@@ -1,9 +1,13 @@
 package com.pablo.testapp
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.safeContentPadding
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.lightColorScheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -18,12 +22,15 @@ import com.pablo.testapp.ui.WelcomeScreen
 
 @Composable
 fun App() {
-    MaterialTheme {
+    val colorScheme = if (isSystemInDarkTheme()) darkColorScheme() else lightColorScheme()
+
+    MaterialTheme(colorScheme = colorScheme) {
         val vm: TestViewModel = viewModel { TestViewModel() }
 
         Box(
             modifier = Modifier
                 .fillMaxSize()
+                .background(MaterialTheme.colorScheme.background)
                 .safeContentPadding()
         ) {
             when (val screen = vm.screen) {
