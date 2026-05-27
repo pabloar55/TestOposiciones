@@ -22,7 +22,11 @@ import com.pablo.testapp.ui.WelcomeScreen
 
 @Composable
 fun App() {
-    val colorScheme = if (isSystemInDarkTheme()) darkColorScheme() else lightColorScheme()
+    val systemDarkTheme = isSystemInDarkTheme()
+    var darkTheme by remember { mutableStateOf(systemDarkTheme) }
+    val colorScheme = if (darkTheme) darkColorScheme() else lightColorScheme()
+
+    ApplySystemBarTheme(darkTheme)
 
     MaterialTheme(colorScheme = colorScheme) {
         val vm: TestViewModel = viewModel { TestViewModel() }
@@ -34,7 +38,11 @@ fun App() {
                 .safeContentPadding()
         ) {
             when (val screen = vm.screen) {
-                is Screen.Welcome -> WelcomeScreen(onStartTest = { vm.startTest(it) })
+                is Screen.Welcome -> WelcomeScreen(
+                    darkTheme = darkTheme,
+                    onToggleTheme = { darkTheme = !darkTheme },
+                    onStartTest = { vm.startTest(it) }
+                )
 
                 is Screen.Question -> {
                     if (vm.isLoading) {
