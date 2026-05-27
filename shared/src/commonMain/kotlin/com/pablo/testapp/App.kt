@@ -68,14 +68,13 @@ fun App() {
                     total = screen.total,
                     segundos = screen.segundos,
                     tipoTest = screen.tipoTest,
-                    historial = screen.historial,
                     onRetry = { vm.retry() },
                     onReview = { vm.reviewAnswers(screen.historial) },
                     onBack = { vm.goToWelcome() }
                 )
 
                 is Screen.Review -> {
-                    var reviewIndex by remember(screen) { mutableStateOf(0) }
+                    var reviewIndex by remember(screen) { mutableIntStateOf(0) }
                     ReviewScreen(
                         historial = screen.historial,
                         currentIndex = reviewIndex,

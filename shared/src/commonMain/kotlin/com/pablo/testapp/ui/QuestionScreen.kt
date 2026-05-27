@@ -4,6 +4,8 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
+import androidx.compose.ui.graphics.Color
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -57,7 +59,8 @@ fun QuestionScreen(
 
         LinearProgressIndicator(
             progress = { (currentIndex + 1).toFloat() / total },
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp)
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+            drawStopIndicator = {}
         )
 
         Column(
@@ -152,25 +155,26 @@ private fun AnswerOption(
     showFeedback: Boolean,
     onClick: () -> Unit
 ) {
+    val isDark = isSystemInDarkTheme()
+
+// Definimos los tonos de verde para claro/oscuro
+    val correctContainerColor = if (isDark) Color(0xFF1B5E20) else Color(0xFFC8E6C9)
+
+// Puedes mantener el error de MaterialTheme o definirlo manualmente si no te convence el naranja
+    val errorContainerColor = MaterialTheme.colorScheme.errorContainer
+
     val containerColor = when {
-        showFeedback && option == correctAnswer -> MaterialTheme.colorScheme.tertiaryContainer
-        showFeedback && selected && option != correctAnswer -> MaterialTheme.colorScheme.errorContainer
+        showFeedback && option == correctAnswer -> correctContainerColor
+        showFeedback && selected -> errorContainerColor
         selected -> MaterialTheme.colorScheme.primaryContainer
         else -> MaterialTheme.colorScheme.surface
-    }
-    val contentColor = when {
-        showFeedback && option == correctAnswer -> MaterialTheme.colorScheme.onTertiaryContainer
-        showFeedback && selected && option != correctAnswer -> MaterialTheme.colorScheme.onErrorContainer
-        selected -> MaterialTheme.colorScheme.onPrimaryContainer
-        else -> MaterialTheme.colorScheme.onSurface
     }
 
     Card(
         onClick = onClick,
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
-            containerColor = containerColor,
-            contentColor = contentColor
+            containerColor = containerColor
         )
     ) {
         Row(
@@ -214,7 +218,8 @@ fun ReviewScreen(
 
         LinearProgressIndicator(
             progress = { (currentIndex + 1).toFloat() / historial.size },
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp)
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+            drawStopIndicator = {}
         )
 
         Column(

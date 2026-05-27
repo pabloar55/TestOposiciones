@@ -10,6 +10,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import androidx.compose.runtime.*
+import kotlin.time.Duration.Companion.milliseconds
 
 sealed class Screen {
     object Welcome : Screen()
@@ -33,7 +34,7 @@ class TestViewModel : ViewModel() {
     var preguntas by mutableStateOf<List<Pregunta>>(emptyList())
         private set
 
-    var currentIndex by mutableStateOf(0)
+    var currentIndex by mutableIntStateOf(0)
         private set
 
     var tipoTest by mutableStateOf(TipoTest.ALEATORIO_30)
@@ -41,7 +42,7 @@ class TestViewModel : ViewModel() {
 
     val userAnswers = mutableStateMapOf<Int, Char>()
 
-    var secondsElapsed by mutableStateOf(0)
+    var secondsElapsed by mutableIntStateOf(0)
         private set
 
     var isLoading by mutableStateOf(false)
@@ -121,7 +122,7 @@ class TestViewModel : ViewModel() {
         timerJob?.cancel()
         timerJob = viewModelScope.launch {
             while (true) {
-                delay(1000)
+                delay(1000.milliseconds)
                 secondsElapsed++
             }
         }

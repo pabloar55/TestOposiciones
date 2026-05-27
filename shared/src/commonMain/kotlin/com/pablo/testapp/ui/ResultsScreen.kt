@@ -10,7 +10,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.pablo.testapp.model.ResultadoPregunta
 import com.pablo.testapp.model.TipoTest
 import kotlin.math.roundToInt
 
@@ -21,7 +20,6 @@ fun ResultsScreen(
     total: Int,
     segundos: Int,
     tipoTest: TipoTest,
-    historial: List<ResultadoPregunta>,
     onRetry: () -> Unit,
     onReview: () -> Unit,
     onBack: () -> Unit
@@ -39,6 +37,7 @@ fun ResultsScreen(
     ) {
         Text(
             text = "Resultados",
+            color = MaterialTheme.colorScheme.onSurface,
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(bottom = 32.dp)
@@ -68,10 +67,11 @@ fun ResultsScreen(
         Spacer(Modifier.height(24.dp))
 
         Row(verticalAlignment = Alignment.CenterVertically) {
-            Text("Tiempo: ", fontSize = 20.sp)
+            Text("Tiempo: ", fontSize = 20.sp, color = MaterialTheme.colorScheme.onSurface)
             Text(
                 text = formatTime(segundos),
                 fontSize = 20.sp,
+                color = MaterialTheme.colorScheme.onSurface,
                 fontWeight = FontWeight.Bold
             )
         }
