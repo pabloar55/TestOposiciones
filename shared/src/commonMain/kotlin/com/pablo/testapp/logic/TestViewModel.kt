@@ -100,8 +100,11 @@ class TestViewModel : ViewModel() {
     }
 
     fun goToWelcome() {
+        val leavingActiveTest = screen is Screen.Question
         stopTimer()
-        saveProgress()
+        if (leavingActiveTest) {
+            saveProgress()
+        }
         screen = Screen.Welcome
     }
 

@@ -147,7 +147,7 @@ fun QuestionScreen(
 }
 
 @Composable
-private fun AnswerOption(
+fun AnswerOption(
     text: String,
     option: Char,
     selected: Boolean,
@@ -212,7 +212,8 @@ fun ReviewScreen(
             Text(
                 text = "${currentIndex + 1} / ${historial.size}",
                 fontWeight = FontWeight.Bold,
-                fontSize = 16.sp
+                fontSize = 16.sp,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
 
@@ -230,6 +231,7 @@ fun ReviewScreen(
         ) {
             Text(
                 text = pregunta.texto,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Medium,
                 modifier = Modifier.padding(bottom = 24.dp)
@@ -237,11 +239,13 @@ fun ReviewScreen(
 
             listOf('a', 'b', 'c', 'd').forEachIndexed { i, opt ->
                 val optionText = pregunta.opciones[i]
-                ReviewOption(
+                AnswerOption(
                     text = optionText,
                     option = opt,
-                    userAnswer = resultado.respuestaUsuario,
-                    correctAnswer = pregunta.respuestaCorrecta
+                    selected = opt == resultado.respuestaUsuario,
+                    correctAnswer = pregunta.respuestaCorrecta,
+                    showFeedback = true,
+                    onClick = {}
                 )
                 Spacer(Modifier.height(8.dp))
             }
@@ -276,32 +280,6 @@ fun ReviewScreen(
     }
 }
 
-@Composable
-private fun ReviewOption(text: String, option: Char, userAnswer: Char, correctAnswer: Char) {
-    val isCorrect = option == correctAnswer
-    val isUserAnswer = option == userAnswer
-    val containerColor = when {
-        isCorrect -> MaterialTheme.colorScheme.tertiaryContainer
-        isUserAnswer && !isCorrect -> MaterialTheme.colorScheme.errorContainer
-        else -> MaterialTheme.colorScheme.surface
-    }
-    val contentColor = when {
-        isCorrect -> MaterialTheme.colorScheme.onTertiaryContainer
-        isUserAnswer && !isCorrect -> MaterialTheme.colorScheme.onErrorContainer
-        else -> MaterialTheme.colorScheme.onSurface
-    }
-
-    Card(
-        modifier = Modifier.fillMaxWidth(),
-        colors = CardDefaults.cardColors(containerColor = containerColor, contentColor = contentColor)
-    ) {
-        Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
-            RadioButton(selected = isUserAnswer, onClick = {})
-            Spacer(Modifier.width(8.dp))
-            Text(text = text, fontSize = 15.sp)
-        }
-    }
-}
 
 private fun formatTime(seconds: Int): String {
     val m = seconds / 60

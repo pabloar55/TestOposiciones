@@ -88,14 +88,22 @@ fun ResultsScreen(
 
         Spacer(Modifier.height(40.dp))
 
-        Row(
-            horizontalArrangement = Arrangement.spacedBy(16.dp)
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            OutlinedButton(onClick = onBack) { Text("Inicio") }
-            Button(onClick = onRetry) { Text("Reintentar") }
+            Button(
+                onClick = onRetry,
+                modifier = Modifier.fillMaxWidth()
+            ) { Text("Reintentar") }
             if (canReview) {
-                Button(onClick = onReview) { Text("Revisar") }
+                OutlinedButton(
+                    onClick = onReview,
+                    modifier = Modifier.fillMaxWidth()
+                ) { Text("Revisar") }
             }
+            TextButton(onClick = onBack) { Text("Inicio") }
         }
     }
 }
