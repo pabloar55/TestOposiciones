@@ -47,19 +47,22 @@ fun ResultsScreen(
         ScoreCard(
             label = "Correctas",
             value = "$correctas / $total",
-            color = Color(0xFF2E7D32)
+            containerColor = MaterialTheme.colorScheme.tertiaryContainer,
+            contentColor = MaterialTheme.colorScheme.onTertiaryContainer
         )
         Spacer(Modifier.height(12.dp))
         ScoreCard(
             label = "Incorrectas",
             value = "$incorrectas / $total",
-            color = Color(0xFFC62828)
+            containerColor = MaterialTheme.colorScheme.errorContainer,
+            contentColor = MaterialTheme.colorScheme.onErrorContainer
         )
         Spacer(Modifier.height(12.dp))
         ScoreCard(
             label = "En blanco",
             value = "$blanco / $total",
-            color = Color.Gray
+            containerColor = MaterialTheme.colorScheme.surfaceVariant,
+            contentColor = MaterialTheme.colorScheme.onSurfaceVariant
         )
 
         Spacer(Modifier.height(24.dp))
@@ -98,10 +101,13 @@ fun ResultsScreen(
 }
 
 @Composable
-private fun ScoreCard(label: String, value: String, color: Color) {
+private fun ScoreCard(label: String, value: String, containerColor: Color, contentColor: Color) {
     Card(
         modifier = Modifier.fillMaxWidth(),
-        colors = CardDefaults.cardColors(containerColor = color.copy(alpha = 0.1f))
+        colors = CardDefaults.cardColors(
+            containerColor = containerColor,
+            contentColor = contentColor
+        )
     ) {
         Row(
             modifier = Modifier
@@ -110,8 +116,8 @@ private fun ScoreCard(label: String, value: String, color: Color) {
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(text = label, fontSize = 18.sp, color = color, fontWeight = FontWeight.Medium)
-            Text(text = value, fontSize = 22.sp, color = color, fontWeight = FontWeight.Bold)
+            Text(text = label, fontSize = 18.sp, fontWeight = FontWeight.Medium)
+            Text(text = value, fontSize = 22.sp, fontWeight = FontWeight.Bold)
         }
     }
 }

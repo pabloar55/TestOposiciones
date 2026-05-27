@@ -7,7 +7,6 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -46,7 +45,8 @@ fun QuestionScreen(
             Text(
                 text = "${currentIndex + 1} / $total",
                 fontWeight = FontWeight.Bold,
-                fontSize = 16.sp
+                fontSize = 16.sp,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
             Text(
                 text = formatTime(secondsElapsed),
@@ -68,6 +68,7 @@ fun QuestionScreen(
         ) {
             Text(
                 text = pregunta.texto,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Medium,
                 modifier = Modifier.padding(bottom = 24.dp)
@@ -114,7 +115,7 @@ fun QuestionScreen(
                 val isCorrect = selectedAnswer == pregunta.respuestaCorrecta
                 Text(
                     text = if (isCorrect) "Respuesta correcta ✓" else "Respuesta incorrecta ✗",
-                    color = if (isCorrect) Color(0xFF2E7D32) else Color(0xFFC62828),
+                    color = if (isCorrect) MaterialTheme.colorScheme.tertiary else MaterialTheme.colorScheme.error,
                     fontWeight = FontWeight.Bold,
                     fontSize = 16.sp
                 )
@@ -152,14 +153,14 @@ private fun AnswerOption(
     onClick: () -> Unit
 ) {
     val containerColor = when {
-        showFeedback && option == correctAnswer -> Color(0xFFE8F5E9)
-        showFeedback && selected && option != correctAnswer -> Color(0xFFFFEBEE)
+        showFeedback && option == correctAnswer -> MaterialTheme.colorScheme.tertiaryContainer
+        showFeedback && selected && option != correctAnswer -> MaterialTheme.colorScheme.errorContainer
         selected -> MaterialTheme.colorScheme.primaryContainer
         else -> MaterialTheme.colorScheme.surface
     }
     val contentColor = when {
-        showFeedback && option == correctAnswer -> Color(0xFF2E7D32)
-        showFeedback && selected && option != correctAnswer -> Color(0xFFC62828)
+        showFeedback && option == correctAnswer -> MaterialTheme.colorScheme.onTertiaryContainer
+        showFeedback && selected && option != correctAnswer -> MaterialTheme.colorScheme.onErrorContainer
         selected -> MaterialTheme.colorScheme.onPrimaryContainer
         else -> MaterialTheme.colorScheme.onSurface
     }
@@ -248,8 +249,8 @@ fun ReviewScreen(
             }
             val statusColor = when {
                 resultado.respuestaUsuario == ' ' -> MaterialTheme.colorScheme.onSurfaceVariant
-                resultado.esCorrecta -> Color(0xFF2E7D32)
-                else -> Color(0xFFC62828)
+                resultado.esCorrecta -> MaterialTheme.colorScheme.tertiary
+                else -> MaterialTheme.colorScheme.error
             }
             Text(text = statusText, color = statusColor, fontWeight = FontWeight.Bold, fontSize = 16.sp)
         }
@@ -275,13 +276,13 @@ private fun ReviewOption(text: String, option: Char, userAnswer: Char, correctAn
     val isCorrect = option == correctAnswer
     val isUserAnswer = option == userAnswer
     val containerColor = when {
-        isCorrect -> Color(0xFFE8F5E9)
-        isUserAnswer && !isCorrect -> Color(0xFFFFEBEE)
+        isCorrect -> MaterialTheme.colorScheme.tertiaryContainer
+        isUserAnswer && !isCorrect -> MaterialTheme.colorScheme.errorContainer
         else -> MaterialTheme.colorScheme.surface
     }
     val contentColor = when {
-        isCorrect -> Color(0xFF2E7D32)
-        isUserAnswer && !isCorrect -> Color(0xFFC62828)
+        isCorrect -> MaterialTheme.colorScheme.onTertiaryContainer
+        isUserAnswer && !isCorrect -> MaterialTheme.colorScheme.onErrorContainer
         else -> MaterialTheme.colorScheme.onSurface
     }
 

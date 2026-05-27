@@ -30,7 +30,8 @@ fun WelcomeScreen(
         ) {
             Icon(
                 imageVector = if (darkTheme) LightModeIcon else DarkModeIcon,
-                contentDescription = if (darkTheme) "Cambiar a tema claro" else "Cambiar a tema oscuro"
+                contentDescription = if (darkTheme) "Cambiar a tema claro" else "Cambiar a tema oscuro",
+                tint = MaterialTheme.colorScheme.onSurface
             )
         }
 
@@ -46,6 +47,7 @@ fun WelcomeScreen(
                 fontSize = 28.sp,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
+                color = MaterialTheme.colorScheme.onSurface,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             Text(
@@ -192,7 +194,7 @@ private fun ModeButton(title: String, description: String, onClick: () -> Unit) 
             Text(
                 text = description,
                 fontSize = 12.sp,
-                color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.8f),
+                color = LocalContentColor.current.copy(alpha = 0.8f),
                 textAlign = TextAlign.Center
             )
         }
