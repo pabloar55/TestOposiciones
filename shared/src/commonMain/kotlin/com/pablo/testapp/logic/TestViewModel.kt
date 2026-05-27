@@ -23,7 +23,7 @@ sealed class Screen {
         val tipoTest: TipoTest,
         val historial: List<ResultadoPregunta>
     ) : Screen()
-    data class Review(val historial: List<ResultadoPregunta>) : Screen()
+    data class Review(val historial: List<ResultadoPregunta>, val results: Results) : Screen()
 }
 
 class TestViewModel : ViewModel() {
@@ -110,8 +110,8 @@ class TestViewModel : ViewModel() {
         startTest(tipoTest)
     }
 
-    fun reviewAnswers(historial: List<ResultadoPregunta>) {
-        screen = Screen.Review(historial)
+    fun reviewAnswers(results: Screen.Results) {
+        screen = Screen.Review(results.historial, results)
     }
 
     fun backToResults(results: Screen.Results) {

@@ -69,7 +69,7 @@ fun App() {
                     segundos = screen.segundos,
                     tipoTest = screen.tipoTest,
                     onRetry = { vm.retry() },
-                    onReview = { vm.reviewAnswers(screen.historial) },
+                    onReview = { vm.reviewAnswers(screen) },
                     onBack = { vm.goToWelcome() }
                 )
 
@@ -81,8 +81,7 @@ fun App() {
                         onNext = { if (reviewIndex < screen.historial.size - 1) reviewIndex++ },
                         onPrevious = { if (reviewIndex > 0) reviewIndex-- },
                         onClose = {
-                            // Return to the last results. We don't store them in vm, so go to welcome.
-                            vm.goToWelcome()
+                            vm.backToResults(screen.results)
                         }
                     )
                 }
