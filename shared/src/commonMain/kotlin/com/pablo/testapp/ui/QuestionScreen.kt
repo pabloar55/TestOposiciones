@@ -1,0 +1,304 @@
+package com.pablo.testapp.ui
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.pablo.testapp.model.Pregunta
+import com.pablo.testapp.model.ResultadoPregunta
+import com.pablo.testapp.model.TipoTest
+
+@Composable
+fun QuestionScreen(
+    preguntas: List<Pregunta>,
+    currentIndex: Int,
+    tipoTest: TipoTest,
+    userAnswers: Map<Int, Char>,
+    secondsElapsed: Int,
+    onAnswer: (Char) -> Unit,
+    onNext: () -> Unit,
+    onPrevious: () -> Unit,
+    onClose: () -> Unit
+) {
+    if (preguntas.isEmpty()) return
+    val pregunta = preguntas[currentIndex]
+    val selectedAnswer = userAnswers[currentIndex]
+    val total = preguntas.size
+    val showFeedback = tipoTest != TipoTest.BLOQUES_30
+
+    Column(modifier = Modifier.fillMaxSize()) {
+        // Top bar
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp, vertical = 8.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            TextButton(onClick = onClose) { Text("← Salir") }
+            Text(
+                text = "${currentIndex + 1} / $total",
+                fontWeight = FontWeight.Bold,
+                fontSize = 16.sp
+            )
+            Text(
+                text = formatTime(secondsElapsed),
+                fontSize = 14.sp,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+
+        LinearProgressIndicator(
+            progress = { (currentIndex + 1).toFloat() / total },
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp)
+        )
+
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .verticalScroll(rememberScrollState())
+                .padding(16.dp)
+        ) {
+            Text(
+                text = pregunta.texto,
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Medium,
+                modifier = Modifier.padding(bottom = 24.dp)
+            )
+
+            AnswerOption(
+                text = pregunta.opcionA(),
+                option = 'a',
+                selected = selectedAnswer == 'a',
+                correctAnswer = pregunta.respuestaCorrecta,
+                showFeedback = showFeedback && selectedAnswer != null,
+                onClick = { onAnswer('a') }
+            )
+            Spacer(Modifier.height(8.dp))
+            AnswerOption(
+                text = pregunta.opcionB(),
+                option = 'b',
+                selected = selectedAnswer == 'b',
+                correctAnswer = pregunta.respuestaCorrecta,
+                showFeedback = showFeedback && selectedAnswer != null,
+                onClick = { onAnswer('b') }
+            )
+            Spacer(Modifier.height(8.dp))
+            AnswerOption(
+                text = pregunta.opcionC(),
+                option = 'c',
+                selected = selectedAnswer == 'c',
+                correctAnswer = pregunta.respuestaCorrecta,
+                showFeedback = showFeedback && selectedAnswer != null,
+                onClick = { onAnswer('c') }
+            )
+            Spacer(Modifier.height(8.dp))
+            AnswerOption(
+                text = pregunta.opcionD(),
+                option = 'd',
+                selected = selectedAnswer == 'd',
+                correctAnswer = pregunta.respuestaCorrecta,
+                showFeedback = showFeedback && selectedAnswer != null,
+                onClick = { onAnswer('d') }
+            )
+
+            if (showFeedback && selectedAnswer != null) {
+                Spacer(Modifier.height(16.dp))
+                val isCorrect = selectedAnswer == pregunta.respuestaCorrecta
+                Text(
+                    text = if (isCorrect) "Respuesta correcta ✓" else "Respuesta incorrecta ✗",
+                    color = if (isCorrect) Color(0xFF2E7D32) else Color(0xFFC62828),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp
+                )
+            }
+        }
+
+        // Navigation buttons
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            OutlinedButton(
+                onClick = onPrevious,
+                enabled = currentIndex > 0
+            ) {
+                Text("← Anterior")
+            }
+
+            Button(onClick = onNext) {
+                Text(if (currentIndex == total - 1) "Finalizar" else "Siguiente →")
+            }
+        }
+    }
+}
+
+@Composable
+private fun AnswerOption(
+    text: String,
+    option: Char,
+    selected: Boolean,
+    correctAnswer: Char,
+    showFeedback: Boolean,
+    onClick: () -> Unit
+) {
+    val containerColor = when {
+        showFeedback && option == correctAnswer -> Color(0xFFE8F5E9)
+        showFeedback && selected && option != correctAnswer -> Color(0xFFFFEBEE)
+        selected -> MaterialTheme.colorScheme.primaryContainer
+        else -> MaterialTheme.colorScheme.surface
+    }
+    val contentColor = when {
+        showFeedback && option == correctAnswer -> Color(0xFF2E7D32)
+        showFeedback && selected && option != correctAnswer -> Color(0xFFC62828)
+        selected -> MaterialTheme.colorScheme.onPrimaryContainer
+        else -> MaterialTheme.colorScheme.onSurface
+    }
+
+    Card(
+        onClick = onClick,
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(
+            containerColor = containerColor,
+            contentColor = contentColor
+        )
+    ) {
+        Row(
+            modifier = Modifier.padding(12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            RadioButton(selected = selected, onClick = onClick)
+            Spacer(Modifier.width(8.dp))
+            Text(text = text, fontSize = 15.sp)
+        }
+    }
+}
+
+@Composable
+fun ReviewScreen(
+    historial: List<ResultadoPregunta>,
+    currentIndex: Int,
+    onNext: () -> Unit,
+    onPrevious: () -> Unit,
+    onClose: () -> Unit
+) {
+    if (historial.isEmpty()) return
+    val resultado = historial[currentIndex]
+    val pregunta = resultado.pregunta
+
+    Column(modifier = Modifier.fillMaxSize()) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp, vertical = 8.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            TextButton(onClick = onClose) { Text("← Volver") }
+            Text(
+                text = "${currentIndex + 1} / ${historial.size}",
+                fontWeight = FontWeight.Bold,
+                fontSize = 16.sp
+            )
+        }
+
+        LinearProgressIndicator(
+            progress = { (currentIndex + 1).toFloat() / historial.size },
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp)
+        )
+
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .verticalScroll(rememberScrollState())
+                .padding(16.dp)
+        ) {
+            Text(
+                text = pregunta.texto,
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Medium,
+                modifier = Modifier.padding(bottom = 24.dp)
+            )
+
+            listOf('a', 'b', 'c', 'd').forEachIndexed { i, opt ->
+                val optionText = pregunta.opciones[i]
+                ReviewOption(
+                    text = optionText,
+                    option = opt,
+                    userAnswer = resultado.respuestaUsuario,
+                    correctAnswer = pregunta.respuestaCorrecta
+                )
+                Spacer(Modifier.height(8.dp))
+            }
+
+            Spacer(Modifier.height(16.dp))
+            val statusText = when {
+                resultado.respuestaUsuario == ' ' -> "Sin respuesta"
+                resultado.esCorrecta -> "Correcta ✓"
+                else -> "Incorrecta ✗ — Respuesta correcta: ${pregunta.respuestaCorrecta})"
+            }
+            val statusColor = when {
+                resultado.respuestaUsuario == ' ' -> MaterialTheme.colorScheme.onSurfaceVariant
+                resultado.esCorrecta -> Color(0xFF2E7D32)
+                else -> Color(0xFFC62828)
+            }
+            Text(text = statusText, color = statusColor, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+        }
+
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            OutlinedButton(onClick = onPrevious, enabled = currentIndex > 0) {
+                Text("← Anterior")
+            }
+            Button(onClick = onNext, enabled = currentIndex < historial.size - 1) {
+                Text("Siguiente →")
+            }
+        }
+    }
+}
+
+@Composable
+private fun ReviewOption(text: String, option: Char, userAnswer: Char, correctAnswer: Char) {
+    val isCorrect = option == correctAnswer
+    val isUserAnswer = option == userAnswer
+    val containerColor = when {
+        isCorrect -> Color(0xFFE8F5E9)
+        isUserAnswer && !isCorrect -> Color(0xFFFFEBEE)
+        else -> MaterialTheme.colorScheme.surface
+    }
+    val contentColor = when {
+        isCorrect -> Color(0xFF2E7D32)
+        isUserAnswer && !isCorrect -> Color(0xFFC62828)
+        else -> MaterialTheme.colorScheme.onSurface
+    }
+
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(containerColor = containerColor, contentColor = contentColor)
+    ) {
+        Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
+            RadioButton(selected = isUserAnswer, onClick = {})
+            Spacer(Modifier.width(8.dp))
+            Text(text = text, fontSize = 15.sp)
+        }
+    }
+}
+
+private fun formatTime(seconds: Int): String {
+    val m = seconds / 60
+    val s = seconds % 60
+    return "${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}"
+}
