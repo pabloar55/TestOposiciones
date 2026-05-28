@@ -15,6 +15,8 @@ import androidx.compose.ui.unit.sp
 import com.pablo.testapp.model.Pregunta
 import com.pablo.testapp.model.ResultadoPregunta
 import com.pablo.testapp.model.TipoTest
+import com.pablo.testapp.ui.icons.arrow_back
+import com.pablo.testapp.ui.icons.arrow_forward
 
 @Composable
 fun QuestionScreen(
@@ -46,7 +48,11 @@ fun QuestionScreen(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            TextButton(onClick = onClose) { Text("← Salir") }
+            TextButton(onClick = onClose) {
+                Icon(arrow_back, contentDescription = null)
+                Spacer(Modifier.width(4.dp))
+                Text("Salir")
+            }
             Text(
                 text = "$displayQuestionNumber / $visibleTotal",
                 fontWeight = FontWeight.Bold,
@@ -139,11 +145,19 @@ fun QuestionScreen(
                 onClick = onPrevious,
                 enabled = currentIndex > 0
             ) {
-                Text("← Anterior")
+                Icon(arrow_back, contentDescription = null)
+                Spacer(Modifier.width(4.dp))
+                Text("Anterior")
             }
 
             Button(onClick = onNext) {
-                Text(if (currentIndex == total - 1) "Finalizar" else "Siguiente →")
+                if (currentIndex == total - 1) {
+                    Text("Finalizar")
+                } else {
+                    Text("Siguiente")
+                    Spacer(Modifier.width(4.dp))
+                    Icon(arrow_forward, contentDescription = null)
+                }
             }
         }
     }
@@ -211,7 +225,11 @@ fun ReviewScreen(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            TextButton(onClick = onClose) { Text("← Volver") }
+            TextButton(onClick = onClose) {
+                Icon(arrow_back, contentDescription = null)
+                Spacer(Modifier.width(4.dp))
+                Text("Volver")
+            }
             Text(
                 text = "${currentIndex + 1} / ${historial.size}",
                 fontWeight = FontWeight.Bold,
@@ -274,10 +292,14 @@ fun ReviewScreen(
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             OutlinedButton(onClick = onPrevious, enabled = currentIndex > 0) {
-                Text("← Anterior")
+                Icon(arrow_back, contentDescription = null)
+                Spacer(Modifier.width(4.dp))
+                Text("Anterior")
             }
             Button(onClick = onNext, enabled = currentIndex < historial.size - 1) {
-                Text("Siguiente →")
+                Text("Siguiente")
+                Spacer(Modifier.width(4.dp))
+                Icon(arrow_forward, contentDescription = null)
             }
         }
     }
