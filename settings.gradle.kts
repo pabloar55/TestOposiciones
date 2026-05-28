@@ -1,4 +1,4 @@
-rootProject.name = "TestApp"
+rootProject.name = "TestOposiciones"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {

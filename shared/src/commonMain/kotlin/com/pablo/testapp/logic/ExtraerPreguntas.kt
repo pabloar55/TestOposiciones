@@ -3,7 +3,7 @@ package com.pablo.testapp.logic
 import com.pablo.testapp.model.Pregunta
 import com.pablo.testapp.model.TestCategory
 import org.jetbrains.compose.resources.ExperimentalResourceApi
-import testapp.shared.generated.resources.Res
+import testoposiciones.shared.generated.resources.Res
 
 @OptIn(ExperimentalResourceApi::class)
 object ExtraerPreguntas {
