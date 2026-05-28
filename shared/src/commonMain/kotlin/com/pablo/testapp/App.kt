@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.pablo.testapp.logic.Screen
 import com.pablo.testapp.logic.TestViewModel
+import com.pablo.testapp.model.TipoTest
 import com.pablo.testapp.ui.QuestionScreen
 import com.pablo.testapp.ui.ResultsScreen
 import com.pablo.testapp.ui.ReviewScreen
@@ -46,9 +47,9 @@ fun App() {
                 is Screen.Welcome -> WelcomeScreen(
                     darkTheme = darkTheme,
                     onToggleTheme = { darkTheme = !darkTheme },
-                    onStartTest = {
+                    onStartTest = { tipo, category ->
                         showExitTestDialog = false
-                        vm.startTest(it)
+                        vm.startTest(tipo, category)
                     }
                 )
 
@@ -59,6 +60,8 @@ fun App() {
                         QuestionScreen(
                             preguntas = vm.preguntas,
                             currentIndex = vm.currentIndex,
+                            displayQuestionNumber = vm.displayQuestionNumber,
+                            displayTotal = vm.displayQuestionTotal,
                             tipoTest = vm.tipoTest,
                             userAnswers = vm.userAnswers,
                             secondsElapsed = vm.secondsElapsed,
@@ -108,7 +111,15 @@ fun App() {
                 AlertDialog(
                     onDismissRequest = { showExitTestDialog = false },
                     title = { Text("Salir del test") },
-                    text = { Text("Se guardara tu progreso. Quieres volver al inicio?") },
+                    text = {
+                        Text(
+                            if (vm.tipoTest == TipoTest.SECUENCIAL) {
+                                "Se guardará tu progreso. Quieres volver al inicio?"
+                            } else {
+                                "Quieres volver al inicio?"
+                            }
+                        )
+                    },
                     confirmButton = {
                         TextButton(
                             onClick = {

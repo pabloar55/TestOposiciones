@@ -1,11 +1,15 @@
 package com.pablo.testapp.platform
 
 import java.io.File
+import com.pablo.testapp.model.TestCategory
 
 actual object ProgressStorage {
-    private val file = File(System.getProperty("user.home"), ".testapp_progress.txt")
+    private fun getFile(category: TestCategory): File {
+        return File(System.getProperty("user.home"), ".testapp_progress_${category.name}.txt")
+    }
 
-    actual fun readNumber(): Int {
+    actual fun readNumber(category: TestCategory): Int {
+        val file = getFile(category)
         return try {
             if (!file.exists()) 1
             else file.readText().trim().toIntOrNull() ?: 1
@@ -14,7 +18,8 @@ actual object ProgressStorage {
         }
     }
 
-    actual fun writeNumber(num: Int) {
+    actual fun writeNumber(category: TestCategory, num: Int) {
+        val file = getFile(category)
         try {
             file.writeText(num.toString())
         } catch (e: Exception) {

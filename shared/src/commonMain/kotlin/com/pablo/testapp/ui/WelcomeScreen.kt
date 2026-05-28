@@ -1,8 +1,9 @@
 package com.pablo.testapp.ui
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -13,14 +14,17 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.pablo.testapp.model.TestCategory
 import com.pablo.testapp.model.TipoTest
 
 @Composable
 fun WelcomeScreen(
     darkTheme: Boolean,
     onToggleTheme: () -> Unit,
-    onStartTest: (TipoTest) -> Unit
+    onStartTest: (TipoTest, TestCategory) -> Unit
 ) {
+    var selectedCategory by remember { mutableStateOf(TestCategory.TER) }
+
     Box(modifier = Modifier.fillMaxSize()) {
         IconButton(
             onClick = onToggleTheme,
@@ -43,7 +47,7 @@ fun WelcomeScreen(
             verticalArrangement = Arrangement.Center
         ) {
             Text(
-                text = "Test Constitución",
+                text = "Test Oposiciones",
                 fontSize = 28.sp,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
@@ -51,17 +55,38 @@ fun WelcomeScreen(
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             Text(
-                text = "T.E.R. — Test Especializado en Regulación",
+                text = "Elige una categoría y el modo de test",
                 fontSize = 16.sp,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center,
-                modifier = Modifier.padding(bottom = 48.dp)
+                modifier = Modifier.padding(bottom = 24.dp)
             )
+
+            Row(
+                modifier = Modifier.padding(bottom = 24.dp).selectableGroup(),
+                horizontalArrangement = Arrangement.spacedBy(16.dp)
+            ) {
+                TestCategory.entries.forEach { category ->
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        RadioButton(
+                            selected = (category == selectedCategory),
+                            onClick = { selectedCategory = category }
+                        )
+                        Text(
+                            text = category.displayName,
+                            modifier = Modifier.padding(start = 4.dp),
+                            color = MaterialTheme.colorScheme.onSurface
+                        )
+                    }
+                }
+            }
 
             ModeButton(
                 title = "30 Preguntas Aleatorias",
                 description = "30 preguntas escogidas al azar. Muestra feedback inmediato.",
-                onClick = { onStartTest(TipoTest.ALEATORIO_30) }
+                onClick = { onStartTest(TipoTest.ALEATORIO_30, selectedCategory) }
             )
 
             Spacer(Modifier.height(16.dp))
@@ -69,7 +94,7 @@ fun WelcomeScreen(
             ModeButton(
                 title = "Bloques de 30",
                 description = "30 preguntas en bloques consecutivos. Reanuda desde el último bloque.",
-                onClick = { onStartTest(TipoTest.BLOQUES_30) }
+                onClick = { onStartTest(TipoTest.BLOQUES_30, selectedCategory) }
             )
 
             Spacer(Modifier.height(16.dp))
@@ -77,7 +102,7 @@ fun WelcomeScreen(
             ModeButton(
                 title = "Preguntas Seguidas",
                 description = "Todas las preguntas en orden. Reanuda desde donde lo dejaste.",
-                onClick = { onStartTest(TipoTest.SECUENCIAL) }
+                onClick = { onStartTest(TipoTest.SECUENCIAL, selectedCategory) }
             )
         }
     }

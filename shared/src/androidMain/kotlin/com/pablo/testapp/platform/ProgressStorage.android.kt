@@ -1,5 +1,6 @@
 package com.pablo.testapp.platform
 
+import com.pablo.testapp.model.TestCategory
 import java.io.File
 
 private var filesDir: File? = null
@@ -9,9 +10,14 @@ fun initProgressStorage(dir: File) {
 }
 
 actual object ProgressStorage {
-    actual fun readNumber(): Int {
+    private fun getFile(category: TestCategory): File? {
+        val dir = filesDir ?: return null
+        return File(dir, "testapp_progress_${category.name}.txt")
+    }
+
+    actual fun readNumber(category: TestCategory): Int {
         return try {
-            val f = File(filesDir ?: return 1, "testapp_progress.txt")
+            val f = getFile(category) ?: return 1
             if (!f.exists()) 1
             else f.readText().trim().toIntOrNull() ?: 1
         } catch (e: Exception) {
@@ -19,10 +25,10 @@ actual object ProgressStorage {
         }
     }
 
-    actual fun writeNumber(num: Int) {
+    actual fun writeNumber(category: TestCategory, num: Int) {
         try {
-            val dir = filesDir ?: return
-            File(dir, "testapp_progress.txt").writeText(num.toString())
+            val file = getFile(category) ?: return
+            file.writeText(num.toString())
         } catch (e: Exception) {
             // ignore write errors
         }

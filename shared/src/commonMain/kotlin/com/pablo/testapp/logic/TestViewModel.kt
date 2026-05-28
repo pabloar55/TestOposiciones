@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.pablo.testapp.model.Pregunta
 import com.pablo.testapp.model.ResultadoPregunta
+import com.pablo.testapp.model.TestCategory
 import com.pablo.testapp.model.TipoTest
 import com.pablo.testapp.platform.ProgressStorage
 import kotlinx.coroutines.Job
@@ -39,6 +40,9 @@ class TestViewModel : ViewModel() {
 
     var tipoTest by mutableStateOf(TipoTest.ALEATORIO_30)
         private set
+        
+    var testCategory by mutableStateOf(TestCategory.TER)
+        private set
 
     val userAnswers = mutableStateMapOf<Int, Char>()
 
@@ -51,23 +55,35 @@ class TestViewModel : ViewModel() {
     var offsetInicial = 0
         private set
 
+    var totalPreguntas by mutableIntStateOf(0)
+        private set
+
+    val displayQuestionNumber: Int
+        get() = if (tipoTest == TipoTest.SECUENCIAL) offsetInicial + currentIndex + 1 else currentIndex + 1
+
+    val displayQuestionTotal: Int
+        get() = if (tipoTest == TipoTest.SECUENCIAL && totalPreguntas > 0) totalPreguntas else preguntas.size
+
     private var timerJob: Job? = null
 
-    fun startTest(tipo: TipoTest) {
+    fun startTest(tipo: TipoTest, category: TestCategory) {
         tipoTest = tipo
+        testCategory = category
         isLoading = true
         viewModelScope.launch {
-            val allPreguntas = ExtraerPreguntas.extraerPreguntas()
+            val allPreguntas = ExtraerPreguntas.extraerPreguntas(category)
+            totalPreguntas = allPreguntas.size
+            offsetInicial = 0
             val loaded = when (tipo) {
                 TipoTest.ALEATORIO_30 -> allPreguntas.shuffled().take(30)
                 TipoTest.SECUENCIAL -> {
-                    val start = ProgressStorage.readNumber() - 1
-                    offsetInicial = start.coerceAtLeast(0)
+                    val start = readProgressStartIndex(category, allPreguntas.size)
+                    offsetInicial = start
                     allPreguntas.drop(offsetInicial)
                 }
                 TipoTest.BLOQUES_30 -> {
-                    val start = ProgressStorage.readNumber() - 1
-                    offsetInicial = start.coerceAtLeast(0)
+                    val start = readProgressStartIndex(category, allPreguntas.size)
+                    offsetInicial = start
                     allPreguntas.drop(offsetInicial).take(30)
                 }
             }
@@ -110,7 +126,7 @@ class TestViewModel : ViewModel() {
 
     fun retry() {
         stopTimer()
-        startTest(tipoTest)
+        startTest(tipoTest, testCategory)
     }
 
     fun reviewAnswers(results: Screen.Results) {
@@ -138,8 +154,7 @@ class TestViewModel : ViewModel() {
 
     private fun saveProgress() {
         when (tipoTest) {
-            TipoTest.SECUENCIAL -> ProgressStorage.writeNumber(offsetInicial + currentIndex + 1)
-            TipoTest.BLOQUES_30 -> ProgressStorage.writeNumber(offsetInicial + currentIndex + 1)
+            TipoTest.SECUENCIAL -> ProgressStorage.writeNumber(testCategory, offsetInicial + currentIndex + 1)
             else -> {}
         }
     }
@@ -158,11 +173,19 @@ class TestViewModel : ViewModel() {
         }
 
         when (tipoTest) {
-            TipoTest.SECUENCIAL -> ProgressStorage.writeNumber(1)
-            TipoTest.BLOQUES_30 -> ProgressStorage.writeNumber(offsetInicial + preguntas.size + 1)
+            TipoTest.SECUENCIAL -> ProgressStorage.writeNumber(
+                testCategory,
+                (offsetInicial + preguntas.size).coerceIn(1, totalPreguntas.coerceAtLeast(1))
+            )
+            TipoTest.BLOQUES_30 -> ProgressStorage.writeNumber(testCategory, offsetInicial + preguntas.size + 1)
             else -> {}
         }
 
         screen = Screen.Results(correctas, incorrectas, preguntas.size, secondsElapsed, tipoTest, historial)
+    }
+
+    private fun readProgressStartIndex(category: TestCategory, total: Int): Int {
+        if (total <= 0) return 0
+        return (ProgressStorage.readNumber(category) - 1).coerceIn(0, total - 1)
     }
 }

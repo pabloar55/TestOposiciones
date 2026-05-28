@@ -1,14 +1,18 @@
 package com.pablo.testapp.logic
 
 import com.pablo.testapp.model.Pregunta
+import com.pablo.testapp.model.TestCategory
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import testapp.shared.generated.resources.Res
 
 @OptIn(ExperimentalResourceApi::class)
 object ExtraerPreguntas {
-    suspend fun extraerPreguntas(): List<Pregunta> {
-        val preguntasText = Res.readBytes("files/PreguntasMixtas.txt").decodeToString()
-        val respuestasText = Res.readBytes("files/RespuestasMixtas.txt").decodeToString()
+    suspend fun extraerPreguntas(category: TestCategory): List<Pregunta> {
+        val preguntasPath = "files/${category.folderName}/${category.questionsFile}"
+        val respuestasPath = "files/${category.folderName}/${category.answersFile}"
+
+        val preguntasText = Res.readBytes(preguntasPath).decodeToString()
+        val respuestasText = Res.readBytes(respuestasPath).decodeToString()
 
         val preguntasLines = preguntasText.lines()
         val respuestasLines = respuestasText.lines().filter { it.isNotBlank() }

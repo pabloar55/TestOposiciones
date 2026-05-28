@@ -20,6 +20,8 @@ import com.pablo.testapp.model.TipoTest
 fun QuestionScreen(
     preguntas: List<Pregunta>,
     currentIndex: Int,
+    displayQuestionNumber: Int = currentIndex + 1,
+    displayTotal: Int = preguntas.size,
     tipoTest: TipoTest,
     userAnswers: Map<Int, Char>,
     secondsElapsed: Int,
@@ -32,6 +34,7 @@ fun QuestionScreen(
     val pregunta = preguntas[currentIndex]
     val selectedAnswer = userAnswers[currentIndex]
     val total = preguntas.size
+    val visibleTotal = displayTotal.coerceAtLeast(displayQuestionNumber)
     val showFeedback = tipoTest != TipoTest.BLOQUES_30
 
     Column(modifier = Modifier.fillMaxSize()) {
@@ -45,7 +48,7 @@ fun QuestionScreen(
         ) {
             TextButton(onClick = onClose) { Text("← Salir") }
             Text(
-                text = "${currentIndex + 1} / $total",
+                text = "$displayQuestionNumber / $visibleTotal",
                 fontWeight = FontWeight.Bold,
                 fontSize = 16.sp,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
@@ -58,7 +61,7 @@ fun QuestionScreen(
         }
 
         LinearProgressIndicator(
-            progress = { (currentIndex + 1).toFloat() / total },
+            progress = { displayQuestionNumber.toFloat() / visibleTotal },
             modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
             drawStopIndicator = {}
         )
