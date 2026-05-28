@@ -21,7 +21,7 @@ dependencies {
 }
 
 android {
-    namespace = "com.pablo.testapp"
+    namespace = "com.pablo.testoposiciones"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {

@@ -11,7 +11,7 @@ kotlin {
     jvm()
 
     androidLibrary {
-        namespace = "com.pablo.testapp.shared"
+        namespace = "com.pablo.testoposiciones.shared"
         compileSdk = libs.versions.android.compileSdk.get().toInt()
         minSdk = libs.versions.android.minSdk.get().toInt()
 
