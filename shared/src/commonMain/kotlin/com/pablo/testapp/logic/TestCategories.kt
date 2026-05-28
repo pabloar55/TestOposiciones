@@ -18,7 +18,7 @@ object TestCategories {
     }
 
     private fun parseCategories(text: String): List<TestCategory> {
-        val objectRegex = Regex("\\{([^{}]*)}", RegexOption.DOT_MATCHES_ALL)
+        val objectRegex = Regex("\\{([^{}]*)\\}", RegexOption.DOT_MATCHES_ALL)
         val fieldRegex = Regex("\"([^\"]+)\"\\s*:\\s*\"((?:\\\\.|[^\"])*)\"")
 
         return objectRegex.findAll(text).mapIndexed { index, match ->

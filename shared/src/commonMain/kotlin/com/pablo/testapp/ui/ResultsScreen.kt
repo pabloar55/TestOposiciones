@@ -96,7 +96,7 @@ fun ResultsScreen(
             Button(
                 onClick = onRetry,
                 modifier = Modifier.fillMaxWidth()
-            ) { Text("Reintentar") }
+            ) { Text(if (tipoTest == TipoTest.BLOQUES_30) "Continuar" else "Reintentar") }
             if (canReview) {
                 OutlinedButton(
                     onClick = onReview,

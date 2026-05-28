@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.Icon
@@ -21,8 +22,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -46,16 +47,13 @@ fun WelcomeScreen(
     categories: List<TestCategory>,
     categoriesLoading: Boolean,
     loadError: String?,
+    selectedCategory: TestCategory?,
     onRetryLoad: () -> Unit,
+    onCategorySelected: (TestCategory) -> Unit,
+    onResetProgress: (TestCategory) -> Unit,
     onStartTest: (TipoTest, TestCategory) -> Unit
 ) {
-    var selectedCategory by remember { mutableStateOf<TestCategory?>(null) }
-
-    LaunchedEffect(categories) {
-        if (selectedCategory == null || categories.none { it.id == selectedCategory?.id }) {
-            selectedCategory = categories.firstOrNull()
-        }
-    }
+    var showResetDialog by remember { mutableStateOf(false) }
 
     Box(modifier = Modifier.fillMaxSize()) {
         IconButton(
@@ -115,11 +113,20 @@ fun WelcomeScreen(
                 else -> CategorySelector(
                     categories = categories,
                     selectedCategory = selectedCategory,
-                    onSelected = { selectedCategory = it }
+                    onSelected = onCategorySelected
                 )
             }
 
             val canStart = selectedCategory != null && !categoriesLoading && loadError == null
+
+            if (canStart) {
+                TextButton(
+                    onClick = { showResetDialog = true },
+                    modifier = Modifier.padding(bottom = 16.dp)
+                ) {
+                    Text("Reiniciar progreso de ${selectedCategory.displayName}")
+                }
+            }
 
             ModeButton(
                 title = "30 Preguntas Aleatorias",
@@ -146,6 +153,34 @@ fun WelcomeScreen(
                 onClick = { selectedCategory?.let { onStartTest(TipoTest.SECUENCIAL, it) } }
             )
         }
+
+        if (showResetDialog && selectedCategory != null) {
+            AlertDialog(
+                onDismissRequest = { showResetDialog = false },
+                title = { Text("Reiniciar progreso") },
+                text = {
+                    Text(
+                        "Se reiniciara el progreso de ${selectedCategory.displayName}. " +
+                            "Preguntas Seguidas y Bloques de 30 volveran a empezar desde la pregunta 1."
+                    )
+                },
+                confirmButton = {
+                    TextButton(
+                        onClick = {
+                            onResetProgress(selectedCategory)
+                            showResetDialog = false
+                        }
+                    ) {
+                        Text("Reiniciar")
+                    }
+                },
+                dismissButton = {
+                    TextButton(onClick = { showResetDialog = false }) {
+                        Text("Cancelar")
+                    }
+                }
+            )
+        }
     }
 }
 
@@ -170,7 +205,6 @@ private fun CategorySelector(
                         onClick = { onSelected(category) },
                         role = Role.RadioButton
                     )
-                    // Opcional: Puedes agregar padding aquí para que el área táctil sea más cómoda
                     .padding(end = 8.dp)
             ) {
                 RadioButton(

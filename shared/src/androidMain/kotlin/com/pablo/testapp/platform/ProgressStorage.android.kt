@@ -34,6 +34,10 @@ actual object ProgressStorage {
         }
     }
 
+    actual fun reset(category: TestCategory) {
+        writeNumber(category, 1)
+    }
+
     private fun TestCategory.safeFileName(): String {
         return id.replace(Regex("[^A-Za-z0-9_-]"), "_")
     }

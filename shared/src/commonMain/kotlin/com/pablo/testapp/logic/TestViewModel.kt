@@ -85,8 +85,9 @@ class TestViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 val loadedCategories = TestCategories.load()
+                val selectedId = testCategory?.id
                 categories = loadedCategories
-                testCategory = loadedCategories.firstOrNull()
+                testCategory = loadedCategories.firstOrNull { it.id == selectedId } ?: loadedCategories.firstOrNull()
             } catch (e: Exception) {
                 categories = emptyList()
                 testCategory = null
@@ -95,6 +96,14 @@ class TestViewModel : ViewModel() {
                 categoriesLoading = false
             }
         }
+    }
+
+    fun selectCategory(category: TestCategory) {
+        testCategory = category
+    }
+
+    fun resetProgress(category: TestCategory) {
+        ProgressStorage.reset(category)
     }
 
     fun startTest(tipo: TipoTest, category: TestCategory) {
@@ -166,6 +175,9 @@ class TestViewModel : ViewModel() {
     fun retry() {
         stopTimer()
         val category = testCategory ?: return
+        if (tipoTest == TipoTest.SECUENCIAL) {
+            ProgressStorage.reset(category)
+        }
         startTest(tipoTest, category)
     }
 

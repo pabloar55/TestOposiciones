@@ -50,7 +50,10 @@ fun App() {
                     categories = vm.categories,
                     categoriesLoading = vm.categoriesLoading,
                     loadError = vm.loadError,
+                    selectedCategory = vm.testCategory,
                     onRetryLoad = { vm.loadCategories() },
+                    onCategorySelected = { vm.selectCategory(it) },
+                    onResetProgress = { vm.resetProgress(it) },
                     onStartTest = { tipo, category ->
                         showExitTestDialog = false
                         vm.startTest(tipo, category)
