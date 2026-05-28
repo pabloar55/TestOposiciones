@@ -41,7 +41,16 @@ class TestViewModel : ViewModel() {
     var tipoTest by mutableStateOf(TipoTest.ALEATORIO_30)
         private set
         
-    var testCategory by mutableStateOf(TestCategory.TER)
+    var testCategory by mutableStateOf<TestCategory?>(null)
+        private set
+
+    var categories by mutableStateOf<List<TestCategory>>(emptyList())
+        private set
+
+    var categoriesLoading by mutableStateOf(true)
+        private set
+
+    var loadError by mutableStateOf<String?>(null)
         private set
 
     val userAnswers = mutableStateMapOf<Int, Char>()
@@ -66,34 +75,64 @@ class TestViewModel : ViewModel() {
 
     private var timerJob: Job? = null
 
+    init {
+        loadCategories()
+    }
+
+    fun loadCategories() {
+        categoriesLoading = true
+        loadError = null
+        viewModelScope.launch {
+            try {
+                val loadedCategories = TestCategories.load()
+                categories = loadedCategories
+                testCategory = loadedCategories.firstOrNull()
+            } catch (e: Exception) {
+                categories = emptyList()
+                testCategory = null
+                loadError = e.message ?: "No se han podido cargar las categorias."
+            } finally {
+                categoriesLoading = false
+            }
+        }
+    }
+
     fun startTest(tipo: TipoTest, category: TestCategory) {
         tipoTest = tipo
         testCategory = category
         isLoading = true
+        loadError = null
+        screen = Screen.Question(tipo)
         viewModelScope.launch {
-            val allPreguntas = ExtraerPreguntas.extraerPreguntas(category)
-            totalPreguntas = allPreguntas.size
-            offsetInicial = 0
-            val loaded = when (tipo) {
-                TipoTest.ALEATORIO_30 -> allPreguntas.shuffled().take(30)
-                TipoTest.SECUENCIAL -> {
-                    val start = readProgressStartIndex(category, allPreguntas.size)
-                    offsetInicial = start
-                    allPreguntas.drop(offsetInicial)
+            try {
+                val allPreguntas = ExtraerPreguntas.extraerPreguntas(category)
+                totalPreguntas = allPreguntas.size
+                offsetInicial = 0
+                val loaded = when (tipo) {
+                    TipoTest.ALEATORIO_30 -> allPreguntas.shuffled().take(30)
+                    TipoTest.SECUENCIAL -> {
+                        val start = readProgressStartIndex(category, allPreguntas.size)
+                        offsetInicial = start
+                        allPreguntas.drop(offsetInicial)
+                    }
+                    TipoTest.BLOQUES_30 -> {
+                        val start = readProgressStartIndex(category, allPreguntas.size)
+                        offsetInicial = start
+                        allPreguntas.drop(offsetInicial).take(30)
+                    }
                 }
-                TipoTest.BLOQUES_30 -> {
-                    val start = readProgressStartIndex(category, allPreguntas.size)
-                    offsetInicial = start
-                    allPreguntas.drop(offsetInicial).take(30)
-                }
+                preguntas = loaded
+                currentIndex = 0
+                userAnswers.clear()
+                secondsElapsed = 0
+                startTimer()
+            } catch (e: Exception) {
+                preguntas = emptyList()
+                loadError = e.message ?: "No se han podido cargar las preguntas."
+                screen = Screen.Welcome
+            } finally {
+                isLoading = false
             }
-            preguntas = loaded
-            currentIndex = 0
-            userAnswers.clear()
-            secondsElapsed = 0
-            isLoading = false
-            screen = Screen.Question(tipo)
-            startTimer()
         }
     }
 
@@ -126,7 +165,8 @@ class TestViewModel : ViewModel() {
 
     fun retry() {
         stopTimer()
-        startTest(tipoTest, testCategory)
+        val category = testCategory ?: return
+        startTest(tipoTest, category)
     }
 
     fun reviewAnswers(results: Screen.Results) {
@@ -153,8 +193,9 @@ class TestViewModel : ViewModel() {
     }
 
     private fun saveProgress() {
+        val category = testCategory ?: return
         when (tipoTest) {
-            TipoTest.SECUENCIAL -> ProgressStorage.writeNumber(testCategory, offsetInicial + currentIndex + 1)
+            TipoTest.SECUENCIAL -> ProgressStorage.writeNumber(category, offsetInicial + currentIndex + 1)
             else -> {}
         }
     }
@@ -172,12 +213,17 @@ class TestViewModel : ViewModel() {
             ResultadoPregunta(pregunta, respuesta, esCorrecta)
         }
 
+        val category = testCategory
         when (tipoTest) {
-            TipoTest.SECUENCIAL -> ProgressStorage.writeNumber(
-                testCategory,
-                (offsetInicial + preguntas.size).coerceIn(1, totalPreguntas.coerceAtLeast(1))
-            )
-            TipoTest.BLOQUES_30 -> ProgressStorage.writeNumber(testCategory, offsetInicial + preguntas.size + 1)
+            TipoTest.SECUENCIAL -> if (category != null) {
+                ProgressStorage.writeNumber(
+                    category,
+                    (offsetInicial + preguntas.size).coerceIn(1, totalPreguntas.coerceAtLeast(1))
+                )
+            }
+            TipoTest.BLOQUES_30 -> if (category != null) {
+                ProgressStorage.writeNumber(category, offsetInicial + preguntas.size + 1)
+            }
             else -> {}
         }
 

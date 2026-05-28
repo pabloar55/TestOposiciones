@@ -1,11 +1,9 @@
 package com.pablo.testapp.model
 
-enum class TestCategory(
+data class TestCategory(
+    val id: String,
     val displayName: String,
     val folderName: String,
     val questionsFile: String,
     val answersFile: String
-) {
-    TER("TER", "TER", "PreguntasMixtas.txt", "RespuestasMixtas.txt"),
-    CONSTITUCION("Constitucion", "constitucion", "PreguntasCE.txt", "Respuestas.txt")
-}
+)

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "TER",
+    "nombre": "TER",
+    "carpeta": "TER",
+    "preguntas": "PreguntasMixtas.txt",
+    "respuestas": "RespuestasMixtas.txt"
+  },
+  {
+    "id": "CONSTITUCION",
+    "nombre": "Constitución",
+    "carpeta": "constitucion",
+    "preguntas": "PreguntasCE.txt",
+    "respuestas": "Respuestas.txt"
+  }
+]

@@ -47,6 +47,10 @@ fun App() {
                 is Screen.Welcome -> WelcomeScreen(
                     darkTheme = darkTheme,
                     onToggleTheme = { darkTheme = !darkTheme },
+                    categories = vm.categories,
+                    categoriesLoading = vm.categoriesLoading,
+                    loadError = vm.loadError,
+                    onRetryLoad = { vm.loadCategories() },
                     onStartTest = { tipo, category ->
                         showExitTestDialog = false
                         vm.startTest(tipo, category)

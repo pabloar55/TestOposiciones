@@ -1,29 +1,61 @@
 package com.pablo.testapp.ui
 
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ElevatedButton
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.LocalContentColor
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.RadioButton
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.SolidColor
-import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.graphics.vector.path
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.pablo.testapp.model.TestCategory
 import com.pablo.testapp.model.TipoTest
+import com.pablo.testapp.ui.icons.dark_mode
+import com.pablo.testapp.ui.icons.light_mode
 
 @Composable
 fun WelcomeScreen(
     darkTheme: Boolean,
     onToggleTheme: () -> Unit,
+    categories: List<TestCategory>,
+    categoriesLoading: Boolean,
+    loadError: String?,
+    onRetryLoad: () -> Unit,
     onStartTest: (TipoTest, TestCategory) -> Unit
 ) {
-    var selectedCategory by remember { mutableStateOf(TestCategory.TER) }
+    var selectedCategory by remember { mutableStateOf<TestCategory?>(null) }
+
+    LaunchedEffect(categories) {
+        if (selectedCategory == null || categories.none { it.id == selectedCategory?.id }) {
+            selectedCategory = categories.firstOrNull()
+        }
+    }
 
     Box(modifier = Modifier.fillMaxSize()) {
         IconButton(
@@ -33,7 +65,7 @@ fun WelcomeScreen(
                 .padding(16.dp)
         ) {
             Icon(
-                imageVector = if (darkTheme) LightModeIcon else DarkModeIcon,
+                imageVector = if (darkTheme) light_mode else dark_mode,
                 contentDescription = if (darkTheme) "Cambiar a tema claro" else "Cambiar a tema oscuro",
                 tint = MaterialTheme.colorScheme.onSurface
             )
@@ -55,46 +87,54 @@ fun WelcomeScreen(
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             Text(
-                text = "Elige una categoría y el modo de test",
+                text = "Elige una categoria y el modo de test",
                 fontSize = 16.sp,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.padding(bottom = 24.dp)
             )
 
-            Row(
-                modifier = Modifier.padding(bottom = 24.dp).selectableGroup(),
-                horizontalArrangement = Arrangement.spacedBy(16.dp)
-            ) {
-                TestCategory.entries.forEach { category ->
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically
+            when {
+                categoriesLoading -> {
+                    CircularProgressIndicator(modifier = Modifier.padding(bottom = 24.dp))
+                }
+                loadError != null -> {
+                    Text(
+                        text = loadError,
+                        color = MaterialTheme.colorScheme.error,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(bottom = 12.dp)
+                    )
+                    OutlinedButton(
+                        onClick = onRetryLoad,
+                        modifier = Modifier.padding(bottom = 24.dp)
                     ) {
-                        RadioButton(
-                            selected = (category == selectedCategory),
-                            onClick = { selectedCategory = category }
-                        )
-                        Text(
-                            text = category.displayName,
-                            modifier = Modifier.padding(start = 4.dp),
-                            color = MaterialTheme.colorScheme.onSurface
-                        )
+                        Text("Reintentar carga")
                     }
                 }
+                else -> CategorySelector(
+                    categories = categories,
+                    selectedCategory = selectedCategory,
+                    onSelected = { selectedCategory = it }
+                )
             }
+
+            val canStart = selectedCategory != null && !categoriesLoading && loadError == null
 
             ModeButton(
                 title = "30 Preguntas Aleatorias",
                 description = "30 preguntas escogidas al azar. Muestra feedback inmediato.",
-                onClick = { onStartTest(TipoTest.ALEATORIO_30, selectedCategory) }
+                enabled = canStart,
+                onClick = { selectedCategory?.let { onStartTest(TipoTest.ALEATORIO_30, it) } }
             )
 
             Spacer(Modifier.height(16.dp))
 
             ModeButton(
                 title = "Bloques de 30",
-                description = "30 preguntas en bloques consecutivos. Reanuda desde el último bloque.",
-                onClick = { onStartTest(TipoTest.BLOQUES_30, selectedCategory) }
+                description = "30 preguntas en bloques consecutivos. Reanuda desde el ultimo bloque.",
+                enabled = canStart,
+                onClick = { selectedCategory?.let { onStartTest(TipoTest.BLOQUES_30, it) } }
             )
 
             Spacer(Modifier.height(16.dp))
@@ -102,116 +142,61 @@ fun WelcomeScreen(
             ModeButton(
                 title = "Preguntas Seguidas",
                 description = "Todas las preguntas en orden. Reanuda desde donde lo dejaste.",
-                onClick = { onStartTest(TipoTest.SECUENCIAL, selectedCategory) }
+                enabled = canStart,
+                onClick = { selectedCategory?.let { onStartTest(TipoTest.SECUENCIAL, it) } }
             )
         }
     }
 }
 
-private val LightModeIcon: ImageVector
-    get() = ImageVector.Builder(
-        name = "LightMode",
-        defaultWidth = 24.dp,
-        defaultHeight = 24.dp,
-        viewportWidth = 24f,
-        viewportHeight = 24f
-    ).apply {
-        path(fill = SolidColor(Color.Black)) {
-            moveTo(12f, 18f)
-            curveTo(8.69f, 18f, 6f, 15.31f, 6f, 12f)
-            reflectiveCurveTo(8.69f, 6f, 12f, 6f)
-            reflectiveCurveTo(18f, 8.69f, 18f, 12f)
-            reflectiveCurveTo(15.31f, 18f, 12f, 18f)
-            close()
-            moveTo(12f, 16f)
-            curveTo(14.21f, 16f, 16f, 14.21f, 16f, 12f)
-            reflectiveCurveTo(14.21f, 8f, 12f, 8f)
-            reflectiveCurveTo(8f, 9.79f, 8f, 12f)
-            reflectiveCurveTo(9.79f, 16f, 12f, 16f)
-            close()
-            moveTo(11f, 2f)
-            horizontalLineTo(13f)
-            verticalLineTo(5f)
-            horizontalLineTo(11f)
-            verticalLineTo(2f)
-            close()
-            moveTo(11f, 19f)
-            horizontalLineTo(13f)
-            verticalLineTo(22f)
-            horizontalLineTo(11f)
-            verticalLineTo(19f)
-            close()
-            moveTo(2f, 11f)
-            horizontalLineTo(5f)
-            verticalLineTo(13f)
-            horizontalLineTo(2f)
-            verticalLineTo(11f)
-            close()
-            moveTo(19f, 11f)
-            horizontalLineTo(22f)
-            verticalLineTo(13f)
-            horizontalLineTo(19f)
-            verticalLineTo(11f)
-            close()
-            moveTo(4.22f, 5.64f)
-            lineTo(5.64f, 4.22f)
-            lineTo(7.76f, 6.34f)
-            lineTo(6.34f, 7.76f)
-            lineTo(4.22f, 5.64f)
-            close()
-            moveTo(16.24f, 17.66f)
-            lineTo(17.66f, 16.24f)
-            lineTo(19.78f, 18.36f)
-            lineTo(18.36f, 19.78f)
-            lineTo(16.24f, 17.66f)
-            close()
-            moveTo(16.24f, 6.34f)
-            lineTo(18.36f, 4.22f)
-            lineTo(19.78f, 5.64f)
-            lineTo(17.66f, 7.76f)
-            lineTo(16.24f, 6.34f)
-            close()
-            moveTo(4.22f, 18.36f)
-            lineTo(6.34f, 16.24f)
-            lineTo(7.76f, 17.66f)
-            lineTo(5.64f, 19.78f)
-            lineTo(4.22f, 18.36f)
-            close()
-        }
-    }.build()
+@Composable
+private fun CategorySelector(
+    categories: List<TestCategory>,
+    selectedCategory: TestCategory?,
+    onSelected: (TestCategory) -> Unit
+) {
+    Row(
+        modifier = Modifier.padding(bottom = 24.dp).selectableGroup(),
+        horizontalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        categories.forEach { category ->
+            val isSelected = category.id == selectedCategory?.id
 
-private val DarkModeIcon: ImageVector
-    get() = ImageVector.Builder(
-        name = "DarkMode",
-        defaultWidth = 24.dp,
-        defaultHeight = 24.dp,
-        viewportWidth = 24f,
-        viewportHeight = 24f
-    ).apply {
-        path(fill = SolidColor(Color.Black)) {
-            moveTo(21f, 14.5f)
-            curveTo(19.8f, 15.08f, 18.45f, 15.4f, 17.03f, 15.4f)
-            curveTo(12.16f, 15.4f, 8.2f, 11.44f, 8.2f, 6.57f)
-            curveTo(8.2f, 5.15f, 8.52f, 3.8f, 9.1f, 2.6f)
-            curveTo(5.55f, 3.76f, 3f, 7.1f, 3f, 11.04f)
-            curveTo(3f, 16.54f, 7.46f, 21f, 12.96f, 21f)
-            curveTo(16.9f, 21f, 20.24f, 18.45f, 21f, 14.5f)
-            close()
-            moveTo(12.96f, 19f)
-            curveTo(8.57f, 19f, 5f, 15.43f, 5f, 11.04f)
-            curveTo(5f, 9.09f, 5.71f, 7.31f, 6.88f, 5.94f)
-            curveTo(6.83f, 6.15f, 6.8f, 6.36f, 6.8f, 6.57f)
-            curveTo(6.8f, 12.21f, 11.39f, 16.8f, 17.03f, 16.8f)
-            curveTo(17.24f, 16.8f, 17.45f, 16.77f, 17.66f, 16.72f)
-            curveTo(16.37f, 18.13f, 14.64f, 19f, 12.96f, 19f)
-            close()
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier
+                    .selectable(
+                        selected = isSelected,
+                        onClick = { onSelected(category) },
+                        role = Role.RadioButton
+                    )
+                    // Opcional: Puedes agregar padding aquí para que el área táctil sea más cómoda
+                    .padding(end = 8.dp)
+            ) {
+                RadioButton(
+                    selected = isSelected,
+                    onClick = null
+                )
+                Spacer(Modifier.width(4.dp))
+                Text(
+                    text = category.displayName,
+                    color = MaterialTheme.colorScheme.onSurface
+                )
+            }
         }
-    }.build()
+    }
+}
 
 @Composable
-private fun ModeButton(title: String, description: String, onClick: () -> Unit) {
+private fun ModeButton(
+    title: String,
+    description: String,
+    enabled: Boolean,
+    onClick: () -> Unit
+) {
     ElevatedButton(
         onClick = onClick,
+        enabled = enabled,
         modifier = Modifier.fillMaxWidth().height(80.dp)
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {

@@ -12,7 +12,7 @@ fun initProgressStorage(dir: File) {
 actual object ProgressStorage {
     private fun getFile(category: TestCategory): File? {
         val dir = filesDir ?: return null
-        return File(dir, "testapp_progress_${category.name}.txt")
+        return File(dir, "testapp_progress_${category.safeFileName()}.txt")
     }
 
     actual fun readNumber(category: TestCategory): Int {
@@ -32,5 +32,9 @@ actual object ProgressStorage {
         } catch (e: Exception) {
             // ignore write errors
         }
+    }
+
+    private fun TestCategory.safeFileName(): String {
+        return id.replace(Regex("[^A-Za-z0-9_-]"), "_")
     }
 }
