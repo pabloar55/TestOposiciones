@@ -17,6 +17,7 @@ import com.pablo.testoposiciones.model.TipoTest
 import com.pablo.testoposiciones.ui.icons.arrow_back
 import com.pablo.testoposiciones.ui.icons.arrow_forward
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun QuestionScreen(
     preguntas: List<Pregunta>,
@@ -38,43 +39,73 @@ fun QuestionScreen(
     val visibleTotal = displayTotal.coerceAtLeast(displayQuestionNumber)
     val showFeedback = tipoTest != TipoTest.BLOQUES_30
 
-    Column(modifier = Modifier.fillMaxSize()) {
-        // Top bar
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 8.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            TextButton(onClick = onClose) {
-                Icon(arrow_back, contentDescription = null)
-                Spacer(Modifier.width(4.dp))
-                Text("Salir")
+    Scaffold(
+        topBar = {
+            Column {
+                TopAppBar(
+                    navigationIcon = {
+                        TextButton(onClick = onClose) {
+                            Icon(arrow_back, contentDescription = null)
+                            Spacer(Modifier.width(4.dp))
+                            Text("Salir")
+                        }
+                    },
+                    title = {
+                        Text(
+                            text = "$displayQuestionNumber / $visibleTotal",
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.Bold
+                        )
+                    },
+                    actions = {
+                        Text(
+                            text = formatTime(secondsElapsed),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.padding(end = 16.dp)
+                        )
+                    }
+                )
+                LinearProgressIndicator(
+                    progress = { displayQuestionNumber.toFloat() / visibleTotal },
+                    modifier = Modifier.fillMaxWidth(),
+                    drawStopIndicator = {}
+                )
             }
-            Text(
-                text = "$displayQuestionNumber / $visibleTotal",
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-            Text(
-                text = formatTime(secondsElapsed),
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
+        },
+        bottomBar = {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                OutlinedButton(onClick = onPrevious, enabled = currentIndex > 0, colors = ButtonDefaults.outlinedButtonColors(
+                    containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.85f),
+                    contentColor = MaterialTheme.colorScheme.onSurfaceVariant
+                )) {
+
+                    Icon(arrow_back, contentDescription = null)
+                    Spacer(Modifier.width(4.dp))
+                    Text("Anterior")
+                }
+                Button(onClick = onNext) {
+                    if (currentIndex == total - 1) {
+                        Text("Finalizar")
+                    } else {
+                        Text("Siguiente")
+                        Spacer(Modifier.width(4.dp))
+                        Icon(arrow_forward, contentDescription = null)
+                    }
+                }
+            }
         }
-
-        LinearProgressIndicator(
-            progress = { displayQuestionNumber.toFloat() / visibleTotal },
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
-            drawStopIndicator = {}
-        )
-
+    ) { innerPadding ->
         Column(
             modifier = Modifier
-                .weight(1f)
+                .fillMaxSize()
                 .verticalScroll(rememberScrollState())
+                .padding(innerPadding)
                 .padding(16.dp)
         ) {
             Text(
@@ -132,33 +163,6 @@ fun QuestionScreen(
                 )
             }
         }
-
-        // Navigation buttons
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-            horizontalArrangement = Arrangement.SpaceBetween
-        ) {
-            OutlinedButton(
-                onClick = onPrevious,
-                enabled = currentIndex > 0
-            ) {
-                Icon(arrow_back, contentDescription = null)
-                Spacer(Modifier.width(4.dp))
-                Text("Anterior")
-            }
-
-            Button(onClick = onNext) {
-                if (currentIndex == total - 1) {
-                    Text("Finalizar")
-                } else {
-                    Text("Siguiente")
-                    Spacer(Modifier.width(4.dp))
-                    Icon(arrow_forward, contentDescription = null)
-                }
-            }
-        }
     }
 }
 
@@ -204,6 +208,7 @@ fun AnswerOption(
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ReviewScreen(
     historial: List<ResultadoPregunta>,
@@ -216,37 +221,57 @@ fun ReviewScreen(
     val resultado = historial[currentIndex]
     val pregunta = resultado.pregunta
 
-    Column(modifier = Modifier.fillMaxSize()) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 8.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            TextButton(onClick = onClose) {
-                Icon(arrow_back, contentDescription = null)
-                Spacer(Modifier.width(4.dp))
-                Text("Volver")
+    Scaffold(
+        topBar = {
+            Column {
+                TopAppBar(
+                    navigationIcon = {
+                        TextButton(onClick = onClose) {
+                            Icon(arrow_back, contentDescription = null)
+                            Spacer(Modifier.width(4.dp))
+                            Text("Volver")
+                        }
+                    },
+                    title = {
+                        Text(
+                            text = "${currentIndex + 1} / ${historial.size}",
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+                )
+                LinearProgressIndicator(
+                    progress = { (currentIndex + 1).toFloat() / historial.size },
+                    modifier = Modifier.fillMaxWidth(),
+                    drawStopIndicator = {}
+                )
             }
-            Text(
-                text = "${currentIndex + 1} / ${historial.size}",
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
+        },
+        bottomBar = {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                OutlinedButton(onClick = onPrevious, enabled = currentIndex > 0) {
+                    Icon(arrow_back, contentDescription = null)
+                    Spacer(Modifier.width(4.dp))
+                    Text("Anterior")
+                }
+                Button(onClick = onNext, enabled = currentIndex < historial.size - 1) {
+                    Text("Siguiente")
+                    Spacer(Modifier.width(4.dp))
+                    Icon(arrow_forward, contentDescription = null)
+                }
+            }
         }
-
-        LinearProgressIndicator(
-            progress = { (currentIndex + 1).toFloat() / historial.size },
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
-            drawStopIndicator = {}
-        )
-
+    ) { innerPadding ->
         Column(
             modifier = Modifier
-                .weight(1f)
+                .fillMaxSize()
                 .verticalScroll(rememberScrollState())
+                .padding(innerPadding)
                 .padding(16.dp)
         ) {
             Text(
@@ -282,24 +307,6 @@ fun ReviewScreen(
                 else -> MaterialTheme.colorScheme.error
             }
             Text(text = statusText, color = statusColor, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
-        }
-
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-            horizontalArrangement = Arrangement.SpaceBetween
-        ) {
-            OutlinedButton(onClick = onPrevious, enabled = currentIndex > 0) {
-                Icon(arrow_back, contentDescription = null)
-                Spacer(Modifier.width(4.dp))
-                Text("Anterior")
-            }
-            Button(onClick = onNext, enabled = currentIndex < historial.size - 1) {
-                Text("Siguiente")
-                Spacer(Modifier.width(4.dp))
-                Icon(arrow_forward, contentDescription = null)
-            }
         }
     }
 }
