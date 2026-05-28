@@ -34,9 +34,7 @@ object ExtraerPreguntas {
                         fail(preguntasPath, questionLine, "La pregunta $questionNumber esta incompleta antes de empezar otra.")
                     }
                     questionNumber = trimmed.substringBefore(")").toInt()
-                    if (!questionNumbers.add(questionNumber)) {
-                        fail(preguntasPath, lineNumber, "La pregunta $questionNumber esta duplicada.")
-                    }
+                    questionNumbers.add(questionNumber)
                     questionLine = lineNumber
                     texto = linea
                     for (i in opciones.indices) opciones[i] = null
@@ -115,9 +113,6 @@ object ExtraerPreguntas {
 
             val number = match.groupValues[1].toInt()
             val option = match.groupValues[2].first().lowercaseChar()
-            if (number in respuestas) {
-                fail(path, lineIndex + 1, "La respuesta de la pregunta $number esta duplicada.")
-            }
             respuestas[number] = option
         }
         if (respuestas.isEmpty()) {

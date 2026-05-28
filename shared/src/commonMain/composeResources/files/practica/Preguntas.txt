@@ -1,0 +1,89 @@
+1) Juana cumple 65 años el 1 de septiembre de 2025 y ha estado trabajando como administrativa durante 40 años en la empresa "Mauricia la Dura, S.L". A efectos de conocer el cálculo de la pensión de jubilación, Juana se cuestiona cual sería el porcentaje aplicable a la base reguladora de la misma a partir del decimosexto año ya que le comentaron que para los primeros quince años cotizados corresponde el 50%.
+a) Por cada mes adicional de cotización entre los meses 1 y 163, el 0,21% y por cada uno de los 83 meses siguientes, el 0,19%.
+b) Por cada mes adicional de cotización entre los meses 1 y 106, el 0,21 por ciento y por cada uno de los 146 meses siguientes, el 0,19 por ciento.
+c) Por cada mes adicional de cotización entre los meses 1 y 49, el 0,21 por ciento y por cada uno de los 209 meses siguientes, el 0,19 por ciento
+d) Por cada mes adicional de cotización entre los meses 1 y 248, se añadirá el 0,19 por ciento, y por cada uno de los que rebasen el mes 248, se añadirá el 0,18 por ciento.
+
+2) Celia falleció como consecuencia de un infarto a los 86 años el 2 de junio de 2024. Celia venía percibiendo la pensión de jubilación desde que cumplió los 66 años. Pedro, cónyuge de Celia desde hace más de 45 años, solicita la pensión de viudedad el día 7 de julio de 2025. No tenían hijos en común. Si Pedro cumpliera los requisitos para el derecho al reconocimiento de la pensión de viudedad, ¿cuándo se producirán los efectos económicos de la pensión?
+a) El derecho al reconocimiento de la pensión de viudedad ha prescrito ya que ha transcurrido más de 1 año desde el hecho causante.
+b) A partir del día siguiente a la solicitud.
+c) A partir del día del fallecimiento de Celia.
+d) A partir de los 3 meses anteriores a la fecha de la solicitud.
+
+3) Pedro con 79 años no percibe ingresos económicos de ningún tipo y hasta el fallecimiento de Celia vivía a sus expensas. Si Pedro tuviera derecho a la pensión de viudedad como consecuencia del fallecimiento de Celia ¿qué porcentaje seria aplicable a la base reguladora a los efectos del cálculo de la pensión?
+a) 52%.
+b) 60%.
+c) 70%.
+d) 100%.
+
+4) Sofía ha dado a luz a sus hijos gemelos Bruno y Carla el día 23 de febrero de 2025. Sofía tiene 22 años y trabaja como dependienta en la empresa ARCOIRIS desde hace 2 meses. Con anterioridad nunca había efectuado trabajo alguno y es la única progenitora. ¿Tendrá derecho Sofía a la prestación económica por nacimiento?
+a) Sí, tendrá derecho a la prestación económica de nacimiento durante 16 semanas.
+b) Sí, tendrá derecho a la prestación económica por nacimiento durante 56 días naturales.
+c) Sí, tendrá derecho a la prestación económica de nacimiento durante 6 semanas.
+d) No, no tendrá derecho a la prestación económica de nacimiento, pero si al descanso en el trabajo.
+
+5) Sofía como consecuencia del nacimiento de sus hijos tiene derecho a la prestación económica por parto o adopción múltiples producidos en España a la que se refiere el artículo 359 del texto refundido de la Ley General de la Seguridad Social. La cuantía de esta prestación económica es de:
+a) 12 veces el SMI.
+b) 8 veces el SMI.
+c) 4 veces el SMI.
+d) 2 veces el SMI.
+
+6) Dña. Guillermina Pacheco es poseedora del 60% de las participaciones de la sociedad "Mauricia la Dura, S.L.", cuyo objeto social es la fabricación de muebles, y dirige la empresa desde su cargo de administradora única. Determine en que régimen del Sistema de la Seguridad Social debe quedar encuadrada Dña. Guillermina Pacheco por su actividad en la mercantil "Mauricia la Dura, S.L."
+a) En el Régimen General de la Seguridad Social o en el Régimen Especial de Trabajadores por Cuenta Propia o Autónomos, según se establezca en los estatutos de la sociedad.
+b) No queda encuadrada en ningún régimen del Sistema de la Seguridad Social.
+c) En el Régimen General de la Seguridad Social.
+d) En el Régimen Especial de Trabajadores por Cuenta Propia o Autónomos.
+
+7) En el mes de enero de 2025 la empresa "Mauricia la Dura, S.L.", abonó a sus trabajadores una paga de beneficios correspondiente a todo el año 2024. Posteriormente, en el mes de febrero de 2025 decidió contratar a Doña Lupe Rubín como parte del departamento de facturación de la empresa, iniciando su actividad laboral el día 10 de febrero de 2025 y desarrollando su trabajo en las oficinas de la empresa. En el momento de tramitar el alta en el Régimen General de la Seguridad Social de Dña. Lupe Rubín, determine si debe comunicarse o no la ocupación a efectos de la cotización por accidentes de trabajo y enfermedades profesionales:
+a) No, se le aplica la tarifa correspondiente a la CNAE de la empresa "31 Fabricación de muebles".
+b) Sí, tiene que comunicarse la ocupación "a" correspondiente al "Personal en trabajos exclusivos de oficina".
+c) No se tiene que comunicar, se determina por la Inspección de Trabajo y Seguridad Social en un momento posterior.
+d) No es un requisito necesario porque la empresa en el momento de efectuar cada liquidación lo indica entre los datos que tiene que aportar.
+
+8) En relación con la paga de beneficios abonada por la empresa "Mauricia la Dura, S.L.", indique si la empresa debe comunicar a la Tesorería General de la Seguridad Social estos importes como conceptos retributivos abonados a sus trabajadores:
+a) Los tiene que comunicar, con independencia de su inclusión o no en la base de cotización.
+b) Los tiene que comunicar, únicamente en aquellos supuestos en que se incluyan en la base de cotización.
+c) No se tienen que comunicar por afectar al año anterior.
+d) Únicamente los tiene que comunicar si superan el 10% del Salario Minimo Interprofesional anual del año a que corresponda.
+
+9) Indique cómo se tienen que cotizar la paga de beneficios abonada por la empresa "Mauricia la Dura, S.L.":
+a) No se cotiza porque no se incluye en la base de cotización, es un concepto excluido.
+b) Se cotiza, pero incluyéndose exclusivamente en la base de cotización del mes de enero de 2025 que es cuando se abona.
+c) Se cotiza prorrateándose a lo largo de los doce meses del año 2024 e incluyéndose en la base de cotización de cada mes.
+d) Se cotiza prorrateándose sobre los últimos doce meses, incluido el mes de enero de 2025.
+
+10) D. Segismundo Ballester desde el 17 de enero de 2022 presta servicios en la empresa "Mauricia la Dura, S.L."; el alta se tramitó en el plazo reglamentariamente establecido y siempre ha figurado en el grupo de cotización 7. En el momento de la práctica de la liquidación de cuotas del mes de marzo de 2025, que se realiza en el mes de abril de 2025, la empresa no aportó, entre otros datos, la base de cotización de D. Segismundo Ballester y por tanto la empresa "Mauricia la Dura, S.L." no abonó las cuotas y demás conceptos de recaudación conjunta de dicho mes, por lo que se emitió la correspondiente reclamación de deuda que fue notificada el día 22 de junio de 2025. Determine cual será la base de cotización utilizada para expedir la correspondiente reclamación de deuda correspondiente a las cuotas y demás conceptos de recaudación conjunta del mes de abril de 2025 del trabajador D. Segismundo Ballester:
+a) La base de cotización por la que se hubiera efectuado la liquidación de cuotas correspondiente al mes inmediatamente anterior.
+b) La media entre la base mínima y máxima correspondiente al grupo de cotización 7.
+c) La media entre la base mínima y la base máxima, con independencia de su grupo de cotización.
+d) La media entre la base minima y máxima correspondiente al grupo de cotización 1.
+
+11) Determine hasta que día debe de hacerse efectivo el pago de la reclamación deuda emitida a la empresa "Mauricia la Dura, S.L." por la falta de ingreso de las cuotas y conceptos de recaudación conjunta del mes de marzo de 2025 del trabajador D. Segismundo Ballester:
+a) Hasta el día 5 de julio de 2025 -sábado-.
+b) Hasta el dia 31 de julio de 2025 -jueves-.
+c) Hasta el día 20 de julio de 2025 -domingo-.
+d) Hasta el día 21 de julio de 2025 -lunes-.
+
+12) Ante la falta de pago de la reclamación de deuda se emitió la correspondiente providencia de apremio, que fue recibida el día 29 de agosto de 2025. Este título ejecutivo no fue abonado y se procedió al embargo de un vehículo propiedad de la mercantil "Mauricia La Dura, S.L.", que tenía un embargo vigente previo de la Agencia Estatal de la Administración Tributaria por importe total de 4.500,00 euros. Este vehículo fue valorado en 10.500,00 euros y posteriormente se dispuso su enajenación mediante subasta pública. Si la deuda de la mercantil "Mauricia la Dura, S.L." por la falta de pago de las cuotas y demás conceptos de recaudación conjunta del mes de marzo de 2025 del trabajador D. Segismundo Ballester, asciende a 1.500,00 euros, incluyendo principal, recargo, intereses de demora y costas del procedimiento, determine cual es tipo de enajenación del vehículo embargado:
+a) 10.500,00 euros.
+b) 6.000,00 euros.
+c) 9.000,00 euros.
+d) 4.500,00 euros.
+
+13) Marta y Pedro son padres de Hugo, un bebé de 10 meses de edad. Ambos trabajan por cuenta ajena a jornada completa desde hace 6 años. Para conciliar su trabajo con el cuidado de su hijo solicitan una reducción de jornada de media hora cada uno, ¿Tendrán derecho a la prestación por ejercicio corresponsable del cuidado del lactante?
+a) Sí, ambos progenitores recibirán el subsidio correspondiente a la reducción de la jornada de trabajo en media hora.
+b) Sólo uno de los progenitores recibirá el subsidio correspondiente a la reducción de la jornada de trabajo en media hora.
+c) No tendrán derecho a la prestación ya que Hugo tiene más de 9 de meses de edad.
+d) No tendrán derecho a la prestación ya que ambos deben solicitar una reducción de jornada de al menos una hora.
+
+14) Mario, otro de los trabajadores de la empresa "Mauricia la Dura, S.L.", nació el 19 de abril de 1962 y este año 2025 acreditará 38 años de cotización a la Seguridad Social. Mario desea jubilarse de forma anticipada según lo previsto en el artículo 208 del texto refundido de la Ley General de la Seguridad Social. Se pregunta qué período mínimo de cotización efectiva le sería exigido.
+a) 25 años.
+b) 30 años.
+c) 33 años.
+d) 35 años.
+
+15) Asimismo, a Mario le surge la duda de si computará a los efectos de acreditar el período mínimo de cotización para el acceso a la jubilación anticipada voluntaria, el tiempo de servicio militar obligatorio.
+a) Sí, con el límite máximo de 2 años.
+b) Si, con el limite máximo de 1 año.
+c) Sí, con el límite máximo de 6 meses.
+d) No, en esta modalidad de jubilación anticipada no computa.

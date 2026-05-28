@@ -12,5 +12,19 @@
     "carpeta": "constitucion",
     "preguntas": "PreguntasCE.txt",
     "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "PRACTICA",
+    "nombre": "Práctica",
+    "carpeta": "practica",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "TEORIA",
+    "nombre": "Teoría",
+    "carpeta": "teoria",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
   }
 ]
