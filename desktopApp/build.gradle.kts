@@ -17,12 +17,25 @@ dependencies {
 
 compose.desktop {
     application {
-        mainClass = "com.pablo.testapp.MainKt"
+        mainClass = "com.pablo.testoposiciones.MainKt"
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.pablo.testapp"
+            packageName = "TestOposiciones"
             packageVersion = "1.0.0"
+
+            windows {
+                // Crea una entrada en el menú de inicio dentro de este grupo
+                menuGroup = "TestOposiciones"
+                // Crea también un acceso directo en el escritorio
+                shortcut = true
+                // Permite al usuario elegir el directorio de instalación
+                dirChooser = true
+                // UUID estable: en futuras actualizaciones el MSI reemplaza la
+                // versión anterior en lugar de instalarla en paralelo.
+                // Genera uno UNA sola vez y no lo cambies más.
+                upgradeUuid = "6969483c-a30b-4ec1-abd9-3eba6e2b39ec"
+            }
         }
     }
 }

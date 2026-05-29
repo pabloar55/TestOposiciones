@@ -22,8 +22,10 @@ object ExtraerPreguntas {
         var questionNumber: Int? = null
         var questionLine = 0
         val opciones = arrayOfNulls<String>(4)
-        val questionNumbers = mutableSetOf<Int>()
+        // Las respuestas se emparejan por ORDEN (posicion), no por numero, para
+        // que funcione aunque la numeracion de las preguntas se reinicie por bloques.
         val respuestas = parseRespuestas(respuestasLines, respuestasPath)
+        var answerIndex = 0
 
         for ((lineIndex, linea) in preguntasLines.withIndex()) {
             val lineNumber = lineIndex + 1
@@ -34,7 +36,6 @@ object ExtraerPreguntas {
                         fail(preguntasPath, questionLine, "La pregunta $questionNumber esta incompleta antes de empezar otra.")
                     }
                     questionNumber = trimmed.substringBefore(")").toInt()
-                    questionNumbers.add(questionNumber)
                     questionLine = lineNumber
                     texto = linea
                     for (i in opciones.indices) opciones[i] = null
@@ -53,10 +54,20 @@ object ExtraerPreguntas {
                     if (missing >= 0) {
                         fail(preguntasPath, questionLine, "La pregunta $number no tiene la opcion ${('a' + missing)}).")
                     }
-                    val opcion = respuestas[number]
-                        ?: fail(respuestasPath, 0, "Falta la respuesta de la pregunta $number.")
+                    if (answerIndex >= respuestas.size) {
+                        fail(respuestasPath, 0, "Hay mas preguntas que respuestas: falta la respuesta de la pregunta $number.")
+                    }
+                    val respuesta = respuestas[answerIndex]
+                    if (respuesta.number != number) {
+                        fail(
+                            respuestasPath,
+                            respuesta.line,
+                            "Descuadre en la posicion ${answerIndex + 1}: la pregunta es la $number pero la respuesta declarada es la ${respuesta.number}."
+                        )
+                    }
 
-                    preguntas.add(Pregunta(t, arrayOf(opciones[0]!!, opciones[1]!!, opciones[2]!!, opciones[3]!!), opcion))
+                    preguntas.add(Pregunta(t, arrayOf(opciones[0]!!, opciones[1]!!, opciones[2]!!, opciones[3]!!), respuesta.option))
+                    answerIndex++
                     texto = null
                     questionNumber = null
                     questionLine = 0
@@ -72,14 +83,9 @@ object ExtraerPreguntas {
             fail(preguntasPath, 0, "No se ha encontrado ninguna pregunta valida.")
         }
 
-        val missingAnswers = questionNumbers.filter { it !in respuestas.keys }.sorted()
-        if (missingAnswers.isNotEmpty()) {
-            fail(respuestasPath, 0, "Faltan respuestas para las preguntas: ${missingAnswers.take(10).joinToString()}.")
-        }
-
-        val extraAnswers = respuestas.keys.filter { it !in questionNumbers }.sorted()
-        if (extraAnswers.isNotEmpty()) {
-            fail(respuestasPath, 0, "Hay respuestas sin pregunta: ${extraAnswers.take(10).joinToString()}.")
+        if (answerIndex < respuestas.size) {
+            val sobrantes = respuestas.size - answerIndex
+            fail(respuestasPath, respuestas[answerIndex].line, "Hay $sobrantes respuesta(s) de mas: ${respuestas.size} respuestas para ${preguntas.size} preguntas.")
         }
 
         return preguntas
@@ -102,8 +108,10 @@ object ExtraerPreguntas {
         opciones[index] = linea
     }
 
-    private fun parseRespuestas(lines: List<String>, path: String): Map<Int, Char> {
-        val respuestas = mutableMapOf<Int, Char>()
+    private data class Respuesta(val number: Int, val option: Char, val line: Int)
+
+    private fun parseRespuestas(lines: List<String>, path: String): List<Respuesta> {
+        val respuestas = mutableListOf<Respuesta>()
         for ((lineIndex, line) in lines.withIndex()) {
             val trimmed = line.trim()
             if (trimmed.isBlank()) continue
@@ -113,7 +121,7 @@ object ExtraerPreguntas {
 
             val number = match.groupValues[1].toInt()
             val option = match.groupValues[2].first().lowercaseChar()
-            respuestas[number] = option
+            respuestas.add(Respuesta(number, option, lineIndex + 1))
         }
         if (respuestas.isEmpty()) {
             fail(path, 0, "No se ha encontrado ninguna respuesta valida.")

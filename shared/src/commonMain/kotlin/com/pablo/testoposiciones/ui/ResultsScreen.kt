@@ -131,7 +131,7 @@ private fun ScoreCard(label: String, value: String, containerColor: Color, conte
 
 private fun calcularPuntuacion(correctas: Int, incorrectas: Int, total: Int): Double {
     if (total == 0) return 0.0
-    val conDescuento = (correctas - incorrectas * 0.33).coerceAtLeast(0.0)
+    val conDescuento = (correctas - incorrectas * 0.25).coerceAtLeast(0.0)
     val sobre10 = (conDescuento * 10) / total
     return (sobre10 * 100).roundToInt() / 100.0
 }
