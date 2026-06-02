@@ -26,5 +26,12 @@
     "carpeta": "teoria",
     "preguntas": "Preguntas.txt",
     "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "TEORIA1",
+    "nombre": "Teoría 1",
+    "carpeta": "PLANTILLA+DEFINITIVA+ACCESO+LIBRE++DÍA+13+DE+SEPTIEMBRE+DE+2025MIE20250320DOC23MO",
+    "preguntas": "preguntas.txt",
+    "respuestas": "respuestas.txt"
   }
 ]

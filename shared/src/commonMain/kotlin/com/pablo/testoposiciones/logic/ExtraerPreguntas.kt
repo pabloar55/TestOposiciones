@@ -55,7 +55,7 @@ object ExtraerPreguntas {
                         fail(preguntasPath, questionLine, "La pregunta $number no tiene la opcion ${('a' + missing)}).")
                     }
                     if (answerIndex >= respuestas.size) {
-                        fail(respuestasPath, 0, "Hay mas preguntas que respuestas: falta la respuesta de la pregunta $number.")
+                        fail(preguntasPath, questionLine, "Hay mas preguntas que respuestas: falta la respuesta de la pregunta $number (linea $questionLine de $preguntasPath).")
                     }
                     val respuesta = respuestas[answerIndex]
                     if (respuesta.number != number) {
