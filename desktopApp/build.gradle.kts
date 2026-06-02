@@ -22,7 +22,7 @@ compose.desktop {
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "TestOposiciones"
-            packageVersion = "1.0.0"
+            packageVersion = "1.0.1"
 
             windows {
                 // Crea una entrada en el menú de inicio dentro de este grupo
