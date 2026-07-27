@@ -1,0 +1,9 @@
+[
+  {
+    "id": "2025_TEORICO",
+    "nombre": "Auxilio Judicial 2025 teórico",
+    "carpeta": "2025_teorico",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  }
+]

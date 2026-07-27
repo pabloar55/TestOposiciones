@@ -2,14 +2,26 @@ package com.pablo.testoposiciones.logic
 
 import com.pablo.testoposiciones.model.Pregunta
 import com.pablo.testoposiciones.model.TestCategory
+import com.pablo.testoposiciones.model.TestExam
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import testoposiciones.shared.generated.resources.Res
 
 @OptIn(ExperimentalResourceApi::class)
 object ExtraerPreguntas {
     suspend fun extraerPreguntas(category: TestCategory): List<Pregunta> {
-        val preguntasPath = "files/${category.folderName}/${category.questionsFile}"
-        val respuestasPath = "files/${category.folderName}/${category.answersFile}"
+        val preguntas = mutableListOf<Pregunta>()
+        for (exam in category.exams) {
+            preguntas += extraerPreguntas(category, exam)
+        }
+        return preguntas
+    }
+
+    private suspend fun extraerPreguntas(category: TestCategory, exam: TestExam): List<Pregunta> {
+        val basePath = listOf("files", category.folderName, exam.folderName)
+            .filter { it.isNotBlank() }
+            .joinToString("/")
+        val preguntasPath = "$basePath/${exam.questionsFile}"
+        val respuestasPath = "$basePath/${exam.answersFile}"
 
         val preguntasText = Res.readBytes(preguntasPath).decodeToString()
         val respuestasText = Res.readBytes(respuestasPath).decodeToString()
