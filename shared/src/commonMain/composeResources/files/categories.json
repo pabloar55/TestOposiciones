@@ -1,5 +1,12 @@
 [
   {
+    "id": "AUXILIO_JUDICIAL",
+    "nombre": "Auxilio judicial",
+    "carpeta": "auxilio_judicial",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  },
+  {
     "id": "TER",
     "nombre": "TER",
     "carpeta": "TER",
