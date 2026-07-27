@@ -17,13 +17,14 @@ class SharedLogicDesktopTest {
             listOf(
                 "Auxilio Judicial 2025 teórico",
                 "Auxilio Judicial septiembre 2024 - primera parte",
-                "Auxilio Judicial 2024 incidencias - primera parte"
+                "Auxilio Judicial 2024 incidencias - primera parte",
+                "Auxilio Judicial marzo 2024 - primera parte"
             ),
             category.exams.map { it.displayName }
         )
 
         val questions = ExtraerPreguntas.extraerPreguntas(category)
-        assertEquals(312, questions.size)
+        assertEquals(416, questions.size)
         assertEquals('d', questions.first().respuestaCorrecta)
         assertEquals(
             "1) Conforme a la Carta de derechos de los ciudadanos ante la Justicia, " +
@@ -35,6 +36,10 @@ class SharedLogicDesktopTest {
                 "atiende a los principios de:",
             questions[208].texto
         )
-        assertEquals('d', questions.last().respuestaCorrecta)
+        assertEquals(
+            "1) Los artículos 6 y 7 de la Constitución Española están recogidos en:",
+            questions[312].texto
+        )
+        assertEquals('c', questions.last().respuestaCorrecta)
     }
 }
