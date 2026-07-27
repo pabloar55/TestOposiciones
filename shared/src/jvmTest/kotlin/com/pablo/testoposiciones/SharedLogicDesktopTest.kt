@@ -13,12 +13,22 @@ class SharedLogicDesktopTest {
         val category = TestCategories.load().single { it.id == "AUXILIO_JUDICIAL" }
 
         assertEquals("Auxilio judicial", category.displayName)
-        assertEquals(1, category.exams.size)
-        assertEquals("Auxilio Judicial 2025 teórico", category.exams.single().displayName)
+        assertEquals(
+            listOf(
+                "Auxilio Judicial 2025 teórico",
+                "Auxilio Judicial septiembre 2024 - primera parte"
+            ),
+            category.exams.map { it.displayName }
+        )
 
         val questions = ExtraerPreguntas.extraerPreguntas(category)
-        assertEquals(104, questions.size)
+        assertEquals(208, questions.size)
         assertEquals('d', questions.first().respuestaCorrecta)
+        assertEquals(
+            "1) Conforme a la Carta de derechos de los ciudadanos ante la Justicia, " +
+                "las reclamaciones e indemnizaciones por error judicial se tramitarán:",
+            questions[104].texto
+        )
         assertEquals('c', questions.last().respuestaCorrecta)
     }
 }

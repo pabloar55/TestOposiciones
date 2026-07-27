@@ -5,5 +5,12 @@
     "carpeta": "2025_teorico",
     "preguntas": "Preguntas.txt",
     "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "2024_SEPTIEMBRE_PRIMERA_PARTE",
+    "nombre": "Auxilio Judicial septiembre 2024 - primera parte",
+    "carpeta": "2024_septiembre_primera_parte",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
   }
 ]
