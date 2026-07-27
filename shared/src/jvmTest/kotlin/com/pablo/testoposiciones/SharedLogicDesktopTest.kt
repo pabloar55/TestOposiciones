@@ -16,19 +16,25 @@ class SharedLogicDesktopTest {
         assertEquals(
             listOf(
                 "Auxilio Judicial 2025 teórico",
-                "Auxilio Judicial septiembre 2024 - primera parte"
+                "Auxilio Judicial septiembre 2024 - primera parte",
+                "Auxilio Judicial 2024 incidencias - primera parte"
             ),
             category.exams.map { it.displayName }
         )
 
         val questions = ExtraerPreguntas.extraerPreguntas(category)
-        assertEquals(208, questions.size)
+        assertEquals(312, questions.size)
         assertEquals('d', questions.first().respuestaCorrecta)
         assertEquals(
             "1) Conforme a la Carta de derechos de los ciudadanos ante la Justicia, " +
                 "las reclamaciones e indemnizaciones por error judicial se tramitarán:",
             questions[104].texto
         )
-        assertEquals('c', questions.last().respuestaCorrecta)
+        assertEquals(
+            "1) La elaboración de la Carta de derechos de los ciudadanos ante la Justicia, " +
+                "atiende a los principios de:",
+            questions[208].texto
+        )
+        assertEquals('d', questions.last().respuestaCorrecta)
     }
 }

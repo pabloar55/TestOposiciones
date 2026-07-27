@@ -12,5 +12,12 @@
     "carpeta": "2024_septiembre_primera_parte",
     "preguntas": "Preguntas.txt",
     "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "2024_INCIDENCIAS_PRIMERA_PARTE",
+    "nombre": "Auxilio Judicial 2024 incidencias - primera parte",
+    "carpeta": "2024_incidencias_primera_parte",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
   }
 ]
