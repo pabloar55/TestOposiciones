@@ -1,6 +1,8 @@
 package com.pablo.testoposiciones.ui
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -19,6 +21,7 @@ fun ResultsScreen(
     total: Int,
     segundos: Int,
     tipoTest: TipoTest,
+    categoryCompleted: Boolean,
     onRetry: () -> Unit,
     onReview: () -> Unit,
     onBack: () -> Unit
@@ -27,82 +30,108 @@ fun ResultsScreen(
     val score = calcularPuntuacion(correctas, incorrectas, total)
     val canReview = tipoTest == TipoTest.ALEATORIO_30 || tipoTest == TipoTest.BLOQUES_30
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(32.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Text(
-            text = "Resultados",
-            color = MaterialTheme.colorScheme.onSurface,
-            style = MaterialTheme.typography.headlineSmall,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(bottom = 32.dp)
-        )
-
-        ScoreCard(
-            label = "Correctas",
-            value = "$correctas / $total",
-            containerColor = MaterialTheme.colorScheme.tertiaryContainer,
-            contentColor = MaterialTheme.colorScheme.onTertiaryContainer
-        )
-        Spacer(Modifier.height(12.dp))
-        ScoreCard(
-            label = "Incorrectas",
-            value = "$incorrectas / $total",
-            containerColor = MaterialTheme.colorScheme.errorContainer,
-            contentColor = MaterialTheme.colorScheme.onErrorContainer
-        )
-        Spacer(Modifier.height(12.dp))
-        ScoreCard(
-            label = "En blanco",
-            value = "$blanco / $total",
-            containerColor = MaterialTheme.colorScheme.surfaceVariant,
-            contentColor = MaterialTheme.colorScheme.onSurfaceVariant
-        )
-
-        Spacer(Modifier.height(24.dp))
-
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Text("Tiempo: ", style = MaterialTheme.typography.titleLarge, color = MaterialTheme.colorScheme.onSurface)
-            Text(
-                text = formatTime(segundos),
-                style = MaterialTheme.typography.titleLarge,
-                color = MaterialTheme.colorScheme.onSurface,
-                fontWeight = FontWeight.Bold
-            )
-        }
-
-        Spacer(Modifier.height(16.dp))
-
-        Text(
-            text = "Puntuación: $score / 10",
-            style = MaterialTheme.typography.headlineMedium,
-            fontWeight = FontWeight.Bold,
-            color = MaterialTheme.colorScheme.primary,
-            textAlign = TextAlign.Center
-        )
-
-        Spacer(Modifier.height(40.dp))
-
+    Box(modifier = Modifier.fillMaxSize()) {
         Column(
-            modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+            modifier = Modifier
+                .align(Alignment.Center)
+                .widthIn(max = 640.dp)
+                .fillMaxWidth()
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = 24.dp, vertical = 32.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
         ) {
-            Button(
-                onClick = onRetry,
-                modifier = Modifier.fillMaxWidth()
-            ) { Text(if (tipoTest == TipoTest.BLOQUES_30) "Continuar" else "Reintentar") }
-            if (canReview) {
-                OutlinedButton(
-                    onClick = onReview,
-                    modifier = Modifier.fillMaxWidth()
-                ) { Text("Revisar") }
+            Text(
+                text = "Resultados",
+                color = MaterialTheme.colorScheme.onSurface,
+                style = MaterialTheme.typography.headlineSmall,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.padding(bottom = 32.dp)
+            )
+
+            ScoreCard(
+                label = "Correctas",
+                value = "$correctas / $total",
+                containerColor = MaterialTheme.colorScheme.tertiaryContainer,
+                contentColor = MaterialTheme.colorScheme.onTertiaryContainer
+            )
+            Spacer(Modifier.height(12.dp))
+            ScoreCard(
+                label = "Incorrectas",
+                value = "$incorrectas / $total",
+                containerColor = MaterialTheme.colorScheme.errorContainer,
+                contentColor = MaterialTheme.colorScheme.onErrorContainer
+            )
+            Spacer(Modifier.height(12.dp))
+            ScoreCard(
+                label = "En blanco",
+                value = "$blanco / $total",
+                containerColor = MaterialTheme.colorScheme.surfaceVariant,
+                contentColor = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+
+            Spacer(Modifier.height(24.dp))
+
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = "Tiempo: ",
+                    style = MaterialTheme.typography.titleLarge,
+                    color = MaterialTheme.colorScheme.onSurface
+                )
+                Text(
+                    text = formatTime(segundos),
+                    style = MaterialTheme.typography.titleLarge,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    fontWeight = FontWeight.Bold
+                )
             }
-            TextButton(onClick = onBack) { Text("Inicio") }
+
+            Spacer(Modifier.height(16.dp))
+
+            Text(
+                text = "Puntuación: $score / 10",
+                style = MaterialTheme.typography.headlineMedium,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.primary,
+                textAlign = TextAlign.Center
+            )
+
+            if (categoryCompleted && tipoTest != TipoTest.ALEATORIO_30) {
+                Spacer(Modifier.height(16.dp))
+                Text(
+                    text = "Has completado todas las preguntas de esta categoría.",
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    textAlign = TextAlign.Center
+                )
+            }
+
+            Spacer(Modifier.height(40.dp))
+
+            Column(
+                modifier = Modifier.fillMaxWidth(),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Button(
+                    onClick = onRetry,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    val label = when {
+                        tipoTest == TipoTest.BLOQUES_30 && categoryCompleted -> "Volver a empezar"
+                        tipoTest == TipoTest.BLOQUES_30 -> "Continuar"
+                        else -> "Reintentar"
+                    }
+                    Text(label)
+                }
+                if (canReview) {
+                    OutlinedButton(
+                        onClick = onReview,
+                        modifier = Modifier.fillMaxWidth()
+                    ) { Text("Revisar") }
+                }
+                TextButton(onClick = onBack) { Text("Inicio") }
+            }
         }
     }
 }

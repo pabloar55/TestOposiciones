@@ -3,8 +3,12 @@ package com.pablo.testoposiciones
 import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.WindowInsetsSides
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.safeContentPadding
+import androidx.compose.foundation.layout.only
+import androidx.compose.foundation.layout.safeContent
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.darkColorScheme
@@ -13,6 +17,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -27,7 +32,7 @@ import com.pablo.testoposiciones.ui.WelcomeScreen
 @Composable
 fun App() {
     val systemDarkTheme = isSystemInDarkTheme()
-    var darkTheme by remember { mutableStateOf(systemDarkTheme) }
+    var darkTheme by rememberSaveable { mutableStateOf(systemDarkTheme) }
     val colorScheme = if (darkTheme) darkColorScheme() else lightColorScheme()
 
     ApplySystemBarTheme(darkTheme)
@@ -41,7 +46,12 @@ fun App() {
             modifier = Modifier
                 .fillMaxSize()
                 .background(MaterialTheme.colorScheme.background)
-                .safeContentPadding()
+                // El contenido ya define su propio margen horizontal. Aplicar también
+                // safeContent en los cuatro lados duplicaba ese espacio en dispositivos
+                // que informan insets laterales amplios, como el Pixel 10.
+                .windowInsetsPadding(
+                    WindowInsets.safeContent.only(WindowInsetsSides.Vertical)
+                )
         ) {
             when (screen) {
                 is Screen.Welcome -> WelcomeScreen(
@@ -86,6 +96,7 @@ fun App() {
                     total = screen.total,
                     segundos = screen.segundos,
                     tipoTest = screen.tipoTest,
+                    categoryCompleted = screen.categoryCompleted,
                     onRetry = { vm.retry() },
                     onReview = { vm.reviewAnswers(screen) },
                     onBack = { vm.goToWelcome() }
@@ -121,9 +132,9 @@ fun App() {
                     text = {
                         Text(
                             if (vm.tipoTest == TipoTest.SECUENCIAL) {
-                                "Se guardará tu progreso. Quieres volver al inicio?"
+                                "Se guardará tu progreso. ¿Quieres volver al inicio?"
                             } else {
-                                "Quieres volver al inicio?"
+                                "¿Quieres volver al inicio?"
                             }
                         )
                     },

@@ -38,59 +38,79 @@ object ExtraerPreguntas {
         // que funcione aunque la numeracion de las preguntas se reinicie por bloques.
         val respuestas = parseRespuestas(respuestasLines, respuestasPath)
         var answerIndex = 0
+        var currentOptionIndex: Int? = null
+
+        fun finishQuestion() {
+            val questionText = texto ?: return
+            val number = questionNumber
+                ?: fail(preguntasPath, questionLine, "La pregunta no tiene numero.")
+            val missing = opciones.indexOfFirst { it == null }
+            if (missing >= 0) {
+                fail(preguntasPath, questionLine, "La pregunta $number no tiene la opcion ${('a' + missing)}).")
+            }
+            if (answerIndex >= respuestas.size) {
+                fail(
+                    preguntasPath,
+                    questionLine,
+                    "Hay mas preguntas que respuestas: falta la respuesta de la pregunta $number."
+                )
+            }
+            val respuesta = respuestas[answerIndex]
+            if (respuesta.number != number) {
+                fail(
+                    respuestasPath,
+                    respuesta.line,
+                    "Descuadre en la posicion ${answerIndex + 1}: la pregunta es la $number pero la respuesta declarada es la ${respuesta.number}."
+                )
+            }
+
+            preguntas.add(
+                Pregunta(
+                    texto = questionText,
+                    opciones = arrayOf(opciones[0]!!, opciones[1]!!, opciones[2]!!, opciones[3]!!),
+                    respuestaCorrecta = respuesta.option
+                )
+            )
+            answerIndex++
+            texto = null
+            questionNumber = null
+            questionLine = 0
+            currentOptionIndex = null
+            for (i in opciones.indices) opciones[i] = null
+        }
 
         for ((lineIndex, linea) in preguntasLines.withIndex()) {
             val lineNumber = lineIndex + 1
             val trimmed = linea.trim()
             when {
+                trimmed.isBlank() -> Unit
                 trimmed.matches(QUESTION_REGEX) -> {
-                    if (texto != null) {
-                        fail(preguntasPath, questionLine, "La pregunta $questionNumber esta incompleta antes de empezar otra.")
-                    }
+                    finishQuestion()
                     questionNumber = trimmed.substringBefore(")").toInt()
                     questionLine = lineNumber
-                    texto = linea
+                    texto = trimmed
+                    currentOptionIndex = null
                     for (i in opciones.indices) opciones[i] = null
                 }
-                trimmed.startsWith("a)") -> setOption(opciones, 0, linea, texto, preguntasPath, lineNumber)
-                trimmed.startsWith("b)") -> setOption(opciones, 1, linea, texto, preguntasPath, lineNumber)
-                trimmed.startsWith("c)") -> setOption(opciones, 2, linea, texto, preguntasPath, lineNumber)
-                trimmed.startsWith("d)") -> {
-                    setOption(opciones, 3, linea, texto, preguntasPath, lineNumber)
-                    val t = texto
-                    val number = questionNumber
-                    if (t == null || number == null) {
-                        fail(preguntasPath, lineNumber, "Hay opciones antes de una pregunta.")
-                    }
-                    val missing = opciones.indexOfFirst { it == null }
-                    if (missing >= 0) {
-                        fail(preguntasPath, questionLine, "La pregunta $number no tiene la opcion ${('a' + missing)}).")
-                    }
-                    if (answerIndex >= respuestas.size) {
-                        fail(preguntasPath, questionLine, "Hay mas preguntas que respuestas: falta la respuesta de la pregunta $number (linea $questionLine de $preguntasPath).")
-                    }
-                    val respuesta = respuestas[answerIndex]
-                    if (respuesta.number != number) {
-                        fail(
-                            respuestasPath,
-                            respuesta.line,
-                            "Descuadre en la posicion ${answerIndex + 1}: la pregunta es la $number pero la respuesta declarada es la ${respuesta.number}."
-                        )
-                    }
-
-                    preguntas.add(Pregunta(t, arrayOf(opciones[0]!!, opciones[1]!!, opciones[2]!!, opciones[3]!!), respuesta.option))
-                    answerIndex++
-                    texto = null
-                    questionNumber = null
-                    questionLine = 0
-                    for (i in opciones.indices) opciones[i] = null
+                OPTION_REGEX.matches(trimmed) -> {
+                    val optionIndex = trimmed.first().lowercaseChar() - 'a'
+                    setOption(opciones, optionIndex, trimmed, texto, preguntasPath, lineNumber)
+                    currentOptionIndex = optionIndex
                 }
+                isSectionHeading(trimmed) -> Unit
+                texto != null -> {
+                    val optionIndex = currentOptionIndex
+                    if (optionIndex == null) {
+                        texto = "$texto $trimmed"
+                    } else {
+                        opciones[optionIndex] = "${opciones[optionIndex]} $trimmed"
+                    }
+                }
+                else -> fail(preguntasPath, lineNumber, "Texto fuera de una pregunta: '$trimmed'.")
             }
         }
 
-        if (texto != null) {
-            fail(preguntasPath, questionLine, "La ultima pregunta esta incompleta.")
-        }
+        finishQuestion()
         if (preguntas.isEmpty()) {
             fail(preguntasPath, 0, "No se ha encontrado ninguna pregunta valida.")
         }
@@ -146,6 +166,12 @@ object ExtraerPreguntas {
         throw IllegalStateException("$location - $message")
     }
 
+    private fun isSectionHeading(text: String): Boolean {
+        val letters = text.filter { it.isLetter() }
+        return letters.isNotEmpty() && letters.all { it.isUpperCase() }
+    }
+
     private val QUESTION_REGEX = Regex("[0-9]+\\).*")
+    private val OPTION_REGEX = Regex("[a-dA-D]\\).*")
     private val ANSWER_REGEX = Regex("([0-9]+)\\s*([a-dA-D])")
 }

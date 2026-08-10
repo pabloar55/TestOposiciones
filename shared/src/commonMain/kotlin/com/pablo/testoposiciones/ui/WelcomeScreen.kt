@@ -1,7 +1,7 @@
 package com.pablo.testoposiciones.ui
 
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
@@ -11,6 +11,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Card
@@ -51,104 +54,102 @@ fun WelcomeScreen(
     onStartTest: (TipoTest, TestCategory) -> Unit
 ) {
     var showResetDialog by remember { mutableStateOf(false) }
+    val canStart = selectedCategory != null && !categoriesLoading && loadError == null
 
-    Box(modifier = Modifier.fillMaxSize()) {
-        IconButton(
-            onClick = onToggleTheme,
-            modifier = Modifier
-                .align(Alignment.TopEnd)
-                .padding(16.dp)
-        ) {
-            Icon(
-                imageVector = if (darkTheme) light_mode else dark_mode,
-                contentDescription = if (darkTheme) "Cambiar a tema claro" else "Cambiar a tema oscuro",
-                tint = MaterialTheme.colorScheme.onSurface
-            )
-        }
+    BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
+        val useTwoPaneLayout = maxWidth >= 720.dp
 
         Column(
             modifier = Modifier
-                .fillMaxSize()
-                .padding(32.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
+                .align(Alignment.TopCenter)
+                .widthIn(max = 1040.dp)
+                .fillMaxWidth()
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = 24.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.End
+            ) {
+                IconButton(onClick = onToggleTheme) {
+                    Icon(
+                        imageVector = if (darkTheme) light_mode else dark_mode,
+                        contentDescription = if (darkTheme) "Cambiar a tema claro" else "Cambiar a tema oscuro",
+                        tint = MaterialTheme.colorScheme.onSurface
+                    )
+                }
+            }
+
             Text(
                 text = "Test Oposiciones",
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
                 color = MaterialTheme.colorScheme.onSurface,
-                modifier = Modifier.padding(bottom = 8.dp)
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 8.dp)
             )
             Text(
-                text = "Elige una categoria y el modo de test",
+                text = "Elige una categoría y el modo de test",
                 style = MaterialTheme.typography.bodyLarge,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center,
-                modifier = Modifier.padding(bottom = 24.dp)
+                modifier = Modifier.fillMaxWidth()
             )
 
-            when {
-                categoriesLoading -> {
-                    CircularProgressIndicator(modifier = Modifier.padding(bottom = 24.dp))
-                }
-                loadError != null -> {
-                    Text(
-                        text = loadError,
-                        color = MaterialTheme.colorScheme.error,
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.padding(bottom = 12.dp)
-                    )
-                    OutlinedButton(
-                        onClick = onRetryLoad,
-                        modifier = Modifier.padding(bottom = 24.dp)
-                    ) {
-                        Text("Reintentar carga")
-                    }
-                }
-                else -> CategorySelector(
-                    categories = categories,
-                    selectedCategory = selectedCategory,
-                    onSelected = onCategorySelected
-                )
-            }
+            Spacer(Modifier.height(32.dp))
 
-            val canStart = selectedCategory != null && !categoriesLoading && loadError == null
-
-            if (canStart) {
-                TextButton(
-                    onClick = { showResetDialog = true },
-                    modifier = Modifier.padding(bottom = 16.dp)
+            if (useTwoPaneLayout) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(32.dp),
+                    verticalAlignment = Alignment.Top
                 ) {
-                    Text("Reiniciar progreso de ${selectedCategory.displayName}")
+                    CategoryPanel(
+                        categories = categories,
+                        categoriesLoading = categoriesLoading,
+                        loadError = loadError,
+                        selectedCategory = selectedCategory,
+                        canStart = canStart,
+                        onRetryLoad = onRetryLoad,
+                        onCategorySelected = onCategorySelected,
+                        onResetProgress = { showResetDialog = true },
+                        modifier = Modifier.weight(1f)
+                    )
+                    ModePanel(
+                        selectedCategory = selectedCategory,
+                        canStart = canStart,
+                        onStartTest = onStartTest,
+                        modifier = Modifier.weight(1f)
+                    )
+                }
+            } else {
+                Column(
+                    modifier = Modifier
+                        .align(Alignment.CenterHorizontally)
+                        .widthIn(max = 680.dp)
+                        .fillMaxWidth(),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    CategoryPanel(
+                        categories = categories,
+                        categoriesLoading = categoriesLoading,
+                        loadError = loadError,
+                        selectedCategory = selectedCategory,
+                        canStart = canStart,
+                        onRetryLoad = onRetryLoad,
+                        onCategorySelected = onCategorySelected,
+                        onResetProgress = { showResetDialog = true }
+                    )
+                    ModePanel(
+                        selectedCategory = selectedCategory,
+                        canStart = canStart,
+                        onStartTest = onStartTest
+                    )
                 }
             }
-
-            ModeButton(
-                title = "30 Preguntas Aleatorias",
-                description = "30 preguntas escogidas al azar. Muestra feedback inmediato.",
-                enabled = canStart,
-                onClick = { selectedCategory?.let { onStartTest(TipoTest.ALEATORIO_30, it) } }
-            )
-
-            Spacer(Modifier.height(16.dp))
-
-            ModeButton(
-                title = "Bloques de 30",
-                description = "30 preguntas en bloques consecutivos. Reanuda desde el ultimo bloque.",
-                enabled = canStart,
-                onClick = { selectedCategory?.let { onStartTest(TipoTest.BLOQUES_30, it) } }
-            )
-
-            Spacer(Modifier.height(16.dp))
-
-            ModeButton(
-                title = "Preguntas Seguidas",
-                description = "Todas las preguntas en orden. Reanuda desde donde lo dejaste.",
-                enabled = canStart,
-                onClick = { selectedCategory?.let { onStartTest(TipoTest.SECUENCIAL, it) } }
-            )
         }
 
         if (showResetDialog && selectedCategory != null) {
@@ -157,8 +158,8 @@ fun WelcomeScreen(
                 title = { Text("Reiniciar progreso") },
                 text = {
                     Text(
-                        "Se reiniciara el progreso de ${selectedCategory.displayName}. " +
-                            "Preguntas Seguidas y Bloques de 30 volveran a empezar desde la pregunta 1."
+                        "Se reiniciará el progreso de ${selectedCategory.displayName}. " +
+                            "Preguntas seguidas y Bloques de 30 volverán a empezar desde la pregunta 1."
                     )
                 },
                 confirmButton = {
@@ -178,6 +179,91 @@ fun WelcomeScreen(
                 }
             )
         }
+    }
+}
+
+@Composable
+private fun CategoryPanel(
+    categories: List<TestCategory>,
+    categoriesLoading: Boolean,
+    loadError: String?,
+    selectedCategory: TestCategory?,
+    canStart: Boolean,
+    onRetryLoad: () -> Unit,
+    onCategorySelected: (TestCategory) -> Unit,
+    onResetProgress: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = modifier,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        when {
+            categoriesLoading -> CircularProgressIndicator(modifier = Modifier.padding(bottom = 24.dp))
+            loadError != null -> {
+                Text(
+                    text = loadError,
+                    color = MaterialTheme.colorScheme.error,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.padding(bottom = 12.dp)
+                )
+                OutlinedButton(
+                    onClick = onRetryLoad,
+                    modifier = Modifier.padding(bottom = 24.dp)
+                ) {
+                    Text("Reintentar carga")
+                }
+            }
+            else -> CategorySelector(
+                categories = categories,
+                selectedCategory = selectedCategory,
+                onSelected = onCategorySelected
+            )
+        }
+
+        if (canStart && selectedCategory != null) {
+            TextButton(
+                onClick = onResetProgress,
+                modifier = Modifier.padding(bottom = 16.dp)
+            ) {
+                Text("Reiniciar progreso de ${selectedCategory.displayName}")
+            }
+        }
+    }
+}
+
+@Composable
+private fun ModePanel(
+    selectedCategory: TestCategory?,
+    canStart: Boolean,
+    onStartTest: (TipoTest, TestCategory) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Column(modifier = modifier.fillMaxWidth()) {
+        ModeButton(
+            title = "Test aleatorio",
+            description = "Hasta 30 preguntas escogidas al azar. Muestra feedback inmediato.",
+            enabled = canStart,
+            onClick = { selectedCategory?.let { onStartTest(TipoTest.ALEATORIO_30, it) } }
+        )
+
+        Spacer(Modifier.height(16.dp))
+
+        ModeButton(
+            title = "Bloques de hasta 30",
+            description = "Preguntas consecutivas. Reanuda desde el último bloque completado.",
+            enabled = canStart,
+            onClick = { selectedCategory?.let { onStartTest(TipoTest.BLOQUES_30, it) } }
+        )
+
+        Spacer(Modifier.height(16.dp))
+
+        ModeButton(
+            title = "Preguntas seguidas",
+            description = "Todas las preguntas en orden. Reanuda desde donde lo dejaste.",
+            enabled = canStart,
+            onClick = { selectedCategory?.let { onStartTest(TipoTest.SECUENCIAL, it) } }
+        )
     }
 }
 

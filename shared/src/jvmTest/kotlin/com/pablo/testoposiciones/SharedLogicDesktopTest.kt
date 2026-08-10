@@ -5,6 +5,7 @@ import com.pablo.testoposiciones.logic.TestCategories
 import kotlinx.coroutines.runBlocking
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertTrue
 
 class SharedLogicDesktopTest {
 
@@ -41,5 +42,36 @@ class SharedLogicDesktopTest {
             questions[312].texto
         )
         assertEquals('c', questions.last().respuestaCorrecta)
+    }
+
+    @Test
+    fun loadsEveryCategoryAndPreservesWrappedOptions() = runBlocking {
+        val categories = TestCategories.load()
+        val questionsByCategory = categories.associate { category ->
+            category.id to ExtraerPreguntas.extraerPreguntas(category)
+        }
+
+        assertEquals(
+            mapOf(
+                "AUXILIO_JUDICIAL" to 416,
+                "TER" to 264,
+                "CONSTITUCION" to 346,
+                "PRACTICA" to 15,
+                "TEORIA" to 299,
+                "TEORIA1" to 71
+            ),
+            questionsByCategory.mapValues { it.value.size }
+        )
+
+        val terQuestions = questionsByCategory.getValue("TER")
+        val nationalHealthSystem = terQuestions.first { it.texto.startsWith("56) Decir cuál") }
+        assertTrue(nationalHealthSystem.opcionB().endsWith("Sistema Nacional de Salud."))
+
+        val healthBenefits = terQuestions.first { it.texto.startsWith("174) Las prestaciones sanitarias") }
+        assertTrue(healthBenefits.opcionC().contains("eficacia y eficiencia de dichas prestaciones."))
+
+        val constitutionQuestions = questionsByCategory.getValue("CONSTITUCION")
+        val regency = constitutionQuestions.first { it.texto.startsWith("307) En qué dos supuestos") }
+        assertTrue(regency.opcionA().endsWith("Estado de excepción."))
     }
 }

@@ -2,13 +2,16 @@ package com.pablo.testoposiciones.ui
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
-import androidx.compose.ui.graphics.Color
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.pablo.testoposiciones.model.Pregunta
@@ -72,19 +75,89 @@ fun QuestionScreen(
                     drawStopIndicator = {}
                 )
             }
-        },
-        bottomBar = {
+        }
+    ) { innerPadding ->
+        Box(modifier = Modifier.fillMaxSize().padding(innerPadding)) {
+            Column(
+                modifier = Modifier
+                    .align(Alignment.TopCenter)
+                    .widthIn(max = 800.dp)
+                    .fillMaxWidth()
+                    .verticalScroll(rememberScrollState())
+                    .padding(start = 16.dp, top = 16.dp, end = 16.dp, bottom = 96.dp)
+            ) {
+                Text(
+                    text = pregunta.texto,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    style = MaterialTheme.typography.bodyLarge,
+                    fontWeight = FontWeight.Medium,
+                    modifier = Modifier.padding(bottom = 24.dp)
+                )
+
+                AnswerOption(
+                    text = pregunta.opcionA(),
+                    option = 'a',
+                    selected = selectedAnswer == 'a',
+                    correctAnswer = pregunta.respuestaCorrecta,
+                    showFeedback = showFeedback && selectedAnswer != null,
+                    onClick = { onAnswer('a') }
+                )
+                Spacer(Modifier.height(8.dp))
+                AnswerOption(
+                    text = pregunta.opcionB(),
+                    option = 'b',
+                    selected = selectedAnswer == 'b',
+                    correctAnswer = pregunta.respuestaCorrecta,
+                    showFeedback = showFeedback && selectedAnswer != null,
+                    onClick = { onAnswer('b') }
+                )
+                Spacer(Modifier.height(8.dp))
+                AnswerOption(
+                    text = pregunta.opcionC(),
+                    option = 'c',
+                    selected = selectedAnswer == 'c',
+                    correctAnswer = pregunta.respuestaCorrecta,
+                    showFeedback = showFeedback && selectedAnswer != null,
+                    onClick = { onAnswer('c') }
+                )
+                Spacer(Modifier.height(8.dp))
+                AnswerOption(
+                    text = pregunta.opcionD(),
+                    option = 'd',
+                    selected = selectedAnswer == 'd',
+                    correctAnswer = pregunta.respuestaCorrecta,
+                    showFeedback = showFeedback && selectedAnswer != null,
+                    onClick = { onAnswer('d') }
+                )
+
+                if (showFeedback && selectedAnswer != null) {
+                    Spacer(Modifier.height(16.dp))
+                    val isCorrect = selectedAnswer == pregunta.respuestaCorrecta
+                    Text(
+                        text = if (isCorrect) "Respuesta correcta ✓" else "Respuesta incorrecta ✗",
+                        color = if (isCorrect) MaterialTheme.colorScheme.tertiary else MaterialTheme.colorScheme.error,
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+            }
+
             Row(
                 modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .widthIn(max = 800.dp)
                     .fillMaxWidth()
                     .padding(16.dp),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                OutlinedButton(onClick = onPrevious, enabled = currentIndex > 0, colors = ButtonDefaults.outlinedButtonColors(
-                    containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.85f),
-                    contentColor = MaterialTheme.colorScheme.onSurfaceVariant
-                )) {
-
+                OutlinedButton(
+                    onClick = onPrevious,
+                    enabled = currentIndex > 0,
+                    colors = ButtonDefaults.outlinedButtonColors(
+                        containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.85f),
+                        contentColor = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                ) {
                     Icon(arrow_back, contentDescription = null)
                     Spacer(Modifier.width(4.dp))
                     Text("Anterior")
@@ -100,69 +173,6 @@ fun QuestionScreen(
                 }
             }
         }
-    ) { innerPadding ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-                .padding(innerPadding)
-                .padding(16.dp)
-        ) {
-            Text(
-                text = pregunta.texto,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                style = MaterialTheme.typography.bodyLarge,
-                fontWeight = FontWeight.Medium,
-                modifier = Modifier.padding(bottom = 24.dp)
-            )
-
-            AnswerOption(
-                text = pregunta.opcionA(),
-                option = 'a',
-                selected = selectedAnswer == 'a',
-                correctAnswer = pregunta.respuestaCorrecta,
-                showFeedback = showFeedback && selectedAnswer != null,
-                onClick = { onAnswer('a') }
-            )
-            Spacer(Modifier.height(8.dp))
-            AnswerOption(
-                text = pregunta.opcionB(),
-                option = 'b',
-                selected = selectedAnswer == 'b',
-                correctAnswer = pregunta.respuestaCorrecta,
-                showFeedback = showFeedback && selectedAnswer != null,
-                onClick = { onAnswer('b') }
-            )
-            Spacer(Modifier.height(8.dp))
-            AnswerOption(
-                text = pregunta.opcionC(),
-                option = 'c',
-                selected = selectedAnswer == 'c',
-                correctAnswer = pregunta.respuestaCorrecta,
-                showFeedback = showFeedback && selectedAnswer != null,
-                onClick = { onAnswer('c') }
-            )
-            Spacer(Modifier.height(8.dp))
-            AnswerOption(
-                text = pregunta.opcionD(),
-                option = 'd',
-                selected = selectedAnswer == 'd',
-                correctAnswer = pregunta.respuestaCorrecta,
-                showFeedback = showFeedback && selectedAnswer != null,
-                onClick = { onAnswer('d') }
-            )
-
-            if (showFeedback && selectedAnswer != null) {
-                Spacer(Modifier.height(16.dp))
-                val isCorrect = selectedAnswer == pregunta.respuestaCorrecta
-                Text(
-                    text = if (isCorrect) "Respuesta correcta ✓" else "Respuesta incorrecta ✗",
-                    color = if (isCorrect) MaterialTheme.colorScheme.tertiary else MaterialTheme.colorScheme.error,
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold
-                )
-            }
-        }
     }
 }
 
@@ -173,37 +183,71 @@ fun AnswerOption(
     selected: Boolean,
     correctAnswer: Char,
     showFeedback: Boolean,
+    interactive: Boolean = true,
     onClick: () -> Unit
 ) {
-    val isDark = isSystemInDarkTheme()
-
-// Definimos los tonos de verde para claro/oscuro
-    val correctContainerColor = if (isDark) Color(0xFF1B5E20) else Color(0xFFC8E6C9)
-
-// Puedes mantener el error de MaterialTheme o definirlo manualmente si no te convence el naranja
-    val errorContainerColor = MaterialTheme.colorScheme.errorContainer
-
     val containerColor = when {
-        showFeedback && option == correctAnswer -> correctContainerColor
-        showFeedback && selected -> errorContainerColor
+        showFeedback && option == correctAnswer -> MaterialTheme.colorScheme.tertiaryContainer
+        showFeedback && selected -> MaterialTheme.colorScheme.errorContainer
         selected -> MaterialTheme.colorScheme.primaryContainer
         else -> MaterialTheme.colorScheme.surface
     }
+    val contentColor = when {
+        showFeedback && option == correctAnswer -> MaterialTheme.colorScheme.onTertiaryContainer
+        showFeedback && selected -> MaterialTheme.colorScheme.onErrorContainer
+        selected -> MaterialTheme.colorScheme.onPrimaryContainer
+        else -> MaterialTheme.colorScheme.onSurface
+    }
+    val stateText = when {
+        showFeedback && option == correctAnswer -> "Respuesta correcta"
+        showFeedback && selected -> "Tu respuesta, incorrecta"
+        selected -> "Respuesta seleccionada"
+        else -> "Respuesta no seleccionada"
+    }
+    val interactionModifier = if (interactive) {
+        Modifier.selectable(
+            selected = selected,
+            role = Role.RadioButton,
+            onClick = onClick
+        ).semantics(mergeDescendants = true) {
+            stateDescription = stateText
+        }
+    } else {
+        Modifier.semantics(mergeDescendants = true) {
+            stateDescription = stateText
+        }
+    }
 
     Card(
-        onClick = onClick,
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .then(interactionModifier),
         colors = CardDefaults.cardColors(
-            containerColor = containerColor
+            containerColor = containerColor,
+            contentColor = contentColor
         )
     ) {
         Row(
             modifier = Modifier.padding(12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            RadioButton(selected = selected, onClick = onClick)
+            RadioButton(
+                selected = selected,
+                onClick = null,
+                modifier = Modifier.clearAndSetSemantics { }
+            )
             Spacer(Modifier.width(8.dp))
-            Text(text = text, style = MaterialTheme.typography.bodyLarge)
+            Column(modifier = Modifier.weight(1f)) {
+                Text(text = text, style = MaterialTheme.typography.bodyLarge)
+                if (showFeedback && (option == correctAnswer || selected)) {
+                    Spacer(Modifier.height(4.dp))
+                    Text(
+                        text = if (option == correctAnswer) "Respuesta correcta" else "Tu respuesta",
+                        style = MaterialTheme.typography.labelMedium,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+            }
         }
     }
 }
@@ -246,34 +290,17 @@ fun ReviewScreen(
                     drawStopIndicator = {}
                 )
             }
-        },
-        bottomBar = {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(16.dp),
-                horizontalArrangement = Arrangement.SpaceBetween
-            ) {
-                OutlinedButton(onClick = onPrevious, enabled = currentIndex > 0) {
-                    Icon(arrow_back, contentDescription = null)
-                    Spacer(Modifier.width(4.dp))
-                    Text("Anterior")
-                }
-                Button(onClick = onNext, enabled = currentIndex < historial.size - 1) {
-                    Text("Siguiente")
-                    Spacer(Modifier.width(4.dp))
-                    Icon(arrow_forward, contentDescription = null)
-                }
-            }
         }
     ) { innerPadding ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-                .padding(innerPadding)
-                .padding(16.dp)
-        ) {
+        Box(modifier = Modifier.fillMaxSize().padding(innerPadding)) {
+            Column(
+                modifier = Modifier
+                    .align(Alignment.TopCenter)
+                    .widthIn(max = 800.dp)
+                    .fillMaxWidth()
+                    .verticalScroll(rememberScrollState())
+                    .padding(start = 16.dp, top = 16.dp, end = 16.dp, bottom = 96.dp)
+            ) {
             Text(
                 text = pregunta.texto,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -290,6 +317,7 @@ fun ReviewScreen(
                     selected = opt == resultado.respuestaUsuario,
                     correctAnswer = pregunta.respuestaCorrecta,
                     showFeedback = true,
+                    interactive = false,
                     onClick = {}
                 )
                 Spacer(Modifier.height(8.dp))
@@ -307,6 +335,27 @@ fun ReviewScreen(
                 else -> MaterialTheme.colorScheme.error
             }
             Text(text = statusText, color = statusColor, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+            }
+
+            Row(
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .widthIn(max = 800.dp)
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                OutlinedButton(onClick = onPrevious, enabled = currentIndex > 0) {
+                    Icon(arrow_back, contentDescription = null)
+                    Spacer(Modifier.width(4.dp))
+                    Text("Anterior")
+                }
+                Button(onClick = onNext, enabled = currentIndex < historial.size - 1) {
+                    Text("Siguiente")
+                    Spacer(Modifier.width(4.dp))
+                    Icon(arrow_forward, contentDescription = null)
+                }
+            }
         }
     }
 }
