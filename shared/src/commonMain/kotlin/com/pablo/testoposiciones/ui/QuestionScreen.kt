@@ -1,6 +1,7 @@
 package com.pablo.testoposiciones.ui
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.verticalScroll
@@ -8,6 +9,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.semantics
@@ -186,14 +188,17 @@ fun AnswerOption(
     interactive: Boolean = true,
     onClick: () -> Unit
 ) {
+    val isDark = isSystemInDarkTheme()
+    val correctContainerColor = if (isDark) Color(0xFF1B5E20) else Color(0xFFC8E6C9)
+
     val containerColor = when {
-        showFeedback && option == correctAnswer -> MaterialTheme.colorScheme.tertiaryContainer
+        showFeedback && option == correctAnswer -> correctContainerColor
         showFeedback && selected -> MaterialTheme.colorScheme.errorContainer
         selected -> MaterialTheme.colorScheme.primaryContainer
         else -> MaterialTheme.colorScheme.surface
     }
     val contentColor = when {
-        showFeedback && option == correctAnswer -> MaterialTheme.colorScheme.onTertiaryContainer
+        showFeedback && option == correctAnswer -> MaterialTheme.colorScheme.onSurface
         showFeedback && selected -> MaterialTheme.colorScheme.onErrorContainer
         selected -> MaterialTheme.colorScheme.onPrimaryContainer
         else -> MaterialTheme.colorScheme.onSurface
