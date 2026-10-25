@@ -52,8 +52,8 @@ fun ResultsScreen(
             ScoreCard(
                 label = "Correctas",
                 value = "$correctas / $total",
-                containerColor = MaterialTheme.colorScheme.tertiaryContainer,
-                contentColor = MaterialTheme.colorScheme.onTertiaryContainer
+                containerColor = successContainerColor(),
+                contentColor = onSuccessContainerColor()
             )
             Spacer(Modifier.height(12.dp))
             ScoreCard(
