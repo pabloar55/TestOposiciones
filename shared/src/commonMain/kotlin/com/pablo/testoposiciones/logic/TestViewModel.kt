@@ -79,6 +79,10 @@ class TestViewModel : ViewModel() {
         get() = if (tipoTest == TipoTest.SECUENCIAL && totalPreguntas > 0) totalPreguntas else preguntas.size
 
     private var timerJob: Job? = null
+    private var appVisible = true
+
+    private val testInProgress: Boolean
+        get() = screen is Screen.Question && !isLoading && preguntas.isNotEmpty()
     private var testLoadJob: Job? = null
     private var categoriesLoadJob: Job? = null
     private var testLoadRequestId = 0
@@ -195,8 +199,18 @@ class TestViewModel : ViewModel() {
         }
     }
 
+    // El cronómetro solo cuenta mientras la app está a la vista.
+    fun onAppVisibilityChanged(visible: Boolean) {
+        appVisible = visible
+        if (!visible) {
+            stopTimer()
+        } else if (testInProgress) {
+            startTimer()
+        }
+    }
+
     fun goToWelcome() {
-        val leavingActiveTest = screen is Screen.Question && !isLoading && preguntas.isNotEmpty()
+        val leavingActiveTest = testInProgress
         testLoadRequestId++
         testLoadJob?.cancel()
         testLoadJob = null
@@ -227,6 +241,7 @@ class TestViewModel : ViewModel() {
 
     private fun startTimer() {
         timerJob?.cancel()
+        if (!appVisible) return
         timerJob = viewModelScope.launch {
             while (true) {
                 delay(1000.milliseconds)

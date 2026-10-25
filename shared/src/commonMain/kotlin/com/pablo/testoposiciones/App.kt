@@ -19,6 +19,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.compose.LifecycleStartEffect
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.pablo.testoposiciones.logic.Screen
 import com.pablo.testoposiciones.logic.TestViewModel
@@ -42,6 +43,11 @@ fun App() {
         val vm: TestViewModel = viewModel { TestViewModel() }
         val screen = vm.screen
         var showExitTestDialog by remember { mutableStateOf(false) }
+
+        LifecycleStartEffect(vm) {
+            vm.onAppVisibilityChanged(true)
+            onStopOrDispose { vm.onAppVisibilityChanged(false) }
+        }
 
         Box(
             modifier = Modifier
