@@ -22,13 +22,16 @@ fun ResultsScreen(
     segundos: Int,
     tipoTest: TipoTest,
     categoryCompleted: Boolean,
+    failedRemaining: Int,
     onRetry: () -> Unit,
     onReview: () -> Unit,
     onBack: () -> Unit
 ) {
     val blanco = total - correctas - incorrectas
     val score = calcularPuntuacion(correctas, incorrectas, total)
-    val canReview = tipoTest == TipoTest.ALEATORIO_30 || tipoTest == TipoTest.BLOQUES_30
+    val canReview = tipoTest == TipoTest.ALEATORIO_30 || tipoTest == TipoTest.BLOQUES_30 ||
+        tipoTest == TipoTest.FALLADAS
+    val canRetry = tipoTest != TipoTest.FALLADAS || failedRemaining > 0
 
     Box(modifier = Modifier.fillMaxSize()) {
         Column(
@@ -96,6 +99,20 @@ fun ResultsScreen(
                 textAlign = TextAlign.Center
             )
 
+            if (tipoTest == TipoTest.FALLADAS) {
+                Spacer(Modifier.height(16.dp))
+                Text(
+                    text = when (failedRemaining) {
+                        0 -> "Has acertado todas las preguntas falladas."
+                        1 -> "Te queda 1 pregunta fallada."
+                        else -> "Te quedan $failedRemaining preguntas falladas."
+                    },
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    textAlign = TextAlign.Center
+                )
+            }
+
             if (categoryCompleted && tipoTest != TipoTest.ALEATORIO_30) {
                 Spacer(Modifier.height(16.dp))
                 Text(
@@ -113,16 +130,19 @@ fun ResultsScreen(
                 verticalArrangement = Arrangement.spacedBy(8.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Button(
-                    onClick = onRetry,
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    val label = when {
-                        tipoTest == TipoTest.BLOQUES_30 && categoryCompleted -> "Volver a empezar"
-                        tipoTest == TipoTest.BLOQUES_30 -> "Continuar"
-                        else -> "Reintentar"
+                if (canRetry) {
+                    Button(
+                        onClick = onRetry,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        val label = when {
+                            tipoTest == TipoTest.BLOQUES_30 && categoryCompleted -> "Volver a empezar"
+                            tipoTest == TipoTest.BLOQUES_30 -> "Continuar"
+                            tipoTest == TipoTest.FALLADAS -> "Repasar las que quedan"
+                            else -> "Reintentar"
+                        }
+                        Text(label)
                     }
-                    Text(label)
                 }
                 if (canReview) {
                     OutlinedButton(

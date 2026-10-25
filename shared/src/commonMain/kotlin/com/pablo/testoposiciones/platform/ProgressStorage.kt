@@ -11,4 +11,7 @@ expect object ProgressStorage {
     // null indica que el usuario nunca ha elegido tema y se sigue el del sistema.
     fun readDarkTheme(): Boolean?
     fun writeDarkTheme(dark: Boolean)
+
+    fun readFailed(category: TestCategory): Set<String>
+    fun writeFailed(category: TestCategory, keys: Set<String>)
 }

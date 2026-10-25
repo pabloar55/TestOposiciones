@@ -59,6 +59,30 @@ actual object ProgressStorage {
         }
     }
 
+    actual fun readFailed(category: TestCategory): Set<String> {
+        val file = getFailedFile(category)
+        return try {
+            if (!file.exists()) emptySet()
+            else file.readLines().map { it.trim() }.filter { it.isNotEmpty() }.toSet()
+        } catch (e: Exception) {
+            emptySet()
+        }
+    }
+
+    actual fun writeFailed(category: TestCategory, keys: Set<String>) {
+        try {
+            getFailedFile(category).writeText(keys.sorted().joinToString("\n"))
+        } catch (e: Exception) {
+            // ignore write errors
+        }
+    }
+
+    // Va por id y no por progressStorageId: las falladas no dependen del orden de las preguntas.
+    private fun getFailedFile(category: TestCategory): File {
+        val safeId = category.id.replace(Regex("[^A-Za-z0-9_-]"), "_")
+        return File(System.getProperty("user.home"), ".testoposiciones_failed_$safeId.txt")
+    }
+
     private fun getThemeFile(): File {
         return File(System.getProperty("user.home"), ".testoposiciones_dark_theme.txt")
     }

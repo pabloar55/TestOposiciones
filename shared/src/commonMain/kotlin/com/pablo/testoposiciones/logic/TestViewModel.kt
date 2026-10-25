@@ -2,6 +2,8 @@ package com.pablo.testoposiciones.logic
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.pablo.testoposiciones.model.BLOCK_SIZE
+import com.pablo.testoposiciones.model.CategoryProgress
 import com.pablo.testoposiciones.model.Pregunta
 import com.pablo.testoposiciones.model.ResultadoPregunta
 import com.pablo.testoposiciones.model.TestCategory
@@ -27,7 +29,8 @@ sealed class Screen {
         val segundos: Int,
         val tipoTest: TipoTest,
         val historial: List<ResultadoPregunta>,
-        val categoryCompleted: Boolean
+        val categoryCompleted: Boolean,
+        val failedRemaining: Int
     ) : Screen()
     data class Review(val historial: List<ResultadoPregunta>, val results: Results) : Screen()
 }
@@ -60,6 +63,9 @@ class TestViewModel : ViewModel() {
 
     val userAnswers = mutableStateMapOf<Int, Char>()
 
+    var categoryProgress by mutableStateOf<CategoryProgress?>(null)
+        private set
+
     var secondsElapsed by mutableIntStateOf(0)
         private set
 
@@ -85,6 +91,7 @@ class TestViewModel : ViewModel() {
         get() = screen is Screen.Question && !isLoading && preguntas.isNotEmpty()
     private var testLoadJob: Job? = null
     private var categoriesLoadJob: Job? = null
+    private var categoryProgressJob: Job? = null
     private var testLoadRequestId = 0
     private var categoriesLoadRequestId = 0
 
@@ -106,6 +113,7 @@ class TestViewModel : ViewModel() {
                 val selectedId = testCategory?.id
                 categories = loadedCategories
                 testCategory = loadedCategories.firstOrNull { it.id == selectedId } ?: loadedCategories.firstOrNull()
+                refreshCategoryProgress()
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
@@ -124,10 +132,12 @@ class TestViewModel : ViewModel() {
 
     fun selectCategory(category: TestCategory) {
         testCategory = category
+        refreshCategoryProgress()
     }
 
     fun resetProgress(category: TestCategory) {
         ProgressStorage.reset(category)
+        refreshCategoryProgress()
     }
 
     fun startTest(tipo: TipoTest, category: TestCategory) {
@@ -156,8 +166,16 @@ class TestViewModel : ViewModel() {
                     TipoTest.BLOQUES_30 -> {
                         val start = readProgressStartIndex(category, tipo, allPreguntas.size)
                         offsetInicial = start
-                        allPreguntas.drop(offsetInicial).take(30)
+                        allPreguntas.drop(offsetInicial).take(BLOCK_SIZE)
                     }
+                    TipoTest.FALLADAS -> FailedQuestions.pending(category, allPreguntas).shuffled()
+                }
+                if (loaded.isEmpty()) {
+                    // Solo ocurre en falladas cuando ya no queda ninguna.
+                    preguntas = emptyList()
+                    screen = Screen.Welcome
+                    refreshCategoryProgress()
+                    return@launch
                 }
                 preguntas = loaded
                 currentIndex = 0
@@ -183,6 +201,15 @@ class TestViewModel : ViewModel() {
     fun selectAnswer(opcion: Char) {
         if (tipoTest.showsFeedback && currentIndex in userAnswers) return
         userAnswers[currentIndex] = opcion
+        if (tipoTest.showsFeedback) {
+            val pregunta = preguntas[currentIndex]
+            testCategory?.let {
+                FailedQuestions.record(
+                    it,
+                    listOf(ResultadoPregunta(pregunta, opcion, opcion == pregunta.respuestaCorrecta))
+                )
+            }
+        }
         saveProgress()
     }
 
@@ -223,6 +250,7 @@ class TestViewModel : ViewModel() {
             saveProgress()
         }
         screen = Screen.Welcome
+        refreshCategoryProgress()
     }
 
     fun retry() {
@@ -240,6 +268,41 @@ class TestViewModel : ViewModel() {
 
     fun backToResults(results: Screen.Results) {
         screen = results
+    }
+
+    private fun refreshCategoryProgress() {
+        categoryProgressJob?.cancel()
+        val category = testCategory ?: run {
+            categoryProgress = null
+            return
+        }
+        // Al volver a la misma categoría se deja el valor anterior hasta tener el nuevo.
+        if (categoryProgress?.categoryId != category.id) categoryProgress = null
+        categoryProgressJob = viewModelScope.launch {
+            try {
+                val allPreguntas = withContext(Dispatchers.Default) {
+                    ExtraerPreguntas.extraerPreguntas(category)
+                }
+                val total = allPreguntas.size
+                categoryProgress = CategoryProgress(
+                    categoryId = category.id,
+                    totalQuestions = total,
+                    sequentialStartIndex = progressStartIndex(
+                        ProgressStorage.readNumber(category, TipoTest.SECUENCIAL),
+                        total
+                    ),
+                    blocksStartIndex = progressStartIndex(
+                        ProgressStorage.readNumber(category, TipoTest.BLOQUES_30),
+                        total
+                    ),
+                    failedCount = FailedQuestions.pending(category, allPreguntas).size
+                )
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                categoryProgress = null
+            }
+        }
     }
 
     private fun startTimer() {
@@ -286,7 +349,12 @@ class TestViewModel : ViewModel() {
         }
 
         val category = testCategory
-        val categoryCompleted = offsetInicial + preguntas.size >= totalPreguntas
+        val categoryCompleted = tipoTest != TipoTest.FALLADAS &&
+            offsetInicial + preguntas.size >= totalPreguntas
+        // Con corrección inmediata ya se han apuntado al responder.
+        if (category != null && !tipoTest.showsFeedback) {
+            FailedQuestions.record(category, historial)
+        }
         when (tipoTest) {
             TipoTest.SECUENCIAL -> if (category != null) {
                 ProgressStorage.writeNumber(
@@ -312,7 +380,12 @@ class TestViewModel : ViewModel() {
             segundos = secondsElapsed,
             tipoTest = tipoTest,
             historial = historial,
-            categoryCompleted = categoryCompleted
+            categoryCompleted = categoryCompleted,
+            failedRemaining = if (tipoTest == TipoTest.FALLADAS && category != null) {
+                FailedQuestions.count(category)
+            } else {
+                0
+            }
         )
     }
 

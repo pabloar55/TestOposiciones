@@ -20,6 +20,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
@@ -34,6 +35,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.pablo.testoposiciones.model.CategoryProgress
 import com.pablo.testoposiciones.model.TestCategory
 import com.pablo.testoposiciones.model.TipoTest
 import com.pablo.testoposiciones.ui.icons.arrow_forward
@@ -48,6 +50,7 @@ fun WelcomeScreen(
     categoriesLoading: Boolean,
     loadError: String?,
     selectedCategory: TestCategory?,
+    categoryProgress: CategoryProgress?,
     onRetryLoad: () -> Unit,
     onCategorySelected: (TestCategory) -> Unit,
     onResetProgress: (TestCategory) -> Unit,
@@ -121,6 +124,7 @@ fun WelcomeScreen(
                     ModePanel(
                         selectedCategory = selectedCategory,
                         canStart = canStart,
+                        progress = categoryProgress,
                         onStartTest = onStartTest,
                         modifier = Modifier.weight(1f)
                     )
@@ -146,6 +150,7 @@ fun WelcomeScreen(
                     ModePanel(
                         selectedCategory = selectedCategory,
                         canStart = canStart,
+                        progress = categoryProgress,
                         onStartTest = onStartTest
                     )
                 }
@@ -159,7 +164,8 @@ fun WelcomeScreen(
                 text = {
                     Text(
                         "Se reiniciará el progreso de ${selectedCategory.displayName}. " +
-                            "Preguntas seguidas y Bloques de 30 volverán a empezar desde la pregunta 1."
+                            "Preguntas seguidas y Bloques de 30 volverán a empezar desde la pregunta 1. " +
+                            "Las preguntas falladas se mantienen."
                     )
                 },
                 confirmButton = {
@@ -236,13 +242,17 @@ private fun CategoryPanel(
 private fun ModePanel(
     selectedCategory: TestCategory?,
     canStart: Boolean,
+    progress: CategoryProgress?,
     onStartTest: (TipoTest, TestCategory) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val failedCount = progress?.failedCount ?: 0
+
     Column(modifier = modifier.fillMaxWidth()) {
         ModeButton(
             title = "Test aleatorio",
             description = "Hasta 30 preguntas escogidas al azar. Muestra feedback inmediato.",
+            status = progress?.let { "De entre ${it.totalQuestions} preguntas" },
             enabled = canStart,
             onClick = { selectedCategory?.let { onStartTest(TipoTest.ALEATORIO_30, it) } }
         )
@@ -252,6 +262,12 @@ private fun ModePanel(
         ModeButton(
             title = "Bloques de hasta 30",
             description = "Preguntas consecutivas. Reanuda desde el último bloque completado.",
+            status = progress?.let {
+                if (it.blocksStartIndex == 0) "${it.totalBlocks} bloques · empiezas por el primero"
+                else "Vas por el bloque ${it.currentBlock} de ${it.totalBlocks}"
+            },
+            progress = progress?.takeIf { it.blocksStartIndex > 0 }
+                ?.let { it.blocksStartIndex.toFloat() / it.totalQuestions },
             enabled = canStart,
             onClick = { selectedCategory?.let { onStartTest(TipoTest.BLOQUES_30, it) } }
         )
@@ -261,8 +277,27 @@ private fun ModePanel(
         ModeButton(
             title = "Preguntas seguidas",
             description = "Todas las preguntas en orden. Reanuda desde donde lo dejaste.",
+            status = progress?.let {
+                if (it.sequentialStartIndex == 0) "${it.totalQuestions} preguntas · empiezas por la primera"
+                else "Vas por la pregunta ${it.sequentialStartIndex + 1} de ${it.totalQuestions}"
+            },
+            progress = progress?.takeIf { it.sequentialStartIndex > 0 }
+                ?.let { it.sequentialStartIndex.toFloat() / it.totalQuestions },
             enabled = canStart,
             onClick = { selectedCategory?.let { onStartTest(TipoTest.SECUENCIAL, it) } }
+        )
+
+        Spacer(Modifier.height(16.dp))
+
+        ModeButton(
+            title = if (failedCount > 0) "Repasar falladas ($failedCount)" else "Repasar falladas",
+            description = if (failedCount > 0) {
+                "Las preguntas que has fallado en esta categoría. Al acertarlas salen de la lista."
+            } else {
+                "Aún no tienes preguntas falladas en esta categoría."
+            },
+            enabled = canStart && failedCount > 0,
+            onClick = { selectedCategory?.let { onStartTest(TipoTest.FALLADAS, it) } }
         )
     }
 }
@@ -295,6 +330,8 @@ private fun ModeButton(
     title: String,
     description: String,
     enabled: Boolean,
+    status: String? = null,
+    progress: Float? = null,
     onClick: () -> Unit
 ) {
     Card(
@@ -314,6 +351,23 @@ private fun ModeButton(
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
+                if (status != null) {
+                    Spacer(Modifier.height(6.dp))
+                    Text(
+                        text = status,
+                        style = MaterialTheme.typography.labelMedium,
+                        fontWeight = FontWeight.SemiBold,
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                }
+                if (progress != null) {
+                    Spacer(Modifier.height(6.dp))
+                    LinearProgressIndicator(
+                        progress = { progress },
+                        modifier = Modifier.fillMaxWidth(),
+                        drawStopIndicator = {}
+                    )
+                }
             }
             Icon(
                 imageVector = arrow_forward,

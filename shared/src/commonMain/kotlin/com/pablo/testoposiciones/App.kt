@@ -71,6 +71,7 @@ fun App() {
                     categoriesLoading = vm.categoriesLoading,
                     loadError = vm.loadError,
                     selectedCategory = vm.testCategory,
+                    categoryProgress = vm.categoryProgress,
                     onRetryLoad = { vm.loadCategories() },
                     onCategorySelected = { vm.selectCategory(it) },
                     onResetProgress = { vm.resetProgress(it) },
@@ -107,6 +108,7 @@ fun App() {
                     segundos = screen.segundos,
                     tipoTest = screen.tipoTest,
                     categoryCompleted = screen.categoryCompleted,
+                    failedRemaining = screen.failedRemaining,
                     onRetry = { vm.retry() },
                     onReview = { vm.reviewAnswers(screen) },
                     onBack = { vm.goToWelcome() }
@@ -141,10 +143,11 @@ fun App() {
                     title = { Text("Salir del test") },
                     text = {
                         Text(
-                            if (vm.tipoTest == TipoTest.SECUENCIAL) {
-                                "Se guardará tu progreso. ¿Quieres volver al inicio?"
-                            } else {
-                                "¿Quieres volver al inicio?"
+                            when (vm.tipoTest) {
+                                TipoTest.SECUENCIAL -> "Se guardará tu progreso. ¿Quieres volver al inicio?"
+                                TipoTest.FALLADAS ->
+                                    "Las que ya has acertado han salido de falladas. ¿Quieres volver al inicio?"
+                                else -> "¿Quieres volver al inicio?"
                             }
                         )
                     },
