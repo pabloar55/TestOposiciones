@@ -45,6 +45,13 @@
     "nombre": "Administrativo CAR",
     "carpeta": "administrativo",
     "examenes": "examenes.json",
+    "versionProgreso": "CAR_FA13_2026_v2"
+  },
+  {
+    "id": "SUPUESTOS_ADMINISTRATIVO_CAR",
+    "nombre": "Supuestos prácticos CAR",
+    "carpeta": "supuestos_administrativo_car",
+    "examenes": "examenes.json",
     "versionProgreso": "CAR_FA13_2026_v1"
   },
   {

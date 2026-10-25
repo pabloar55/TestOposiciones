@@ -1,0 +1,126 @@
+1) En el texto titulado Relación Sol-Tierra-Luna se ha insertado la marca de agua de texto “BORRADOR” con distribución diagonal. De las opciones que se plantean a continuación, ¿cuál es la correcta para añadir dicha marca de agua?
+@imagen: imagenes/pregunta_1.png
+a) Acceder a la pestaña “Diseño” en la cinta de opciones, hacer clic en botón “Marca de agua” en el grupo “Fondo de página” y seleccionar la marca de agua predeterminada de la galería que aparece con el nombre “BORRADOR 1”
+b) Acceder a la pestaña “Diseño” en la cinta de opciones, hacer clic en botón “Marca de agua” en el grupo “Fondo de página” y seleccionar la marca de agua predeterminada de la galería que aparece con el nombre “BORRADOR 2”
+c) Acceder a la pestaña “Insertar” en la cinta de opciones, hacer clic en botón “Marca de agua” en el grupo “Fondo de página” y seleccionar la marca de agua predeterminada de la galería que aparece con el nombre “BORRADOR 1”
+d) Acceder a la pestaña “Insertar” en la cinta de opciones, hacer clic en botón “Marca de agua” en el grupo “Fondo de página” y seleccionar la marca de agua predeterminada de la galería que aparece con el nombre “BORRADOR 2”
+
+2) En el texto Relación Sol-Tierra-Luna se ha insertado un marcador en el cuarto párrafo. ¿Cuál de las siguientes opciones es la correcta para la denominación de dicho marcador?
+@imagen: imagenes/pregunta_2.png
+a) 1Funciónfísica
+b) Función física 1
+c) 1ª_Función_física
+d) Función_física_1
+
+3) En el primer párrafo del texto Relación Sol-Tierra-Luna se ha insertado la primera letra “L” como letra capital “En texto”. Para personalizarla desde “Opciones de letra capital…”, ¿cuál de las siguientes NO figura entre las opciones del cuadro de diálogo de letra capital?
+@imagen: imagenes/pregunta_3.png
+a) Alineación izquierda
+b) Fuente
+c) Líneas que ocupa
+d) Distancia desde el texto
+
+4) ¿Qué característica visual se utiliza de forma predeterminada para indicar un error ortográfico potencial en el texto al realizar la revisión desde el botón “Ortografía y gramática”?
+a) Una línea ondulada de color rojo debajo de la palabra
+b) Una línea ondulada de color verde debajo de la frase u oración
+c) Una línea recta de color azul debajo del texto
+d) Un sombreado de color amarillo sobre el párrafo
+
+6) El último elemento del texto Relación Sol-Tierra-Luna es un gráfico de la Composición del Sol. De las siguientes opciones, elija la correcta para desactivar las líneas de división horizontales que se observan en dicho gráfico:
+@imagen: imagenes/pregunta_6.png
+a) Hacer clic en el gráfico, seleccionar la pestaña “Diseño” y en el grupo “Análisis” hacer clic en “Líneas” y luego en “Ninguna”
+b) Hacer clic en el gráfico, pulsar en el botón de “Elementos de gráfico” y desactivar la opción “Líneas de la cuadrícula”
+c) Hacer clic en el gráfico, pulsar en el botón de “Opciones de diseño” y marcar la opción “Suprimir las líneas del eje”
+d) Hacer clic en el gráfico, ir a la pestaña “Herramientas de gráfico” y en la sección “Formato” elegir la opción “Sin líneas”
+
+7) En el gráfico que se muestra en el texto Relación Sol-Tierra-Luna, ¿en qué posición aparecen las etiquetas de datos?
+@imagen: imagenes/pregunta_7.png
+a) Centro
+b) Extremo externo
+c) Base interior
+d) Extremo interno
+
+8) A la vista de las siguientes imágenes de las tablas CENTROS DOCENTES y PERSONAL DOCENTE y la relación entre ambas, ¿qué ocurre si se pulsa en el signo [+] de I.E.S. Beethoven de la tabla CENTROS DOCENTES?
+@imagen: imagenes/pregunta_8.png
+a) Se añade un nuevo docente al I.E.S. Beethoven
+b) Se añade un nuevo Centro justo antes del I.E.S. Beethoven
+c) Se añade un nuevo Centro justo después del I.E.S. Beethoven
+d) Se muestran los datos relativos a los dos docentes del I.E.S. Beethoven
+
+9) ¿Qué indica el lápiz que aparece a la izquierda del tercer registro de la tabla PERSONAL DOCENTE en la siguiente imagen? (el cursor está en el campo “Nombre” del tercer registro)
+@imagen: imagenes/pregunta_9.png
+a) Que se está editando el registro y se grabará cuando se cambie de registro
+b) Que se está editando el registro y se grabará cuando se dé a la tecla INTRO (enter)
+c) Que se está editando el registro y se grabará cuando se dé a la tecla TAB (tabulador) para cambiar de campo
+d) Que el registro está bloqueado y no puede modificarse porque está siendo usado por otro usuario
+
+10) ¿Cuál de las siguientes afirmaciones sobre el diseño de una tabla es cierta?
+a) No es posible usar más de un campo de una tabla como clave principal
+b) Un mismo tipo de datos puede aplicarse a varios campos de una tabla, pero cada campo solo puede tener un tipo de datos asignado
+c) El tipo de datos “Texto largo” no admite texto con formato (negrita, cursiva, etc.)
+d) La clave principal no permite valores duplicados pero sí nulos
+
+11) Teniendo en cuenta la tabla PERSONAL DOCENTE que figura a continuación, ¿cuál de las consultas propuestas devuelve el número total de docentes que pertenecen al Cuerpo de Maestros?
+@imagen: imagenes/pregunta_11.png
+a) Consulta A (véase la imagen).
+b) Consulta B (véase la imagen).
+c) Consulta C (véase la imagen).
+d) Consulta D (véase la imagen).
+
+12) El campo Id_Docente se ha creado para almacenar el NIF, de modo que el usuario esté obligado a introducir exactamente 8 dígitos seguidos y una letra final en mayúscula. ¿Cuál de las siguientes máscaras de entrada es la correcta?
+a) LLLLLLLL>?
+b) 0000-0000
+c) 00000000<L
+d) 00000000>L
+
+13) Teniendo en cuenta las tablas CENTROS DOCENTES y PERSONAL DOCENTE que se muestran a continuación, ¿cuál sería el resultado de la consulta propuesta?
+@imagen: imagenes/pregunta_13.png
+a) Devolverá solo tres registros
+b) Devolverá solo dos registros
+c) Devolverá solo un registro
+d) Devolverá solo los registros del Cuerpo Maestros cuyo centro pertenezca a Montelirio
+
+14) El origen de un informe puede ser:
+a) Tablas, consultas, formularios y otros informes
+b) Solo tablas, consultas y formularios
+c) Solo tablas y consultas
+d) Solo tablas
+
+15) Le encargan crear un gráfico de ingresos y gastos con fechas y obtiene como resultado la imagen de la FIGURA 1. ¿Cómo lograría acortar el enorme espacio que queda entre los penúltimos y últimos datos de la tabla de manera que el resultado final fuese la imagen de la FIGURA 2? FIGURA 1 FIGURA 2
+@imagen: imagenes/pregunta_15.png
+a) Seleccionando el eje horizontal y haciendo clic con el botón derecho del ratón para seleccionar “Dar formato el eje…” y entre las opciones “Tipo de eje” elegir “Eje de texto”
+b) Seleccionando el eje horizontal y haciendo clic con el botón derecho del ratón para seleccionar “Dar formato el eje…” y entre las opciones “Tipo de eje” elegir “Eje de fecha”
+c) Seleccionando el eje vertical y haciendo clic con el botón derecho del ratón para seleccionar “Dar formato el eje…” y entre las opciones “Tipo de eje” elegir “Seleccionar automáticamente en función de los datos”
+d) Seleccionando el eje horizontal y haciendo clic con el botón derecho del ratón para seleccionar “Dar formato el eje…” y entre las opciones “Tipo de eje” elegir “Eje de formato”
+
+16) Señale la respuesta CORRECTA. En los libros compartidos se puede:
+a) Eliminar hojas de cálculo
+b) Combinar celdas o dividir celdas combinadas
+c) Ordenar o filtrar por número, texto o fecha
+d) Insertar o cambiar hipervínculos
+
+17) Si estoy en la hoja llamada CENTROS y quiero referirme a la celda B4 que se encuentra en la hoja llamada ALUMNOS debo escribir:
+a) =ALUMNOS:B4
+b) =ALUMNOS!B4
+c) =$ALUMNOS:$B$4
+d) =B4!ALUMNOS
+
+18) Le piden crear una fórmula en la celda E7 de modo que, escribiendo el turno en la celda D7, aparezca el nombre del trabajador de ese turno. ¿Cuál es la opción correcta entre las propuestas?
+@imagen: imagenes/pregunta_18.png
+a) =BUSCARH(D7;B2:E3;3;FALSO)
+b) =BUSCARV(D7;B2:E3;3;FALSO)
+c) =BUSCARH(D7;B2:E3;2;FALSO)
+d) =BUSCARV(D7;B2:E3;2;FALSO)
+
+19) ¿De qué manera se pueden imprimir las letras de las columnas (A, B, C, D, E…) y los números de las filas (1, 2, 3, 4…) de una hoja de Excel?
+@imagen: imagenes/pregunta_19.png
+a) En el grupo “Opciones de la hoja” de la pestaña “Diseño de página” activar la casilla “Imprimir” que se encuentra debajo de “Encabezados”
+b) En el grupo “Mostrar” de la pestaña “Vista” activar la casilla “Encabezados”
+c) En el grupo “Configurar página” de la pestaña “Diseño de página” pulsar el botón “Imprimir títulos” y seleccionar el rango de la primera fila en “Repetir filas en extremo superior” y el rango de la primera columna en “Repetir columnas a la izquierda”
+d) En el grupo “Texto” de la pestaña “Insertar” pulsar en “Encabez. pie pág.”
+
+20) ¿Qué se mostrará en la celda B9 cuando se pulse la tecla INTRO (enter)?
+@imagen: imagenes/pregunta_20.png
+a) 18
+b) 6
+c) 4
+d) 2

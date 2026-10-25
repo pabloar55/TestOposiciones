@@ -1,0 +1,58 @@
+[
+  {
+    "name": "car28_1",
+    "title": "Cuestionario primer ejercicio fase 1",
+    "url": "https://ias1.larioja.org/emp/infraweb/rdf/rdf_visor.jsp?_idClave=ghxcEun2xMPJkJiBEoMoKHaC5dJg5o5Mv7JZsSf8n_6WyGELH4Ve9Q==",
+    "archivo": "car28_1.pdf",
+    "sha256": "4bf49c284b1b183a55b943eeaf334186fb94c159b21923a234395c0e2f4f9ddd"
+  },
+  {
+    "name": "car28_2",
+    "title": "Cuestionario primer ejercicio fase 2",
+    "url": "https://ias1.larioja.org/emp/infraweb/rdf/rdf_visor.jsp?_idClave=ghxcEun2xMPJkJiBEoMoKHaC5dJg5o5MalDU4FzV1cuWyGELH4Ve9Q==",
+    "archivo": "car28_2.pdf",
+    "sha256": "033e0df67349a9b609cad31c7ee12908962c8e80ec1b48b98ab787f02cdbe720"
+  },
+  {
+    "name": "car28_4",
+    "title": "Plantilla definitiva respuestas primer ejercicio",
+    "url": "https://ias1.larioja.org/emp/infraweb/rdf/rdf_visor.jsp?_idClave=ghxcEun2xMPJkJiBEoMoKK_NfBskNdCIWIlH_WE5c7aWyGELH4Ve9Q==",
+    "archivo": "car28_4.pdf",
+    "sha256": "7aff3755f4e480c23924a47a143eedf3424f709efc67051d852bfcb1bf01c76f"
+  },
+  {
+    "name": "car28_9",
+    "title": "Cuestionario segundo ejercicio",
+    "url": "https://ias1.larioja.org/emp/infraweb/rdf/rdf_visor.jsp?_idClave=ghxcEun2xMPJkJiBEoMoKPl-E4TRY2xn5mrahBERab2WyGELH4Ve9Q==",
+    "archivo": "car28_9.pdf",
+    "sha256": "ee870c137b743c8448d72aa8b1455aa206c785947ef8f8b768254092a71aebb9"
+  },
+  {
+    "name": "car28_13",
+    "title": "Plantilla modificada respuestas segundo ejercicio.",
+    "url": "https://ias1.larioja.org/emp/infraweb/rdf/rdf_visor.jsp?_idClave=ghxcEun2xMPJkJiBEoMoKCc8dy8kvO3cwNHtGh0qzH2WyGELH4Ve9Q==",
+    "archivo": "car28_13.pdf",
+    "sha256": "8d6054b0f4a9e1dff09e6af75fd1d9081f03821acd4ed2cef9a50e99c664d4b7"
+  },
+  {
+    "name": "car29_1",
+    "title": "Cuestionario fase 1 ejercicio único",
+    "url": "https://ias1.larioja.org/emp/infraweb/rdf/rdf_visor.jsp?_idClave=ghxcEun2xMPJkJiBEoMoKOfpLipL1IjEWA4zpyc7G7SWyGELH4Ve9Q==",
+    "archivo": "car29_1.pdf",
+    "sha256": "f0dc85a9c11be71aabedfd0c25b796aa07d989051fe4bc0448fe2043e56f7209"
+  },
+  {
+    "name": "car29_2",
+    "title": "Cuestionario Fase 2 ejercicio único",
+    "url": "https://ias1.larioja.org/emp/infraweb/rdf/rdf_visor.jsp?_idClave=ghxcEun2xMPJkJiBEoMoKOfpLipL1IjEftijxDG0PBCWyGELH4Ve9Q==",
+    "archivo": "car29_2.pdf",
+    "sha256": "5345113451af30377918ad6f7549f0781dc8f3f609d06fe9755c4bd0017bce1e"
+  },
+  {
+    "name": "car29_3",
+    "title": "Plantilla modificada ejercicio único",
+    "url": "https://ias1.larioja.org/emp/infraweb/rdf/rdf_visor.jsp?_idClave=ghxcEun2xMPJkJiBEoMoKDdtGWHPj0LBJO5X7_27BFCWyGELH4Ve9Q==",
+    "archivo": "car29_3.pdf",
+    "sha256": "762406e0189d37badfefc0f6e9638761cea53c336d11300f1321637a6e3226e2"
+  }
+]

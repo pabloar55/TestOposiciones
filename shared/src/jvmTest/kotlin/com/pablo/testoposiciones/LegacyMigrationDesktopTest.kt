@@ -36,9 +36,11 @@ class LegacyMigrationDesktopTest {
         val retainedByExam = selection.filter { it[2] == "conservar" }
             .groupBy({ it[0] }, { it[1].toInt() })
         val categories = TestCategories.load().filter { it.id in setOf("ADMINISTRATIVO", "INFORMATICA") }
+            .map { category -> category.copy(exams = category.exams.filterNot { it.id.startsWith("CAR_2025_") }) }
         assertEquals(2, categories.size)
         assertEquals(retainedByExam.keys, categories.flatMap { it.exams }.map { it.id }.toSet())
-        assertTrue(categories.all { it.progressVersion == "CAR_FA13_2026_v1" })
+        assertEquals("CAR_FA13_2026_v2", categories.single { it.id == "ADMINISTRATIVO" }.progressVersion)
+        assertEquals("CAR_FA13_2026_v1", categories.single { it.id == "INFORMATICA" }.progressVersion)
         var total = 0
         for (category in categories) {
             for (exam in category.exams) {
@@ -59,6 +61,7 @@ class LegacyMigrationDesktopTest {
     @Test
     fun allQuestionIllustrationsArePackagedAndOnlyAssignedWhereNeeded() = runBlocking {
         val categories = TestCategories.load().filter { it.id in setOf("ADMINISTRATIVO", "INFORMATICA") }
+            .map { category -> category.copy(exams = category.exams.filterNot { it.id.startsWith("CAR_2025_") }) }
         val questions = categories.flatMap { ExtraerPreguntas.extraerPreguntas(it) }
         val paths = questions.mapNotNull { it.imagenPath }
         assertEquals(48, paths.size)

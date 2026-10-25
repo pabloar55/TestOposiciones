@@ -13,9 +13,18 @@ class CarProgressDesktopTest {
     fun filteredBanksStartFreshAndKeepTheirOwnProgress() = runBlocking {
         val directory = Files.createTempDirectory("testoposiciones-car").toFile()
         val previousHome = System.getProperty("user.home")
-        val categories = TestCategories.load().filter { it.id in setOf("ADMINISTRATIVO", "INFORMATICA") }
+        val categories = TestCategories.load().filter {
+            it.id in setOf("ADMINISTRATIVO", "INFORMATICA", "SUPUESTOS_ADMINISTRATIVO_CAR")
+        }
+        assertEquals(3, categories.size)
         try {
             System.setProperty("user.home", directory.absolutePath)
+            val administrative = categories.single { it.id == "ADMINISTRATIVO" }
+            val previousSelection = administrative.copy(progressVersion = "CAR_FA13_2026_v1")
+            for (mode in listOf(TipoTest.SECUENCIAL, TipoTest.BLOQUES_30)) {
+                ProgressStorage.writeNumber(previousSelection, mode, 375)
+                assertEquals(1, ProgressStorage.readNumber(administrative, mode))
+            }
             for (category in categories) {
                 val oldCategory = category.copy(progressVersion = "")
                 for (mode in listOf(TipoTest.SECUENCIAL, TipoTest.BLOQUES_30)) {

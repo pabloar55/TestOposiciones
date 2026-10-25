@@ -33,5 +33,19 @@
     "carpeta": "auxiliar_2026",
     "preguntas": "Preguntas.txt",
     "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "CAR_2025_LIBRE_TEORICO",
+    "nombre": "CAR 18/10/2025 - libre, teoría",
+    "carpeta": "car_2025_libre_teorico",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "CAR_2025_PI_TEORICO",
+    "nombre": "CAR 23/10/2025 - promoción interna, teoría",
+    "carpeta": "car_2025_pi_teorico",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
   }
 ]

@@ -1,0 +1,63 @@
+52) Entre las cintas de opciones habituales del Word 2016, NO se encuentra:
+a) Cinta de opciones Archivo.
+b) Cinta de opciones Referencias.
+c) Cinta de opciones Datos.
+d) Cinta de opciones Vista.
+
+53) Tenemos el texto “Oferta de Empleo Público 2026” escrito en un documento de Word 2016. A la palabra “Oferta” se le ha aplicado, en el siguiente orden, las siguientes instrucciones para darle formato: negrita, cursiva y tamaño 18. Si seleccionamos del mismo texto la palabra “Empleo” y pulsamos la tecla F4, ¿qué ocurrirá?:
+a) Se le aplicará negrita, cursiva y tamaño 18.
+b) Se le aplicará negrita.
+c) Se le aplicará tamaño 18.
+d) No ocurrirá nada.
+
+54) ¿Qué combinación de teclas en Excel 2016 permite insertar una hoja de cálculo nueva?
+a) Mayús + F11
+b) Bloq mayús + F11
+c) Alt + F11
+d) Alt + Mayús + F11
+
+55) La IMAGEN 1 muestra una tabla creada en Excel 2016. Si utilizamos la herramienta “Buscar” (IMAGEN 2) para localizar el valor A001S003 (resultado de aplicar en la columna “I” la fórmula: =ALMACÉN&ESTADO ), nos devuelve el mensaje de error de la IMAGEN 3. Indique cuál de las respuestas nos devolvería el valor buscado:
+@imagen: imagenes/pregunta_55.png
+a) Hacer clic en el botón “Opciones” de la herramienta “Buscar”, seleccionar del desplegable “Dentro de”, la opción “Libro”, y hacer clic en el botón “Buscar todos”.
+b) Hacer clic en el botón “Opciones” de la herramienta “Buscar”, seleccionar del desplegable “Buscar en”, la opción “Fórmulas”, y hacer clic en el botón “Buscar todos”.
+c) Hacer clic en el botón “Opciones” de la herramienta “Buscar”, marcar la casilla “Coincidir con el contenido de toda la celda” y hacer clic en el botón “Buscar todos”.
+d) Hacer clic en el botón “Opciones” de la herramienta “Buscar”, seleccionar del desplegable “Buscar en”, la opción “Valores”, y hacer clic en el botón “Buscar todos”.
+
+56) En Excel 2016, si una celda tiene el siguiente tipo de formato personalizado #.### y el valor que introduzco es 123456,98 ¿cuál de las siguientes visualizaciones es la correcta?
+a) 123.456,98
+b) 123457
+c) 123.457
+d) 123456
+
+57) Trabajando con Excel 2016, en una celda tenemos el valor “539”, y en la siguiente a la derecha el valor “Medida”. Si selecciona las dos celdas y pulsa “Combinar y centrar”, ¿cuál de los siguientes será el resultado?
+a) Borrará “Medida” y dejará el valor 539 centrado en la nueva celda.
+b) Escribirá los dos valores sin separación 539Medida y centrados en la nueva celda.
+c) Borrará los valores de ambas celdas y creará una nueva celda vacía con la alineación centrada.
+d) Escribirá los dos valores separados por una coma 539,Medida y centrados en la nueva celda.
+
+58) ¿Cuántos registros devolverá la siguiente consulta?
+@imagen: imagenes/pregunta_58.png
+a) 8.
+b) 6.
+c) 7.
+d) 5.
+
+59) El campo “Nombre” de la tabla “Empleados” se ha configurado para mostrar siempre en mayúsculas el texto introducido en dicho campo en la vista Hoja de Datos. Indique cómo se ha definido la correspondiente propiedad del campo “Nombre” para que esto sea posible:
+@imagen: imagenes/pregunta_59.png
+a) En la propiedad Formato, introduciendo el siguiente carácter: >
+b) En la propiedad Máscara de entrada, introduciendo el siguiente texto: MAYUSC
+c) En la propiedad Formato, introduciendo el siguiente comando: “MAYUSC”
+d) En la propiedad Regla de validación, introduciendo el siguiente comando: MAYUSC(*)
+
+60) Se quiere crear un nuevo campo que indique el coste mensual en seguridad social de cada empleado, ¿qué nombre de campo NO sería válido?
+@imagen: imagenes/pregunta_60.png
+a) Seguridad Social
+b) $eg$oc
+c) S.Social
+d) Seg_Soc
+
+70) En Word 2016, ¿cuál de los siguientes es el tipo de gráfico que mejor representa los datos para mostrar cantidades acumuladas a lo largo del tiempo?
+a) Columnas.
+b) Áreas.
+c) Dispersión.
+d) Líneas.

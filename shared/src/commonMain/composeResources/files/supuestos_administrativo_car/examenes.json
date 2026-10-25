@@ -1,0 +1,16 @@
+[
+  {
+    "id": "CAR_2025_LIBRE_SUPUESTOS",
+    "nombre": "CAR 18/10/2025 - libre, supuestos",
+    "carpeta": "car_2025_libre_supuestos",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "CAR_2025_PI_SUPUESTOS",
+    "nombre": "CAR 23/10/2025 - promoción interna, supuestos",
+    "carpeta": "car_2025_pi_supuestos",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  }
+]

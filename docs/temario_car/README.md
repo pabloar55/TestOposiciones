@@ -1,5 +1,7 @@
 # Selección para Administrativo de Administración General de la CAR
 
+> **Ampliación posterior:** se han añadido 227 preguntas oficiales de Administrativo CAR, con sus plantillas corregidas. El total activo es ahora **592** (391 de administrativo, 143 de informática y 58 en la categoría independiente «Supuestos prácticos CAR»). Véase [la importación desde Internet](../examenes_web/car_2025/README.md). Los recuentos de este documento describen la selección inicial de los bancos antiguos.
+
 Convocatoria **FA.13/24-26**, anexo II del BOR de 10 de junio de 2026, número 108. Referencia: páginas **16–18 del PDF aportado** (10268–10270 del boletín). Revisión realizada el 25 de octubre de 2026.
 
 Se han revisado las **661 preguntas** de las categorías de administrativo e informática. La aplicación ofrece ahora **365**: **251** en «Administrativo CAR» y **114** en «Informática CAR (Office 2016)». Se descartan **296**. Las otras seis categorías no se modifican.

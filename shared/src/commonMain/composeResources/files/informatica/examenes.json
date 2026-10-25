@@ -33,5 +33,19 @@
     "carpeta": "word_tablas",
     "preguntas": "Preguntas.txt",
     "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "CAR_2025_OFIMATICA",
+    "nombre": "CAR 13/12/2025 - Word, Access y Excel 2016",
+    "carpeta": "car_2025_ofimatica",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "CAR_2025_PI_OFIMATICA",
+    "nombre": "CAR 23/10/2025 - ofimática, promoción interna",
+    "carpeta": "car_2025_pi_ofimatica",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
   }
 ]
