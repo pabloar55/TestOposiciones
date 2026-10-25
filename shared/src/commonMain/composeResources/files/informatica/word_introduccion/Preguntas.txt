@@ -40,12 +40,6 @@ b) CTRL + A
 c) CTRL + V
 d) CTRL + U
 
-8) En Word encontramos el nuevo cuadro de búsqueda de Microsoft. Esta herramienta avanzada nos ayudará a encontrar rápidamente lo que buscamos, desde texto y comandos hasta ayuda y mucho más. ¿Dónde se encuentra?
-a) En la barra de título.
-b) En la cinta de opciones.
-c) En la barra de estado.
-d) En la barra de herramientas.
-
 9) A la derecha de la barra de título encontramos tres iconos para manejar nuestra ventana. El único que cambia su forma es el segundo de ellos. ¿Qué forma tendrá este pequeño icono si nuestra ventana se encuentra maximizada?
 a) Dos cuadrados superpuestos.
 b) Un único cuadrado.

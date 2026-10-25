@@ -30,7 +30,8 @@ object TestCategories {
                 id = definition.id,
                 displayName = definition.displayName,
                 folderName = definition.folderName,
-                exams = exams
+                exams = exams,
+                progressVersion = definition.progressVersion
             )
         }
 
@@ -67,7 +68,8 @@ object TestCategories {
                 folderName = required("carpeta"),
                 questionsFile = questionsFile,
                 answersFile = answersFile,
-                examsFile = examsFile
+                examsFile = examsFile,
+                progressVersion = optional("versionProgreso").orEmpty()
             )
         }
     }
@@ -133,6 +135,7 @@ object TestCategories {
         val folderName: String,
         val questionsFile: String?,
         val answersFile: String?,
-        val examsFile: String?
+        val examsFile: String?,
+        val progressVersion: String
     )
 }

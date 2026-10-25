@@ -56,6 +56,6 @@ actual object ProgressStorage {
     }
 
     private fun TestCategory.safeFileName(): String {
-        return id.replace(Regex("[^A-Za-z0-9_-]"), "_")
+        return progressStorageId.replace(Regex("[^A-Za-z0-9_-]"), "_")
     }
 }

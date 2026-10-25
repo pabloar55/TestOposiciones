@@ -42,14 +42,16 @@
   },
   {
     "id": "ADMINISTRATIVO",
-    "nombre": "Administrativo y auxiliar administrativo",
+    "nombre": "Administrativo CAR",
     "carpeta": "administrativo",
-    "examenes": "examenes.json"
+    "examenes": "examenes.json",
+    "versionProgreso": "CAR_FA13_2026_v1"
   },
   {
     "id": "INFORMATICA",
-    "nombre": "Informática",
+    "nombre": "Informática CAR (Office 2016)",
     "carpeta": "informatica",
-    "examenes": "examenes.json"
+    "examenes": "examenes.json",
+    "versionProgreso": "CAR_FA13_2026_v1"
   }
 ]

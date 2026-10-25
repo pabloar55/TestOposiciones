@@ -70,78 +70,6 @@ b) En el momento que se produzca el acceso a su contenido.
 c) En el momento en que la notificación se encuentre disponible para su acceso.
 d) A los 5 días siguientes a su recepción.
 
-13) De acuerdo con la le Ley 2/2002, de Salud de La Rioja, una de las siguientes características fundamentales no corresponde al sistema público de salud de La Rioja en el marco del Sistema Nacional de Salud:
-a) La extensión de sus servicios, únicamente, a determinada población de La Rioja.
-b) Una organización adecuada para prestar una atención integral a la salud.
-c) El uso preferente de los recursos sanitarios públicos en la provisión de los servicios.
-d) El  establecimiento  de  programas  de  mejora  continua  de  la  calidad  de  los servicios sanitarios.
-
-14) Según la Ley 2/2002, de Salud de La Rioja, ¿cuál de los siguientes no es un recurso del Sistema Público de Salud de La Rioja?
-a) Los centros sanitarios de la Comunidad Autónoma de La Rioja.
-b) Los centros sanitarios de otras Administraciones Públicas, según los acuerdos o convenios suscritos al efecto.
-c) Los centros transferidos a la Rioja del Instituto Nacional de Servicios Sociales.
-d) Los centros sanitarios transferidos a La Rioja de las Corporaciones Locales.
-
-15) De acuerdo con la Ley 2/2002, de Salud de La Rioja, la clasificación o régimen jurídico del personal del sistema público de salud de La Rioja y de los organismos o entidades adscritas o que lo conformen, se regirán por las disposiciones que respectivamente le sean aplicables, atendiendo:
-a) A la categoría de pertenencia.
-b) Al grupo de clasificación.
-c) A su procedencia y a la naturaleza de su relación de empleo.
-d) Al sistema de previsión social al que pertenezca.
-
-16) De acuerdo con el artículo 41 de la Ley 2/2002, de Salud de La Rioja, las Áreas de Salud se dividirán:
-a) En zonas de servicios públicos.
-b) En zonas básicas de servicios públicos.
-c) En zonas de salud.
-d) En zonas básicas de salud.
-
-17) De acuerdo con el artículo 37 de la Ley 2/2002, de Salud de La Rioja, la inclusión de nuevas prestaciones en el sistema público de salud de La Rioja requerirá la aprobación:
-a) Del Parlamento de La Rioja, previo informe del Gobierno de La Rioja.
-b) Del Gobierno, previo informe de la Consejería competente en materia de salud.
-c) De la Consejería de Salud, exclusivamente.
-d) Del Gobierno, previo informe del Consejo Consultivo.
-
-18) De acuerdo con la Ley 2/2002, de Salud de La Rioja, señale cuál es la respuesta incorrecta. Las áreas de salud se delimitan teniendo en cuenta:
-a) Factores geográficos.
-b) Factores socioeconómicos.
-c) Factores culturales.
-d) Únicamente a la población activa de cada zona básica.
-
-19) De acuerdo con la Ley 2/2002, de Salud de La Rioja, el Servicio Riojano de Salud, bajo  la  supervisión  de  la  Consejería  competente  en  materia  de  salud,  no desarrollará una de las siguientes funciones:
-a) Dirigir y gestionar los centros sanitarios adscritos al mismo.
-b) Prestar asistencia sanitaria en los centros que le sean adscritos.
-c) Dirigir y gestionar los recursos humanos adscritos a la Consejería de Sanidad.
-d) Aquellas funciones que le atribuyan las leyes.
-
-20) De acuerdo con la ley 2/2002, de Salud de La Rioja, la clasificación y régimen jurídico del personal del Servicio Riojano de Salud se regirá por las disposiciones que le sean aplicables atendiendo:
-a) A su procedencia y a la naturaleza de su relación de empleo.
-b) A su grupo de clasificación.
-c) Al puesto de trabajo desempeñado.
-d) Al grado de carrera profesional adquirido.
-
-21) De acuerdo con la Ley 2/2002, de Salud de La Rioja, la selección del personal estatutario del Servicio Riojano de Salud se hará de acuerdo:
-a) Con los principios de competencia y profesionalidad.
-b) Con los principios de publicidad, igualdad, mérito y capacidad.
-c) Con los principios de eficacia y eficiencia.
-d) No se establecen principios en la selección del personal del Servicio Riojano de Salud.
-
-22) De acuerdo con la Ley 2/2002, de Salud de La Rioja, el patrimonio del Servicio Riojano de Salud afecto al desarrollo de sus funciones tiene la consideración de:
-a) Catálogo de bienes.
-b) Dominio público.
-c) Dominio privado.
-d) Catálogo de servicios.
-
-23) De acuerdo con el Decreto 32/2021, por el que se establece la estructura orgánica y funciones de la Gerencia del Servicio Riojano de Salud, la planificación, gestión y dirección del Servicio de Prevención de Riesgos Laborales del Servicio Riojano de Salud, corresponde a:
-a) La Dirección de Gestión Económica.
-b) La Dirección de Recursos Humanos.
-c) La Gerencia de Atención Primaria.
-d) La Dirección de Secretariado de la Gerencia.
-
-24) De acuerdo con la Orden 6/2013, de 28 de octubre, de la Consejería de Salud y Servicios  Sociales,  de  creación  y  agrupación  de  zonas  básicas  de  salud,  y delimitación de su ámbito territorial, el marco territorial elemental para la prestación de la atención primaria de salud lo constituye:
-a) La zona básica de salud.
-b) El municipio.
-c) La comarca.
-d) La Comunidad Autónoma.
-
 25) Los   presupuestos   generales   de   la   Comunidad   Autónoma   de   La   Rioja determinarán  los  estados  de  gastos  en  los  que  se  incluirán  las  obligaciones económicas que:
 a) Como  mínimo  pueden  reconocer  los  sujetos  integrantes  del  sector  público administrativo.
 b) Aproximadamente pueden reconocer los sujetos integrantes del sector público administrativo.
@@ -238,53 +166,11 @@ b) La suma de las bases de cotización por contingencias comunes y accidente de 
 c) La base de cotización por contingencias comunes.
 d) La que en ese momento establezca el Servicio Público de Empleo.
 
-41) Indique  la  respuesta  incorrecta:  con  respecto  a  los  sistemas  de  selección regulados  en  el  Decreto  2/2011,  de  14  de  enero,  de  selección  de  personal estatutario y provisión de plazas y puestos de trabajo del Servicio Riojano de Salud:
-a) La oposición consiste en la celebración de una o más pruebas.
-b) Tanto  la  oposición  como  el  concurso  evalúan  la  competencia,  aptitud  e idoneidad   de   los   aspirantes   para   el   desempeño   de   las   funciones correspondientes a la categoría.
-c) La selección podrá realizarse a través del sistema de oposición cuando así resulte más adecuado en función de las características socio-profesionales y funciones atribuidas a las categorías del personal estatutario cuyas plazas se convocan.
-d) La utilización del concurso o de la oposición como sistema de selección podrá ser objeto de negociación colectiva en cada caso.
-
-42) De acuerdo con el Decreto 2/2011, de 14 de enero, de selección de personal estatutario y provisión de plazas y puestos de trabajo del Servicio Riojano de Salud, no están obligados a participar en un concurso de traslados de personal estatutario fijo:
-a) El personal de nuevo ingreso con adjudicación provisional en la plaza.
-b) El personal fijo con adscripción al puesto en libre designación y adjudicación provisional en la plaza.
-c) El personal reingresado provisional al servicio activo en el Servicio Riojano de Salud, que se encuentre en esta situación a fecha de la publicación de la convocatoria.
-d) El personal en activo con adjudicación definitiva de plaza.
-
-43) De acuerdo con el Decreto 2/2011, de 14 de enero, la aprobación de la oferta de empleo público de personal estatutario del Servicio Riojano de Salud corresponde:
-a) Al Gerente del Servicio Riojano de Salud.
-b) Al Consejo de Gobierno de La Rioja.
-c) A la Presidencia del Servicio Riojano de Salud.
-d) Al Consejero competente en materia de salud.
-
 44) Las bases y tipos de cotización a la Seguridad Social serán, de acuerdo con el Real Decreto Legislativo 8/2015, de 30 de octubre:
 a) Las que se establezcan cada año en la Ley de Presupuestos Generales del Estado.
 b) Las que se establezcan a la firma del correspondiente nombramiento.
 c) Las que establece el empresario.
 d) Las que establezca el propio trabajador.
-
-45) Se acordará la finalización de la relación estatutaria temporal del personal del Servicio Riojano de Salud, según la Ley 55/2003, de 16 de diciembre:
-a) Por  la  cobertura  de  la  plaza  desempeñada  por  otro  personal  estatutario temporal.
-b) Por la finalización del plazo establecido y recogido en el nombramiento.
-c) Por encontrarse el trabajador en situación de incapacidad temporal.
-d) Cuando lo decida el Director de Recursos Humanos.
-
-46) De acuerdo con la Ley 55/2003, de 16 de diciembre, una de las siguientes no es una situación administrativa del personal estatutario fijo de los servicios de salud:
-a) Servicios especiales.
-b) Excedencia por servicios en el sector público.
-c) Movilidad voluntaria.
-d) Suspensión de funciones.
-
-47) De acuerdo con la Ley 55/2003, de 16 de diciembre, no se mantendrán en la situación de servicio activo quienes estén en:
-a) Comisión de servicios.
-b) Disfrute de vacaciones o permisos.
-c) Se encuentren en situación de incapacidad temporal.
-d) Sean declarados en suspensión firme de funciones.
-
-48) Según la Ley 55/2003, de 16 de diciembre, para obtener la excedencia voluntaria cuando el personal estatutario lo solicite por interés particular:
-a) No es necesario haber prestado servicios efectivos en las Administraciones públicas con anterioridad.
-b) Será   preciso   haber   prestado   servicios   efectivos   en   cualquiera   de   las Administraciones públicas durante los 2 años inmediatamente anteriores.
-c) Será   preciso   haber   prestado   servicios   efectivos   en   cualquiera   de   las Administraciones públicas durante los 3 años inmediatamente anteriores.
-d) Será   preciso   haber   prestado   servicios   efectivos   en   cualquiera   de   las Administraciones públicas durante los 5 años inmediatamente anteriores.
 
 49) Según artículo 16.3.a) la Ley de Contratos del Sector Público, Ley 9/2017, ¿qué naturaleza   jurídica   tiene   un   contrato   cuyo   objeto   es   la   adquisición   y   el arrendamiento de equipos o el tratamiento de la información, sus dispositivos o programas; a excepción de los programas de ordenador hechos a medida?
 a) Contratos de suministros.

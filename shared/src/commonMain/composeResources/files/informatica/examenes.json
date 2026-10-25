@@ -1,12 +1,5 @@
 [
   {
-    "id": "INTERNET",
-    "nombre": "Internet - banco antiguo (sin PDF de origen)",
-    "carpeta": "internet",
-    "preguntas": "Preguntas.txt",
-    "respuestas": "Respuestas.txt"
-  },
-  {
     "id": "WORD_INTRODUCCION",
     "nombre": "Word - introducción y entorno",
     "carpeta": "word_introduccion",

@@ -1,5 +1,7 @@
 # Migración de los tests Java a KMP
 
+> Este documento registra la importación histórica íntegra, anterior al filtro de temario. La selección activa para la convocatoria CAR FA.13/24-26 está descrita en [temario_car/README.md](../temario_car/README.md): conserva 365 de las 661 preguntas importadas. Las plantillas y la procedencia de esta carpeta siguen siendo referencias del original.
+
 Revisión del 25 de octubre de 2026. Se incorporan las parejas TXT antiguas y todas las preguntas válidas de los PDF aportados en `test advo` y `Test informatica`. Los recursos se comparten entre Android y escritorio mediante Compose Resources.
 
 | Categoría / examen | Antes en Java | Ahora en KMP | Anuladas excluidas |

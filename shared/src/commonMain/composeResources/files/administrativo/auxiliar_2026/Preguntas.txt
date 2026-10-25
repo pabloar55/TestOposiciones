@@ -1,51 +1,3 @@
-1) El artículo 49 de la Ley 2/2002, de 17 de abril de Salud, indica que constituye la base del sistema sanitario y es el acceso ordinario de la población al proceso asistencial:
-a) La atención primaria.
-b) La atención especializada.
-c) La atención a urgencias y emergencias.
-d) La atención a la salud mental y drogodependencias.
-
-2) ¿Cuál de las siguientes autoridades sanitarias no aparece mencionada en el artículo 68 de la Ley 2/2002, de 17 de abril de Salud?
-a) El Gobierno de La Rioja.
-b) El titular de la Consejería competente en materia de salud.
-c) El Gerente del SERIS.
-d) Los Alcaldes.
-
-3) ¿Cuál de las siguientes no es una competencia de la Consejería competente en materia de salud, según la Ley 2/2002, de 17 de abril de Salud?
-a) La propuesta al Gobierno, de las líneas generales de la política sanitaria de La Rioja.
-b) La aprobación de la estructura básica del sistema de información sanitaria de La Rioja.
-c) La determinación de los criterios de la planificación sanitaria y ordenación territorial.
-d) El control sanitario de los cementerios y policía sanitaria mortuoria.
-
-4) Según el artículo 14 de la Ley 31/1995, de 8 de noviembre, de Prevención de Riesgos Laborales, el derecho de los trabajadores a una protección eficaz en materia de seguridad y salud en el trabajo:
-a) Se limita a los riesgos graves e inminentes.
-b) Implica un correlativo deber del trabajador de autoprotección.
-c) Supone un correlativo deber del empresario de protección de los trabajadores.
-d) Queda condicionado a la disponibilidad económica de la empresa.
-
-5) ¿Cuál de las siguientes opciones NO constituye un principio de la acción preventiva según el artículo 15 de la Ley 31/1995 de 8 de noviembre, de Prevención de Riesgos Laborales?
-a) Combatir los riesgos en su origen.
-b) Adaptar el trabajo a la persona.
-c) Tener en cuenta la evolución de la técnica.
-d) Priorizar la protección individual frente a la colectiva.
-
-6) En virtud del artículo 46 de la Ley 14/1986, de 25 de abril, General de Sanidad. Son características fundamentales del Sistema Nacional de Salud (señale la respuesta incorrecta):
-a) La organización adecuada para prestar una atención integral a la salud, comprensiva tanto de la promoción de la salud y prevención de la enfermedad como de la curación y rehabilitación.
-b) La coordinación y, en su caso, la integración de todos los recursos sanitarios públicos y privados en un dispositivo único.
-c) La prestación de una atención integral de la salud procurando algos niveles de calidad debidamente evaluados y controlados.
-d) La extensión de sus servicios a toda la población.
-
-7) De acuerdo con el artículo 58 de la Ley 14/1986, de 25 de abril, General de Sanidad. ¿Cuál no es una función del Consejo de Salud?
-a) Proponer medidas a  desarrollar en  el  Área  de  Salud  para  estudiar los  problemas sanitarios específicos de la misma, así como sus prioridades.
-b) Promover la participación comunitaria en el seno del Área de Salud.
-c) Conocer e informar el anteproyecto del Plan de Salud del Área y de sus adaptaciones anuales.
-d) El establecimiento de los criterios generales de coordinación en el Área de Salud.
-
-8) Según el artículo 60 de la Ley 14/1986, de 25 de abril, General de Sanidad.
-a) El Gerente del Área de Salud será nombrado y cesado por la Dirección del Servicio de Salud de la Comunidad Autónoma, a propuesta del Consejo de Salud.
-b) El Gerente del Área de Salud es el órgano de gestión de la misma. Podrá, previa convocatoria, asistir con voz y voto a las reuniones del Consejo de Dirección.
-c) El Gerente del Área de Salud será nombrado y cesado por la Dirección del Servicio de Salud de la Comunidad Autónoma, a propuesta del Consejo de Dirección del Área.
-d) El Gerente del Área de Salud es el órgano de gestión de la misma. Podrá, previa convocatoria, asistir con voz, pero sin voto a las reuniones del Consejo de Salud.
-
 9) En virtud del artículo 10 del Real Decreto Ley 5/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto Básico del Empleado Público. Son funcionarios interinos los que, por razones expresamente justificadas de necesidad y urgencia, son nombrados como tales con carácter temporal para el desempeño de funciones propias de funcionarios de carrera, cuando se dé alguna de las siguientes circunstancias:
 a) El exceso o acumulación de tareas por un plazo máximo de doce meses, dentro de un periodo de dieciocho meses.
 b) El exceso o acumulación de tareas por un plazo máximo de nueve meses, dentro de un periodo de dieciocho meses.
@@ -88,24 +40,6 @@ b) Cuando así lo solicite una décima parte de los miembros de cualquiera de la
 c) Cuando así lo solicite dos tercios de cada una de las Cámaras.
 d) Cuando así lo solicite tres quintos de cada una de las Cámaras.
 
-16) Según el artículo 17 de la Ley 55/2003, de 16 de diciembre, del Estatuto Marco, ¿cuál de los siguientes no es un derecho individual?
-a) Recibir protección eficaz en materia de seguridad y salud en el trabajo.
-b) La actividad sindical.
-c) La estabilidad en el empleo.
-d) La formación continuada.
-
-17) ¿Quién determinará cada año las retribuciones básicas y las cuantías del sueldo y los trienios del personal estatutario según el artículo 42 de la Ley 55/2003, de 16 de diciembre, del Estatuto Marco?
-a) El Ministerio de Sanidad.
-b) El servicio de salud.
-c) Las Leyes de Presupuestos.
-d) Cada Comunidad Autónoma.
-
-18) Conforme al artículo 72.6 de la Ley 55/2003, de 16 de diciembre, del Estatuto Marco, las faltas prescribirán:
-a) Las muy graves a los 4 años, las graves a los 2 años y las leves a los 6 meses.
-b) Las muy graves a los 3 años, las graves a los 2 años y las leves al año.
-c) Las muy graves a los 3 años, las graves a los 2 años y las leves a los 6 meses.
-d) Las muy graves a los 4 años, las graves a los 2 años y las leves al año.
-
 19) Conforme  al  art.17  del  Estatuto  de  Autonomía  de  La  Rioja,  la  Ley  electoral  del Parlamento de La Rioja fijará el número de Diputados que constituirán el Parlamento, con un mínimo de:
 a) 40
 b) 32
@@ -129,54 +63,6 @@ a) El Gobierno presentará el proyecto de presupuesto al Parlamento antes del ú
 b) Si el presupuesto no se aprobara antes del primer día del ejercicio fiscal correspondiente, se considerará prorrogado el del ejercicio anterior hasta la aprobación del nuevo.
 c) El presupuesto tendrá carácter de Ley y en él no se podrán crear nuevos tributos. Podrá, sin embargo, modificar los existentes cuando una Ley Tributaria sustantiva así lo prevea.
 d) Todas son correctas.
-
-23) Conforme establece el Decreto 2/2011, de 14 de enero, de selección de personal estatutario y provisión de plazas y puestos de trabajo del Servicio Riojano de Salud la aprobación de la oferta de empleo público de personal estatutario del Servicio Riojano de Salud corresponde:
-a) Al Consejo de Gobierno de La Rioja previa propuesta de la Consejería competente en materia de salud.
-b) A la Presidencia del Servicio Riojano de Salud, previa propuesta de la Consejería competente en materia de salud.
-c) A la Consejería competente en materia de salud, previa propuesta del Consejo de Gobierno de La Rioja.
-d) A  la  Gerencia  del  Servicio  Riojano  de  Salud,  previa  propuesta  de  la  Consejería competente en materia de salud.
-
-24) Conforme al artículo 37 del Decreto 2/2011, de 14 de enero, de selección de personal estatutario y provisión de plazas y puestos de trabajo del Servicio Riojano de Salud NO es un requisito para la participación en procesos selectivos por el sistema de promoción interna:
-a) Ostentar la titulación requerida.
-b) Haber prestado servicios como personal estatutario fijo al menos un año en la categoría de procedencia.
-c) Haber  prestado  servicios  como  personal  estatutario  fijo  al  menos  dos  años  en  la categoría de procedencia.
-d) Encontrarse en servicio activo en el Servicio Riojano de Salud como personal estatutario fijo.
-
-25) Dispone el artículo 47 del Decreto 2/2011, de 14 de enero, de selección de personal estatutario y provisión de plazas y puestos de trabajo del Servicio Riojano de Salud que están obligados a participar en el concurso de traslados:
-a) El personal de nuevo ingreso con adjudicación provisional en la plaza.
-b) El personal fijo con adscripción al puesto en libre designación y adjudicación provisional en la plaza.
-c) El personal reingresado provisional al servicio activo en el Servicio Riojano de Salud.
-d) Todas son correctas.
-
-26) Conforme al artículo 73 del Decreto 2/2011, de 14 de enero, de selección de personal estatutario y provisión de plazas y puestos de trabajo del Servicio Riojano de Salud las plazas de personal estatutario se ocuparán mediante adjudicación con carácter provisional, además de en los supuestos de comisión de servicios, promoción interna temporal y personal estatutario temporal, en los siguientes casos:
-a) A consecuencia de la amortización de la plaza en la plantilla del centro o institución, sin que proceda el pase a la situación de excedencia voluntaria.
-b) En los supuestos de reingreso al servicio activo con reserva de plaza, que se denominará reingreso provisional al servicio activo.
-c) Cuando al personal estatutario de nuevo ingreso le corresponda una adjudicación con carácter definitivo en plaza.
-d) Cuando el personal adscrito al puesto de trabajo en libre designación ostente una adjudicación definitiva de plaza en el centro de destino.
-
-27) El Decreto 2/2011, de 14 de enero, de selección de personal estatutario y provisión de plazas y puestos de trabajo del Servicio Riojano de Salud establece respecto a la Oferta de Empleo Público que:
-a) Corresponde al Consejo de Gobierno de La Rioja la aprobación de la oferta de empleo público de personal estatutario del Servicio Riojano de Salud, previa propuesta de la Consejería competente en materia de salud.
-b) Se reservará al menos el cincuenta por ciento de las plazas incluidas en la Oferta de Empleo Público al turno de promoción interna.
-c) Se reservará un cupo de las plazas ofertadas para ser cubiertas por personas con discapacidad, en ningún caso inferior al siete por ciento.
-d) Todas son correctas.
-
-28) Según el artículo 8 de la Ley 41/2002, de 14 de noviembre, básica reguladora de la autonomía del paciente y de derechos y obligaciones en materia de información y documentación clínica, señale la opción correcta en relación con el consentimiento:
-a) El consentimiento será verbal por regla general.
-b) El consentimiento será escrito por regla general.
-c) El paciente puede revocar verbalmente su consentimiento en cualquier momento.
-d) Todas las respuestas son incorrectas.
-
-29) Según el artículo 11 de la Ley 41/2002, de 14 de noviembre, básica reguladora de la autonomía del paciente y de derechos y obligaciones en materia de información y documentación clínica, con el fin de asegurar la eficacia en todo el territorio nacional de las instrucciones previas manifestadas por los pacientes y formalizadas de acuerdo con lo dispuesto en la legislación de las respectivas Comunidades Autónomas, se creará:
-a) En cada Comunidad Autónoma el Registro de instrucciones previas que se regirá por las normas que reglamentariamente se determinen, previo acuerdo del Consejo Consultivo correspondiente.
-b) En cada Comunidad Autónoma el Registro de instrucciones previas que se regirá por las normas  que  legalmente  se  determinen,  previo  acuerdo  del  Consejo  Consultivo correspondiente.
-c) En cada Comunidad Autónoma el Registro de últimas voluntades que se regirá por las normas  que  legalmente  se  determinen,  previo  acuerdo  del  Consejo  Consultivo correspondiente.
-d) En el Ministerio de Sanidad y Consumo el Registro nacional de instrucciones previas que se regirá por las normas que reglamentariamente se determinen, previo acuerdo del Consejo Interterritorial del Sistema Nacional de Salud.
-
-30) Según el artículo 16 de la Ley 41/2002, de 14 de noviembre, básica reguladora de la autonomía del paciente y de derechos y obligaciones en materia de información y documentación  clínica,  el  personal  de  administración  y  gestión  de  los  centros sanitarios:
-a) Tiene  acceso  a  las  historias  clínicas  en  el  cumplimiento  de  sus  funciones  de comprobación de la calidad de la asistencia, el respeto de los derechos del paciente o cualquier otra obligación del centro en relación con los pacientes y usuarios o la propia Administración sanitaria.
-b) Sólo puede acceder a los datos de la historia clínica relacionados con sus propias funciones.
-c) Tienen acceso a la historia clínica del paciente con fines epidemiológicos.
-d) Tienen acceso a la historia clínica del paciente con fines de salud pública.
 
 31) Según  el  artículo  3  de  la  Ley  39/2015,  de  1  de  octubre,  del  Procedimiento Administrativo Común de las Administraciones Públicas. A los efectos de la citada Ley, tendrán capacidad de obrar ante las Administraciones Públicas:
 a) Las personas físicas o jurídicas que ostenten capacidad de obrar con arreglo a las normas civiles.
@@ -213,54 +99,6 @@ a) Un mes.
 b) Dos meses.
 c) Tres meses.
 d) El plazo de resolución del recurso de alzada dependerá de si el acto recurrido agota o no la vía administrativa.
-
-37) Según el artículo 3 de la Ley 3/2014, de 11 de septiembre, de Transparencia y Buen Gobierno de La Rioja, se entiende por transparencia:
-a) La  obligación  de  difundir  de  forma  permanente,  periódica  y  actualizada  aquella información pública más relevante para garantizar la transparencia de la actividad de la Administración Pública.
-b) La cualidad que permite y facilita el acceso de los ciudadanos a la información pública en poder de la Administración dentro de los límites establecidos por la legislación vigente.
-c) Aquella información, cualquiera que sea su soporte y forma de expresión, poseída o elaborada por los sujetos comprendidos en el artículo 2 de esta ley, y que no se halle sujeta a los límites de confidencialidad establecidos por la legislación básica aplicable.
-d) El uso de documentos que obran en poder de los órganos pertenecientes al Sector Público, por personas físicas o jurídicas, con fines comerciales o no, siempre que dicho uso no constituya una actividad administrativa pública.
-
-38) Según el artículo 9 de la Ley 3/2014, de 11 de septiembre, de Transparencia y Buen Gobierno de La Rioja, los sujetos comprendidos en los párrafos 1 y 2 del artículo 2 de esta ley, en relación con sus competencias, publicarán:
-a) Las memorias e informes que conformen los expedientes de elaboración de los textos normativos.
-b) Los documentos que, conforme a la legislación sectorial vigente, deban ser sometidos a un periodo de información pública durante su tramitación.
-c) El inventario de procedimientos administrativos y, entre ellos, los disponibles en formato electrónico.
-d) Todas las respuestas son correctas.
-
-39) Según el artículo 15 de la Ley 3/2014, de 11 de septiembre, de Transparencia y Buen Gobierno de La Rioja será órgano competente para la resolución del procedimiento de solicitud de acceso a la información pública en los organismos públicos:
-a) Los titulares de los órganos de la consejería que posean la información solicitada.
-b) El Consejo de Dirección del correspondiente organismo.
-c) El Gerente del correspondiente organismo.
-d) Los presidentes.
-
-40) Según el artículo 16 de la Ley 3/2014, de 11 de septiembre, de Transparencia y Buen Gobierno de La Rioja, será competente para conocer de la reclamación previa frente a las resoluciones expresas o presuntas de las solicitudes de derecho de acceso a la información pública:
-a) El Consejo de Transparencia y Buen Gobierno integrado en la Administración general del Estado.
-b) El Consejo de Transparencia y Buen Gobierno integrado en la Comunidad Autónoma de La Rioja.
-c) Los Juzgados de lo contencioso-administrativo de La Rioja.
-d) El Tribunal Superior de Justicia de la Rioja.
-
-41) Según el artículo 21 de la Ley 3/2014, de 11 de septiembre, de Transparencia y Buen Gobierno de La Rioja, el órgano competente en materia de buen gobierno para ordenar la incoación del procedimiento sancionador cuando el presunto infractor tenga la condición de miembro del Gobierno de La Rioja será:
-a) El titular de la consejería a la que esté adscrito el miembro del Gobierno.
-b) El titular de la consejería competente en materia de Administración Pública.
-c) El titular de la consejería competente en materia de Transparencia.
-d) El propio Gobierno de La Rioja.
-
-42) Según el artículo 26 de la Ley 3/2014, de 11 de septiembre, de Transparencia y Buen Gobierno  de  La  Rioja,  el  plazo  máximo  para  dictar  y  notificar  la  resolución  de reutilización de la información solicitada será de:
-a) Diez días, salvo que por razones de complejidad y volumen de la información se acuerde ampliar el plazo en otros diez días.
-b) Veinte días, salvo que por razones de complejidad y volumen de la información se acuerde ampliar el plazo en otros veinte días.
-c) Veinte días sin posibilidad de ampliación.
-d) Diez días sin posibilidad de ampliación.
-
-43) Según el artículo 3 de la Ley 3/2014 de 11 de septiembre, de Transparencia y Buen Gobierno de La Rioja, ¿qué se entiende por «transparencia»?
-a) La cualidad que permite y facilita el acceso de los ciudadanos a la información pública en poder de la Administración.
-b) La  obligación  de  difundir  de  forma  permanente,  periódica  y  actualizada  aquella información pública más relevante para garantizar la transparencia.
-c) La intervención     e implicación de la ciudadanía en los asuntos públicos.
-d) La obligación de publicar información cuando lo soliciten los ciudadanos.
-
-44) Según el artículo 3 de la Ley 5/2014, de 20 de octubre, de administración electrónica y simplificación administrativa, ¿cuál no es un propósito de esta ley?
-a) Promover una Administración Pública ágil, eficaz y eficiente, haciendo accesibles sus relaciones con los ciudadanos con independencia del soporte que se utilice.
-b) Mejorar la actuación de los órganos, organismos y entes mediante la regulación de medidas de simplificación de trámites y procedimientos, para la reducción de cargas administrativas.
-c) Garantizar la coordinación administrativa, así como la subjetividad en la actuación de los diferentes órganos y entes.
-d) Garantizar que el uso de los medios electrónicos promueva una Administración Pública abierta, transparente y accesible.
 
 45) Según la Ley 5/2014, de 20 de octubre, de administración electrónica y simplificación administrativa, “es la dirección electrónica a través de la cual los ciudadanos acceden a la información, servicios y trámites electrónicos”:
 a) La sede electrónica.
@@ -316,18 +154,6 @@ b) Desde el día siguiente en que la infracción se hubiera cometido.
 c) Desde el día en que se notifique la infracción al interesado.
 d) Desde el día siguiente en que se notifique la infracción al interesado.
 
-54) Según el artículo 48.8 de la ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, los convenios se perfeccionan:
-a) Con su publicación.
-b) Con su inscripción en el Registro Electrónico estatal de Órganos e Instrumentos de Cooperación.
-c) Con su aplicación.
-d) Por la prestación del consentimiento de las partes.
-
-55) De acuerdo con el artículo 127 de la ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, respecto a la disolución del consorcio no es correcto:
-a) La disolución del consorcio produce su liquidación y extinción.
-b) En todo caso será causa de disolución que los fines para los que fue creado el consorcio hayan sido cumplidos.
-c) El  máximo órgano de  gobierno  del  consorcio  al adoptar el  acuerdo de  disolución nombrará un liquidador que será un órgano o entidad, vinculada o dependiente, de la Administración Pública a la que el consorcio esté adscrito.
-d) La responsabilidad que le corresponda al empleado público como miembro de la entidad u órgano liquidador será directamente asumida por su superior jerárquico.
-
 56) A los efectos de lo previsto en el artículo 136 del Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social, indicar los trabajadores que NO se declaran expresamente incluidos en el campo de aplicación del Régimen General de la Seguridad Social:
 a) Los trabajadores incluidos en el Sistema Especial para Empleados de Hogar.
 b) El personal contratado al servicio de notarías, registros de la propiedad y demás oficinas o centros similares.
@@ -364,60 +190,6 @@ b) Alta médica por curación o mejoría que permita al trabajador realizar su t
 c) Por ser dado de alta el trabajador con o sin declaración de incapacidad permanente.
 d) Incomparecencia justificada a cualquiera de las convocatorias para los exámenes y reconocimientos establecidos por la inspección médica del Instituto Nacional de la Seguridad Social o por los médicos de la mutua colaboradora con la Seguridad Social.
 
-62) Si pulsamos la combinación de teclas Ctrl + Alt + Supr en nuestra sesión de Windows se muestra una pantalla con diversas opciones entre las que NO se encuentra:
-a) Cerrar sesión
-b) Cambiar una contraseña
-c) Administrador de tareas
-d) Suspender sesión
-
-63) En nuestro escritorio de Windows disponemos de un archivo guardado que queremos copiar a una carpeta, para ello:
-a) Seleccionamos   el   archivo   y   arrastramos   a   la   carpeta   de   destino   pulsando simultáneamente la tecla Ctrl
-b) Seleccionamos   el   archivo   y   arrastramos   a   la   carpeta   de   destino   pulsando simultáneamente la tecla Mayúscula
-c) Seleccionamos el archivo, pulsamos las teclas Ctrl + X simultáneamente, seleccionamos la carpeta donde queremos copiar el documento y pulsamos Ctrl + V simultáneamente
-d) Son correctas las opciones a y c
-
-64) En el entorno de Windows señale que opción NO está contemplada como forma de ordenar los documentos de las carpetas desde la ficha correspondiente de la cinta de opciones:
-a) Por autores
-b) Por fecha de modificación
-c) Por tamaño
-d) Todas son correctas
-
-65) Como se denomina a los correos electrónicos que tratan de conseguir información confidencial como contraseñas, datos financieros o accesos a servicios, de forma engañosa o fraudulenta haciéndose pasar por entidades o personas legítimas:
-a) Spam
-b) Malware
-c) Phising
-d) Troyanos
-
-66) Que  función  permite  configurar  Outlook  para  que  organice  automáticamente  los mensajes  de  correo  electrónico  entrantes  en  carpetas  especificas  previamente definidas por el usuario:
-a) Validación de mensajes
-b) Reglas de mensaje
-c) Reenvío de mensajes
-d) Distribución de mensajes
-
-67) En la Bandeja de entrada de correo en Outlook, disponemos en la cinta de opciones de Inicio de la opción «Ignorar» que nos permite:
-a) Ignora las peticiones de confirmación de lectura o de entrega para todos los elementos seleccionados
-b) Mover los mensajes actuales y futuros de la conversación seleccionada a la carpeta de Elementos eliminados
-c) Ignora las convocatorias de reunión procedentes del usuario que es remitente del correo seleccionado
-d) Mueve los mensajes actuales y futuros de la conversación seleccionada a la carpeta de Correo no deseado
-
-68) ¿Cuál de los siguientes no es un elemento periférico de salida?
-a) Fax
-b) Plotter
-c) Micrófono
-d) Pantalla
-
-69) ¿Cuántos bits forman un byte?
-a) 2 bits
-b) 4 bits
-c) 8 bits
-d) 10 bits
-
-70) ¿Cuál de los siguientes no es un sistema operativo?
-a) Kernel
-b) MS-DOS
-c) Linux
-d) iOS
-
 71) La extensión de archivo de una base de datos Access es:
 a) .accdb
 b) .accx
@@ -453,30 +225,6 @@ a) C$3
 b) C:3
 c) $C3
 d) $C$3
-
-77) ¿Qué  conector  permite   transmitir   vídeo,   audio,  datos   y   además  suministrar alimentación eléctrica mediante un único cable, según los estándares actuales?
-a) HDMI
-b) DisplayPort
-c) USB tipo C
-d) VGA
-
-78) En el Explorador de archivos de Windows, ¿qué función permite cambiar la forma en que se muestran los archivos y carpetas (iconos, lista, detalles, etc.) dentro de una carpeta?
-a) El Panel de control
-b) La barra de direcciones
-c) Las opciones de vista
-d) El historial de archivos
-
-79) ¿Cuál de los siguientes protocolos o servicios de Internet se utiliza específicamente para la transferencia de páginas web entre un servidor y un navegador?
-a) FTP
-b) SMTP
-c) HTTP
-d) TCP
-
-80) Respecto a las funciones de navegación, búsqueda y gestión de información en Internet Explorer, señale la opción correcta:
-a) El historial muestra exclusivamente las páginas web añadidas a favoritos
-b) La búsqueda en Internet Explorer se realiza únicamente a través de los menús del navegador
-c) Los favoritos permiten organizar y almacenar direcciones web para su posterior acceso
-d) La barra de direcciones solo admite direcciones web completas y no permite búsquedas
 
 81) Después de redactar un documento en Word 2016, quieres generar una Tabla de contenido automáticamente  desde  la  pestaña  Referencias.  ¿Qué requisito  previo deben cumplir los textos del documento?
 a) Deben contener un marcador al final de cada frase.
