@@ -183,11 +183,13 @@ class TestViewModel : ViewModel() {
     fun selectAnswer(opcion: Char) {
         if (tipoTest.showsFeedback && currentIndex in userAnswers) return
         userAnswers[currentIndex] = opcion
+        saveProgress()
     }
 
     fun goNext() {
         if (currentIndex < preguntas.size - 1) {
             currentIndex++
+            saveProgress()
         } else {
             finalizeTest()
         }
@@ -196,6 +198,7 @@ class TestViewModel : ViewModel() {
     fun goPrevious() {
         if (currentIndex > 0) {
             currentIndex--
+            saveProgress()
         }
     }
 
@@ -255,6 +258,8 @@ class TestViewModel : ViewModel() {
         timerJob = null
     }
 
+    // Se guarda en cada paso y no solo al salir: si Android cierra la app en segundo
+    // plano, el ViewModel se pierde sin pasar por goToWelcome().
     private fun saveProgress() {
         val category = testCategory ?: return
         when (tipoTest) {
