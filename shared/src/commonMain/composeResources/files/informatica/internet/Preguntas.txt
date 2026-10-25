@@ -1,0 +1,167 @@
+1) Si desea realizar un seguimiento en Internet Explorer de las páginas o sitios web de interés encontrados, ¿qué acción de las siguientes le resultará más fácil de acceder?
+a) Se pueden añadir al Historial.
+b) Se pueden añadir a la lista de Favoritos.
+c) Se pueden añadir a la página de Inicio.
+d) Ninguna es correcta.
+
+2) ¿A qué corresponde la sigla HTML?
+a) Hypertext Monitoring Language (Lenguaje de control de hipertexto).
+b) Hypertext Mark-up Language (Lenguaje de marcas de hipertexto).
+c) High Tension Music Laboratory (Laboratorio musical de alta tensión).
+d) Hypertext Masking Language (Lenguaje de máscaras de hipertexto).
+
+3) En Internet Explorer versión 11, ¿cuál es el método abreviado correcto para abrir una nueva pestaña y cargar en ella otra página web?
+a) Ctrl+W
+b) Ctrl+T
+c) Ctrl+N
+d) Ctrl+S
+
+4) ¿Qué es Telnet?
+a) Un servicio de conexión remota a ordenador.
+b) Un servicio de transferencia de ficheros mediante menús.
+c) Un servicio de grupos de debate de usuarios.
+d) Un servicio de correo electrónico entre usuarios.
+
+5) ¿Qué es TCP/IP?
+a) Un tipo de procesador.
+b) Los dos protocolos característicos de Internet.
+c) Un puerto de comunicación.
+d) Un dispositivo de comunicación.
+
+6) ¿Para qué sirve HTML?
+a) Es el programa para la búsqueda rápida de in en un buscador en Internet.
+b) Es un servidor de Internet.
+c) Es un lenguaje utilizado en el diseño y creación de páginas web.
+d) Son correctas a) y b).
+
+7) ¿Existe alguna opción en Internet Explorer que nos permita parar la descarga de una página que está tardando mucho en abrirse?
+a) No es posible.
+b) Sí es posible, abriendo una nueva ventana y cerrando la actual.
+c) Existe el botón de detener.
+d) Existe el botón de actualizar.
+
+8) Si estamos visualizando una página web cuyo contenido es susceptible de cambios continuos, para reflejar dichos cambios en la página en Internet Explorer usaremos:
+a) Abriremos una nueva ventana y cargaremos la página.
+b) Pulsaremos el botón de Atrás.
+c) Pulsaremos el botón de Adelante.
+d) Pulsaremos el botón de Actualizar.
+
+9) ¿Qué elemento de Internet conecta las diversas redes y hace que la información vaya por el camino más rápido?
+a) Un servidor.
+b) Un router.
+c) Un host.
+d) Un módem.
+
+10) ¿Qué significan las siglas PSI o ISP?
+a) Proveedor de Sistemas de Internet.
+b) Proveedor de Servicios de una Intranet.
+c) Proveedor de Servicios de Internet.
+d) Producto y Servicios de Internet.
+
+11) ¿Cómo se denomina el servicio que permite obtener una dirección IP a partir de un nombre de dominio como por ejemplo www.map.es?
+a) FTP.
+b) DNS.
+c) HTTP.
+d) IRC.
+
+12) No es un navegador de Internet:
+a) Netscape.
+b) Internet Explorer.
+c) Mozilla Firefox.
+d) Netshow.
+
+13) ¿Cuál es el valor máximo que pueden tomar cada uno de los números que forman una dirección IP de Internet utilizando IPv4?
+a) 255.
+b) 256.
+c) 10.
+d) 4.
+
+14) ¿Qué aplicación permite mostrar las páginas web y poder pasar de una a otra?
+a) Infovía.
+b) www.
+c) Navegador.
+d) Buscador.
+
+15) No es un buscador:
+a) Google.
+b) Altavista.
+c) Netscape o Internet Explorer.
+d) Yahoo.
+
+16) En Yahoo, para buscar documentos que contengan la frase exacta "Turismo rural", la forma más óptima sería escribir en el cuadro de texto buscar:
+a) Turismo rural.
+b) "Turismo rural".
+c) +Turismo + rural.
+d) +Turismo - rural.
+
+17) Los dos iconos que se muestran a continuación representan lo mismo. ¿El qué? (son 2 estrellas)
+a) Crear carpeta.
+b) Favoritos.
+c) Administrar carpetas.
+d) Eliminar carpetas.
+
+18) ¿Cuál es la combinación de teclas que se utiliza para abrir el cuadro de diálogo que aparece a continuación? (es una barra de búsqueda)
+a) CTRL+F.
+b) CTRL + B.
+c) CTRL + R.
+d) CTRL+D.
+
+19) ¿Qué es el IRC?
+a) Es una forma de transmitir datos a través de las líneas telefónicas regulares.
+b) Es una herramienta que facilita las charlas en directo entre varios interlocutores al mismo tiempo.
+c) Son las empresas cuyos servicios posibilitan el acceso a Internet de los usuarios.
+d) Es un nuevo lenguaje de programación de páginas web.
+
+20) ¿Qué es una barra de direcciones en un explorador?
+a) Es un espacio en el que se puede escribir y mostrar la dirección de una página web.
+b) Es una barra con las direcciones de Internet utilizadas los últimos 20 días.
+c) Es el lugar donde se encuentran las direcciones de correo de los usuarios.
+d) Es una barra que sirve para guardar las páginas web más utilizadas.
+
+21) En Internet Explorer, para volver a visitar las páginas web vistas recientemente:
+a) Usamos el icono de favoritos (estrella) y pasamos en el menú que se despliega a la pestaña Historial.
+b) En la barra de herramientas, haga clic en el botón Búsqueda.
+c) En el menú Ver del explorador, haga clic en Páginas Web.
+d) En el menú Ver del explorador, haga clic en Recientes.
+
+22) ¿Qué es una LAN?
+a) Una red de área extensa.
+b) Una red de área metropolitana.
+c) Una red de área urbana.
+d) Una red de área local.
+
+23) ¿Qué tecla nos permite alternar la visualización de una página web a pantalla completa/pantalla normal?
+a) F1.
+b) F2.
+c) F11.
+d) F5.
+
+24) Si queremos tener distintas páginas web abiertas en un navegador como Internet Explorer:
+a) No es posible, solamente podremos visualizar una.
+b) Podremos abrir varias ventanas (Ctrl+N) o varias pestañas (Ctrl+T) y cambiar a la página deseada.
+c) Tendremos que abrir distintas instancias del mismo programa.
+d) Ninguna es correcta.
+
+25) En informática, se entiende por protocolo:
+a) El documento, en el que se describe un proceso.
+b) Un lenguaje de máquina.
+c) Un programa de comunicaciones.
+d) Un programa de código objeto.
+
+26) ¿Cómo está identificado cada ordenador en Internet?
+a) Por su número IP.
+b) Por su número de serie.
+c) Por su nombre de dominio.
+d) Son correctas a) y c).
+
+27) ¿Qué es un nombre de dominio en Internet?
+a) La forma que tienen las máquinas de llamarse entre sí.
+b) El nombre de los proveedores de acceso.
+c) Es el único nombre que identifica a un sitio Internet.
+d) Cuatro números separados por puntos, cada uno de los cuales puede tomar valores entre 0 y 255.
+
+28) A la vista de la imagen siguiente, ¿qué servicio de Internet se está ejecutando? (nombre del dominio en la barra de direcciones ftp://fedora....)
+a) World Wide Web.
+b) IRC.
+c) Chat.
+d) FTP.

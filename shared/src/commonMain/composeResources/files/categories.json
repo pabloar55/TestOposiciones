@@ -39,5 +39,17 @@
     "carpeta": "PLANTILLA+DEFINITIVA+ACCESO+LIBRE++DÍA+13+DE+SEPTIEMBRE+DE+2025MIE20250320DOC23MO",
     "preguntas": "preguntas.txt",
     "respuestas": "respuestas.txt"
+  },
+  {
+    "id": "ADMINISTRATIVO",
+    "nombre": "Administrativo y auxiliar administrativo",
+    "carpeta": "administrativo",
+    "examenes": "examenes.json"
+  },
+  {
+    "id": "INFORMATICA",
+    "nombre": "Informática",
+    "carpeta": "informatica",
+    "examenes": "examenes.json"
   }
 ]

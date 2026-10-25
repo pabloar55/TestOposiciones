@@ -1,0 +1,37 @@
+[
+  {
+    "id": "ADMINISTRATIVO_2023_PROMOCION_INTERNA",
+    "nombre": "Administrativo 2023 - promoción interna",
+    "carpeta": "administrativo_2023_promocion_interna",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "AUXILIAR_2024",
+    "nombre": "Auxiliar administrativo septiembre 2024",
+    "carpeta": "auxiliar_2024",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "AUXILIAR_2022",
+    "nombre": "Auxiliar administrativo octubre 2022",
+    "carpeta": "auxiliar_2022",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "ADMINISTRATIVO_2024",
+    "nombre": "Administrativo mayo 2024",
+    "carpeta": "administrativo_2024",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "AUXILIAR_2026",
+    "nombre": "Auxiliar administrativo enero 2026",
+    "carpeta": "auxiliar_2026",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  }
+]

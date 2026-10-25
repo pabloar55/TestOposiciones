@@ -1,0 +1,127 @@
+1) ¿Cuál de las filas de la siguiente tabla tiene todas las celdas combinadas?
+@imagen: imagenes/pregunta_1.png
+a) Fila 1
+b) Fila 2
+c) Fila 4
+d) Fila 3
+
+2) Si tengo el cursor en la celda con el apellido López y pulso la opción Dividir tabla…
+@imagen: imagenes/pregunta_2.png
+a) La tabla se convertirá en dos tablas. La primera tabla tendrá las filas de “Laura” y “Antonia”. La segunda tabla tendrá las filas “Juan” y “Pedro”.
+b) La tabla seguirá siendo una sola, pero la fila de “Juan” se borrará.
+c) La tabla se convertirá en cuatro tablas. Cada una correspondiente a una fila.
+d) La tabla se convertirá en dos tablas. La primera tabla tendrá las filas de “Laura”, “Antonia” y “Juan”. La segunda tabla tendrá solo la fila “Pedro”.
+
+3) La opción Autoajustar al contenido…
+a) Hace que todas las filas tengan el mismo alto.
+b) Hace que las columnas se agranden hasta conseguir que la tabla ocupe todo el espacio entre margen izquierdo y margen derecho.
+c) Hace que todas las columnas tengan el mismo ancho.
+d) Hace que las columnas cambien de tamaño para ajustarse al texto que contienen.
+
+4) Si selecciona dos filas y activa la opción Distribuir Filas…
+a) Las dos filas seleccionadas se pondrán con el mismo alto.
+b) Las filas de la tabla se pondrán con un alto específico introducido por el usuario.
+c) Todas las columnas de la tabla se pondrán con el mismo ancho.
+d) Todas las filas de la tabla se pondrán con el mismo alto.
+
+5) Si quiere sumar todos los números situados por encima de la celda marcada con X, deberá introducir en esta celda la Fórmula… [El PDF original no incluye la tabla mencionada.]
+a) =SUM(1..3)
+b) =SUM(ABOVE)
+c) =SUM(TOP)
+d) =SUM(SUPERIOR)
+
+6) Si quiere actualizar todos los cálculos hechos a través de fórmulas en una tabla, debe…
+a) Seleccionar la tabla y pulsar F9
+b) Hacer clic en cualquier celda de la tabla y pulsar F9
+c) Hacer clic en cualquier celda de la tabla y pulsar Ctrl+F9
+d) Hacer clic sobre uno de los cálculos y pulsar Ctrl+F9
+
+7) Si quiere insertar una fila entre el 7 y el 4, debe…
+@imagen: imagenes/pregunta_7.png
+a) Llevar el ratón a la celda del 3 y activar la opción Insertar Derecha.
+b) Llevar el ratón a la línea situada entre el 8 y el 9, hacer clic y arrastrar hacia abajo.
+c) Llevar el ratón a la izquierda de la tabla entre el 7 y el 4 y pulsar sobre el símbolo más que aparece.
+d) No es posible insertar una fila en ese lugar.
+
+8) ¿Puede insertar una tabla dentro de una celda?
+a) Sí, usando la opción Dividir tabla.
+b) Sí, usando la opción Insertar – Tabla, dentro de la celda.
+c) Sí usando la opción combinar celdas.
+d) Sí, usando la opción dividir celda.
+
+9) Los anchos de columnas puede configurarlos…
+a) En porcentaje y centímetros.
+b) En porcentaje y puntos.
+c) En centímetros solamente.
+d) En porcentaje y píxeles.
+
+10) Si selecciona toda la tabla siguiente y activa la opción Dividir celdas con las opciones que se indican… ¿Cuántas celdas en total tendrá la tabla?
+@imagen: imagenes/pregunta_10.png
+a) 2 celdas
+b) 3 celdas
+c) 6 celdas
+d) 18 celdas
+
+11) ¿Es posible convertir el siguiente listado con palabras separadas por espacios en una tabla de cuatro filas y tres columnas conteniendo los nombres apellidos y edades?
+@imagen: imagenes/pregunta_11.png
+a) Sí, usando la opción Tabla de la pestaña Insertar y activando la opción Tablas Rápidas.
+b) Sí, entrando en las opciones de párrafo y activando convertir tabulaciones en tablas.
+c) No se puede hacer automáticamente. Es necesario hacer la tabla y luego cortar y pegar cada dato dentro de la tabla.
+d) Sí, usando la opción Tabla de la pestaña Insertar y a continuación, la opción Convertir texto en tabla.
+
+12) ¿Cuántas posibles opciones de alineación existen para alinear un dato dentro de una celda de una tabla?
+a) 9
+b) 4
+c) 3
+d) 6
+
+13) ¿Qué opción se ha usado para colocar la palabra "Alumnos" de la siguiente tabla en vertical?
+@imagen: imagenes/pregunta_13.png
+a) Alineación superior
+b) Se ha hecho clic con el botón derecho del ratón sobre la palabra y se ha activado la opción ""Giro 3D""
+c) Dirección del texto
+d) Alineación superior izquierda
+
+14) La opción Copiar Borde de la pestaña Diseño de Tabla permite…
+a) Aplicar automáticamente un borde a toda la tabla
+b) Cambiar el color de relleno de las celdas
+c) Copiar el contenido de una celda a otra celda
+d) Dibujar directamente bordes sobre la tabla
+
+15) Para conseguir que varias columnas de una tabla tengan el mismo ancho debe activar la opción…
+a) Distribuir columnas
+b) Autoajustar al contenido
+c) Autoajustar - ancho de columna fijo
+d) Alinear al centro
+
+16) Indique la respuesta correcta…
+a) No se pueden hacer ordenaciones por fechas en una tabla
+b) No se puede ordenar solo algunas filas de la tabla
+c) No se pueden ordenar tablas que tengan celdas de varias filas combinadas
+d) No se pueden ordenar números en una tabla
+
+17) ¿Qué se ha hecho en la segunda celda de la tabla?
+@imagen: imagenes/pregunta_17.png
+a) Se ha insertado otra tabla
+b) Se ha aplicado una tabulación
+c) Se ha activado la vista de cuadrícula
+d) Se ha dividido la celda en 3 filas y 3 columnas
+
+18) ¿Cuál de los siguientes estilos de tabla tiene aplicado una fila de totales?
+@imagen: imagenes/pregunta_18.png
+a) Tabla A (véase la imagen).
+b) Tabla B (véase la imagen).
+c) Tabla C (véase la imagen).
+d) Tabla D (véase la imagen).
+
+19) ¿Es posible poner bordes diagonales a una celda de una tabla?
+a) Sí, se pueden poner hasta dos bordes diagonales en una celda.
+b) Sí, se puede poner solo un borde diagonal descendente de izquierda a derecha.
+c) No.
+d) Sí, se puede poner solo un borde diagonal ascendente de izquierda a derecha.
+
+20) La opción Borrador que se encuentra dentro de la pestaña Disposición de las Herramientas de Tabla permite…
+a) Borrar los formatos de una celda
+b) Borrar el contenido de la celda seleccionada
+c) Hacer que el borde de una celda sea invisible (no se produce combinación de celdas)
+d) Eliminar líneas de la tabla, produciendo así una combinación de celdas

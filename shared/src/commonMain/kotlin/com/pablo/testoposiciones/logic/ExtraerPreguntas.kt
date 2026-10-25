@@ -26,6 +26,15 @@ object ExtraerPreguntas {
         val preguntasText = Res.readBytes(preguntasPath).decodeToString()
         val respuestasText = Res.readBytes(respuestasPath).decodeToString()
 
+        return parsePreguntas(preguntasText, respuestasText, preguntasPath, respuestasPath)
+    }
+
+    internal fun parsePreguntas(
+        preguntasText: String,
+        respuestasText: String,
+        preguntasPath: String,
+        respuestasPath: String
+    ): List<Pregunta> {
         val preguntasLines = preguntasText.lines()
         val respuestasLines = respuestasText.lines()
 
@@ -39,6 +48,7 @@ object ExtraerPreguntas {
         val respuestas = parseRespuestas(respuestasLines, respuestasPath)
         var answerIndex = 0
         var currentOptionIndex: Int? = null
+        var imagenPath: String? = null
 
         fun finishQuestion() {
             val questionText = texto ?: return
@@ -68,7 +78,8 @@ object ExtraerPreguntas {
                 Pregunta(
                     texto = questionText,
                     opciones = arrayOf(opciones[0]!!, opciones[1]!!, opciones[2]!!, opciones[3]!!),
-                    respuestaCorrecta = respuesta.option
+                    respuestaCorrecta = respuesta.option,
+                    imagenPath = imagenPath
                 )
             )
             answerIndex++
@@ -76,6 +87,7 @@ object ExtraerPreguntas {
             questionNumber = null
             questionLine = 0
             currentOptionIndex = null
+            imagenPath = null
             for (i in opciones.indices) opciones[i] = null
         }
 
@@ -84,6 +96,16 @@ object ExtraerPreguntas {
             val trimmed = linea.trim()
             when {
                 trimmed.isBlank() -> Unit
+                trimmed.startsWith("@imagen:") -> {
+                    if (texto == null || imagenPath != null) {
+                        fail(preguntasPath, lineNumber, "La imagen debe pertenecer a una pregunta y no estar duplicada.")
+                    }
+                    val relativePath = trimmed.substringAfter(":").trim()
+                    if (!IMAGE_REGEX.matches(relativePath)) {
+                        fail(preguntasPath, lineNumber, "La imagen debe tener formato 'imagenes/nombre.png'.")
+                    }
+                    imagenPath = "${preguntasPath.substringBeforeLast('/')}/$relativePath"
+                }
                 trimmed.matches(QUESTION_REGEX) -> {
                     finishQuestion()
                     questionNumber = trimmed.substringBefore(")").toInt()
@@ -174,4 +196,5 @@ object ExtraerPreguntas {
     private val QUESTION_REGEX = Regex("[0-9]+\\).*")
     private val OPTION_REGEX = Regex("[a-dA-D]\\).*")
     private val ANSWER_REGEX = Regex("([0-9]+)\\s*([a-dA-D])")
+    private val IMAGE_REGEX = Regex("imagenes/[a-z0-9_]+\\.png")
 }

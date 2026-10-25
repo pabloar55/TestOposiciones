@@ -1,0 +1,214 @@
+1) El procesador de textos Word pertenece al paquete ofimático:
+a) Open Office.
+b) Microsoft Office.
+c) Libre Office.
+d) Suite Office.
+
+2) ¿Qué barra se encuentra en la parte inferior de nuestra ventana de Word?
+a) La barra de título.
+b) La barra de tareas.
+c) La barra de herramientas.
+d) La barra de estado.
+
+3) ¿Cuándo tendrá un nombre nuestro documento Word?
+a) Cuando lo guardemos por primera vez y asignemos un nombre al documento, así como extensión y una ruta hasta la carpeta donde esté almacenado.
+b) Siempre tendrá un nombre asignado, incluso cuando creemos un documento nuevo.
+c) Cuando se guarde por primera vez o bien cuando le pongamos un nombre haciendo un doble clic sobre la barra de título o bien cuando se le asigne un nombre en la pestaña Archivo.
+d) Todas las opciones falsas.
+
+4) ¿Cuál de los siguientes iconos aparece por defecto en la barra de herramientas de acceso rápido de nuestra barra de título?
+a) Nuevo.
+b) Abrir.
+c) Guardar.
+d) Dibujar.
+
+5) ¿Mediante qué acción nos permite Word realizar rápidamente una impresión de nuestro documento sin pasar por el menú de impresión?
+a) Pestaña Archivo – Imprimir.
+b) Icono de la impresora de la barra de acceso rápido.
+c) Combinación de teclas CTRL + P.
+d) Combinación de teclas CTRL + MAYUS + P.
+
+6) ¿Qué nombré dará Word, en sus últimas versiones, a un nuevo documento?
+a) Documento1.
+b) Doc1.
+c) Texto1.
+d) Word1.
+
+7) ¿Con qué combinación de teclas podré crear un nuevo documento en Word?
+a) CTRL + N
+b) CTRL + A
+c) CTRL + V
+d) CTRL + U
+
+8) En Word encontramos el nuevo cuadro de búsqueda de Microsoft. Esta herramienta avanzada nos ayudará a encontrar rápidamente lo que buscamos, desde texto y comandos hasta ayuda y mucho más. ¿Dónde se encuentra?
+a) En la barra de título.
+b) En la cinta de opciones.
+c) En la barra de estado.
+d) En la barra de herramientas.
+
+9) A la derecha de la barra de título encontramos tres iconos para manejar nuestra ventana. El único que cambia su forma es el segundo de ellos. ¿Qué forma tendrá este pequeño icono si nuestra ventana se encuentra maximizada?
+a) Dos cuadrados superpuestos.
+b) Un único cuadrado.
+c) Un cuadrado con un aspa en su zona inferior derecha.
+d) Una línea.
+
+10) ¿Siempre que cerramos un documento nos va a preguntar Word si queremos guardar los cambios antes de cerrar?
+a) Si, siempre.
+b) No, porque Word guarda los cambios de manera automática en sus últimas versiones.
+c) Sólo nos preguntará si hemos realizado alguna modificación en el documento.
+d) No, nunca.
+
+11) ¿En qué pestaña encontramos el icono de opciones de presentación de la cinta de opciones?
+a) En la pestaña Archivo.
+b) En la pestaña Inicio.
+c) En la pestaña Disposición.
+d) En ninguna pestaña, se encuentra en la barra de título.
+
+12) En las opciones de presentación de la cinta de opciones nos encontramos diferentes configuraciones. Una de ellas es “Ocultar automáticamente la cinta de opciones”. Si seleccionamos esta opción, ¿qué nos ocultará de manera automática Word?
+a) La cinta de opciones.
+b) La cinta de opciones y la barra de título.
+c) La cinta de opciones, la barra de título y las reglas.
+d) Esa opción no existe.
+
+13) ¿Qué pestaña está activada y se muestra por defecto en la cinta de opciones?
+a) Archivo.
+b) Inicio.
+c) Formato.
+d) Diseño.
+
+14) ¿Cuál de las siguientes no es una de las pestañas de la cinta de opciones?
+a) Formato.
+b) Disposición.
+c) Vista.
+d) Ayuda.
+
+15) ¿En qué pestaña de la cinta de opciones encontraré el icono de Negrita?
+a) Inicio.
+b) Formato.
+c) Diseño.
+d) Vista.
+
+16) ¿En qué pestaña de la cinta de opciones podré abrir un documento ya existente?
+a) Inicio.
+b) Herramientas.
+c) Vista.
+d) Archivo.
+
+17) Dentro de cada pestaña de la cinta de opciones, los iconos se encuentran clasificados y agrupados en diferentes….
+a) Subpestañas.
+b) Categorías.
+c) Menús.
+d) Submenús.
+
+18) Dentro de la pestaña Inicio encontramos las herramientas de “Fuente”, donde podremos cambiar el color de nuestra fuente. Si queremos acceder a más opciones dentro de “Fuente”, como por ejemplo los efectos de la fuente, deberemos hacer clic en un pequeño icono con forma de flechita que apunta hacia abajo a la derecha. Este icono lo encontraremos dentro de la categoría Fuente, …
+a) … en la zona inferior derecha.
+b) … en la zona superior derecha.
+c) … en la zona inferior izquierda.
+d) … en la zona superior izquierda.
+
+19) En Word, el icono de cursiva se representa mediante…
+a) Una letra C.
+b) Una letra X.
+c) Una letra K.
+d) Una letra U.
+
+20) ¿Qué acción ejecuta el siguiente icono en Word?
+@imagen: imagenes/pregunta_20.png
+a) Color de fuente.
+b) Color de resaltado del texto.
+c) Sombreado.
+d) Todas falsas.
+
+21) ¿Qué acción ejecuta el siguiente icono en Word?
+@imagen: imagenes/pregunta_21.png
+a) Copiar.
+b) Pegar.
+c) Pegar formato.
+d) Todas falsas.
+
+22) ¿Qué acción ejecuta el siguiente icono en Word?
+@imagen: imagenes/pregunta_22.png
+a) Copiar.
+b) Pegar.
+c) Copiar formato.
+d) Todas falsas.
+
+23) ¿Qué acción ejecuta el siguiente icono en Word?
+@imagen: imagenes/pregunta_23.png
+a) Tabulación.
+b) Aumentar sangría.
+c) Alineación derecha.
+d) Todas falsas.
+
+24) ¿Qué acción ejecuta el siguiente icono en Word?
+@imagen: imagenes/pregunta_24.png
+a) Mostrar todo.
+b) Negrita especial.
+c) Ecuaciones.
+d) Todas falsas.
+
+25) ¿Qué regla muestra Word por defecto?
+a) La regla horizontal.
+b) La regla vertical.
+c) Las reglas horizontal y vertical.
+d) La regla horizontal, la vertical y la de párrafo.
+
+26) En las reglas de Word se nos muestra un color diferente para la zona de texto y otro para los márgenes. ¿Qué color se muestra en las reglas para la zona de escritura del texto?
+a) Gris.
+b) Azul.
+c) Blanco.
+d) Negro.
+
+27) ¿En qué pestaña de la cinta de opciones podremos activar y desactivar las reglas?
+a) Disposición.
+b) Vista.
+c) Inicio.
+d) Diseño.
+
+28) Mediante las reglas podremos cambiar de manera rápida el tamaño de nuestros márgenes y el de nuestra zona de escritura. ¿Qué tecla deberemos mantener pulsada mientras arrastramos con el ratón en una regla para modificar, por ejemplo, el tamaño de uno de los márgenes, si queremos que Word nos muestre en las propias reglas el tamaño exacto en centímetros de las diferentes zontas?
+a) ALT.
+b) CTRL.
+c) MAYUS.
+d) CTRL + ALT.
+
+29) ¿Dónde muestra Word, por defecto, la regla horizontal?
+a) Encima de la barra de estado.
+b) Debajo de la barra de título.
+c) Debajo de la cinta de opciones.
+d) Encima de la cinta de opciones.
+
+30) Word cuenta con dos barras de desplazamiento, una vertical y otra horizontal. Indique la respuesta correcta con respecto a las mismas.
+a) Por defecto Word siempre muestra las dos barras de desplazamiento.
+b) De manera predeterminada Word mostrará las barras de desplazamiento vertical y horizontal solamente cuando sean necesarias.
+c) La barra de desplazamiento vertical siempre se encuentra visible, aunque no siempre operativa. La barra de desplazamiento horizontal sólo se muestra cuando es necesaria para la correcta visualización de la totalidad de nuestro documento.
+d) Todas las respuestas falsas.
+
+31) En la barra de estado encontramos una zona donde se nos indica el número de páginas de nuestro documento. ¿Qué ocurre si hacemos clic sobre esta zona?
+a) Nada, ya que deberemos hacer doble clic.
+b) Se abre el menú Navegación.
+c) Cambiamos a la vista “Modo lectura”.
+d) Nos desplazamos al comienzo del documento.
+
+32) En la zona derecha de la barra de estado podremos modificar el zoom. También podremos hacerlo mediante la ruedecita del ratón.
+a) Cierto, desplazando la ruedecita hacia delante y hacia atrás.
+b) Cierto, pero deberemos pulsar y mantener la tecla CTRL mientras usamos la ruedecita.
+c) Falso, podremos utilizar el ratón para modificar el zoom pero no usando la ruedecita del mismo.
+d) Falso, no podremos utilizar el ratón para modificar el zoom.
+
+33) ¿Qué ocurre si hacemos doble clic en una zona de la barra de título que no contenga ningún comando?
+a) La ventana de maximizará o restaurará.
+b) Se minimiza la ventana.
+c) Nada.
+d) Si la ventana está maximizada se cerrará. Si la ventana está restaurada se maximizará. En todo caso se abrirá una ventana donde se ofrecerá la opción de modificar el nombre, así como la ruta de acceso al archivo y el formato de este.
+
+34) ¿Qué ocurre si hacemos CLIC en la zona más a la izquierda de nuestra barra de título?
+a) Se despliega un menú oculto.
+b) Se maximiza o restaura nuestra ventana.
+c) Se cierra la ventana y por lo tanto Word, preguntándonos si deseamos guardar los cambios en su caso.
+d) Todas las opciones falsas.
+
+35) ¿Qué ocurre si hacemos DOBLE CLIC en la zona más a la izquierda de nuestra barra de título?
+a) Se despliega un menú oculto.
+b) Se maximiza o restaura nuestra ventana.
+c) Accedemos a la configuración de Word.
+d) Se cierra la ventana, y por lo tanto Word, preguntándonos si deseamos guardar los cambios en su caso.

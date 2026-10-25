@@ -1,0 +1,119 @@
+1) Si pulsa repetidas veces la combinación de teclas Shift+Tecla flecha derecha el resultado es…
+a) Selecciona frase a frase
+b) Selecciona letra a letra
+c) Selecciona línea a línea
+d) Selecciona palabra a palabra
+
+2) Para seleccionar desde la posición del cursor al final de la línea usará:
+a) Fin
+b) Shift + Fin
+c) Alt + Fin
+d) Ctrl + Fin
+
+3) Si pulsa Ctrl+Shift+Tecla flecha arriba el resultado es…
+a) Selecciona la línea actual
+b) Selecciona todo el párrafo actual
+c) Selecciona desde la posición actual hasta el comienzo del texto
+d) Selecciona desde la posición actual hasta el comienzo del párrafo actual
+
+4) Si tiene el cursor al comienzo del documento y pulsa Ctrl+Shift+Fin, el resultado será…
+a) Se selecciona toda la primera línea del documento
+b) Igual que si pulsara Ctrl+A
+c) Selecciona el primer párrafo del documento
+d) Igual que si pulsara Ctrl+E
+
+5) Suponiendo que no está activado el modo extendido de selección ¿Qué se selecciona si pulsa Ctrl+Tecla Flecha derecha?
+a) El siguiente párrafo
+b) La siguiente línea
+c) La siguiente palabra
+d) Nada
+
+6) ¿Con qué tecla se activa el modo de selección extendido?
+a) F9
+b) F2
+c) F4
+d) F8
+
+7) Si hace clic en el texto con el modo de selección extendido…
+a) Se selecciona desde el principio del documento hasta donde se ha hecho clic con el ratón
+b) Se selecciona la segunda mitad del documento
+c) Se selecciona el texto desde la palabra donde se activó el modo de selección extendido hasta donde se ha hecho clic con el ratón.
+d) Se selecciona desde el comienzo del párrafo hasta donde se ha hecho clic con el ratón
+
+8) ¿Cómo se sale del modo de selección extendido?
+a) Haciendo triple clic en el texto
+b) Haciendo doble clic en el texto
+c) Con la tecla Esc
+d) Pulsando la tecla de flecha derecha
+
+9) Puede acceder a la vista previa de impresión pulsando…
+a) Ctrl+Alt+I
+b) Ctrl+Alt+X
+c) Ctrl+Alt+N
+d) Ctrl+Alt+S
+
+10) La tecla Fin…
+a) Lleva el cursor al final de documento
+b) Lleva el cursor al final de la frase
+c) Lleva el cursor al final de la línea
+d) Lleva el cursor al final del párrafo
+
+11) Para colocar el cursor al principio del documento usará
+a) Inicio
+b) Alt+Inicio
+c) Ctrl+Inicio
+d) Shift+Inicio
+
+12) Si tiene seleccionada una imagen de su documento y quiere seleccionar la siguiente, usará…
+a) Tabulador
+b) Tecla de flecha derecha
+c) Escape
+d) Espacio
+
+13) Para activar las teclas de acceso de la cinta de opciones puede usar la tecla Alt, o bien…
+a) F8
+b) F1
+c) F5
+d) F10
+
+14) ¿Qué hace la combinación Ctrl+F1?
+a) Minimiza la ventana de Word
+b) Cierra el documento actual
+c) Contrae o expande la cinta de opciones
+d) Cierra el programa Word
+
+15) Para abrir un menú contextual de Word puede usar la tecla de contexto (de los teclados Windows) o bien pulsar la combinación…
+a) Ctrl + F10
+b) Ctrl + F2
+c) Ctrl+ F3
+d) Shift + F10
+
+16) La combinación de teclas Ctrl + A
+a) Activa la opción Abrir
+b) Selecciona el párrafo actual
+c) Agranda el tamaño de la letra
+d) Activa el listado de fuentes
+
+17) La combinación de teclas Ctrl + Y
+a) Activa la opción Deshacer
+b) Activa la opción Rehacer
+c) Activa la opción Imprimir
+d) Cierra el documento actual
+
+18) Las opciones Copiar, Cortar y Pegar son respectivamente…
+a) Ctrl + C, Ctrl + V, Ctrl + P
+b) Ctrl + C, Ctrl + X, Ctrl + G
+c) Ctrl + C, Ctrl + X, Ctrl + V
+d) Ctrl + P, Ctrl + X, Ctrl + R
+
+19) La combinación Ctrl + S…
+a) Cambia el color del texto
+b) Cambia el color de resaltado
+c) Activa el superíndice
+d) Subraya
+
+20) Para activar la cursiva usará:
+a) Ctrl + X
+b) Ctrl + I
+c) Ctrl + C
+d) Ctrl + K

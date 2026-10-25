@@ -1,0 +1,44 @@
+[
+  {
+    "id": "INTERNET",
+    "nombre": "Internet - banco antiguo (sin PDF de origen)",
+    "carpeta": "internet",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "WORD_INTRODUCCION",
+    "nombre": "Word - introducción y entorno",
+    "carpeta": "word_introduccion",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "WORD_FORMATOS_FUENTE",
+    "nombre": "Word 2016 - formatos de fuente",
+    "carpeta": "word_formatos_fuente",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "WORD_ATAJOS",
+    "nombre": "Word 2016 - atajos de teclado",
+    "carpeta": "word_atajos",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "WORD_BOTONES",
+    "nombre": "Word 2016 - botones de la cinta",
+    "carpeta": "word_botones",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "WORD_TABLAS",
+    "nombre": "Word 2016 - tablas",
+    "carpeta": "word_tablas",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  }
+]

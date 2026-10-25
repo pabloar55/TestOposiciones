@@ -1,0 +1,139 @@
+1) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_1.png
+a) Borrado
+b) Subrayado
+c) Cursiva
+d) Negrita
+
+2) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_2.png
+a) Bordes
+b) Resaltado
+c) Sangría
+d) Tablas
+
+3) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_3.png
+a) Alineación Derecha
+b) Centrar
+c) Justificar
+d) Alineación Izquierda
+
+4) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_4.png
+a) Aumentar Sangría Derecha
+b) Disminuir Sangría Derecha
+c) Aumentar Sangría Izquierda
+d) Disminuir Sangría Izquierda
+
+5) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_5.png
+a) Bordes
+b) Corrección Ortográfica
+c) Tachado
+d) Subrayado
+
+6) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_6.png
+a) Aumentar Tamaño de Fuente
+b) Cambiar minúsculas y mayúsculas
+c) Alineación superior
+d) Negrita
+
+7) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_7.png
+a) Color de Fuente
+b) Color de resaltado de texto
+c) Interlineado
+d) Efectos de texto y tipografía
+
+8) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_8.png
+a) Disminuir Sangría Derecha
+b) Disminuir Sangría Izquierda
+c) Aumentar Sangría Derecha
+d) Aumentar Sangría Izquierda
+
+9) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_9.png
+a) Sangría
+b) Centrado
+c) Espacio entre líneas y párrafos
+d) Alineación derecha
+
+10) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_10.png
+a) Centrar
+b) Alineación derecha
+c) Justificar
+d) Alineación Izquierda
+
+11) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_11.png
+a) Subrayado
+b) Alineación inferior
+c) Disminuir Tamaño de Fuente
+d) Justificar
+
+12) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_12.png
+a) Bordes y sombreado
+b) Efectos de texto y tipografía
+c) Color de fuente
+d) Mayúsculas
+
+13) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_13.png
+a) Copiar
+b) Pegar
+c) Cortar
+d) Guardar
+
+14) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_14.png
+a) Subíndice
+b) Superíndice
+c) Potencia
+d) Tachado
+
+15) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_15.png
+a) Interlineado
+b) Viñetas
+c) Numeración
+d) Listas multinivel
+
+16) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_16.png
+a) Sombreado
+b) Color de fuente
+c) Color de resaltado de texto
+d) Efectos de texto
+
+17) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_17.png
+a) Justificar
+b) Centrado
+c) Alineación derecha
+d) Alineación Izquierda
+
+18) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_18.png
+a) Lista multinivel
+b) Sombreado
+c) Mostrar todo
+d) Negrita
+
+19) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_19.png
+a) Copiar
+b) Pegar
+c) Copiar formato
+d) Cortar
+
+20) ¿Para qué sirve el siguiente botón?
+@imagen: imagenes/pregunta_20.png
+a) Copiar formato
+b) Pegar
+c) Color de fuente
+d) Sombreado

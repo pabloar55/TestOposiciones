@@ -96,6 +96,8 @@ fun QuestionScreen(
                     modifier = Modifier.padding(bottom = 24.dp)
                 )
 
+                QuestionIllustration(pregunta.imagenPath)
+
                 AnswerOption(
                     text = pregunta.opcionA(),
                     option = 'a',
@@ -313,6 +315,8 @@ fun ReviewScreen(
                 fontWeight = FontWeight.Medium,
                 modifier = Modifier.padding(bottom = 24.dp)
             )
+
+            QuestionIllustration(pregunta.imagenPath)
 
             listOf('a', 'b', 'c', 'd').forEachIndexed { i, opt ->
                 val optionText = pregunta.opciones[i]

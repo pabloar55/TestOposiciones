@@ -1,0 +1,134 @@
+1) Observe el texto de la imagen y conteste. ¿Qué país tiene un subrayado doble?
+@imagen: imagenes/paises.png
+a) Hungría
+b) Italia
+c) Noruega
+d) España
+
+2) Observe el texto de la imagen y conteste. ¿Qué país tiene un tachado doble?
+@imagen: imagenes/paises.png
+a) Italia
+b) Noruega
+c) Alemania
+d) Ninguno
+
+3) Observe el texto de la imagen y conteste. ¿Cuántos países están en negrita?
+@imagen: imagenes/paises.png
+a) 4
+b) 3
+c) 1
+d) 2
+
+4) Observe el texto de la imagen y conteste. ¿Qué país tiene aplicado el formato Versalitas?
+@imagen: imagenes/paises.png
+a) Países Bajos
+b) Portugal
+c) Gran Bretaña
+d) Dinamarca
+
+5) Observe el texto de la imagen y conteste. ¿Qué país tiene aplicado un superíndice?
+@imagen: imagenes/paises.png
+a) República de Irlanda
+b) Polonia
+c) Dinamarca
+d) Países Bajos
+
+6) Observe el texto de la imagen y conteste. ¿Cuántos países están en cursiva?
+@imagen: imagenes/paises.png
+a) 2
+b) 1
+c) 3
+d) 4
+
+7) Observe el texto de la imagen y conteste. ¿Qué país está escrito en mayúsculas?
+@imagen: imagenes/paises.png
+a) Portugal
+b) Gran Bretaña
+c) Rusia
+d) Alemania
+
+8) Observe el texto de la imagen y conteste. ¿Qué país está resaltado?
+@imagen: imagenes/paises.png
+a) Dinamarca
+b) España
+c) Rusia
+d) Alemania
+
+9) Observe el texto de la imagen y conteste. ¿Qué país tiene expandido el texto?
+@imagen: imagenes/paises.png
+a) Dinamarca
+b) Rusia
+c) Alemania
+d) República de Irlanda
+
+10) Observe el texto de la imagen y conteste. ¿Qué país tiene un tachado sencillo?
+@imagen: imagenes/paises.png
+a) Hungría
+b) Polonia
+c) Italia
+d) Noruega
+
+11) Observe el texto de la imagen y conteste. ¿Cuántos países están subrayados?
+@imagen: imagenes/paises.png
+a) 2
+b) 3
+c) 1
+d) 4
+
+12) Observe el texto de la imagen y conteste. ¿Qué formatos tiene aplicado Hungría?
+@imagen: imagenes/paises.png
+a) Un subrayado, negrita y cursiva
+b) Subrayado, cursiva y versalitas
+c) Negrita y tachado
+d) Subrayado y negrita solamente
+
+13) Observe el texto de la imagen y conteste. ¿Qué país tiene aplicado un subíndice?
+@imagen: imagenes/paises.png
+a) República de Irlanda
+b) Países Bajos
+c) Gran Bretaña
+d) Portugal
+
+14) Observe el texto de la imagen y conteste. ¿Qué país tiene aplicado un subrayado punteado?
+@imagen: imagenes/paises.png
+a) España
+b) Noruega
+c) Alemania
+d) Italia
+
+15) Observe el texto de la imagen y conteste. ¿Qué país tiene aplicado un borde?
+@imagen: imagenes/paises.png
+a) Alemania
+b) Noruega
+c) España
+d) Italia
+
+16) La negrita consiste…
+a) En hacer que la letra aparezca más gruesa para resaltarla
+b) En resaltar el texto aumentando su tamaño de fuente
+c) En resaltar el texto subrayándolo
+d) En cambiar el color de la letra a negro
+
+17) Un texto en subíndice…
+a) Aparecerá con un tamaño más pequeño y desplazado hacia arriba
+b) Aparecerá con un tamaño más grande y desplazado hacia abajo
+c) Aparecerá con un tamaño más pequeño y desplazado hacia abajo
+d) Aparecerá con un tamaño más grande y desplazado hacia arriba
+
+18) ¿Es posible cambiar el color de un subrayado?
+a) No
+b) Sí, solo en el caso de que el texto esté en negrita
+c) Sí
+d) Sí, solo en el caso de subrayados ondulados
+
+19) Para acceder al cuadro de diálogo de Fuente usará el atajo de teclado…
+a) Ctrl+P
+b) Ctrl+M
+c) Ctrl+F
+d) Ctrl+S
+
+20) Si usa la opción "Poner en mayúsculas cada palabra" contenida en la opción "Cambiar mayúsculas y minúsculas", el resultado será...
+a) Que todo el texto seleccionado se pone en minúsculas excepto la primera letra del texto
+b) Que se pone en mayúsculas una palabra sí y otra no
+c) Que se pone en mayúsculas la primera letra de cada palabra del texto seleccionado
+d) Que todo el texto seleccionado se pone en mayúsculas
