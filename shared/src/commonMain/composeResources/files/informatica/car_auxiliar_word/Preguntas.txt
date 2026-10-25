@@ -1,0 +1,144 @@
+1) En el siguiente botón de Opciones de presentación de la cinta de opciones podemos encontrar:
+@imagen: imagenes/pregunta_1.png
+a) Mostrar automáticamente la cinta de opciones
+b) Ocultar pestañas
+c) Mostrar pestañas y comandos
+d) Todas las respuestas anteriores son incorrectas
+
+2) Indique una de las opciones seleccionables como Tema de Office. Esta característica se encuentra en Archivo > Opciones > General > Tema de Office
+a) Estándar
+b) Ahorro de energía
+c) Blanco
+d) Transparente
+
+3) ¿Cuál de las siguientes opciones NO es un tipo de vista disponible en Word 2016?
+a) Vista Esquema
+b) Diseño web
+c) Diseño de cuadrícula
+d) Modo de lectura
+
+4) Si se hace clic en un texto con el modo de selección extendido, señale la respuesta CORRECTA:
+a) Se selecciona desde el principio del documento hasta donde se ha hecho clic con el ratón
+b) Se selecciona la segunda mitad del documento
+c) Se selecciona el texto desde la palabra donde se activó el modo de selección extendido hasta donde se ha hecho clic con el ratón
+d) Se selecciona desde el comienzo del párrafo hasta donde se ha hecho clic con el ratón
+
+5) ¿Cuál de las siguientes opciones permite aplicar formato de subrayado doble a una selección de texto?
+a) CTRL+SHIFT+U
+b) Desde la pestaña Insertar > Símbolos > Subrayado
+c) Cuadro de diálogo Fuente > Subrayado > Doble
+d) CTRL+D y luego CTRL+2
+
+7) ¿Qué combinación de teclas permite copiar el formato de un texto seleccionado?
+a) Ctrl+Shift+C
+b) Ctrl+Shift+V
+c) Ctrl+Alt+C
+d) Ctrl+Shift+F
+
+8) Seleccione el resultado de aplicar los métodos abreviados que se indican a la palabra nuevo teniendo en cuenta que inicialmente se encuentra en cursiva y minúsculas. Métodos abreviados aplicados en el siguiente orden a la palabra nuevo 1º CTRL+N 2º SHIFT+F3 3º CTRL+Y
+@imagen: imagenes/pregunta_8.png
+a) NUEVO (negrita y cursiva; véase opción A de la imagen).
+b) Nuevo (negrita y cursiva; véase opción B de la imagen).
+c) NUEVO (sin negrita ni cursiva; véase opción C de la imagen).
+d) nuevo (negrita y cursiva; véase opción D de la imagen).
+
+9) Indique los efectos de texto aplicados al texto escrito con fuente Arial que se muestra a continuación:
+@imagen: imagenes/pregunta_9.png
+a) Contorno con línea sólida. Sin relleno de texto. Con efecto de reflejo
+b) Sin relleno de texto. Con efecto de giro de 180 grados
+c) Con relleno de texto de color blanco. Con efecto de iluminación
+d) Con contorno fino. Con efecto de sombra nítida
+
+10) ¿Qué ocurre si se aplica un estilo de párrafo que incluye una sangría izquierda, pero luego se aplica una sangría manual con la regla?
+a) Word ignora la sangría manual y mantiene la sangría del estilo
+b) Se anulan ambas sangrías y se usa el margen del documento
+c) Se aplica la sangría del estilo, pero no se puede modificar con la regla
+d) La sangría manual sobrescribe la del estilo
+
+11) Elija la afirmación CORRECTA:
+a) Un Estilo vinculado se puede aplicar a un párrafo completo o a una parte del texto, si el texto se encuentra seleccionado cuando se aplica el estilo
+b) Al cambiar el Conjunto de estilos de un documento se actualizan las propiedades de todos los estilos a la vez, excepto si hay insertados saltos de sección, ya que en cada sección se define el conjunto de estilos
+c) El único Estilo válido para generar una jerarquía en la vista de esquema de un documento es el estilo Título 1
+d) Para definir el diseño de un documento se puede optar por seleccionar un Tema de la pestaña Diseño o un Conjunto de estilos de la misma pestaña Diseño, pero no ambos en el mismo documento, ya que son incompatibles
+
+13) Seleccione la afirmación CORRECTA en relación al símbolo de tabulación que aparece en la esquina superior izquierda de la imagen:
+@imagen: imagenes/pregunta_13.png
+a) Indica que los tabuladores que se añadan al texto del documento mediante la pulsación de la tecla TAB serán de tipo Tabulación Decimal por defecto
+b) Indica que los tabuladores que se creen en la regla horizontal con un clic sobre la regla serán del tipo Tabulación Derecha por defecto
+c) Indica que los tabuladores que se inserten tanto en el texto como los que se definan en la regla horizontal serán del tipo Tabulación Centrada con relleno de puntos por defecto
+d) Todas las respuestas anteriores son incorrectas
+
+14) En un documento aparece el siguiente texto: lunes, 6 de octubre de 2025 Indique la afirmación CORRECTA sobre la inserción del texto utilizando la opción Insertar > Fecha y Hora
+a) Aunque se puede insertar la fecha, no existe la opción de incluir el día de la semana
+b) Se puede insertar la fecha, aunque solo en formato numérico del tipo 06/10/2025
+c) Se puede insertar tal y como aparece en el texto, además se actualizará automáticamente si al insertarla se activa el check Actualizar automáticamente
+d) Se puede insertar tal y como aparece en el texto, aunque no permite activar el check Actualizar automáticamente
+
+15) ¿Cómo se llama la herramienta que permite capturar y reutilizar fragmentos de texto o gráficos frecuentes?
+a) Autocorrección
+b) Elementos rápidos / Autotexto
+c) Hipervínculo
+d) Referencias cruzadas
+
+16) Indique el conjunto de fórmulas que calcula la columna Promedio con los valores 850, 700 y 1.000 en las celdas E2, E3 y E4 respectivamente: Enero Febrero Marzo Promedio Exposición 1.150 900 500 850 Museo 850 550 700 700 Concierto 2.200 800 1.000
+@imagen: imagenes/pregunta_16.png
+a) E2 =AVERAGE(B2;C2;D2) E3 =AVERAGE(B3:D3) E4 =AVERAGE(LEFT)
+b) E2 =SUM(LEFT)/COUNT(LEFT) E3 =B3+C3+D3/COUNT(LEFT) E4 =SUM(B4:D4)/COUNT(B4:D4)
+c) E2 =AVERAGE(LEFT) E3 =SUM(LEFT)/COUNT(LEFT) E4 =SUM(B4:D4)/3
+d) E2 =AVERAGE(LEFT) E3 =SUM(LEFT)/COUNT(LEFT) E4 =SUM(B4:D4)/2
+
+17) Si se inserta un salto de sección de Página impar y la sección actual termina en una página impar, ¿qué ocurre con el diseño?
+a) El documento no reconoce el salto y sigue con la numeración de página sin cambios
+b) La nueva sección empieza en la siguiente página, sea par o impar
+c) Word inserta una página en blanco para que la siguiente sección comience en una página impar
+d) Word te pide que escojas manualmente si quieres una página par o impar
+
+18) Para que el pie de página de la página 3 sea diferente al de la página 2 en un documento, seleccione la afirmación CORRECTA:
+a) Aunque al crear la página 3 el pie de página sea igual que el anterior, en la página 3 se puede editar y modificar haciendo doble clic sobre el pie de página, obteniendo así un pie de página diferente al de la página 2
+b) Solo es posible crear pies de página diferentes en páginas pares/impares o en la primera página
+c) Se puede crear un pie de página diferente si las páginas pertenecen a secciones diferentes y se desactiva el botón Vincular al anterior
+d) Se pueden definir distintos encabezados de página, pero los pies de página deben ser iguales en todo el documento
+
+19) Al combinar correspondencia en un documento, para insertar un texto distinto basándonos en el valor de un campo, ¿qué tipo de regla se utiliza?
+a) Regla 'Siguiente registro'
+b) Regla 'Si... Entonces... Sino'
+c) Regla 'Campo combinado'
+d) Regla 'Omitir registro si...'
+
+20) Señale la respuesta CORRECTA. Al filtrar destinatarios en una combinación de correspondencia, cuando se utiliza el operador O
+@imagen: imagenes/pregunta_20.png
+a) Se tiene que cumplir alguna de las condiciones, es decir, se incluye al destinario si se cumple al menos una condición
+b) Se tienen que cumplir todas las condiciones, es decir, se incluye al destinatario solo si se cumplen las 2 condiciones
+c) Se tienen que incumplir las 2 condiciones, es decir, se excluye al destinatario si se cumplen las 2 condiciones
+d) Todas las respuestas anteriores son incorrectas
+
+21) Tras insertar, por este orden, un rectángulo, un triángulo y una estrella, indique la respuesta que incluye todas las acciones necesarias para obtener la siguiente figura:
+@imagen: imagenes/pregunta_21.png
+a) Enviar atrás el rectángulo y agrupar las tres formas
+b) Traer al frente el triángulo
+c) Enviar al fondo la estrella y agrupar las tres formas
+d) Traer adelante el rectángulo
+
+22) Al imprimir un documento a doble cara con varias copias, ¿qué opción asegura que cada copia completa (todas sus páginas anverso y reverso) se imprima antes de comenzar la siguiente copia?
+a) Orientación de página
+b) Imprimir por una cara
+c) Modo borrador
+d) Intercaladas
+
+23) Seleccione el formato correcto para imprimir las páginas 4, 5, 7, 8, 9, 12 desde la opción de Archivo > Imprimir > Páginas
+a) 4..5, 7..9, 12
+b) 4-5, 7-9, 12
+c) 4, 5, 7.9, 12
+d) 4, 5, 7, 9, 12
+
+24) Se puede recuperar un documento de Word que se ha cerrado sin guardar (señale la respuesta CORRECTA)
+a) Desde la opción Archivo > Información > Administrar documento, siempre que haya sido guardado previamente alguna vez
+b) Desde la opción Archivo > Información > Administrar documento, solo si ya había sido guardado previamente alguna vez y está activada la opción de conservar la última versión autoguardada
+c) Desde la opción Archivo > Información > Administrar documento permite recuperar archivos guardados previamente si está activada la opción de conservar la última versión autoguardada. También puede recuperar archivos nuevos cerrados sin guardar, aunque no se les haya dado un nombre de archivo todavía
+d) Desde la opción Archivo > Nuevo en la que se incluye la lista de archivos cerrados sin guardar y permite recuperarlos de manera temporal
+
+25) Si queremos controlar los tipos de cambios que otros usuarios pueden hacer en nuestro documento, podremos encontrar la opción en la pestaña:
+a) Archivo > Información > Administrar > Documento > Restringir edición
+b) Archivo > Guardar > Restringir edición
+c) Revisar > Administrar Documento
+d) Revisar > Restringir edición

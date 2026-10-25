@@ -8,6 +8,12 @@ import testoposiciones.shared.generated.resources.Res
 import kotlin.test.*
 
 class LegacyMigrationDesktopTest {
+    private fun legacyExamIds(): Set<String> =
+        checkNotNull(javaClass.getResourceAsStream("/migracion/plantillas.tsv")).bufferedReader().use { reader ->
+            reader.readLines().filter { it.isNotBlank() && !it.startsWith("#") }
+                .map { it.substringBefore('\t') }.toSet()
+        }
+
     @Test
     fun selectedQuestionsMatchSourceTemplatesAndCarSyllabusSelection() = runBlocking {
         val templates = checkNotNull(javaClass.getResourceAsStream("/migracion/plantillas.tsv"))
@@ -36,7 +42,7 @@ class LegacyMigrationDesktopTest {
         val retainedByExam = selection.filter { it[2] == "conservar" }
             .groupBy({ it[0] }, { it[1].toInt() })
         val categories = TestCategories.load().filter { it.id in setOf("ADMINISTRATIVO", "INFORMATICA") }
-            .map { category -> category.copy(exams = category.exams.filterNot { it.id.startsWith("CAR_2025_") }) }
+            .map { category -> category.copy(exams = category.exams.filter { it.id in templates }) }
         assertEquals(2, categories.size)
         assertEquals(retainedByExam.keys, categories.flatMap { it.exams }.map { it.id }.toSet())
         assertEquals("CAR_FA13_2026_v2", categories.single { it.id == "ADMINISTRATIVO" }.progressVersion)
@@ -60,8 +66,9 @@ class LegacyMigrationDesktopTest {
     @OptIn(ExperimentalResourceApi::class)
     @Test
     fun allQuestionIllustrationsArePackagedAndOnlyAssignedWhereNeeded() = runBlocking {
+        val legacyIds = legacyExamIds()
         val categories = TestCategories.load().filter { it.id in setOf("ADMINISTRATIVO", "INFORMATICA") }
-            .map { category -> category.copy(exams = category.exams.filterNot { it.id.startsWith("CAR_2025_") }) }
+            .map { category -> category.copy(exams = category.exams.filter { it.id in legacyIds }) }
         val questions = categories.flatMap { ExtraerPreguntas.extraerPreguntas(it) }
         val paths = questions.mapNotNull { it.imagenPath }
         assertEquals(48, paths.size)

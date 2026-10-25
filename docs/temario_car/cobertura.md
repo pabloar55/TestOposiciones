@@ -1,6 +1,6 @@
 # Cobertura del programa tras el filtrado
 
-> **Este diagnóstico corresponde a las 365 preguntas iniciales.** Tras la búsqueda en Internet se han añadido 227 preguntas oficiales CAR y varios bloques aquí señalados como ausentes ya tienen preguntas. El balance actualizado y las carencias restantes figuran en [la ampliación de exámenes oficiales](../examenes_web/car_2025/README.md#qué-mejora-y-qué-queda-pendiente).
+> **Este diagnóstico corresponde a las 365 preguntas iniciales.** Tras las búsquedas en Internet se han añadido 227 preguntas oficiales CAR y otras 118 de CAR y UV. Varios bloques aquí señalados como ausentes ya tienen preguntas. El balance actual y las carencias restantes figuran en [la segunda ampliación](../examenes_web/ampliacion_2/README.md#contenidos-reforzados); la primera se documenta [por separado](../examenes_web/car_2025/README.md).
 
 Revisión del 25 de octubre de 2026. Se compara el anexo II de la convocatoria FA.13/24-26 (páginas 16–18 del PDF aportado) con las **365 preguntas activas** de «Administrativo CAR» e «Informática CAR (Office 2016)». Las decisiones y los enunciados están en [revision.json](revision.json).
 

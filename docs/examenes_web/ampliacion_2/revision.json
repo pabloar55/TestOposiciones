@@ -1,0 +1,3156 @@
+{
+  "preguntas": [
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 1,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 2,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 3,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 4,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 5,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 6,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 7,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 8,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 9,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 10,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 11,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 12,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 13,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 14,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 15,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 16,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 17,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 18,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 19,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 20,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 21,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 22,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 23,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 24,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 25,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 26,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 27,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 28,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 29,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 30,
+      "decision": "descartar",
+      "referencia": "Psicotécnicos: fuera del programa CAR FA.13/24-26.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 31,
+      "decision": "añadir",
+      "referencia": "G-I.4",
+      "respuesta": "b",
+      "enunciado": "El artículo 67 de la Constitución Española establece que las reuniones de Parlamentarios que se celebren sin convocatoria reglamentaria:",
+      "opciones": [
+        "Serán nulas de pleno derecho.",
+        "No vincularán a las Cámaras, y no podrán ejercer sus funciones ni ostentar sus privilegios.",
+        "Están expresamente prohibidas en la Constitución.",
+        "El artículo 67 no regula las reuniones de Parlamentarios celebradas sin convocatoria reglamentaria."
+      ],
+      "pagina": 9
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 32,
+      "decision": "añadir",
+      "referencia": "G-I.1",
+      "respuesta": "d",
+      "enunciado": "De conformidad con el artículo 55.2 de la Constitución Española, los derechos que pueden ser suspendidos individualmente, con la necesaria intervención judicial y el adecuado control parlamentario, son:",
+      "opciones": [
+        "El plazo máximo de detención preventiva, la libertad de expresión y el secreto de las comunicaciones.",
+        "El plazo máximo de detención preventiva, el derecho al honor y el secreto de las comunicaciones.",
+        "El plazo máximo de detención preventiva, la libertad de residencia y el secreto de las comunicaciones.",
+        "El plazo máximo de detención preventiva, la inviolabilidad del domicilio y el secreto de las comunicaciones."
+      ],
+      "pagina": 9
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 33,
+      "decision": "añadir",
+      "referencia": "G-I.2",
+      "respuesta": "a",
+      "enunciado": "De conformidad con el artículo 2.4 de la Ley Orgánica 3/1981, de 6 de abril, del Defensor del Pueblo, para su designación se precisa una votación favorable de:",
+      "opciones": [
+        "Tres quintas partes en el Congreso y ratificación posterior, en un plazo máximo de 20 días, por esta misma mayoría en el Senado.",
+        "Mayoría absoluta en el Congreso y ratificación posterior, en un plazo máximo de 10 días, por esta misma mayoría en el Senado.",
+        "Tres quintas partes en el Congreso y ratificación posterior, en un plazo máximo de 10 días, por esta misma mayoría en el Senado.",
+        "Mayoría absoluta en el Congreso y ratificación posterior, en un plazo máximo de 20 días, por esta misma mayoría en el Senado."
+      ],
+      "pagina": 9
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 34,
+      "decision": "añadir",
+      "referencia": "G-I.8",
+      "respuesta": "c",
+      "enunciado": "De acuerdo al artículo 27.1 de la Ley 1/2003, de 3 de marzo, de la Administración Local de La Rioja:",
+      "opciones": [
+        "El gobierno y la administración del municipio corresponden al Ayuntamiento, integrado por el Alcalde, los Tenientes de Alcalde y los concejales.",
+        "El gobierno y la administración del municipio corresponden al Ayuntamiento, integrado por el Pleno, el Alcalde, los Tenientes de Alcalde y los concejales.",
+        "El gobierno y la administración del municipio corresponden al Ayuntamiento, integrado por el Alcalde y los concejales.",
+        "El gobierno y la administración del municipio corresponden al Ayuntamiento, integrado por el Pleno, el Alcalde y los concejales."
+      ],
+      "pagina": 9
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 35,
+      "decision": "añadir",
+      "referencia": "G-I.1",
+      "respuesta": "b",
+      "enunciado": "En relación con el derecho a la libertad religiosa, ¿qué declara la Constitución Española en el artículo 16?",
+      "opciones": [
+        "La reconoce.",
+        "La garantiza.",
+        "La reconoce y la garantiza.",
+        "La reconoce, la garantiza y la protege."
+      ],
+      "pagina": 9
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 36,
+      "decision": "añadir",
+      "referencia": "E-II.4",
+      "respuesta": "d",
+      "enunciado": "En cuanto a la Seguridad Social, la Constitución Española dicta en el artículo 41, que:",
+      "opciones": [
+        "En ningún caso da cobertura al desempleo.",
+        "Los poderes públicos mantendrán un régimen público de Seguridad Social para la población activa.",
+        "La asistencia y prestaciones complementarias a la Seguridad Social son obligatorias.",
+        "Garantizará la asistencia y prestaciones sociales suficientes ante situaciones de necesidad, especialmente en caso de desempleo."
+      ],
+      "pagina": 9
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 37,
+      "decision": "añadir",
+      "referencia": "G-I.3",
+      "respuesta": "d",
+      "enunciado": "¿Quién deberá reconocer la imposibilidad del Rey para ejercer sus funciones de acuerdo con el artículo 59 de la Constitución Española?",
+      "opciones": [
+        "El Gobierno.",
+        "La Familia Real.",
+        "El Congreso de los Diputados.",
+        "Las Cortes Generales."
+      ],
+      "pagina": 10
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 38,
+      "decision": "añadir",
+      "referencia": "G-I.2",
+      "respuesta": "d",
+      "enunciado": "Según el artículo 159 de la Constitución Española, los miembros del Tribunal Constitucional serán propuestos:",
+      "opciones": [
+        "Por el Rey.",
+        "Seis a propuesta del Senado y seis a propuesta del Congreso.",
+        "Cuatro a propuesta del Congreso por mayoría de dos quintos de sus miembros; cuatro a propuesta del Senado, con idéntica mayoría; dos a propuesta del Gobierno, y dos a propuesta del Consejo General del Poder Judicial.",
+        "Cuatro a propuesta del Congreso por mayoría de tres quintos de sus miembros; cuatro a propuesta del Senado, con idéntica mayoría; dos a propuesta del Gobierno, y dos a propuesta del Consejo General del Poder Judicial."
+      ],
+      "pagina": 10
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 39,
+      "decision": "añadir",
+      "referencia": "G-I.2",
+      "respuesta": "c",
+      "enunciado": "De acuerdo con el artículo 165 de la Constitución Española el funcionamiento del Tribunal Constitucional se regula:",
+      "opciones": [
+        "Mediante su reglamento de Régimen Interior.",
+        "Mediante Decreto-Ley.",
+        "Mediante una ley orgánica.",
+        "Mediante una ley ordinaria salvo lo concerniente al estatuto de sus miembros."
+      ],
+      "pagina": 10
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 40,
+      "decision": "añadir",
+      "referencia": "G-I.4",
+      "respuesta": "a",
+      "enunciado": "Según el artículo 70 de la Constitución Española, la validez de las actas y credenciales de los miembros de ambas Cámaras:",
+      "opciones": [
+        "Estará sometida al control judicial, en los términos que establezca la ley electoral.",
+        "Estará sometida al control de las Cámaras, en los términos que establezca la ley electoral.",
+        "Estará sometida al reglamento del Congreso, en los términos que establezca la ley electoral.",
+        "Estará sometida a la Comisión del Personal, en los términos que establezca la ley electoral."
+      ],
+      "pagina": 10
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 41,
+      "decision": "añadir",
+      "referencia": "G-I.4",
+      "respuesta": "a",
+      "enunciado": "De acuerdo con la Constitución Española en su artículo 74, ¿qué decisiones de las Cortes Generales se adoptarán por mayoría de cada una de las Cámaras?",
+      "opciones": [
+        "Las previstas en los artículos 94.1, 145.2 y 158.2.",
+        "Las de competencias legislativas que el Título II atribuye expresamente a las Cortes Generales.",
+        "Las previstas en el título I de la Constitución Española.",
+        "Las previstas en los artículos 94.1, 145.2 y 153.1."
+      ],
+      "pagina": 10
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 42,
+      "decision": "añadir",
+      "referencia": "G-I.9",
+      "respuesta": "c",
+      "enunciado": "Conforme al artículo 15 de la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, NO ES CORRECTO respecto a los órganos colegiados:",
+      "opciones": [
+        "El régimen jurídico de los órganos colegiados se ajustará a las normas contenidas en la sección 3ª, sin perjuicio de las peculiaridades organizativas de las Administraciones Públicas en que se integran.",
+        "El acuerdo de creación y las normas de funcionamiento de los órganos colegiados que dicten resoluciones que tengan efectos jurídicos frente a terceros deberán ser publicados en el Boletín o Diario Oficial de la Administración Pública en que se integran.",
+        "Las Administraciones no podrán publicar el acuerdo de creación y las normas de funcionamiento en otros medios de difusión que garanticen su conocimiento.",
+        "Cuando se trate de un órgano colegiado en que participen organizaciones representativas de intereses sociales, la publicidad se realizará por la Administración a quien corresponda la Presidencia."
+      ],
+      "pagina": 10
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 43,
+      "decision": "añadir",
+      "referencia": "G-I.6",
+      "respuesta": "a",
+      "enunciado": "Según el artículo 61 de la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, corresponde imponer la sanción de separación del servicio por faltas muy graves a:",
+      "opciones": [
+        "Los Ministros.",
+        "Los Secretarios de Estado.",
+        "Los Secretarios Generales.",
+        "Los Subsecretarios."
+      ],
+      "pagina": 11
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 44,
+      "decision": "añadir",
+      "referencia": "G-I.6",
+      "respuesta": "c",
+      "enunciado": "Según lo dispuesto en el artículo 57.3 de la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, la determinación del número, la denominación y el ámbito de competencia respectivo de los Ministerios y las Secretarías de Estado se establecen por:",
+      "opciones": [
+        "Acuerdo del Consejo de Ministros.",
+        "Real Decreto del Consejo de Ministros.",
+        "Real Decreto del Presidente del Gobierno.",
+        "Orden Ministerial."
+      ],
+      "pagina": 11
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 45,
+      "decision": "añadir",
+      "referencia": "E-I.3",
+      "respuesta": "b",
+      "enunciado": "De acuerdo con el artículo 10 del Decreto 57/2006, de 27 de octubre, por el que se regula la atención al ciudadano en la Comunidad Autónoma de La Rioja, sobre la naturaleza de la información administrativa:",
+      "opciones": [
+        "La información administrativa tiene carácter vinculante y no originará derechos ni expectativa de derecho.",
+        "La información facilitada no podrá invocarse a efectos de interrupción o suspensión de plazos, caducidad o prescripción, ni servirá de instrumento formal de notificación en el expediente.",
+        "La información administrativa podrá invocarse a efectos de caducidad o prescripción.",
+        "La información administrativa generará expectativa de derecho."
+      ],
+      "pagina": 11
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 46,
+      "decision": "descartar",
+      "referencia": "Detalle del libro de Quejas y Sugerencias, fuera del programa.",
+      "respuesta": "c",
+      "enunciado": "De conformidad con el Decreto 118/2007, de 27 de septiembre, por el que se regula el libro de Quejas y Sugerencias de la Comunidad Autónoma de La Rioja:",
+      "opciones": [
+        "Las quejas y sugerencias pueden ser formuladas tanto por personas físicas y jurídicas y presentadas de forma anónima.",
+        "En las sugerencias deberán quedar constancia de la identidad de la persona, indicándose el nombre y los apellidos, así como su domicilio o dirección de correo electrónico o fax, según sea el medio elegido para la contestación. No serán objeto de tramitación las sugerencias en que no consten tales datos.",
+        "Cada ejemplar del Libro estará numerado y compuesto por un juego de 50 hojas encuadernadas, separables y numeradas correlativamente.",
+        "Las respuestas b y c son correctas."
+      ],
+      "pagina": 11
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 47,
+      "decision": "descartar",
+      "referencia": "Sistema de Archivos de La Rioja, fuera del programa.",
+      "respuesta": "c",
+      "enunciado": "Señale la respuesta INCORRECTA. Según el artículo 10 de la Ley 4/1994, de 24 de mayo, de Archivos y Patrimonio Documental de La Rioja, el Sistema de Archivos de La Rioja está integrado por:",
+      "opciones": [
+        "El Consejo de Archivos de La Rioja.",
+        "El Órgano Gestor del Sistema de Archivos de La Rioja.",
+        "El Órgano Coordinador de Archivos de La Rioja.",
+        "Los Centros de Archivo."
+      ],
+      "pagina": 11
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 48,
+      "decision": "añadir",
+      "referencia": "E-I.3",
+      "respuesta": "b",
+      "enunciado": "Señale la respuesta INCORRECTA. De conformidad con el artículo 8 del Decreto 58/2004, de 29 de octubre, por el que se regula el Registro en el ámbito de la Administración General de la Comunidad Autónoma de La Rioja y sus Organismos Públicos, cuál de las siguientes funciones corresponde a las Oficinas de Registro.",
+      "opciones": [
+        "Validar y anotar los asientos de entrada y salida de solicitudes, escritos y comunicaciones.",
+        "Verificación de la identidad de los ciudadanos mediante la presentación del Documento Nacional de Identidad o del certificado de empadronamiento.",
+        "Expedir las copias anotadas o recibos de presentación.",
+        "Trasladar toda la documentación a las personas, órganos o unidades destinatarias."
+      ],
+      "pagina": 12
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 49,
+      "decision": "añadir",
+      "referencia": "E-II.1-2",
+      "respuesta": "a",
+      "enunciado": "De conformidad con el artículo 54 de la Ley 9/2023, de 5 de mayo, de función pública de la Comunidad Autónoma de La Rioja, sobre la rehabilitación de la condición de personal funcionario.",
+      "opciones": [
+        "En caso de extinción de la relación de servicios como consecuencia de pérdida de la nacionalidad o jubilación por incapacidad permanente para el servicio, la persona interesada, una vez desaparecida la causa objetiva que la motivó, podrá solicitar la rehabilitación de su condición de personal funcionario, que le será concedida.",
+        "La rehabilitación podrá solicitarse también cuando la pérdida de la condición derive de una condena penal de inhabilitación, siendo obligatoria su concesión una vez transcurridos tres meses sin resolución expresa.",
+        "El Consejero competente en materia de Función Pública, podrá conceder, con carácter excepcional, por el procedimiento que reglamentariamente se determine, la rehabilitación de la condición de personal funcionario.",
+        "Se puede solicitar la rehabilitación por quien hubiera perdido la condición de personal funcionario por haber sido condenado a la pena accesoria de inhabilitación. No cabe en el caso de pena principal."
+      ],
+      "pagina": 12
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 50,
+      "decision": "añadir",
+      "referencia": "E-II.1",
+      "respuesta": "d",
+      "enunciado": "Señale la respuesta INCORRECTA. De conformidad con el artículo 135 de Ley 9/2023, de 5 de mayo, de función pública de la Comunidad Autónoma de La Rioja sobre materias objeto de negociación quedan excluidas de la obligatoriedad de la negociación:",
+      "opciones": [
+        "La determinación de condiciones de trabajo del personal directivo público profesional.",
+        "Los poderes de dirección y control propios de la relación jerárquica.",
+        "La regulación y determinación concreta, en cada caso, de los sistemas, criterios, órganos y procedimientos de acceso al empleo público y la promoción profesional.",
+        "Los criterios generales de acción social."
+      ],
+      "pagina": 12
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 51,
+      "decision": "añadir",
+      "referencia": "E-II.1",
+      "respuesta": "b",
+      "enunciado": "Señale la respuesta INCORRECTA. Según el artículo 127 de la Ley 9/2023, de 5 de mayo, de función pública de la Comunidad de La Rioja, la calificación de las faltas y la determinación del alcance de la sanción se establecerán teniendo en cuenta, entre otros, los siguientes criterios:",
+      "opciones": [
+        "El grado de perturbación del servicio.",
+        "El grado de culpabilidad, descuido o negligencia que se revele en la conducta.",
+        "El grado de participación.",
+        "El interés, beneficio o provecho propio o ajeno perseguidos con la infracción."
+      ],
+      "pagina": 12
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 52,
+      "decision": "añadir",
+      "referencia": "G-II.1-2",
+      "respuesta": "c",
+      "enunciado": "De entre las siguientes afirmaciones de la Ley Orgánica 3/1982, de 9 de junio, de Estatuto de Autonomía de La Rioja, cuál de ellas NO REQUIERE de una mayoría de dos tercios de sus miembros:",
+      "opciones": [
+        "La ampliación de las competencias de la Comunidad Autónoma en materias que no estén atribuidas en exclusiva al Estado, o que sólo estén atribuidas las bases o principios, según el artículo 149 de la Constitución.",
+        "La aprobación de la Ley electoral del Parlamento de La Rioja, que regulará el proceso de elecciones, así como las causas de inelegibilidad e incompatibilidad de los Diputados, su cese y sustitución, asegurando la proporcionalidad del sistema.",
+        "La propuesta de la moción de censura, que habrá de incluir un candidato a la Presidencia de la Comunidad Autónoma, y, no podrá ser votada hasta que transcurran cinco días desde su presentación, pudiendo, en este plazo, presentarse mociones alternativas, y, si no fuere aprobada por el Parlamento, ninguno de los signatarios podrá presentar otra en el plazo de seis meses.",
+        "La modificación, por parte del Parlamento de La Rioja, del himno y escudo propios de la Comunidad Autónoma de La Rioja."
+      ],
+      "pagina": 13
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 53,
+      "decision": "añadir",
+      "referencia": "G-II.1",
+      "respuesta": "b",
+      "enunciado": "Según establece el artículo 8 del Estatuto de Autonomía de La Rioja le corresponde la competencia exclusiva a la Comunidad de La Rioja en las siguientes materias:",
+      "opciones": [
+        "Sanidad e higiene.",
+        "Protección y Tutela de Menores.",
+        "Las denominaciones de origen y sus Consejos Reguladores sin colaboración alguna con el Estado.",
+        "Las Apuestas Mutuas Deportivas-Benéficas."
+      ],
+      "pagina": 13
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 54,
+      "decision": "añadir",
+      "referencia": "G-II.2",
+      "respuesta": "b",
+      "enunciado": "Atendiendo al artículo 17 del Estatuto de Autonomía de La Rioja el número mínimo de Diputados que constituirán el Parlamento será:",
+      "opciones": [
+        "40",
+        "32",
+        "25",
+        "37"
+      ],
+      "pagina": 13
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 55,
+      "decision": "añadir",
+      "referencia": "G-II.2",
+      "respuesta": "d",
+      "enunciado": "Según el artículo 24 del Estatuto de Autonomía de La Rioja, el Gobierno de La Rioja, como órgano colegiado, ejerce las funciones ejecutivas y la administración de la Comunidad Autónoma, correspondiéndole en particular:",
+      "opciones": [
+        "Interponer recursos ante el Tribunal Supremo y personarse en las actuaciones en que así proceda.",
+        "El ejercicio de la potestad reglamentaria incluida la que haya sido reservada por el Estatuto al Parlamento.",
+        "Convocar elecciones, pudiendo coincidir con las elecciones locales.",
+        "Ejecutar en general, cuantas funciones se deriven del ordenamiento jurídico estatal y regional."
+      ],
+      "pagina": 13
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 56,
+      "decision": "añadir",
+      "referencia": "G-II.3",
+      "respuesta": "a",
+      "enunciado": "En el artículo 36 del Estatuto de Autonomía de La Rioja, se estipula que la competencia de los órganos jurisdiccionales de la Comunidad Autónoma se extiende:",
+      "opciones": [
+        "En el orden civil, a todas las instancias y grados, a excepción de los recursos de casación y revisión regulados en la Ley de Enjuiciamiento Civil.",
+        "En el orden penal los recursos de casación y revisión.",
+        "En el orden contencioso-administrativo a todas las instancias y grados cuando se trate de actos o reglamentos emanados por el Parlamento de La Rioja.",
+        "En el orden social a todas las instancias y grados, a excepción del recurso de reposición."
+      ],
+      "pagina": 13
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 57,
+      "decision": "añadir",
+      "referencia": "G-II.3",
+      "respuesta": "a",
+      "enunciado": "Según el artículo 50 del Estatuto de Autonomía de La Rioja, la Comunidad Autónoma de La Rioja podrá crear su propio Tribunal Económico-Administrativo:",
+      "opciones": [
+        "Mediante Ley que regulará su composición, régimen y funcionamiento.",
+        "Aunque no regulará su funcionamiento, cuya competencia corresponderá a la Administración del Estado.",
+        "Cuyo funcionamiento dependerá del Tribunal de Justicia.",
+        "Ninguna de las respuestas anteriores es correcta."
+      ],
+      "pagina": 14
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 58,
+      "decision": "añadir",
+      "referencia": "E-I.10",
+      "respuesta": "a",
+      "enunciado": "Señale la respuesta INCORRECTA. Se establece en la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales:",
+      "opciones": [
+        "El hecho de que el tratamiento de los datos personales no esté limitado debe constar claramente en los sistemas de información del responsable.",
+        "El tratamiento de datos personales relativos a condenas e infracciones penales, así como a procedimientos y medidas cautelares y de seguridad conexas, para fines distintos de los de prevención, investigación, detección o enjuiciamiento de infracciones penales o de ejecución de sanciones penales, solo podrá llevarse a cabo cuando se encuentre amparado en una norma de Derecho de la Unión, en esta ley orgánica o en otras normas de rango legal.",
+        "El tratamiento de los datos personales de un menor de edad únicamente podrá fundarse en su consentimiento cuando sea mayor de catorce años.",
+        "Las personas vinculadas al fallecido por razones familiares o de hecho así como sus herederos podrán dirigirse al responsable o encargado del tratamiento al objeto de solicitar el acceso a los datos personales de aquella y, en su caso, su rectificación o supresión"
+      ],
+      "pagina": 14
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 59,
+      "decision": "añadir",
+      "referencia": "E-I.10",
+      "respuesta": "b",
+      "enunciado": "De acuerdo al artículo 3 de la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales, los familiares de una persona fallecida podrán acceder a datos personales de aquella, su rectificación o supresión:",
+      "opciones": [
+        "En ningún caso, dado el fallecimiento.",
+        "En el caso de que el fallecido no lo hubiese prohibido expresamente.",
+        "Sólo si se trata de sus herederos.",
+        "En los diez días siguientes al fallecimiento."
+      ],
+      "pagina": 14
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 60,
+      "decision": "descartar",
+      "referencia": "Legislación específica de igualdad y violencia de género, fuera del programa.",
+      "respuesta": "a",
+      "enunciado": "Siguiendo las definiciones que establece la Ley 7/2023, de 20 de abril, de igualdad efectiva de mujeres y hombres de La Rioja en su artículo 3, la igualdad sustantiva es:",
+      "opciones": [
+        "El acceso al mismo trato y oportunidades para el reconocimiento, goce o pleno ejercicio de los derechos humanos y las libertades fundamentales.",
+        "Idea de justicia social por la que un sistema ofrece a los individuos que lo conforman, de forma directa o con la intervención subsidiaria del Estado, las mismas posibilidades de partida para su desarrollo personal, profesional y social, sin ningún tipo de discriminación.",
+        "Reparto equilibrado de las tareas domésticas y de las responsabilidades familiares, tales como su organización, el cuidado, la educación y el afecto a personas dependientes dentro del hogar, con el fin de distribuir de manera justa los tiempos de vida de mujeres y hombres.",
+        "La acción educadora que potencia la igualdad real de oportunidades y valora indistintamente la experiencia, aptitudes y aportación social y cultural de mujeres y hombres, en igualdad de derechos, sin estereotipos sexistas."
+      ],
+      "pagina": 14
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 61,
+      "decision": "descartar",
+      "referencia": "Legislación específica de igualdad y violencia de género, fuera del programa.",
+      "respuesta": "d",
+      "enunciado": "Según la Ley 7/2023, de 20 de abril, de igualdad efectiva de mujeres y hombres de La Rioja se entiende por discriminación directa:",
+      "opciones": [
+        "Cuando una mujer es discriminada de manera simultánea o consecutiva por dos o más causas de las previstas en la Ley 15/2022, de 12 de julio, integral para la igualdad de trato y la no discriminación.",
+        "Situación en la que una disposición, criterio o práctica aparentemente neutros ponen a personas de un sexo en desventaja con respecto a personas del otro sexo.",
+        "Situación por la que mujeres y hombres ocupan mayoritariamente determinadas profesiones, eligen determinados estudios debido a roles y estereotipos de género.",
+        "Situación en la que se encuentra una persona que sea, haya sido o pudiera ser tratada, en atención a su sexo, de manera menos favorable que otra en situación comparable."
+      ],
+      "pagina": 15
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 62,
+      "decision": "descartar",
+      "referencia": "Legislación específica de igualdad y violencia de género, fuera del programa.",
+      "respuesta": "b",
+      "enunciado": "Según el artículo 1 de la Ley 11/2022, de 20 de septiembre, contra la Violencia de Género de La Rioja, esta tiene como objeto:",
+      "opciones": [
+        "Actuar frente a la violencia de género como manifestación de la igualdad, la discriminación y las relaciones de poder simétricas entre mujeres y hombres.",
+        "Actuar frente a la violencia de género como manifestación de la desigualdad, la discriminación y las relaciones de poder asimétricas entre mujeres y hombres.",
+        "Respeto, protección y promoción de los derechos humanos.",
+        "Actuar frente a toda violencia contra una mujer o un hombre por el hecho de serlo o que afecte a las mujeres y hombres de manera desproporcionada."
+      ],
+      "pagina": 15
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 63,
+      "decision": "descartar",
+      "referencia": "Legislación específica de igualdad y violencia de género, fuera del programa.",
+      "respuesta": "b",
+      "enunciado": "Según el artículo 5 de la Ley 11/2022, contra la Violencia de Género de la Rioja, la violencia de género de segundo orden es:",
+      "opciones": [
+        "Cualquier acto o conducta accidental que provoque un daño en el entorno de la víctima, incluidos los animales de compañía.",
+        "Violencia ejercida por el agresor, tanto física como psicológica, a través de represalias, humillaciones, hostigamiento, amenazas y persecución ejercida contra las personas que apoyan a la víctima de violencia de género o hacia las personas que intervienen en una agresión: familiares, amistades o personas anónimas, así como los y las profesionales.",
+        "Toda conducta o acto violento contra las mujeres llevado a cabo a través de las tecnologías de la información y la comunicación.",
+        "La utilización de iconos, representaciones, narrativas o imágenes que reproducen o transmiten relaciones de dominación de los hombres sobre las mujeres."
+      ],
+      "pagina": 15
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 64,
+      "decision": "descartar",
+      "referencia": "Régimen específico de transparencia, fuera del programa.",
+      "respuesta": "c",
+      "enunciado": "Indique el nombre correcto de la Ley de Transparencia y Buen Gobierno de La Rioja:",
+      "opciones": [
+        "Ley 4/2013, de 11 de noviembre, de Transparencia y Buen Gobierno de La Rioja.",
+        "Ley 4/2013, de 11 de septiembre, de Transparencia y Buen Gobierno de La Rioja.",
+        "Ley 3/2014, de 11 de septiembre, de Transparencia y Buen Gobierno de La Rioja.",
+        "Ley 3/2014, de 11 de noviembre, de Transparencia y Buen Gobierno de La Rioja."
+      ],
+      "pagina": 15
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 65,
+      "decision": "descartar",
+      "referencia": "Régimen específico de transparencia, fuera del programa.",
+      "respuesta": "d",
+      "enunciado": "Según el artículo 14 de la Ley de Transparencia y Buen Gobierno de La Rioja, el derecho de acceso a la información pública.",
+      "opciones": [
+        "Siempre se ejercerá, tramitará y resolverá por medios electrónicos.",
+        "Se ejercerá, tramitará y resolverá por medios electrónicos, aunque el ciudadano haya manifestado su preferencia por otro medio.",
+        "Siempre se ejercerá y tramitará por medios electrónicos y únicamente podrá realizarse por otros medios la resolución, aunque el ciudadano haya manifestado su preferencia por otro medio.",
+        "Se ejercerá, tramitará y resolverá por medios electrónicos, salvo cuando el ciudadano haya manifestado su preferencia por otro medio."
+      ],
+      "pagina": 15
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 66,
+      "decision": "añadir",
+      "referencia": "E-I.3",
+      "respuesta": "d",
+      "enunciado": "Señale la respuesta INCORRECTA. De conformidad con el artículo 14 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, ¿quién está obligado a relacionarse electrónicamente con las Administraciones Públicas?",
+      "opciones": [
+        "Un funcionario de la CAR que reclama la aplicación de un trienio en su nómina.",
+        "Un vecino de un inmueble que solicita, en representación de la Comunidad de Propietarios a la que pertenece, una subvención del Ayuntamiento de Logroño para reformar su edificio.",
+        "Una entidad financiera sin ánimo de lucro.",
+        "Una psicóloga colegiada que solicita una beca para Educación Infantil de la CAR para su hijo."
+      ],
+      "pagina": 16
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 67,
+      "decision": "añadir",
+      "referencia": "E-I.2",
+      "respuesta": "b",
+      "enunciado": "Según el artículo 40.2 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, ¿cuál es el plazo máximo para que el órgano que dicte las resoluciones y actos administrativos los notifique a los interesados cuyos derechos e intereses sean afectados por aquellos?",
+      "opciones": [
+        "Cinco días a partir de la fecha en que el acto haya sido dictado.",
+        "Diez días a partir de la fecha en que el acto haya sido dictado.",
+        "Quince días a partir de la fecha en que el acto haya sido dictado.",
+        "Un mes a partir de la fecha en que el acto haya sido dictado."
+      ],
+      "pagina": 16
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 68,
+      "decision": "añadir",
+      "referencia": "E-I.2",
+      "respuesta": "a",
+      "enunciado": "Señale la respuesta INCORRECTA. Teniendo en cuenta lo indicado en el artículo 41 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, con independencia del medio utilizado, las notificaciones serán válidas siempre que permitan tener constancia de:",
+      "opciones": [
+        "Sus fechas y lugares de envío.",
+        "Su contenido íntegro.",
+        "La identidad fidedigna del remitente y destinatario de la misma.",
+        "La recepción o acceso por el interesado o su representante."
+      ],
+      "pagina": 16
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 69,
+      "decision": "añadir",
+      "referencia": "E-I.2",
+      "respuesta": "b",
+      "enunciado": "De acuerdo a la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas:",
+      "opciones": [
+        "Son nulos de pleno derecho los actos de las Administraciones Públicas dictados por órgano manifiestamente competente por razón de la materia o del territorio.",
+        "Los actos nulos o anulables que, sin embargo, contengan los elementos constitutivos de otro distinto producirán los efectos de éste.",
+        "El Estado podrá convalidar los actos anulables, subsanando los vicios de que adolezcan.",
+        "La nulidad o anulabilidad de un acto implicará la de los sucesivos en el procedimiento que sean independientes del primero."
+      ],
+      "pagina": 16
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 70,
+      "decision": "añadir",
+      "referencia": "E-I.2",
+      "respuesta": "b",
+      "enunciado": "Según el artículo 47.1 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, ¿cuál de los siguientes casos es una causa de nulidad de pleno derecho de los actos administrativos?",
+      "opciones": [
+        "Aquellos que incurran en cualquier infracción del ordenamiento jurídico.",
+        "Los que lesionen los derechos y libertades susceptibles de amparo constitucional.",
+        "Los que presenten un defecto de forma que no impida alcanzar su fin.",
+        "La realización de actuaciones administrativas fuera del tiempo establecido."
+      ],
+      "pagina": 16
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 71,
+      "decision": "añadir",
+      "referencia": "E-I.3 / E-I.8",
+      "respuesta": "d",
+      "enunciado": "Señale la respuesta INCORRECTA. De acuerdo al artículo 61 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, que regula el inicio del procedimiento por petición razonada de otros órganos, en los procedimientos de naturaleza sancionadora, las peticiones deberán especificar, en la medida de lo posible:",
+      "opciones": [
+        "La persona o personas presuntamente responsables.",
+        "Las conductas o hechos que pudieran constituir infracción administrativa y su tipificación.",
+        "El lugar, la fecha, fechas o período de tiempo continuado en que los hechos se produjeron.",
+        "La evaluación económica del hecho."
+      ],
+      "pagina": 17
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 72,
+      "decision": "añadir",
+      "referencia": "E-I.3",
+      "respuesta": "b",
+      "enunciado": "De conformidad con lo dispuesto en el artículo 96.6 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, ¿cuál es el plazo máximo de resolución para los procedimientos administrativos tramitados de manera simplificada?",
+      "opciones": [
+        "El plazo máximo es de 15 días, a contar desde el siguiente al que se notifique al interesado el acuerdo de tramitación simplificada del procedimiento.",
+        "El plazo máximo es de 30 días, a contar desde el siguiente al que se notifique al interesado el acuerdo de tramitación simplificada del procedimiento.",
+        "El plazo máximo es de 10 días, a contar desde el siguiente al que se notifique al interesado el acuerdo de tramitación simplificada del procedimiento.",
+        "No existe un plazo específico para la tramitación simplificada."
+      ],
+      "pagina": 17
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 73,
+      "decision": "añadir",
+      "referencia": "E-I.4",
+      "respuesta": "c",
+      "enunciado": "De conformidad con el artículo 125.1 la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, ¿en qué caso NO PROCEDE la interposición del recurso extraordinario de revisión contra actos firmes en vía administrativa?",
+      "opciones": [
+        "Que al dictarlos se hubiera incurrido en error de hecho, que resulte de los propios documentos incorporados al expediente.",
+        "Que aparezcan documentos de valor esencial para la resolución del asunto que, aunque sean posteriores, evidencien el error de la resolución recurrida.",
+        "Que la resolución se hubiese dictado como consecuencia de una divergencia de criterios entre órganos administrativos.",
+        "Que la resolución se hubiese dictado como consecuencia de prevaricación, cohecho, violencia, maquinación fraudulenta u otra conducta punible y se haya declarado así en virtud de sentencia judicial firme."
+      ],
+      "pagina": 17
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 74,
+      "decision": "añadir",
+      "referencia": "E-I.2 / E-I.4",
+      "respuesta": "c",
+      "enunciado": "Según el artículo 107.2 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, ¿cuál es el plazo máximo para que las Administraciones Públicas declaren la lesividad de actos anulables desde que se dictó el acto administrativo?",
+      "opciones": [
+        "Un año.",
+        "Dos años.",
+        "Cuatro años.",
+        "Seis meses."
+      ],
+      "pagina": 17
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 75,
+      "decision": "añadir",
+      "referencia": "E-I.4",
+      "respuesta": "b",
+      "enunciado": "De conformidad con el artículo 124.2 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, ¿cuál es el plazo máximo para dictar y notificar la resolución de un recurso potestativo de reposición?",
+      "opciones": [
+        "El plazo máximo es de 10 días.",
+        "El plazo máximo es de un mes.",
+        "El plazo máximo es de tres meses.",
+        "El plazo máximo es de seis meses."
+      ],
+      "pagina": 17
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 76,
+      "decision": "añadir",
+      "referencia": "E-I.1",
+      "respuesta": "c",
+      "enunciado": "En virtud del artículo 129 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, en el ejercicio de la iniciativa legislativa y la potestad reglamentaria, las Administraciones Públicas actuarán de acuerdo con los principios de:",
+      "opciones": [
+        "Eficacia, eficiencia, proporcionalidad, seguridad jurídica, transparencia y economía.",
+        "Eficacia, eficiencia, proporcionalidad, seguridad jurídica, transparencia y publicidad.",
+        "Eficacia, eficiencia, proporcionalidad, seguridad jurídica, transparencia y necesidad.",
+        "Eficacia, eficiencia, proporcionalidad, seguridad jurídica, transparencia e igualdad."
+      ],
+      "pagina": 18
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 77,
+      "decision": "añadir",
+      "referencia": "G-II.4",
+      "respuesta": "c",
+      "enunciado": "Señale la respuesta INCORRECTA. De acuerdo con el artículo 3 de la Ley 4/2005, de 1 de junio, de funcionamiento y régimen jurídico de la Administración de la Comunidad Autónoma de La Rioja, la Administración y sus organismos públicos ajustarán su actividad a los siguientes principios:",
+      "opciones": [
+        "Principio de responsabilidad por la gestión pública.",
+        "Colaboración y coordinación entre sus distintos órganos y organismos públicos.",
+        "Eficiencia en el cumplimiento de los objetivos institucionales.",
+        "Colaboración mutua y lealtad institucional en sus relaciones con los demás Poderes y Administraciones Públicas."
+      ],
+      "pagina": 18
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 78,
+      "decision": "añadir",
+      "referencia": "G-II.4",
+      "respuesta": "c",
+      "enunciado": "De acuerdo con el artículo 12.h). 1º de la Ley 4/2005, de 1 de junio, de funcionamiento y régimen jurídico de la Administración de la Comunidad Autónoma de La Rioja, ¿cuál es la duración máxima determinada para los convenios que celebre la Administración General de la Comunidad Autónoma de La Rioja?",
+      "opciones": [
+        "Indefinida, siempre que exista interés mutuo.",
+        "Dos años, salvo que normativamente se prevea un plazo superior.",
+        "Cuatro años, salvo que normativamente se prevea un plazo superior.",
+        "Cinco años, salvo que normativamente se prevea un plazo superior."
+      ],
+      "pagina": 18
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 79,
+      "decision": "añadir",
+      "referencia": "G-II.6",
+      "respuesta": "c",
+      "enunciado": "De acuerdo con el artículo 9 de la Ley 3/2003, de 3 de marzo, de Organización del Sector Público de la Comunidad Autónoma de La Rioja, ¿cuál de las siguientes NO es una de las funciones que se le atribuyen al Secretario General Técnico?",
+      "opciones": [
+        "Ejercer la jefatura superior del personal de la Consejería.",
+        "Elaborar el anteproyecto del presupuesto y la memoria anual de actividades de la Consejería en coordinación con los Directores Generales.",
+        "Dirigir y gestionar los servicios y organizar las dependencias a su cargo.",
+        "Tramitar los recursos que se interpongan ante el Consejero."
+      ],
+      "pagina": 18
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_TEORIA",
+      "origen": "car_auxiliar_teoria",
+      "numero": 80,
+      "decision": "añadir",
+      "referencia": "G-II.6",
+      "respuesta": "b",
+      "enunciado": "Indique cuál de las siguientes afirmaciones corresponde a las Secciones teniendo en cuenta lo estipulado sobre las Unidades Administrativas en el Capítulo III de la Ley 3/2003, de 3 de marzo, de Organización del Sector Público de la Comunidad Autónoma de La Rioja.",
+      "opciones": [
+        "Son las unidades administrativas de superior nivel funcional de las Consejerías.",
+        "Les corresponden funciones de ejecución, informe y propuesta de las cuestiones pertenecientes al ámbito que tienen atribuido.",
+        "Se les atribuyen las funciones de tramitación, inventario, si procede, y archivo de los asuntos que tengan asignados.",
+        "Son unidades administrativas de apoyo dependientes de los Negociados."
+      ],
+      "pagina": 18
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 1,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 2,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 3,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 4,
+      "decision": "añadir",
+      "referencia": "G-I.10",
+      "respuesta": "c",
+      "enunciado": "¿A qué institución europea corresponde la función de ejecutar el presupuesto de la Unión Europea?",
+      "opciones": [
+        "Al Consejo Europeo.",
+        "Al Consejo de la Unión Europea.",
+        "A la Comisión Europea.",
+        "Al Parlamento Europeo."
+      ],
+      "pagina": 3
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 5,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 6,
+      "decision": "añadir",
+      "referencia": "G-I.8",
+      "respuesta": "b",
+      "enunciado": "De acuerdo con el artículo 149.1. 9ª de la Constitución española, el Estado tiene competencia exclusiva sobre:",
+      "opciones": [
+        "Asistencia Social.",
+        "Legislación sobre propiedad intelectual e industrial.",
+        "Sanidad e Higiene.",
+        "Gestión en materia de medio ambiente."
+      ],
+      "pagina": 4
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 7,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 8,
+      "decision": "añadir",
+      "referencia": "E-I.3",
+      "respuesta": "d",
+      "enunciado": "Según lo dispuesto en el artículo 30 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas:",
+      "opciones": [
+        "Los plazos expresados en días se contarán a partir del día siguiente en que tenga lugar la notificación o publicación del acto de que se trate, o desde el dia en que se produzca la estimación o la desestimación por silencio administrativo.",
+        "Siempre que por Ley o en el Derecho de la Unión Europea no se exprese otro cómputo, cuando los plazos se señalen por días, se entiende que éstos son naturales, incluyéndose en el cómputo los sábados, los domingos y los declarados festivos.",
+        "Cuando un día fuese hábil en el municipio o Comunidad Autónoma en que residiese el interesado, e inhábil en la sede del órgano administrativo, o a la inversa, se considerará hábil en todo caso.",
+        "La declaración de un día como hábil o inhábil a efectos de cómputo de plazos no determina por sí sola el funcionamiento de los centros de trabajo de las Administraciones Públicas, la organización del tiempo de trabajo o el régimen de jornada y horarios de las mismas."
+      ],
+      "pagina": 4
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 9,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 10,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 11,
+      "decision": "añadir",
+      "referencia": "E-I.6",
+      "respuesta": "c",
+      "enunciado": "Según dispone el artículo 15 de la Ley 9/2017, de 8 de noviembre, de Contratos del Sector Público, el contrato de concesión de servicios es aquel en cuya virtud uno o varios poderes adjudicadores encomiendan:",
+      "opciones": [
+        "A título oneroso, a una o varias personas jurídicas, la gestión de un servicio cuya prestación sea de su titularidad o competencia",
+        "A título oneroso o gratuito, a una o varias personas, naturales o jurídicas, la gestión de un servicio cuya prestación sea de su titularidad o competencia.",
+        "A título oneroso, a una o varias personas, naturales o jurídicas, la gestión de un servicio cuya prestación sea de su titularidad o competencia.",
+        "A título oneroso o gratuito, a una o varias personas jurídicas, la gestión de un servicio cuya prestación sea de su titularidad o competencia."
+      ],
+      "pagina": 5
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 12,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 13,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 14,
+      "decision": "añadir",
+      "referencia": "G-I.1",
+      "respuesta": "a",
+      "enunciado": "De acuerdo con el artículo 18.4 de la Constitución española, la ley limitará el uso de la informática para garantizar:",
+      "opciones": [
+        "El honor y la intimidad personal y familiar de los ciudadanos y el pleno ejercicio de sus derechos.",
+        "El secreto de las comunicaciones entre los ciudadanos frente a la intervención maliciosa de terceros.",
+        "La protección de los menores de edad frente a potenciales abusos o delitos relacionados con la pornografía infantil o cualquier otra actividad que pueda menoscabar su dignidad e integridad.",
+        "El secreto profesional de acuerdo con lo que establezca una ley promulgada al efecto."
+      ],
+      "pagina": 6
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 15,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 16,
+      "decision": "añadir",
+      "referencia": "E-I.3",
+      "respuesta": "b",
+      "enunciado": "De acuerdo con lo dispuesto en el artículo 32 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas:",
+      "opciones": [
+        "La Administración, salvo precepto en contrario, podrá conceder de oficio o a petición de los interesados, una ampliación de los plazos establecidos, que no exceda de la mitad de los mismos, si las circunstancias lo aconsejan y con ello no se perjudican derechos de tercero. El acuerdo de ampliación no deberá ser notificado a los interesados.",
+        "La ampliación de los plazos por el tiempo máximo permitido se aplicará en todo caso a los procedimientos tramitados por las misiones diplomáticas y oficinas consulares, así como a aquellos que, sustanciándose en el interior, exijan cumplimentar algún trámite en el extranjero o en los que intervengan interesados residentes fuera de España.",
+        "Tanto la petición de los interesados como la decisión sobre la ampliación deberán producirse, en todo caso, antes del vencimiento del plazo de que se trate. En ningún caso podrá ser objeto de ampliación un plazo ya vencido. Los acuerdos sobre ampliación de plazos o sobre su denegación siempre serán susceptibles de recurso.",
+        "Cuando una incidencia técnica haya imposibilitado el funcionamiento ordinario del sistema o aplicación que corresponda, y hasta que se solucione el problema, la Administración podrá determinar una ampliación de los plazos vencidos, debiendo publicar en la sede electrónica tanto la incidencia técnica acontecida como la ampliación concreta del plazo vencido."
+      ],
+      "pagina": 6
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 17,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 18,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 19,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 20,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 21,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 22,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 23,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 24,
+      "decision": "añadir",
+      "referencia": "E-I.6",
+      "respuesta": "d",
+      "enunciado": "Según dispone el artículo 2 de la Ley 9/2017, de 8 de noviembre, de Contratos del Sector Público, son contratos del sector público y, en consecuencia, están sometidos a la presente Ley en la forma y términos previstos en la misma:",
+      "opciones": [
+        "Los contratos no onerosos, de naturaleza jurídica pública, que celebren las entidades enumeradas en el artículo 3 de esta ley.",
+        "Los contratos onerosos, de naturaleza jurídica pública, que celebren las entidades enumeradas en el artículo 3 de esta ley.",
+        "Los contratos no onerosos, cualquiera que sea su naturaleza jurídica, que celebren las entidades enumeradas en el artículo 3 de esta ley.",
+        "Los contratos onerosos, cualquiera que sea su naturaleza jurídica, que celebren las entidades enumeradas en el articulo 3 de esta ley."
+      ],
+      "pagina": 8
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 25,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 26,
+      "decision": "añadir",
+      "referencia": "G-I.5",
+      "respuesta": "c",
+      "enunciado": "Los representantes del Congreso de los Diputados y del Senado en el Consejo General del Poder Judicial, son elegidos por:",
+      "opciones": [
+        "Mayoría absoluta de cada Cámara.",
+        "Mayoría de 2/3 de los miembros de cada Cámara.",
+        "Mayoría de 3/5 de los miembros de cada Cámara.",
+        "Mayoría de 3/5 de los miembros presentes en cada Cámara."
+      ],
+      "pagina": 9
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 27,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 28,
+      "decision": "añadir",
+      "referencia": "E-I.3",
+      "respuesta": "b",
+      "enunciado": "Según lo dispuesto en el artículo 73 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, los trámites que deban ser cumplimentados por los interesados deberán realizarse en el plazo de:",
+      "opciones": [
+        "Veinte días a partir del siguiente al de la notificación del correspondiente acto, salvo en el caso de que en la norma correspondiente se fije plazo distinto.",
+        "Diez días a partir del siguiente al de la notificación del correspondiente acto, salvo en el caso de que en la norma correspondiente se fije plazo distinto.",
+        "Quince días a partir del día siguiente al de la notificación del correspondiente acto, salvo en el caso de que en la norma correspondiente se fije plazo distinto.",
+        "Cinco días a partir del siguiente al de la notificación del correspondiente acto, salvo en el caso de que en la norma correspondiente se fije plazo distinto."
+      ],
+      "pagina": 9
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 29,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 30,
+      "decision": "añadir",
+      "referencia": "G-I.9",
+      "respuesta": "b",
+      "enunciado": "De acuerdo con el art 9 de la Ley 40/2015, de régimen jurídico del sector público, no podrán ser objeto de delegación, las competencias relativas a:",
+      "opciones": [
+        "La resolución de los procedimientos de revisión de oficio.",
+        "La adopción de disposiciones de carácter general.",
+        "Los asuntos que se refieran a las relaciones con el Rectorado, el Consejo de Gobierno y el Consejo Social.",
+        "La resolución de las reclamaciones previas a la jurisdicción civil."
+      ],
+      "pagina": 10
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 31,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 32,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 33,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 34,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 35,
+      "decision": "añadir",
+      "referencia": "E-I.4",
+      "respuesta": "a",
+      "enunciado": "De acuerdo con lo dispuesto en el artículo 118 de la ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, cuando hayan de tenerse en cuenta nuevos hechos o documentos no recogidos en el expediente originario, se pondrán de manifiesto a los interesados para que:",
+      "opciones": [
+        "En un plazo no inferior a diez días ni superior a quince, formulen las alegaciones y presenten los documentos y justificantes que estimen procedentes.",
+        "En un plazo no inferior a diez días ni superior a veinte, formulen las alegaciones y presenten los documentos y justificantes que estimen procedentes.",
+        "En un plazo no inferior a quince días ni superior a veinte, formulen las alegaciones y presenten los documentos y justificantes que estimen procedentes.",
+        "En un plazo no inferior a veinte días ni superior a treinta, formulen las alegaciones y presenten los documentos y justificantes que estimen procedentes."
+      ],
+      "pagina": 11
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 36,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 37,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 38,
+      "decision": "añadir",
+      "referencia": "E-I.3",
+      "respuesta": "d",
+      "enunciado": "De acuerdo con lo dispuesto en el artículo 15 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas:",
+      "opciones": [
+        "La lengua de los procedimientos tramitados por la Administración General del Estado será el castellano. Los interesados que se dirijan a los órganos de la Administración General del Estado con sede en el territorio de una Comunidad Autónoma no podrán utilizar la lengua que sea cooficial en ella.",
+        "En los procedimientos tramitados por las Administraciones de las Comunidades Autónomas y de las Entidades Locales, el uso de la lengua se ajustará a lo previsto en la legislación estatal correspondiente.",
+        "La Administración Pública instructora no deberá traducir al castellano los documentos, expedientes o partes de los mismos que deban surtir efecto fuera del territorio de la Comunidad Autónoma ni los documentos dirigidos a los interesados, aunque así lo soliciten expresamente. Si debieran surtir efectos en el territorio de una Comunidad Autónoma donde sea cooficial esa misma lengua distinta del castellano, no será precisa su traducción.",
+        "La lengua de los procedimientos tramitados por la Administración General del Estado será el castellano. No obstante lo anterior, los interesados que se dirijan a los órganos de la Administración General del Estado con sede en el territorio de una Comunidad Autónoma podrán utilizar también la lengua que sea cooficial en ella."
+      ],
+      "pagina": 12
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 39,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 40,
+      "decision": "añadir",
+      "referencia": "E-I.10",
+      "respuesta": "b",
+      "enunciado": "Según dispone el artículo 5 de la Ley Orgánica 3/2018, de 5 de diciembre, los responsables y encargados del tratamiento de datos, así como todas las personas que intervengan en cualquier fase de éste, estarán sujetas al deber de:",
+      "opciones": [
+        "Información.",
+        "Confidencialidad.",
+        "Sigilo.",
+        "Secreto."
+      ],
+      "pagina": 12
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 41,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 42,
+      "decision": "añadir",
+      "referencia": "G-I.9",
+      "respuesta": "b",
+      "enunciado": "De acuerdo con el art 13 de la Ley 40/2015, de régimen jurídico del sector público, los titulares de los órganos administrativos:",
+      "opciones": [
+        "Pueden ser suplidos de forma permanente en caso ausencia del titular.",
+        "Pueden ser suplidos de forma temporal en caso de que haya sido declarada su abstención o recusación.",
+        "Nunca pueden ser suplidos en el ejercicio de sus competencias propias.",
+        "Pueden ser suplidos temporalmente por los órganos inmediatamente superiores en los casos de que el titular se jubile antes de finalizar su mandato."
+      ],
+      "pagina": 13
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 43,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 44,
+      "decision": "añadir",
+      "referencia": "E-I.4",
+      "respuesta": "c",
+      "enunciado": "Según lo dispuesto en el artículo 122.2 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, el plazo máximo para dictar y notificar la resolución del recurso de alzada será de:",
+      "opciones": [
+        "Un mes",
+        "Dos meses",
+        "Tres meses",
+        "Cuatro meses"
+      ],
+      "pagina": 13
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 45,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 46,
+      "decision": "añadir",
+      "referencia": "E-I.3",
+      "respuesta": "a",
+      "enunciado": "De acuerdo con lo dispuesto en el artículo 76 de la ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas,",
+      "opciones": [
+        "Los interesados podrán, en cualquier momento del procedimiento anterior al trámite de audiencia, aducir alegaciones y aportar documentos u otros elementos de juicio.",
+        "Los interesados podrán, en cualquier momento del procedimiento posterior al trámite de audiencia, aducir alegaciones y aportar documentos u otros elementos de juicio.",
+        "Los interesados no podrán, antes del trámite de audiencia, aducir alegaciones y aportar documentos u otros elementos de juicio.",
+        "Los no interesados podrán aducir alegaciones y aportar documentos u otros elementos de juicio."
+      ],
+      "pagina": 14
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 47,
+      "decision": "añadir",
+      "referencia": "G-I.9",
+      "respuesta": "d",
+      "enunciado": "De acuerdo con el art. 17.2 de la Ley 40/2015, de régimen jurídico del sector público, para la válida constitución de un órgano colegiado hace falta que asistan:",
+      "opciones": [
+        "Todos los miembros del órgano.",
+        "El presidente, el secretario y dos tercios de los miembros.",
+        "La mayoria de los miembros.",
+        "El presidente, el secretario y la mitad, al menos, de sus miembros."
+      ],
+      "pagina": 14
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 48,
+      "decision": "añadir",
+      "referencia": "G-I.10",
+      "respuesta": "a",
+      "enunciado": "¿A qué instituciones corresponde el poder legislativo de la Unión Europea?",
+      "opciones": [
+        "Al Consejo y al Parlamento Europeo.",
+        "Al Consejo Europeo y al Parlamento Europeo.",
+        "A la Comisión y al Parlamento Europeo.",
+        "Al Consejo Europeo y a la Comisión."
+      ],
+      "pagina": 14
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 49,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 50,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 51,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 52,
+      "decision": "añadir",
+      "referencia": "E-I.3",
+      "respuesta": "d",
+      "enunciado": "De acuerdo con el artículo 82 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, la audiencia a los interesados:",
+      "opciones": [
+        "Nunca se podrá prescindir de su tramitación.",
+        "Debe realizarse en plazo no superior a 10 días.",
+        "Será posterior a la solicitud del informe del órgano competente para el asesoramiento jurídico",
+        "Se tendrá por realizada si antes del vencimiento del plazo los interesados manifiestan su decisión de no formular alegaciones."
+      ],
+      "pagina": 15
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 53,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 54,
+      "decision": "añadir",
+      "referencia": "E-I.6",
+      "respuesta": "c",
+      "enunciado": "Según dispone el artículo 16 de la Ley 9/2017, de 8 de noviembre, de Contratos del Sector Público, indica cuál de los siguientes no se consideran contratos de suministros:",
+      "opciones": [
+        "Aquellos en los que el empresario se obligue a entregar una pluralidad de bienes de forma sucesiva y por precio unitario sin que la cuantía total se defina con exactitud al tiempo de celebrar el contrato, por estar subordinadas las entregas a las necesidades del adquirente.",
+        "Los de fabricación, por los que la cosa o cosas que hayan de ser entregadas por el empresario deban ser elaboradas con arreglo a características peculiares fijadas previamente por la entidad contratante.",
+        "Los contratos de adquisición de programas de ordenador desarrollados a medida.",
+        "Los que tengan por objeto la adquisición de energía primaria o energía transformada."
+      ],
+      "pagina": 15
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 55,
+      "decision": "añadir",
+      "referencia": "G-I.6 / E-III.1",
+      "respuesta": "b",
+      "enunciado": "Según establece la Constitución española, el Gobierno deberá presentar ante el Congreso de los Diputados los Presupuestos Generales del Estado:",
+      "opciones": [
+        "Dentro de los tres últimos meses del ejercicio anterior.",
+        "Al menos tres meses antes de la expiración del ejercicio anterior.",
+        "En cualquier momento, dentro de los tres meses posteriores al ejercicio anterior.",
+        "La Constitución no señala plazo para presentación ya que establece la prórroga automática de los anteriores."
+      ],
+      "pagina": 16
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 56,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 57,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 58,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 59,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 60,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 61,
+      "decision": "añadir",
+      "referencia": "E-I.3",
+      "respuesta": "c",
+      "enunciado": "De acuerdo con lo dispuesto en el artículo 80 de la ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas,",
+      "opciones": [
+        "Salvo disposición expresa en contrario, los informes serán preceptivos y no vinculantes.",
+        "Salvo disposición expresa en contrario, los informes serán facultativos y vinculantes.",
+        "Salvo disposición expresa en contrario, los informes serán facultativos y no vinculantes.",
+        "Salvo disposición expresa en contrario, los informes serán preceptivos y vinculantes."
+      ],
+      "pagina": 17
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 62,
+      "decision": "descartar",
+      "referencia": "Umbral de contratación de 2022; no se traslada como umbral vigente.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 63,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 64,
+      "decision": "descartar",
+      "referencia": "Legislación específica de violencia de género, fuera del programa.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 65,
+      "decision": "añadir",
+      "referencia": "G-I.9",
+      "respuesta": "b",
+      "enunciado": "De acuerdo con el art 9.4 de la Ley 40/2015, de régimen jurídico del sector público, las resoluciones que se adopten por delegación se entenderán dictadas:",
+      "opciones": [
+        "Por el órgano delegado, previo visto bueno del órgano delegante.",
+        "Por el órgano delegante.",
+        "Mancomunada y conjuntamente por el órgano delegante y el delegado.",
+        "Por el órgano delegado."
+      ],
+      "pagina": 18
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 66,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 67,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 68,
+      "decision": "añadir",
+      "referencia": "E-I.4",
+      "respuesta": "a",
+      "enunciado": "De acuerdo con lo dispuesto en el artículo 123 de la ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, los actos administrativos que pongan fin a la vía administrativa:",
+      "opciones": [
+        "Podrán ser recurridos potestativamente en reposición ante el mismo órgano que los hubiera dictado o ser impugnados directamente ante el orden jurisdiccional contencioso-administrativo.",
+        "No podrán ser recurridos en vía administrativa.",
+        "Podrán ser recurridos potestativamente en reposición ante el órgano superior al que los hubiera dictado o ser impugnados directamente ante el orden jurisdiccional contencioso-administrativo.",
+        "Podrán ser recurridos potestativamente en alzada ante el mismo órgano que los hubiera dictado o ser impugnados directamente ante el orden jurisdiccional contencioso-administrativo."
+      ],
+      "pagina": 19
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 69,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 70,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 71,
+      "decision": "añadir",
+      "referencia": "G-I.6",
+      "respuesta": "d",
+      "enunciado": "Según dispone la Constitución Española, el plazo de dos meses para obtener la investidura de un candidato a la Presidencia del Gobierno, empieza a contar:",
+      "opciones": [
+        "A partir de las 48 horas de la primera votación.",
+        "A partir de la segunda votación que deniega la confianza.",
+        "A partir de la propuesta del primer candidato.",
+        "A partir de la primera votación de investidura."
+      ],
+      "pagina": 20
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 72,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 73,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 74,
+      "decision": "añadir",
+      "referencia": "E-I.6",
+      "respuesta": "a",
+      "enunciado": "Según dispone el artículo 1 de la Ley 9/2017, de 8 de noviembre, de Contratos del Sector Público, en toda contratación pública se incorporarán de manera transversal y preceptiva:",
+      "opciones": [
+        "Criterios sociales y medioambientales siempre que guarde relación con el objeto del contrato.",
+        "Criterios éticos y de transparencia, aunque no guarde relación con el objeto del contrato.",
+        "Criterios éticos y de transparencia siempre que guarde relación con el objeto del contrato.",
+        "Criterios sociales y medioambientales, aunque no guarde relación con el objeto del contrato."
+      ],
+      "pagina": 20
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 75,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 76,
+      "decision": "añadir",
+      "referencia": "E-I.2",
+      "respuesta": "c",
+      "enunciado": "De acuerdo con el art. 43 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas:",
+      "opciones": [
+        "Las notificaciones por medios electrónicos se entenderán practicadas desde el día siguiente de la puesta a disposición del interesado en la sede electrónica.",
+        "Las notificaciones pueden practicarse mediante cualquier medio electrónico.",
+        "Cuando la notificación por medios electrónicos sea de carácter obligatorio, o haya sido expresamente elegida por el interesado, se entenderá rechazada cuando hayan transcurrido 10 días naturales desde la puesta a disposición sin que se acceda a su contenido.",
+        "Cuando la notificación por medios electrónicos sea de carácter obligatorio, o haya sido expresamente elegida por el interesado, se entenderá rechazada cuando hayan transcurrido 10 días hábiles desde la puesta a disposición sin que se acceda a su contenido."
+      ],
+      "pagina": 21
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 77,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 78,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 79,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 80,
+      "decision": "añadir",
+      "referencia": "E-I.1",
+      "respuesta": "d",
+      "enunciado": "Según dispone la Constitución Española, la audiencia a los ciudadanos en el procedimiento de elaboración de las disposiciones administrativas que les afecten tendrá lugar:",
+      "opciones": [
+        "Siempre directamente, ya que están legitimados por cuestiones que les afectan a título personal.",
+        "Sólo a través de organizaciones reconocidas por la ley.",
+        "Directamente o a través de organizaciones sindicales y profesionales reconocidas por la ley.",
+        "Directamente o a través de las organizaciones y asociaciones reconocidas por la ley."
+      ],
+      "pagina": 22
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 81,
+      "decision": "añadir",
+      "referencia": "E-I.10",
+      "respuesta": "b",
+      "enunciado": "Según dispone el artículo 6 de la Ley Orgánica 3/2018, de 5 de diciembre, se entiende por 'consentimiento del afectado':",
+      "opciones": [
+        "Toda manifestación de voluntad libre, general e inequívoca por la que éste acepta, ya sea mediante una declaración o una clara acción afirmativa, el tratamiento de datos personales que le conciernen.",
+        "Toda manifestación de voluntad libre, específica, informada e inequívoca por la que éste acepta, ya sea mediante una declaración o una clara acción afirmativa, el tratamiento de datos personales que le conciernen.",
+        "Toda manifestación de voluntad específica, informada e inequívoca por la que éste acepta, ya sea mediante una declaración o una clara acción afirmativa, el tratamiento de datos personales que le conciernen.",
+        "Toda manifestación de voluntad informada e inequívoca por la que éste acepta, ya sea mediante una declaración o una clara acción afirmativa, el tratamiento de datos personales que le conciernen."
+      ],
+      "pagina": 22
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 82,
+      "decision": "añadir",
+      "referencia": "G-I.2",
+      "respuesta": "d",
+      "enunciado": "Para interponer recurso de amparo, de acuerdo con la Constitución Española:",
+      "opciones": [
+        "Es precisa mayoría absoluta en una de las Cámaras.",
+        "Es precisa mayoría absoluta en ambas Cámaras.",
+        "Basta con la firma del recurso por parte de 50 diputados o 50 senadores.",
+        "Está legitimada toda persona natural o jurídica que invoque un interés legítimo."
+      ],
+      "pagina": 22
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 83,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 84,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 85,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 86,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 87,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 88,
+      "decision": "añadir",
+      "referencia": "E-I.3",
+      "respuesta": "d",
+      "enunciado": "De acuerdo con lo dispuesto en el artículo 4 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, se considera interesados en el procedimiento:",
+      "opciones": [
+        "Quienes lo promuevan como titulares de derechos o intereses individuales o colectivos.",
+        "Exclusivamente quienes habiendo iniciado el procedimiento, tengan derechos que puedan resultar afectados por la decisión que en el mismo se adopte.",
+        "Aquellos cuyos intereses pudieran resultar afectados por la resolución y se personen en cualquier fase del procedimiento.",
+        "Quienes lo promuevan como titulares de derechos o intereses legítimos, individuales o colectivos."
+      ],
+      "pagina": 24
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 89,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 90,
+      "decision": "añadir",
+      "referencia": "G-I.1",
+      "respuesta": "d",
+      "enunciado": "La Constitución española establece literalmente que los españoles son iguales ante la ley, sin que pueda prevalecer discriminación alguna por razón:",
+      "opciones": [
+        "De nacimiento, del color de su piel, sexo, religión, opinión o cualquier otra condición personal o social.",
+        "De nacimiento, raza, orientación sexual, religión, opinión o cualquier otra condición o circunstancia personal o social.",
+        "De nacimiento, sexo, raza, ideología política o cualquier otra condición o circunstancia personal o social.",
+        "De nacimiento, raza, sexo, religión, opinión o cualquier otra condición o circunstancia personal o social."
+      ],
+      "pagina": 24
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 91,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 92,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 93,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 94,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 95,
+      "decision": "añadir",
+      "referencia": "E-I.2",
+      "respuesta": "b",
+      "enunciado": "De acuerdo con lo dispuesto en el artículo 52 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas:",
+      "opciones": [
+        "La Administración no podrá convalidar los actos nulos ni los anulables.",
+        "La Administración podrá convalidar los actos anulables, subsanando los vicios de que adolezcan",
+        "La Administración podrá convalidar los actos anulables, pero no podrá subsanar los vicios de que adolezcan.",
+        "La Administración no podrá convalidar los actos anulables ni subsanar los vicios de que adolezcan."
+      ],
+      "pagina": 25
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 96,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 97,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 98,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 99,
+      "decision": "descartar",
+      "referencia": "Fuera de la selección CAR: contenido universitario, normativa valenciana o PRL.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_TEORIA_CAR",
+      "origen": "uv_teoria",
+      "numero": 100,
+      "decision": "añadir",
+      "referencia": "G-I.10",
+      "respuesta": "d",
+      "enunciado": "El Consejo es el órgano de la Unión Europea que representa a los Estados miembros y está compuesto por:",
+      "opciones": [
+        "Un representante de cada Estado miembro.",
+        "Dos representantes de cada Estado miembro.",
+        "Quince miembros representantes de los Estados, con rango ministerial.",
+        "Un representante de cada Estado miembro, de rango ministerial"
+      ],
+      "pagina": 27
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 1,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "c",
+      "enunciado": "En el siguiente botón de Opciones de presentación de la cinta de opciones podemos encontrar:",
+      "opciones": [
+        "Mostrar automáticamente la cinta de opciones",
+        "Ocultar pestañas",
+        "Mostrar pestañas y comandos",
+        "Todas las respuestas anteriores son incorrectas"
+      ],
+      "pagina": 2
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 2,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "c",
+      "enunciado": "Indique una de las opciones seleccionables como Tema de Office. Esta característica se encuentra en Archivo > Opciones > General > Tema de Office",
+      "opciones": [
+        "Estándar",
+        "Ahorro de energía",
+        "Blanco",
+        "Transparente"
+      ],
+      "pagina": 2
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 3,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "c",
+      "enunciado": "¿Cuál de las siguientes opciones NO es un tipo de vista disponible en Word 2016?",
+      "opciones": [
+        "Vista Esquema",
+        "Diseño web",
+        "Diseño de cuadrícula",
+        "Modo de lectura"
+      ],
+      "pagina": 2
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 4,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "c",
+      "enunciado": "Si se hace clic en un texto con el modo de selección extendido, señale la respuesta CORRECTA:",
+      "opciones": [
+        "Se selecciona desde el principio del documento hasta donde se ha hecho clic con el ratón",
+        "Se selecciona la segunda mitad del documento",
+        "Se selecciona el texto desde la palabra donde se activó el modo de selección extendido hasta donde se ha hecho clic con el ratón",
+        "Se selecciona desde el comienzo del párrafo hasta donde se ha hecho clic con el ratón"
+      ],
+      "pagina": 3
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 5,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "c",
+      "enunciado": "¿Cuál de las siguientes opciones permite aplicar formato de subrayado doble a una selección de texto?",
+      "opciones": [
+        "CTRL+SHIFT+U",
+        "Desde la pestaña Insertar > Símbolos > Subrayado",
+        "Cuadro de diálogo Fuente > Subrayado > Doble",
+        "CTRL+D y luego CTRL+2"
+      ],
+      "pagina": 3
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 6,
+      "decision": "descartar",
+      "referencia": "Anulada por la plantilla modificada oficial.",
+      "respuesta": "x",
+      "enunciado": "Al aplicar la opción Espaciado entre caracteres en un texto, ¿cuál de las siguientes unidades se utiliza?",
+      "opciones": [
+        "Centímetros",
+        "Puntos",
+        "Milímetros",
+        "Pulgadas"
+      ],
+      "pagina": 3
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 7,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "a",
+      "enunciado": "¿Qué combinación de teclas permite copiar el formato de un texto seleccionado?",
+      "opciones": [
+        "Ctrl+Shift+C",
+        "Ctrl+Shift+V",
+        "Ctrl+Alt+C",
+        "Ctrl+Shift+F"
+      ],
+      "pagina": 3
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 8,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "a",
+      "enunciado": "Seleccione el resultado de aplicar los métodos abreviados que se indican a la palabra nuevo teniendo en cuenta que inicialmente se encuentra en cursiva y minúsculas. Métodos abreviados aplicados en el siguiente orden a la palabra nuevo 1º CTRL+N 2º SHIFT+F3 3º CTRL+Y",
+      "opciones": [
+        "NUEVO (negrita y cursiva; véase opción A de la imagen).",
+        "Nuevo (negrita y cursiva; véase opción B de la imagen).",
+        "NUEVO (sin negrita ni cursiva; véase opción C de la imagen).",
+        "nuevo (negrita y cursiva; véase opción D de la imagen)."
+      ],
+      "pagina": 3
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 9,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "a",
+      "enunciado": "Indique los efectos de texto aplicados al texto escrito con fuente Arial que se muestra a continuación:",
+      "opciones": [
+        "Contorno con línea sólida. Sin relleno de texto. Con efecto de reflejo",
+        "Sin relleno de texto. Con efecto de giro de 180 grados",
+        "Con relleno de texto de color blanco. Con efecto de iluminación",
+        "Con contorno fino. Con efecto de sombra nítida"
+      ],
+      "pagina": 4
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 10,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "d",
+      "enunciado": "¿Qué ocurre si se aplica un estilo de párrafo que incluye una sangría izquierda, pero luego se aplica una sangría manual con la regla?",
+      "opciones": [
+        "Word ignora la sangría manual y mantiene la sangría del estilo",
+        "Se anulan ambas sangrías y se usa el margen del documento",
+        "Se aplica la sangría del estilo, pero no se puede modificar con la regla",
+        "La sangría manual sobrescribe la del estilo"
+      ],
+      "pagina": 4
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 11,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "a",
+      "enunciado": "Elija la afirmación CORRECTA:",
+      "opciones": [
+        "Un Estilo vinculado se puede aplicar a un párrafo completo o a una parte del texto, si el texto se encuentra seleccionado cuando se aplica el estilo",
+        "Al cambiar el Conjunto de estilos de un documento se actualizan las propiedades de todos los estilos a la vez, excepto si hay insertados saltos de sección, ya que en cada sección se define el conjunto de estilos",
+        "El único Estilo válido para generar una jerarquía en la vista de esquema de un documento es el estilo Título 1",
+        "Para definir el diseño de un documento se puede optar por seleccionar un Tema de la pestaña Diseño o un Conjunto de estilos de la misma pestaña Diseño, pero no ambos en el mismo documento, ya que son incompatibles"
+      ],
+      "pagina": 4
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 12,
+      "decision": "descartar",
+      "referencia": "Anulada por la plantilla modificada oficial.",
+      "respuesta": "x",
+      "enunciado": "Señale la respuesta INCORRECTA. Un hipervínculo lo podemos vincular a:",
+      "opciones": [
+        "A una página web existente",
+        "A un lugar de otro documento",
+        "A un lugar en este documento",
+        "A una dirección de correo electrónico"
+      ],
+      "pagina": 4
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 13,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "d",
+      "enunciado": "Seleccione la afirmación CORRECTA en relación al símbolo de tabulación que aparece en la esquina superior izquierda de la imagen:",
+      "opciones": [
+        "Indica que los tabuladores que se añadan al texto del documento mediante la pulsación de la tecla TAB serán de tipo Tabulación Decimal por defecto",
+        "Indica que los tabuladores que se creen en la regla horizontal con un clic sobre la regla serán del tipo Tabulación Derecha por defecto",
+        "Indica que los tabuladores que se inserten tanto en el texto como los que se definan en la regla horizontal serán del tipo Tabulación Centrada con relleno de puntos por defecto",
+        "Todas las respuestas anteriores son incorrectas"
+      ],
+      "pagina": 5
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 14,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "c",
+      "enunciado": "En un documento aparece el siguiente texto: lunes, 6 de octubre de 2025 Indique la afirmación CORRECTA sobre la inserción del texto utilizando la opción Insertar > Fecha y Hora",
+      "opciones": [
+        "Aunque se puede insertar la fecha, no existe la opción de incluir el día de la semana",
+        "Se puede insertar la fecha, aunque solo en formato numérico del tipo 06/10/2025",
+        "Se puede insertar tal y como aparece en el texto, además se actualizará automáticamente si al insertarla se activa el check Actualizar automáticamente",
+        "Se puede insertar tal y como aparece en el texto, aunque no permite activar el check Actualizar automáticamente"
+      ],
+      "pagina": 5
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 15,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "b",
+      "enunciado": "¿Cómo se llama la herramienta que permite capturar y reutilizar fragmentos de texto o gráficos frecuentes?",
+      "opciones": [
+        "Autocorrección",
+        "Elementos rápidos / Autotexto",
+        "Hipervínculo",
+        "Referencias cruzadas"
+      ],
+      "pagina": 5
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 16,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "c",
+      "enunciado": "Indique el conjunto de fórmulas que calcula la columna Promedio con los valores 850, 700 y 1.000 en las celdas E2, E3 y E4 respectivamente: Enero Febrero Marzo Promedio Exposición 1.150 900 500 850 Museo 850 550 700 700 Concierto 2.200 800 1.000",
+      "opciones": [
+        "E2 =AVERAGE(B2;C2;D2) E3 =AVERAGE(B3:D3) E4 =AVERAGE(LEFT)",
+        "E2 =SUM(LEFT)/COUNT(LEFT) E3 =B3+C3+D3/COUNT(LEFT) E4 =SUM(B4:D4)/COUNT(B4:D4)",
+        "E2 =AVERAGE(LEFT) E3 =SUM(LEFT)/COUNT(LEFT) E4 =SUM(B4:D4)/3",
+        "E2 =AVERAGE(LEFT) E3 =SUM(LEFT)/COUNT(LEFT) E4 =SUM(B4:D4)/2"
+      ],
+      "pagina": 6
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 17,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "c",
+      "enunciado": "Si se inserta un salto de sección de Página impar y la sección actual termina en una página impar, ¿qué ocurre con el diseño?",
+      "opciones": [
+        "El documento no reconoce el salto y sigue con la numeración de página sin cambios",
+        "La nueva sección empieza en la siguiente página, sea par o impar",
+        "Word inserta una página en blanco para que la siguiente sección comience en una página impar",
+        "Word te pide que escojas manualmente si quieres una página par o impar"
+      ],
+      "pagina": 6
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 18,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "c",
+      "enunciado": "Para que el pie de página de la página 3 sea diferente al de la página 2 en un documento, seleccione la afirmación CORRECTA:",
+      "opciones": [
+        "Aunque al crear la página 3 el pie de página sea igual que el anterior, en la página 3 se puede editar y modificar haciendo doble clic sobre el pie de página, obteniendo así un pie de página diferente al de la página 2",
+        "Solo es posible crear pies de página diferentes en páginas pares/impares o en la primera página",
+        "Se puede crear un pie de página diferente si las páginas pertenecen a secciones diferentes y se desactiva el botón Vincular al anterior",
+        "Se pueden definir distintos encabezados de página, pero los pies de página deben ser iguales en todo el documento"
+      ],
+      "pagina": 6
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 19,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "b",
+      "enunciado": "Al combinar correspondencia en un documento, para insertar un texto distinto basándonos en el valor de un campo, ¿qué tipo de regla se utiliza?",
+      "opciones": [
+        "Regla 'Siguiente registro'",
+        "Regla 'Si... Entonces... Sino'",
+        "Regla 'Campo combinado'",
+        "Regla 'Omitir registro si...'"
+      ],
+      "pagina": 7
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 20,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "a",
+      "enunciado": "Señale la respuesta CORRECTA. Al filtrar destinatarios en una combinación de correspondencia, cuando se utiliza el operador O",
+      "opciones": [
+        "Se tiene que cumplir alguna de las condiciones, es decir, se incluye al destinario si se cumple al menos una condición",
+        "Se tienen que cumplir todas las condiciones, es decir, se incluye al destinatario solo si se cumplen las 2 condiciones",
+        "Se tienen que incumplir las 2 condiciones, es decir, se excluye al destinatario si se cumplen las 2 condiciones",
+        "Todas las respuestas anteriores son incorrectas"
+      ],
+      "pagina": 7
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 21,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "c",
+      "enunciado": "Tras insertar, por este orden, un rectángulo, un triángulo y una estrella, indique la respuesta que incluye todas las acciones necesarias para obtener la siguiente figura:",
+      "opciones": [
+        "Enviar atrás el rectángulo y agrupar las tres formas",
+        "Traer al frente el triángulo",
+        "Enviar al fondo la estrella y agrupar las tres formas",
+        "Traer adelante el rectángulo"
+      ],
+      "pagina": 7
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 22,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "d",
+      "enunciado": "Al imprimir un documento a doble cara con varias copias, ¿qué opción asegura que cada copia completa (todas sus páginas anverso y reverso) se imprima antes de comenzar la siguiente copia?",
+      "opciones": [
+        "Orientación de página",
+        "Imprimir por una cara",
+        "Modo borrador",
+        "Intercaladas"
+      ],
+      "pagina": 8
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 23,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "b",
+      "enunciado": "Seleccione el formato correcto para imprimir las páginas 4, 5, 7, 8, 9, 12 desde la opción de Archivo > Imprimir > Páginas",
+      "opciones": [
+        "4..5, 7..9, 12",
+        "4-5, 7-9, 12",
+        "4, 5, 7.9, 12",
+        "4, 5, 7, 9, 12"
+      ],
+      "pagina": 8
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 24,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "c",
+      "enunciado": "Se puede recuperar un documento de Word que se ha cerrado sin guardar (señale la respuesta CORRECTA)",
+      "opciones": [
+        "Desde la opción Archivo > Información > Administrar documento, siempre que haya sido guardado previamente alguna vez",
+        "Desde la opción Archivo > Información > Administrar documento, solo si ya había sido guardado previamente alguna vez y está activada la opción de conservar la última versión autoguardada",
+        "Desde la opción Archivo > Información > Administrar documento permite recuperar archivos guardados previamente si está activada la opción de conservar la última versión autoguardada. También puede recuperar archivos nuevos cerrados sin guardar, aunque no se les haya dado un nombre de archivo todavía",
+        "Desde la opción Archivo > Nuevo en la que se incluye la lista de archivos cerrados sin guardar y permite recuperarlos de manera temporal"
+      ],
+      "pagina": 8
+    },
+    {
+      "examen": "CAR_AUXILIAR_2025_WORD",
+      "origen": "car_auxiliar_word",
+      "numero": 25,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "d",
+      "enunciado": "Si queremos controlar los tipos de cambios que otros usuarios pueden hacer en nuestro documento, podremos encontrar la opción en la pestaña:",
+      "opciones": [
+        "Archivo > Información > Administrar > Documento > Restringir edición",
+        "Archivo > Guardar > Restringir edición",
+        "Revisar > Administrar Documento",
+        "Revisar > Restringir edición"
+      ],
+      "pagina": 8
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 1,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 2,
+      "decision": "añadir",
+      "referencia": "INF.1",
+      "respuesta": "d",
+      "pagina": 4,
+      "enunciado": "Si quisieramos guardar la base de datos ACCESS 2016 \"PERSONAS\", ¿cuál de los siguientes tipos de archivos NO aparece si abrimos el menú \"Archivo\" y elegimos \"Guardar como\"?",
+      "opciones": [
+        "Base de datos Access",
+        "Base de datos Access 2002-2003",
+        "Plantilla",
+        "Fichero XLSX"
+      ]
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 3,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 4,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 5,
+      "decision": "añadir",
+      "referencia": "INF.1",
+      "respuesta": "a",
+      "pagina": 5,
+      "enunciado": "En la base de datos ACCESS 2016 \"PERSONAS\" se desea crear una consulta que agregue registros a la tabla DATOS ADMINISTRATIVOS. ¿Qué tipo de consulta habrá que seleccionar?",
+      "opciones": [
+        "Anexar",
+        "Actualizar",
+        "Eliminar",
+        "Crear tabla"
+      ]
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 6,
+      "decision": "añadir",
+      "referencia": "INF.1",
+      "respuesta": "b",
+      "pagina": 5,
+      "enunciado": "En la base de datos ACCESS 2016 \"PERSONAS\", ¿cuál de las siguientes vistas NO podemos seleccionar cuando trabajamos con las consultas?",
+      "opciones": [
+        "Vista SQL",
+        "Vista Informes",
+        "Vista Hoja de datos",
+        "Vista Diseño"
+      ]
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 7,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 8,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 9,
+      "decision": "añadir",
+      "referencia": "INF.1",
+      "respuesta": "a",
+      "pagina": 7,
+      "enunciado": "¿Qué menú de la cinta de opciones de la base de datos ACCESS 2016 \"PERSONAS\" deberiamos seleccionar para comprobar las relaciones existentes entre las tablas creadas?",
+      "opciones": [
+        "Herramientas de base de datos",
+        "Inicio",
+        "Crear",
+        "Archivo"
+      ]
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 10,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 11,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "b",
+      "pagina": 8,
+      "enunciado": "En la aplicación Word 2016 queremos crear documentos personalizados para enviar a cada empleado informando de su situación administrativa a 1 de enero de 2022. Para mostrar el asistente de la combinación de correspondencia, debe usar la opción \"Paso a paso por el Asistente para combinar correspondencia...\" que se encuentra dentro de la opción:",
+      "opciones": [
+        "Editar lista de destinatarios.",
+        "Iniciar combinación de correspondencia.",
+        "Insertar campo combinado.",
+        "Seleccionar destinatarios."
+      ]
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 12,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 13,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 14,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 15,
+      "decision": "añadir",
+      "referencia": "INF.3",
+      "respuesta": "b",
+      "pagina": 9,
+      "enunciado": "Antes de imprimir el documento \"INFORMES\" abierto en la aplicación Word 2016, nos damos cuenta que la aplicación ha marcado automáticamente un subrayado ondulado bajo una palabra. Podemos afirmar que:",
+      "opciones": [
+        "Si el color del subrayado ondulado es rojo, es porque la palabra provoca un error gramatical en la frase.",
+        "Si el color del subrayado ondulado es rojo, es porque hay un error ortográfico en la palabra, o porque la misma no figura en el diccionario de Word.",
+        "Si el color del subrayado ondulado es azul, es porque hay un error ortográfico en la palabra, o porque la misma no existe en el diccionario de Word.",
+        "El color es independiente, el error es siempre ortográfico."
+      ]
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 16,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 17,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 18,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 19,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S1",
+      "origen": "uv_ofimatica_s1",
+      "numero": 20,
+      "decision": "añadir",
+      "referencia": "INF.2",
+      "respuesta": "c",
+      "pagina": 12,
+      "enunciado": "Una vez hemos terminado de trabajar con el libro de Excel 2016 \"ADQUISICIONES\", es necesario guardarlo. ¿Cuál de los siguientes formatos NO aparecería en el desplegable “Tipo” del cuadro de diálogo “Guardar como”?",
+      "opciones": [
+        "Página Web",
+        "Plantilla de Excel 97-2003",
+        "Informe Tabulado",
+        "Libro de Excel 97-2003"
+      ]
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 1,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 2,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 3,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 4,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 5,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 6,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 7,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 8,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 9,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 10,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 11,
+      "decision": "añadir",
+      "referencia": "INF.1",
+      "respuesta": "a",
+      "pagina": 17,
+      "enunciado": "Tenemos que trabajar con la base de datos ACCESS 2016 denominada \"PERSONAS\", creada para almacenar la Relación de Puestos de Trabajo del Personal de Administración y Servicios en la Universitat de València. Nos han pedido que modifiquemos un formulario existente agregando y/o modificando controles. ¿Cuál de las siguientes vistas se utiliza para hacerlo?",
+      "opciones": [
+        "Diseño",
+        "Hoja de datos",
+        "Formulario",
+        "Impresión"
+      ]
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 12,
+      "decision": "añadir",
+      "referencia": "INF.1",
+      "respuesta": "d",
+      "pagina": 17,
+      "enunciado": "Si alguien cambia los datos de una de las tablas que contiene la base de datos ACCESS 2016 \"PERSONAS\" en que se basa un informe creado previamente, ¿qué ocurrirá cuando vuelva a abrir dicho informe?",
+      "opciones": [
+        "Verá un mensaje que indica que los datos han cambiado.",
+        "Nada. Una vez que crea un informe, los datos nunca cambian.",
+        "El programa impide modificar la consulta si ya se utiliza en un informe.",
+        "Los datos actualizados aparecerán cuando abra el informe de nuevo."
+      ]
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 13,
+      "decision": "añadir",
+      "referencia": "INF.1",
+      "respuesta": "b",
+      "pagina": 17,
+      "enunciado": "Trabajando con un informe incluido en la base de datos ACCES 2016 \"PERSONAS\", queremos cambiar el color de fondo de la sección \"Encabezado\" de un informe, ¿desde dónde lo realizaríamos?:",
+      "opciones": [
+        "Desde la Herramienta Hoja de Propiedades de la vista SELECCIÓN.",
+        "Desde la Herramienta Hoja de Propiedades de la vista DISEÑO.",
+        "Desde la Herramienta Hoja de Propiedades de la vista IMPRIMIR.",
+        "Desde la Herramienta Hoja de Propiedades de la vista FORMULARIO."
+      ]
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 14,
+      "decision": "añadir",
+      "referencia": "INF.1",
+      "respuesta": "c",
+      "pagina": 17,
+      "enunciado": "Para modificar las propiedades de los campos de una tabla de base de datos ACCESS 2016 \"PERSONAS\", ¿cuál de las siguientes vistas seleccionaria?",
+      "opciones": [
+        "Relaciones",
+        "Hoja de datos",
+        "Diseño",
+        "Formulario"
+      ]
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 15,
+      "decision": "añadir",
+      "referencia": "INF.1",
+      "respuesta": "a",
+      "pagina": 18,
+      "enunciado": "¿Podríamos obtener información que directamente no exista en ninguna tabla en la base de datos ACCES 2016 \"PERSONAS\"?",
+      "opciones": [
+        "Sí, utilizando expresiones.",
+        "No, es imposible. De donde no hay no se puede sacar.",
+        "Sí, siempre que las relaciones entre las tablas sean de uno a muchos.",
+        "Sí, siempre que las relaciones entre tablas sean de uno a uno."
+      ]
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 16,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 17,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 18,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 19,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S2",
+      "origen": "uv_ofimatica_s2",
+      "numero": 20,
+      "decision": "añadir",
+      "referencia": "INF.2",
+      "respuesta": "d",
+      "pagina": 20,
+      "enunciado": "Una vez terminado de trabajar con libro EXCEL 2016 \"ADQUISICIONES\", queremos guardar los cambios, ¿cuál es el atajo de teclado para hacerlo?",
+      "opciones": [
+        "Ctrl+N",
+        "Ctrl+A",
+        "Ctrl+U",
+        "Ctrl+G"
+      ]
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 1,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 2,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 3,
+      "decision": "añadir",
+      "referencia": "INF.2",
+      "respuesta": "c",
+      "pagina": 23,
+      "enunciado": "En el fichero EXCEL 2016 \"PROCEDIMIENTOS\", existe una hoja llamada 'UNIDADES ORGANIZATIVAS' que contiene todas las unidades organizativas, con su código (que es obligatorio y es un texto) y descripción, en valenciano y en castellano, cada dato en su columna correspondiente. Si quisieramos saber cuántas unidades hay, ¿qué función utilizaría basándose en el columna CÓDIGO?",
+      "opciones": [
+        "SUMAR",
+        "CUENTACODIGO",
+        "CONTARA",
+        "REGISTRAR"
+      ]
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 4,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 5,
+      "decision": "añadir",
+      "referencia": "INF.2",
+      "respuesta": "b",
+      "pagina": 23,
+      "enunciado": "En el fichero EXCEL 2016 \"PROCEDIMIENTOS\" , si se desea crear tantas hojas como unidades organizativas existen, ¿cuál sería el límite de hojas en el libro?",
+      "opciones": [
+        "100",
+        "Limitado a la memoria disponible del dispositivo en el que se trabaje.",
+        "10",
+        "1000"
+      ]
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 6,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 7,
+      "decision": "añadir",
+      "referencia": "INF.2",
+      "respuesta": "c",
+      "pagina": 24,
+      "enunciado": "En el fichero EXCEL 2016 \"PROCEDIMIENTOS\", se desea imprimir las columnas correspondientes a los códigos de los procedimientos y las fechas de inicio y fin de la hoja PAS. ¿Desde qué menú de la cinta de opciones podremos establecer el Área de impresión?",
+      "opciones": [
+        "Vista",
+        "Revisar",
+        "Diseño de página",
+        "Datos"
+      ]
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 8,
+      "decision": "añadir",
+      "referencia": "INF.2",
+      "respuesta": "a",
+      "pagina": 24,
+      "enunciado": "Si en el fichero EXCEL 2016 \"PROCEDIMIENTOS\", queremos aplicar un efecto de relleno a unas celdas en concreto. ¿Qué efecto de relleno puede aplicarse a una celda?",
+      "opciones": [
+        "Degradado de color.",
+        "Un fondo de imagen.",
+        "Texturas predefinidas (textura de papel, mármol, pergamino, etc.).",
+        "No es posible aplicar efectos de relleno a una celda."
+      ]
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 9,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "b"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 10,
+      "decision": "añadir",
+      "referencia": "INF.2",
+      "respuesta": "b",
+      "pagina": 25,
+      "enunciado": "A fin de que los documentos impresos generados a través del fichero EXCEL 2016 \"PROCEDIMIENTOS\" sean de lectura rápida, se va a proceder a dar formato de fuente a las celdas. Selecciona qué efectos de fuente podremos elegir:",
+      "opciones": [
+        "Cuatro: Tachado, Doble Tachado, Superíndice y Subíndice.",
+        "Tres: Tachado, Superíndice y Subíndice.",
+        "Dos: Tachado y Doble Tachado.",
+        "Cuatro: Tachado, Versalitas, Superíndice y Subíndice."
+      ]
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 11,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 12,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 13,
+      "decision": "añadir",
+      "referencia": "INF.1",
+      "respuesta": "b",
+      "pagina": 27,
+      "enunciado": "En la base de datos ACCESS 2016 \"PROCEDIMIENTOS\" queremos crear un informe que liste, para una fecha concreta, los procedimientos iniciados. Utilizando el asistente para informes, ¿qué información hay que proporcionar en el primer paso?",
+      "opciones": [
+        "La fecha de inicio a comparar.",
+        "Los campos a incluir en el informe.",
+        "El nivel de resumen.",
+        "El nombre del informe."
+      ]
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 14,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "c"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 15,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 16,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "d"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 17,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 18,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 19,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "a"
+    },
+    {
+      "examen": "UV_2022_OFIMATICA_S3",
+      "origen": "uv_ofimatica_s3",
+      "numero": 20,
+      "decision": "descartar",
+      "referencia": "No incluida en la selección autónoma revisada; no se importa el supuesto completo.",
+      "respuesta": "d"
+    }
+  ],
+  "recuento": {
+    "CAR_AUXILIAR_2025_TEORIA": 42,
+    "UV_2022_TEORIA_CAR": 34,
+    "CAR_AUXILIAR_2025_WORD": 23,
+    "UV_2022_OFIMATICA_S1": 7,
+    "UV_2022_OFIMATICA_S2": 6,
+    "UV_2022_OFIMATICA_S3": 6
+  }
+}

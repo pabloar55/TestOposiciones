@@ -47,5 +47,33 @@
     "carpeta": "car_2025_pi_ofimatica",
     "preguntas": "Preguntas.txt",
     "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "CAR_AUXILIAR_2025_WORD",
+    "nombre": "CAR 15/11/2025 - Word 2016",
+    "carpeta": "car_auxiliar_word",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "UV_2022_OFIMATICA_S1",
+    "nombre": "UV 16/07/2022 - Office 2016, independientes del caso 1",
+    "carpeta": "uv_ofimatica_s1",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "UV_2022_OFIMATICA_S2",
+    "nombre": "UV 16/07/2022 - Office 2016, independientes del caso 2",
+    "carpeta": "uv_ofimatica_s2",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
+  },
+  {
+    "id": "UV_2022_OFIMATICA_S3",
+    "nombre": "UV 16/07/2022 - Office 2016, independientes del caso 3",
+    "carpeta": "uv_ofimatica_s3",
+    "preguntas": "Preguntas.txt",
+    "respuestas": "Respuestas.txt"
   }
 ]

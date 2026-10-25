@@ -59,9 +59,9 @@ class SharedLogicDesktopTest {
                 "PRACTICA" to 15,
                 "TEORIA" to 299,
                 "TEORIA1" to 71,
-                "ADMINISTRATIVO" to 391,
+                "ADMINISTRATIVO" to 467,
                 "SUPUESTOS_ADMINISTRATIVO_CAR" to 58,
-                "INFORMATICA" to 143
+                "INFORMATICA" to 185
             ),
             questionsByCategory.mapValues { it.value.size }
         )

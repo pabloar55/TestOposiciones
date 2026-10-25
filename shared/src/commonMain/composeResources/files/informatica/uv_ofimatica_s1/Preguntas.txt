@@ -1,0 +1,41 @@
+2) Si quisieramos guardar la base de datos ACCESS 2016 "PERSONAS", ¿cuál de los siguientes tipos de archivos NO aparece si abrimos el menú "Archivo" y elegimos "Guardar como"?
+a) Base de datos Access
+b) Base de datos Access 2002-2003
+c) Plantilla
+d) Fichero XLSX
+
+5) En la base de datos ACCESS 2016 "PERSONAS" se desea crear una consulta que agregue registros a la tabla DATOS ADMINISTRATIVOS. ¿Qué tipo de consulta habrá que seleccionar?
+a) Anexar
+b) Actualizar
+c) Eliminar
+d) Crear tabla
+
+6) En la base de datos ACCESS 2016 "PERSONAS", ¿cuál de las siguientes vistas NO podemos seleccionar cuando trabajamos con las consultas?
+a) Vista SQL
+b) Vista Informes
+c) Vista Hoja de datos
+d) Vista Diseño
+
+9) ¿Qué menú de la cinta de opciones de la base de datos ACCESS 2016 "PERSONAS" deberiamos seleccionar para comprobar las relaciones existentes entre las tablas creadas?
+a) Herramientas de base de datos
+b) Inicio
+c) Crear
+d) Archivo
+
+11) En la aplicación Word 2016 queremos crear documentos personalizados para enviar a cada empleado informando de su situación administrativa a 1 de enero de 2022. Para mostrar el asistente de la combinación de correspondencia, debe usar la opción "Paso a paso por el Asistente para combinar correspondencia..." que se encuentra dentro de la opción:
+a) Editar lista de destinatarios.
+b) Iniciar combinación de correspondencia.
+c) Insertar campo combinado.
+d) Seleccionar destinatarios.
+
+15) Antes de imprimir el documento "INFORMES" abierto en la aplicación Word 2016, nos damos cuenta que la aplicación ha marcado automáticamente un subrayado ondulado bajo una palabra. Podemos afirmar que:
+a) Si el color del subrayado ondulado es rojo, es porque la palabra provoca un error gramatical en la frase.
+b) Si el color del subrayado ondulado es rojo, es porque hay un error ortográfico en la palabra, o porque la misma no figura en el diccionario de Word.
+c) Si el color del subrayado ondulado es azul, es porque hay un error ortográfico en la palabra, o porque la misma no existe en el diccionario de Word.
+d) El color es independiente, el error es siempre ortográfico.
+
+20) Una vez hemos terminado de trabajar con el libro de Excel 2016 "ADQUISICIONES", es necesario guardarlo. ¿Cuál de los siguientes formatos NO aparecería en el desplegable “Tipo” del cuadro de diálogo “Guardar como”?
+a) Página Web
+b) Plantilla de Excel 97-2003
+c) Informe Tabulado
+d) Libro de Excel 97-2003

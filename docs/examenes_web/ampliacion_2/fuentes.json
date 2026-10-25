@@ -1,0 +1,56 @@
+[
+  {
+    "archivo": "car_aux25_0.pdf",
+    "titulo": "Auxiliar CAR 15/11/2025: fase 1",
+    "url": "https://ias1.larioja.org/emp/infraweb/rdf/rdf_visor.jsp?_idClave=ghxcEun2xMPJkJiBEoMoKGiwj_tBQFUJZgQ3jwAdPwCWyGELH4Ve9Q==",
+    "sha256": "e15b5a11f5ea099abb64c18529c25ae7984a8a879e90a0e66f584af76386df6a"
+  },
+  {
+    "archivo": "car_aux25_1.pdf",
+    "titulo": "Auxiliar CAR: plantilla publicada fase 1",
+    "url": "https://ias1.larioja.org/emp/infraweb/rdf/rdf_visor.jsp?_idClave=ghxcEun2xMPJkJiBEoMoKGiwj_tBQFUJGcLzERg127WWyGELH4Ve9Q==",
+    "sha256": "6a6f69f4c04ca5b804232971c2a34096655fcfa03e25bc29258909d2ef58388e"
+  },
+  {
+    "archivo": "car_aux25_2.pdf",
+    "titulo": "Auxiliar CAR 15/11/2025: Word 2016",
+    "url": "https://ias1.larioja.org/emp/infraweb/rdf/rdf_visor.jsp?_idClave=ghxcEun2xMPJkJiBEoMoKGiwj_tBQFUJKyWgENv59X-WyGELH4Ve9Q==",
+    "sha256": "d38185a1f044a6da61ea0f19308a8d6fa3bdd69d4abfc171994695bdacfc964b"
+  },
+  {
+    "archivo": "car_aux25_3.pdf",
+    "titulo": "Auxiliar CAR: fe de errores de Word, pregunta 17",
+    "url": "https://ias1.larioja.org/emp/infraweb/rdf/rdf_visor.jsp?_idClave=ghxcEun2xMPJkJiBEoMoKGiwj_tBQFUJzrK_ptcApcOWyGELH4Ve9Q==",
+    "sha256": "63c7944919abadec5794d764c6b6a98505521a06481a2418f7a9e404563f4104"
+  },
+  {
+    "archivo": "car_aux25_5.pdf",
+    "titulo": "Auxiliar CAR: plantilla modificada Word, anula la inicial",
+    "url": "https://ias1.larioja.org/emp/infraweb/rdf/rdf_visor.jsp?_idClave=ghxcEun2xMPJkJiBEoMoKJEHUeUbEc_R3fRuiknOvyGWyGELH4Ve9Q==",
+    "sha256": "22d6f6d690c01123fc0c38256bc934c8e3683d3d2356bfbf1168d5b349e04cf1"
+  },
+  {
+    "archivo": "uv21_0.pdf",
+    "titulo": "UV: primer ejercicio 14/05/2022",
+    "url": "https://www.uv.es/pas/nuevaWEB/Oposiciones/C1-ADMINISTRATIU-TL%202021/Primer%20Ejericio%20%2014-05-21_c.pdf",
+    "sha256": "0a635a390f7125bd9187a0158e888d6058daa8c6736de20a82fda545a6864145"
+  },
+  {
+    "archivo": "uv21_1.pdf",
+    "titulo": "UV: plantilla publicada primer ejercicio",
+    "url": "https://www.uv.es/pas/nuevaWEB/Oposiciones/C1-ADMINISTRATIU-TL%202021/PLANTILLA%20C1.pdf",
+    "sha256": "2f7e127fcac927f049c9b8c5ede81f1cde62ba8e35be36ef91374684e690d5ce"
+  },
+  {
+    "archivo": "uv21_2.pdf",
+    "titulo": "UV: segundo ejercicio Office 2016, 16/07/2022",
+    "url": "https://www.uv.es/pas/nuevaWEB/Oposiciones/C1-ADMINISTRATIU-TL%202021/Segon%20exercici_C.pdf",
+    "sha256": "74b157f9e11bc44575035153a0ed792402bf2a9b3329a7ca1fd3da73899e5d94"
+  },
+  {
+    "archivo": "uv21_3.pdf",
+    "titulo": "UV: plantilla publicada segundo ejercicio",
+    "url": "https://www.uv.es/pas/nuevaWEB/Oposiciones/C1-ADMINISTRATIU-TL%202021/PLANTILLA%202na%20prova.pdf",
+    "sha256": "9ff47d90ee3de4e98743001b29b0f9abcac84f418e66f3721fcbc59181b559a0"
+  }
+]

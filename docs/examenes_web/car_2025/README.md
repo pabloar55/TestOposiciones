@@ -4,6 +4,8 @@ Importación del 25 de octubre de 2026, limitada al programa FA.13/24-26. Se han
 
 Los supuestos se han separado en una categoría independiente a petición del usuario. Se eligen expresamente desde «Supuestos prácticos CAR» y no forman parte de los tests aleatorios, secuenciales ni por bloques de «Administrativo CAR».
 
+> **Ampliación posterior:** se han añadido otras [118 preguntas oficiales CAR y UV](../ampliacion_2/README.md). El total actual es 710: 467 de Administrativo, 185 de Informática y 58 de Supuestos. Los recuentos de este documento describen la primera importación.
+
 ## Procedencia oficial
 
 Se ha consultado el portal de procesos selectivos del Gobierno de La Rioja, OEP 2021, y el desarrollo completo de las convocatorias:

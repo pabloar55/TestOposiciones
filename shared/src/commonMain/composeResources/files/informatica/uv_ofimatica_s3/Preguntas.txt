@@ -1,0 +1,35 @@
+3) En el fichero EXCEL 2016 "PROCEDIMIENTOS", existe una hoja llamada 'UNIDADES ORGANIZATIVAS' que contiene todas las unidades organizativas, con su código (que es obligatorio y es un texto) y descripción, en valenciano y en castellano, cada dato en su columna correspondiente. Si quisieramos saber cuántas unidades hay, ¿qué función utilizaría basándose en el columna CÓDIGO?
+a) SUMAR
+b) CUENTACODIGO
+c) CONTARA
+d) REGISTRAR
+
+5) En el fichero EXCEL 2016 "PROCEDIMIENTOS" , si se desea crear tantas hojas como unidades organizativas existen, ¿cuál sería el límite de hojas en el libro?
+a) 100
+b) Limitado a la memoria disponible del dispositivo en el que se trabaje.
+c) 10
+d) 1000
+
+7) En el fichero EXCEL 2016 "PROCEDIMIENTOS", se desea imprimir las columnas correspondientes a los códigos de los procedimientos y las fechas de inicio y fin de la hoja PAS. ¿Desde qué menú de la cinta de opciones podremos establecer el Área de impresión?
+a) Vista
+b) Revisar
+c) Diseño de página
+d) Datos
+
+8) Si en el fichero EXCEL 2016 "PROCEDIMIENTOS", queremos aplicar un efecto de relleno a unas celdas en concreto. ¿Qué efecto de relleno puede aplicarse a una celda?
+a) Degradado de color.
+b) Un fondo de imagen.
+c) Texturas predefinidas (textura de papel, mármol, pergamino, etc.).
+d) No es posible aplicar efectos de relleno a una celda.
+
+10) A fin de que los documentos impresos generados a través del fichero EXCEL 2016 "PROCEDIMIENTOS" sean de lectura rápida, se va a proceder a dar formato de fuente a las celdas. Selecciona qué efectos de fuente podremos elegir:
+a) Cuatro: Tachado, Doble Tachado, Superíndice y Subíndice.
+b) Tres: Tachado, Superíndice y Subíndice.
+c) Dos: Tachado y Doble Tachado.
+d) Cuatro: Tachado, Versalitas, Superíndice y Subíndice.
+
+13) En la base de datos ACCESS 2016 "PROCEDIMIENTOS" queremos crear un informe que liste, para una fecha concreta, los procedimientos iniciados. Utilizando el asistente para informes, ¿qué información hay que proporcionar en el primer paso?
+a) La fecha de inicio a comparar.
+b) Los campos a incluir en el informe.
+c) El nivel de resumen.
+d) El nombre del informe.

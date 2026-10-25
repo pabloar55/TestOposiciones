@@ -1,0 +1,35 @@
+11) Tenemos que trabajar con la base de datos ACCESS 2016 denominada "PERSONAS", creada para almacenar la Relación de Puestos de Trabajo del Personal de Administración y Servicios en la Universitat de València. Nos han pedido que modifiquemos un formulario existente agregando y/o modificando controles. ¿Cuál de las siguientes vistas se utiliza para hacerlo?
+a) Diseño
+b) Hoja de datos
+c) Formulario
+d) Impresión
+
+12) Si alguien cambia los datos de una de las tablas que contiene la base de datos ACCESS 2016 "PERSONAS" en que se basa un informe creado previamente, ¿qué ocurrirá cuando vuelva a abrir dicho informe?
+a) Verá un mensaje que indica que los datos han cambiado.
+b) Nada. Una vez que crea un informe, los datos nunca cambian.
+c) El programa impide modificar la consulta si ya se utiliza en un informe.
+d) Los datos actualizados aparecerán cuando abra el informe de nuevo.
+
+13) Trabajando con un informe incluido en la base de datos ACCES 2016 "PERSONAS", queremos cambiar el color de fondo de la sección "Encabezado" de un informe, ¿desde dónde lo realizaríamos?:
+a) Desde la Herramienta Hoja de Propiedades de la vista SELECCIÓN.
+b) Desde la Herramienta Hoja de Propiedades de la vista DISEÑO.
+c) Desde la Herramienta Hoja de Propiedades de la vista IMPRIMIR.
+d) Desde la Herramienta Hoja de Propiedades de la vista FORMULARIO.
+
+14) Para modificar las propiedades de los campos de una tabla de base de datos ACCESS 2016 "PERSONAS", ¿cuál de las siguientes vistas seleccionaria?
+a) Relaciones
+b) Hoja de datos
+c) Diseño
+d) Formulario
+
+15) ¿Podríamos obtener información que directamente no exista en ninguna tabla en la base de datos ACCES 2016 "PERSONAS"?
+a) Sí, utilizando expresiones.
+b) No, es imposible. De donde no hay no se puede sacar.
+c) Sí, siempre que las relaciones entre las tablas sean de uno a muchos.
+d) Sí, siempre que las relaciones entre tablas sean de uno a uno.
+
+20) Una vez terminado de trabajar con libro EXCEL 2016 "ADQUISICIONES", queremos guardar los cambios, ¿cuál es el atajo de teclado para hacerlo?
+a) Ctrl+N
+b) Ctrl+A
+c) Ctrl+U
+d) Ctrl+G
