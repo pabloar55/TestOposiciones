@@ -1,11 +1,12 @@
 package com.pablo.testoposiciones.ui
 
+import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.Role
@@ -83,7 +84,7 @@ fun QuestionScreen(
                     .align(Alignment.TopCenter)
                     .widthIn(max = 800.dp)
                     .fillMaxWidth()
-                    .verticalScroll(rememberScrollState())
+                    .verticalScroll(rememberQuestionScrollState(currentIndex))
                     .padding(start = 16.dp, top = 16.dp, end = 16.dp, bottom = 96.dp)
             ) {
                 Text(
@@ -300,7 +301,7 @@ fun ReviewScreen(
                     .align(Alignment.TopCenter)
                     .widthIn(max = 800.dp)
                     .fillMaxWidth()
-                    .verticalScroll(rememberScrollState())
+                    .verticalScroll(rememberQuestionScrollState(currentIndex))
                     .padding(start = 16.dp, top = 16.dp, end = 16.dp, bottom = 96.dp)
             ) {
             Text(
@@ -364,6 +365,10 @@ fun ReviewScreen(
     }
 }
 
+// Cada pregunta empieza arriba del todo; si no, hereda el desplazamiento de la anterior.
+@Composable
+private fun rememberQuestionScrollState(questionIndex: Int): ScrollState =
+    rememberSaveable(questionIndex, saver = ScrollState.Saver) { ScrollState(0) }
 
 private fun formatTime(seconds: Int): String {
     val m = seconds / 60
