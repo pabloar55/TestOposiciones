@@ -5,3 +5,7 @@ enum class TipoTest {
     SECUENCIAL,
     BLOQUES_30,
 }
+
+// Corrección inmediata al responder; en estos modos la respuesta queda fijada una vez vista.
+val TipoTest.showsFeedback: Boolean
+    get() = this != TipoTest.BLOQUES_30

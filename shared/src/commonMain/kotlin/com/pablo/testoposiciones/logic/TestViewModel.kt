@@ -6,6 +6,7 @@ import com.pablo.testoposiciones.model.Pregunta
 import com.pablo.testoposiciones.model.ResultadoPregunta
 import com.pablo.testoposiciones.model.TestCategory
 import com.pablo.testoposiciones.model.TipoTest
+import com.pablo.testoposiciones.model.showsFeedback
 import com.pablo.testoposiciones.platform.ProgressStorage
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
@@ -176,6 +177,7 @@ class TestViewModel : ViewModel() {
     }
 
     fun selectAnswer(opcion: Char) {
+        if (tipoTest.showsFeedback && currentIndex in userAnswers) return
         userAnswers[currentIndex] = opcion
     }
 

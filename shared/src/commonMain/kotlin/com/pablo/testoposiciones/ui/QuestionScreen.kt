@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.dp
 import com.pablo.testoposiciones.model.Pregunta
 import com.pablo.testoposiciones.model.ResultadoPregunta
 import com.pablo.testoposiciones.model.TipoTest
+import com.pablo.testoposiciones.model.showsFeedback
 import com.pablo.testoposiciones.ui.icons.arrow_back
 import com.pablo.testoposiciones.ui.icons.arrow_forward
 
@@ -41,7 +42,8 @@ fun QuestionScreen(
     val selectedAnswer = userAnswers[currentIndex]
     val total = preguntas.size
     val visibleTotal = displayTotal.coerceAtLeast(displayQuestionNumber)
-    val showFeedback = tipoTest != TipoTest.BLOQUES_30
+    val showFeedback = tipoTest.showsFeedback
+    val answerLocked = showFeedback && selectedAnswer != null
 
     Scaffold(
         topBar = {
@@ -102,7 +104,8 @@ fun QuestionScreen(
                     option = 'a',
                     selected = selectedAnswer == 'a',
                     correctAnswer = pregunta.respuestaCorrecta,
-                    showFeedback = showFeedback && selectedAnswer != null,
+                    showFeedback = answerLocked,
+                    interactive = !answerLocked,
                     onClick = { onAnswer('a') }
                 )
                 Spacer(Modifier.height(8.dp))
@@ -111,7 +114,8 @@ fun QuestionScreen(
                     option = 'b',
                     selected = selectedAnswer == 'b',
                     correctAnswer = pregunta.respuestaCorrecta,
-                    showFeedback = showFeedback && selectedAnswer != null,
+                    showFeedback = answerLocked,
+                    interactive = !answerLocked,
                     onClick = { onAnswer('b') }
                 )
                 Spacer(Modifier.height(8.dp))
@@ -120,7 +124,8 @@ fun QuestionScreen(
                     option = 'c',
                     selected = selectedAnswer == 'c',
                     correctAnswer = pregunta.respuestaCorrecta,
-                    showFeedback = showFeedback && selectedAnswer != null,
+                    showFeedback = answerLocked,
+                    interactive = !answerLocked,
                     onClick = { onAnswer('c') }
                 )
                 Spacer(Modifier.height(8.dp))
@@ -129,7 +134,8 @@ fun QuestionScreen(
                     option = 'd',
                     selected = selectedAnswer == 'd',
                     correctAnswer = pregunta.respuestaCorrecta,
-                    showFeedback = showFeedback && selectedAnswer != null,
+                    showFeedback = answerLocked,
+                    interactive = !answerLocked,
                     onClick = { onAnswer('d') }
                 )
 
