@@ -17,13 +17,13 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.*
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.pablo.testoposiciones.logic.Screen
 import com.pablo.testoposiciones.logic.TestViewModel
 import com.pablo.testoposiciones.model.TipoTest
+import com.pablo.testoposiciones.platform.ProgressStorage
 import com.pablo.testoposiciones.ui.QuestionScreen
 import com.pablo.testoposiciones.ui.ResultsScreen
 import com.pablo.testoposiciones.ui.ReviewScreen
@@ -32,7 +32,8 @@ import com.pablo.testoposiciones.ui.WelcomeScreen
 @Composable
 fun App() {
     val systemDarkTheme = isSystemInDarkTheme()
-    var darkTheme by rememberSaveable { mutableStateOf(systemDarkTheme) }
+    var savedDarkTheme by remember { mutableStateOf(ProgressStorage.readDarkTheme()) }
+    val darkTheme = savedDarkTheme ?: systemDarkTheme
     val colorScheme = if (darkTheme) darkColorScheme() else lightColorScheme()
 
     ApplySystemBarTheme(darkTheme)
@@ -56,7 +57,10 @@ fun App() {
             when (screen) {
                 is Screen.Welcome -> WelcomeScreen(
                     darkTheme = darkTheme,
-                    onToggleTheme = { darkTheme = !darkTheme },
+                    onToggleTheme = {
+                        savedDarkTheme = !darkTheme
+                        ProgressStorage.writeDarkTheme(!darkTheme)
+                    },
                     categories = vm.categories,
                     categoriesLoading = vm.categoriesLoading,
                     loadError = vm.loadError,

@@ -42,6 +42,27 @@ actual object ProgressStorage {
         getLegacyFile(category).delete()
     }
 
+    actual fun readDarkTheme(): Boolean? {
+        val file = getThemeFile()
+        return try {
+            if (!file.exists()) null else file.readText().trim().toBooleanStrictOrNull()
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    actual fun writeDarkTheme(dark: Boolean) {
+        try {
+            getThemeFile().writeText(dark.toString())
+        } catch (e: Exception) {
+            // ignore write errors
+        }
+    }
+
+    private fun getThemeFile(): File {
+        return File(System.getProperty("user.home"), ".testoposiciones_dark_theme.txt")
+    }
+
     private fun migrateLegacyProgress(category: TestCategory) {
         val legacyFile = getLegacyFile(category)
         if (!legacyFile.exists()) return
