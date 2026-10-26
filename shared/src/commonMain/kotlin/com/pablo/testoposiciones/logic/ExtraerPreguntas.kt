@@ -3,17 +3,23 @@ package com.pablo.testoposiciones.logic
 import com.pablo.testoposiciones.model.Pregunta
 import com.pablo.testoposiciones.model.TestCategory
 import com.pablo.testoposiciones.model.TestExam
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import testoposiciones.shared.generated.resources.Res
 
 @OptIn(ExperimentalResourceApi::class)
 object ExtraerPreguntas {
-    suspend fun extraerPreguntas(category: TestCategory): List<Pregunta> {
-        val preguntas = mutableListOf<Pregunta>()
-        for (exam in category.exams) {
-            preguntas += extraerPreguntas(category, exam)
+    // Los ficheros van dentro de la app y no cambian mientras se ejecuta, así que basta con
+    // leerlos una vez. Sin caché, cada vuelta al inicio volvía a parsear toda la categoría.
+    // La clave es la categoría completa (con sus exámenes) porque los tests piden subconjuntos.
+    private val cache = mutableMapOf<TestCategory, List<Pregunta>>()
+    private val cacheMutex = Mutex()
+
+    suspend fun extraerPreguntas(category: TestCategory): List<Pregunta> = cacheMutex.withLock {
+        cache.getOrPut(category) {
+            category.exams.flatMap { exam -> extraerPreguntas(category, exam) }
         }
-        return preguntas
     }
 
     private suspend fun extraerPreguntas(category: TestCategory, exam: TestExam): List<Pregunta> {
