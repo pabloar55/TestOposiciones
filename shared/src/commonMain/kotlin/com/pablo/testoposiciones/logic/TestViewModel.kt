@@ -4,7 +4,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.pablo.testoposiciones.model.BLOCK_SIZE
 import com.pablo.testoposiciones.model.CategoryProgress
-import com.pablo.testoposiciones.model.Pregunta
 import com.pablo.testoposiciones.model.ResultadoPregunta
 import com.pablo.testoposiciones.model.TestCategory
 import com.pablo.testoposiciones.model.TipoTest
@@ -19,20 +18,30 @@ import kotlinx.coroutines.withContext
 import androidx.compose.runtime.*
 import kotlin.time.Duration.Companion.milliseconds
 
-sealed class Screen {
-    object Welcome : Screen()
-    data class Question(val tipoTest: TipoTest) : Screen()
+private const val RANDOM_TEST_SIZE = 30
+
+/** Cada pantalla lleva su propio estado: fuera de [Question] no existe ningún test en curso. */
+sealed interface Screen {
+    data object Welcome : Screen
+
+    data class Loading(val tipoTest: TipoTest) : Screen
+
+    data class Question(val session: TestSession) : Screen
+
     data class Results(
-        val correctas: Int,
-        val incorrectas: Int,
-        val total: Int,
-        val segundos: Int,
+        val category: TestCategory,
         val tipoTest: TipoTest,
         val historial: List<ResultadoPregunta>,
+        val segundos: Int,
         val categoryCompleted: Boolean,
         val failedRemaining: Int
-    ) : Screen()
-    data class Review(val historial: List<ResultadoPregunta>, val results: Results) : Screen()
+    ) : Screen {
+        val total: Int get() = historial.size
+        val correctas: Int get() = historial.count { it.esCorrecta }
+        val incorrectas: Int get() = historial.count { it.respuestaUsuario != null && !it.esCorrecta }
+    }
+
+    data class Review(val results: Results, val index: Int = 0) : Screen
 }
 
 class TestViewModel : ViewModel() {
@@ -40,15 +49,8 @@ class TestViewModel : ViewModel() {
     var screen by mutableStateOf<Screen>(Screen.Welcome)
         private set
 
-    var preguntas by mutableStateOf<List<Pregunta>>(emptyList())
-        private set
+    // Estado de la pantalla de inicio.
 
-    var currentIndex by mutableIntStateOf(0)
-        private set
-
-    var tipoTest by mutableStateOf(TipoTest.ALEATORIO_30)
-        private set
-        
     var testCategory by mutableStateOf<TestCategory?>(null)
         private set
 
@@ -61,34 +63,15 @@ class TestViewModel : ViewModel() {
     var loadError by mutableStateOf<String?>(null)
         private set
 
-    val userAnswers = mutableStateMapOf<Int, Char>()
-
     var categoryProgress by mutableStateOf<CategoryProgress?>(null)
         private set
 
-    var secondsElapsed by mutableIntStateOf(0)
-        private set
-
-    var isLoading by mutableStateOf(false)
-        private set
-
-    var offsetInicial = 0
-        private set
-
-    var totalPreguntas by mutableIntStateOf(0)
-        private set
-
-    val displayQuestionNumber: Int
-        get() = if (tipoTest == TipoTest.SECUENCIAL) offsetInicial + currentIndex + 1 else currentIndex + 1
-
-    val displayQuestionTotal: Int
-        get() = if (tipoTest == TipoTest.SECUENCIAL && totalPreguntas > 0) totalPreguntas else preguntas.size
+    private val session: TestSession?
+        get() = (screen as? Screen.Question)?.session
 
     private var timerJob: Job? = null
     private var appVisible = true
 
-    private val testInProgress: Boolean
-        get() = screen is Screen.Question && !isLoading && preguntas.isNotEmpty()
     private var testLoadJob: Job? = null
     private var categoriesLoadJob: Job? = null
     private var categoryProgressJob: Job? = null
@@ -142,91 +125,79 @@ class TestViewModel : ViewModel() {
 
     fun startTest(tipo: TipoTest, category: TestCategory) {
         testLoadJob?.cancel()
+        stopTimer()
         val requestId = ++testLoadRequestId
-        tipoTest = tipo
         testCategory = category
-        isLoading = true
         loadError = null
-        screen = Screen.Question(tipo)
+        screen = Screen.Loading(tipo)
         testLoadJob = viewModelScope.launch {
             try {
                 val allPreguntas = withContext(Dispatchers.Default) {
                     ExtraerPreguntas.extraerPreguntas(category)
                 }
                 if (requestId != testLoadRequestId) return@launch
-                totalPreguntas = allPreguntas.size
-                offsetInicial = 0
-                val loaded = when (tipo) {
-                    TipoTest.ALEATORIO_30 -> allPreguntas.shuffled().take(30)
-                    TipoTest.SECUENCIAL -> {
-                        val start = readProgressStartIndex(category, tipo, allPreguntas.size)
-                        offsetInicial = start
-                        allPreguntas.drop(offsetInicial)
-                    }
-                    TipoTest.BLOQUES_30 -> {
-                        val start = readProgressStartIndex(category, tipo, allPreguntas.size)
-                        offsetInicial = start
-                        allPreguntas.drop(offsetInicial).take(BLOCK_SIZE)
-                    }
+                val offset = when (tipo) {
+                    TipoTest.SECUENCIAL, TipoTest.BLOQUES_30 ->
+                        readProgressStartIndex(category, tipo, allPreguntas.size)
+                    TipoTest.ALEATORIO_30, TipoTest.FALLADAS -> 0
+                }
+                val preguntas = when (tipo) {
+                    TipoTest.ALEATORIO_30 -> allPreguntas.shuffled().take(RANDOM_TEST_SIZE)
+                    TipoTest.SECUENCIAL -> allPreguntas.drop(offset)
+                    TipoTest.BLOQUES_30 -> allPreguntas.drop(offset).take(BLOCK_SIZE)
                     TipoTest.FALLADAS -> FailedQuestions.pending(category, allPreguntas).shuffled()
                 }
-                if (loaded.isEmpty()) {
+                if (preguntas.isEmpty()) {
                     // Solo ocurre en falladas cuando ya no queda ninguna.
-                    preguntas = emptyList()
                     screen = Screen.Welcome
                     refreshCategoryProgress()
                     return@launch
                 }
-                preguntas = loaded
-                currentIndex = 0
-                userAnswers.clear()
-                secondsElapsed = 0
+                screen = Screen.Question(
+                    TestSession(
+                        category = category,
+                        tipoTest = tipo,
+                        preguntas = preguntas,
+                        offsetInicial = offset,
+                        totalEnCategoria = allPreguntas.size
+                    )
+                )
                 startTimer()
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
                 if (requestId != testLoadRequestId) return@launch
-                preguntas = emptyList()
                 loadError = e.message ?: "No se han podido cargar las preguntas."
                 screen = Screen.Welcome
             } finally {
-                if (requestId == testLoadRequestId) {
-                    isLoading = false
-                    testLoadJob = null
-                }
+                if (requestId == testLoadRequestId) testLoadJob = null
             }
         }
     }
 
     fun selectAnswer(opcion: Char) {
-        if (tipoTest.showsFeedback && currentIndex in userAnswers) return
-        userAnswers[currentIndex] = opcion
-        if (tipoTest.showsFeedback) {
-            val pregunta = preguntas[currentIndex]
-            testCategory?.let {
-                FailedQuestions.record(
-                    it,
-                    listOf(ResultadoPregunta(pregunta, opcion, opcion == pregunta.respuestaCorrecta))
-                )
-            }
+        val current = session ?: return
+        if (current.answerLocked) return
+        val updated = updateSession { it.answer(opcion) } ?: return
+        if (updated.tipoTest.showsFeedback) {
+            FailedQuestions.record(updated.category, listOf(updated.resultadoActual()))
         }
-        saveProgress()
+        saveProgress(updated)
     }
 
     fun goNext() {
-        if (currentIndex < preguntas.size - 1) {
-            currentIndex++
-            saveProgress()
+        val current = session ?: return
+        if (current.isLast) {
+            finalizeTest(current)
         } else {
-            finalizeTest()
+            updateSession { it.next() }?.let(::saveProgress)
         }
     }
 
     fun goPrevious() {
-        if (currentIndex > 0) {
-            currentIndex--
-            saveProgress()
-        }
+        val current = session ?: return
+        if (current.isFirst) return
+        updateSession { it.previous() }?.let(::saveProgress)
     }
 
     // El cronómetro solo cuenta mientras la app está a la vista.
@@ -234,40 +205,51 @@ class TestViewModel : ViewModel() {
         appVisible = visible
         if (!visible) {
             stopTimer()
-        } else if (testInProgress) {
+        } else if (session != null) {
             startTimer()
         }
     }
 
     fun goToWelcome() {
-        val leavingActiveTest = testInProgress
+        val activeSession = session
         testLoadRequestId++
         testLoadJob?.cancel()
         testLoadJob = null
-        isLoading = false
         stopTimer()
-        if (leavingActiveTest) {
-            saveProgress()
-        }
+        activeSession?.let(::saveProgress)
         screen = Screen.Welcome
         refreshCategoryProgress()
     }
 
-    fun retry() {
-        stopTimer()
-        val category = testCategory ?: return
-        if (tipoTest == TipoTest.SECUENCIAL) {
-            ProgressStorage.writeNumber(category, TipoTest.SECUENCIAL, 1)
+    fun retry(results: Screen.Results) {
+        if (results.tipoTest == TipoTest.SECUENCIAL) {
+            ProgressStorage.writeNumber(results.category, TipoTest.SECUENCIAL, 1)
         }
-        startTest(tipoTest, category)
+        startTest(results.tipoTest, results.category)
     }
 
     fun reviewAnswers(results: Screen.Results) {
-        screen = Screen.Review(results.historial, results)
+        screen = Screen.Review(results)
     }
 
-    fun backToResults(results: Screen.Results) {
-        screen = results
+    fun reviewNext() = moveReview(+1)
+
+    fun reviewPrevious() = moveReview(-1)
+
+    fun backToResults() {
+        (screen as? Screen.Review)?.let { screen = it.results }
+    }
+
+    private fun moveReview(delta: Int) {
+        val review = screen as? Screen.Review ?: return
+        val index = (review.index + delta).coerceIn(0, review.results.historial.lastIndex)
+        screen = review.copy(index = index)
+    }
+
+    /** Aplica [transform] a la sesión en curso y la publica. Devuelve la nueva, o null si no hay test. */
+    private inline fun updateSession(transform: (TestSession) -> TestSession): TestSession? {
+        val current = session ?: return null
+        return transform(current).also { screen = Screen.Question(it) }
     }
 
     private fun refreshCategoryProgress() {
@@ -311,7 +293,7 @@ class TestViewModel : ViewModel() {
         timerJob = viewModelScope.launch {
             while (true) {
                 delay(1000.milliseconds)
-                secondsElapsed++
+                updateSession { it.tick() } ?: break
             }
         }
     }
@@ -323,66 +305,33 @@ class TestViewModel : ViewModel() {
 
     // Se guarda en cada paso y no solo al salir: si Android cierra la app en segundo
     // plano, el ViewModel se pierde sin pasar por goToWelcome().
-    private fun saveProgress() {
-        val category = testCategory ?: return
-        when (tipoTest) {
-            TipoTest.SECUENCIAL -> ProgressStorage.writeNumber(
-                category,
-                TipoTest.SECUENCIAL,
-                offsetInicial + currentIndex + 1
-            )
-            else -> {}
+    private fun saveProgress(session: TestSession) {
+        if (session.tipoTest == TipoTest.SECUENCIAL) {
+            ProgressStorage.writeNumber(session.category, TipoTest.SECUENCIAL, session.resumeQuestionNumber)
         }
     }
 
-    private fun finalizeTest() {
+    private fun finalizeTest(session: TestSession) {
         stopTimer()
-        var correctas = 0
-        var incorrectas = 0
-        val historial = preguntas.mapIndexed { i, pregunta ->
-            val respuesta = userAnswers.getOrElse(i) { ' ' }
-            val esCorrecta = respuesta == pregunta.respuestaCorrecta
-            if (respuesta != ' ') {
-                if (esCorrecta) correctas++ else incorrectas++
-            }
-            ResultadoPregunta(pregunta, respuesta, esCorrecta)
-        }
-
-        val category = testCategory
-        val categoryCompleted = tipoTest != TipoTest.FALLADAS &&
-            offsetInicial + preguntas.size >= totalPreguntas
+        val historial = session.historial()
         // Con corrección inmediata ya se han apuntado al responder.
-        if (category != null && !tipoTest.showsFeedback) {
-            FailedQuestions.record(category, historial)
+        if (!session.tipoTest.showsFeedback) {
+            FailedQuestions.record(session.category, historial)
         }
-        when (tipoTest) {
-            TipoTest.SECUENCIAL -> if (category != null) {
-                ProgressStorage.writeNumber(
-                    category,
-                    TipoTest.SECUENCIAL,
-                    offsetInicial + preguntas.size + 1
-                )
-            }
-            TipoTest.BLOQUES_30 -> if (category != null) {
-                ProgressStorage.writeNumber(
-                    category,
-                    TipoTest.BLOQUES_30,
-                    offsetInicial + preguntas.size + 1
-                )
-            }
-            else -> {}
+        when (session.tipoTest) {
+            TipoTest.SECUENCIAL, TipoTest.BLOQUES_30 ->
+                ProgressStorage.writeNumber(session.category, session.tipoTest, session.nextQuestionNumber)
+            TipoTest.ALEATORIO_30, TipoTest.FALLADAS -> Unit
         }
 
         screen = Screen.Results(
-            correctas = correctas,
-            incorrectas = incorrectas,
-            total = preguntas.size,
-            segundos = secondsElapsed,
-            tipoTest = tipoTest,
+            category = session.category,
+            tipoTest = session.tipoTest,
             historial = historial,
-            categoryCompleted = categoryCompleted,
-            failedRemaining = if (tipoTest == TipoTest.FALLADAS && category != null) {
-                FailedQuestions.count(category)
+            segundos = session.secondsElapsed,
+            categoryCompleted = session.completesCategory,
+            failedRemaining = if (session.tipoTest == TipoTest.FALLADAS) {
+                FailedQuestions.count(session.category)
             } else {
                 0
             }

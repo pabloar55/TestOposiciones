@@ -37,7 +37,7 @@ class FailedQuestionsTest {
             resultados = listOf(
                 ResultadoPregunta(fallada, 'b', esCorrecta = false),
                 ResultadoPregunta(acertada, 'a', esCorrecta = true),
-                ResultadoPregunta(enBlanco, ' ', esCorrecta = false)
+                ResultadoPregunta(enBlanco, null, esCorrecta = false)
             )
         )
 

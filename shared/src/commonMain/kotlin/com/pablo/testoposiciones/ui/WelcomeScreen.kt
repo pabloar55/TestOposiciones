@@ -281,7 +281,7 @@ private fun LoadErrorCard(message: String, onRetry: () -> Unit) {
         modifier = Modifier.fillMaxWidth()
     ) {
         Column(Modifier.padding(20.dp)) {
-            Text("No se han podido cargar las categorías", style = MaterialTheme.typography.titleMedium)
+            Text("No se ha podido cargar el temario", style = MaterialTheme.typography.titleMedium)
             Spacer(Modifier.height(4.dp))
             Text(message, style = MaterialTheme.typography.bodySmall)
             Spacer(Modifier.height(12.dp))

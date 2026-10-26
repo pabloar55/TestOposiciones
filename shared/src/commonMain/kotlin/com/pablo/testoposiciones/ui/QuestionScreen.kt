@@ -24,10 +24,9 @@ import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.pablo.testoposiciones.logic.TestSession
 import com.pablo.testoposiciones.model.Pregunta
 import com.pablo.testoposiciones.model.ResultadoPregunta
-import com.pablo.testoposiciones.model.TipoTest
-import com.pablo.testoposiciones.model.showsFeedback
 import com.pablo.testoposiciones.ui.icons.arrow_back
 import com.pablo.testoposiciones.ui.icons.arrow_forward
 import com.pablo.testoposiciones.ui.icons.check
@@ -38,36 +37,28 @@ private val OPTION_LETTERS = listOf('a', 'b', 'c', 'd')
 
 @Composable
 fun QuestionScreen(
-    preguntas: List<Pregunta>,
-    currentIndex: Int,
-    displayQuestionNumber: Int = currentIndex + 1,
-    displayTotal: Int = preguntas.size,
-    tipoTest: TipoTest,
-    userAnswers: Map<Int, Char>,
-    secondsElapsed: Int,
+    session: TestSession,
     onAnswer: (Char) -> Unit,
     onNext: () -> Unit,
     onPrevious: () -> Unit,
     onClose: () -> Unit
 ) {
-    if (preguntas.isEmpty()) return
-    val pregunta = preguntas[currentIndex]
-    val selectedAnswer = userAnswers[currentIndex]
-    val visibleTotal = displayTotal.coerceAtLeast(displayQuestionNumber)
-    val answerLocked = tipoTest.showsFeedback && selectedAnswer != null
+    val number = session.displayQuestionNumber
+    val visibleTotal = session.displayQuestionTotal.coerceAtLeast(number)
+    val answerLocked = session.answerLocked
 
     QuestionLayout(
-        title = "Pregunta $displayQuestionNumber de $visibleTotal",
-        progress = displayQuestionNumber.toFloat() / visibleTotal,
+        title = "Pregunta $number de $visibleTotal",
+        progress = number.toFloat() / visibleTotal,
         navigationIcon = close,
         navigationLabel = "Salir del test",
         onNavigate = onClose,
-        scrollKey = currentIndex,
-        actions = { TimerChip(secondsElapsed) },
+        scrollKey = session.currentIndex,
+        actions = { TimerChip(session.secondsElapsed) },
         bottomBar = {
             OutlinedButton(
                 onClick = onPrevious,
-                enabled = currentIndex > 0,
+                enabled = !session.isFirst,
                 modifier = Modifier.weight(1f).height(52.dp)
             ) {
                 Icon(arrow_back, contentDescription = null, modifier = Modifier.size(18.dp))
@@ -75,7 +66,7 @@ fun QuestionScreen(
                 Text("Anterior")
             }
             Button(onClick = onNext, modifier = Modifier.weight(1f).height(52.dp)) {
-                if (currentIndex == preguntas.size - 1) {
+                if (session.isLast) {
                     Text("Finalizar")
                 } else {
                     Text("Siguiente")
@@ -86,8 +77,8 @@ fun QuestionScreen(
         }
     ) {
         QuestionBody(
-            pregunta = pregunta,
-            selectedAnswer = selectedAnswer,
+            pregunta = session.pregunta,
+            selectedAnswer = session.respuestaActual,
             revealed = answerLocked,
             onAnswer = onAnswer.takeIf { !answerLocked }
         )
@@ -135,7 +126,7 @@ fun ReviewScreen(
     ) {
         QuestionBody(
             pregunta = resultado.pregunta,
-            selectedAnswer = resultado.respuestaUsuario.takeIf { it != ' ' },
+            selectedAnswer = resultado.respuestaUsuario,
             revealed = true,
             onAnswer = null
         )

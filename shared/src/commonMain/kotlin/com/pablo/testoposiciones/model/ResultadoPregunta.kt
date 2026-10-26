@@ -2,6 +2,7 @@ package com.pablo.testoposiciones.model
 
 data class ResultadoPregunta(
     val pregunta: Pregunta,
-    val respuestaUsuario: Char,
+    /** null si se dejó en blanco. */
+    val respuestaUsuario: Char?,
     val esCorrecta: Boolean
 )

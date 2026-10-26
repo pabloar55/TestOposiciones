@@ -30,7 +30,7 @@ object FailedQuestions {
 internal fun updateFailedKeys(keys: Set<String>, resultados: List<ResultadoPregunta>): Set<String> {
     val updated = keys.toMutableSet()
     for (resultado in resultados) {
-        if (resultado.respuestaUsuario == ' ') continue
+        if (resultado.respuestaUsuario == null) continue
         val key = resultado.pregunta.failedKey()
         if (resultado.esCorrecta) updated.remove(key) else updated.add(key)
     }

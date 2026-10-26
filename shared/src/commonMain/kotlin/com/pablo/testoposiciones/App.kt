@@ -79,25 +79,15 @@ fun App() {
                     }
                 )
 
-                is Screen.Question -> {
-                    if (vm.isLoading) {
-                        CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
-                    } else {
-                        QuestionScreen(
-                            preguntas = vm.preguntas,
-                            currentIndex = vm.currentIndex,
-                            displayQuestionNumber = vm.displayQuestionNumber,
-                            displayTotal = vm.displayQuestionTotal,
-                            tipoTest = vm.tipoTest,
-                            userAnswers = vm.userAnswers,
-                            secondsElapsed = vm.secondsElapsed,
-                            onAnswer = { vm.selectAnswer(it) },
-                            onNext = { vm.goNext() },
-                            onPrevious = { vm.goPrevious() },
-                            onClose = { showExitTestDialog = true }
-                        )
-                    }
-                }
+                is Screen.Loading -> CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
+
+                is Screen.Question -> QuestionScreen(
+                    session = screen.session,
+                    onAnswer = { vm.selectAnswer(it) },
+                    onNext = { vm.goNext() },
+                    onPrevious = { vm.goPrevious() },
+                    onClose = { showExitTestDialog = true }
+                )
 
                 is Screen.Results -> ResultsScreen(
                     correctas = screen.correctas,
@@ -107,30 +97,26 @@ fun App() {
                     tipoTest = screen.tipoTest,
                     categoryCompleted = screen.categoryCompleted,
                     failedRemaining = screen.failedRemaining,
-                    onRetry = { vm.retry() },
+                    onRetry = { vm.retry(screen) },
                     onReview = { vm.reviewAnswers(screen) },
                     onBack = { vm.goToWelcome() }
                 )
 
-                is Screen.Review -> {
-                    var reviewIndex by remember(screen) { mutableIntStateOf(0) }
-                    ReviewScreen(
-                        historial = screen.historial,
-                        currentIndex = reviewIndex,
-                        onNext = { if (reviewIndex < screen.historial.size - 1) reviewIndex++ },
-                        onPrevious = { if (reviewIndex > 0) reviewIndex-- },
-                        onClose = {
-                            vm.backToResults(screen.results)
-                        }
-                    )
-                }
+                is Screen.Review -> ReviewScreen(
+                    historial = screen.results.historial,
+                    currentIndex = screen.index,
+                    onNext = { vm.reviewNext() },
+                    onPrevious = { vm.reviewPrevious() },
+                    onClose = { vm.backToResults() }
+                )
             }
 
             AppBackHandler(enabled = screen !is Screen.Welcome) {
                 when (screen) {
+                    is Screen.Loading -> vm.goToWelcome()
                     is Screen.Question -> showExitTestDialog = true
                     is Screen.Results -> vm.goToWelcome()
-                    is Screen.Review -> vm.backToResults(screen.results)
+                    is Screen.Review -> vm.backToResults()
                     is Screen.Welcome -> Unit
                 }
             }
@@ -141,7 +127,7 @@ fun App() {
                     title = { Text("Salir del test") },
                     text = {
                         Text(
-                            when (vm.tipoTest) {
+                            when (screen.session.tipoTest) {
                                 TipoTest.SECUENCIAL -> "Se guardará tu progreso. ¿Quieres volver al inicio?"
                                 TipoTest.FALLADAS ->
                                     "Las que ya has acertado han salido de falladas. ¿Quieres volver al inicio?"
