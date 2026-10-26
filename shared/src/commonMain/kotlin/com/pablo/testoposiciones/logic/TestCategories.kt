@@ -2,15 +2,19 @@ package com.pablo.testoposiciones.logic
 
 import com.pablo.testoposiciones.model.TestCategory
 import com.pablo.testoposiciones.model.TestExam
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.SerializationException
+import kotlinx.serialization.json.Json
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import testoposiciones.shared.generated.resources.Res
 
 @OptIn(ExperimentalResourceApi::class)
 object TestCategories {
+    private const val CATEGORIES_PATH = "files/categories.json"
+
     suspend fun load(): List<TestCategory> {
-        val categoriesPath = "files/categories.json"
-        val text = Res.readBytes(categoriesPath).decodeToString()
-        val definitions = parseCategoryDefinitions(text, categoriesPath)
+        val text = Res.readBytes(CATEGORIES_PATH).decodeToString()
+        val definitions = parseCategoryDefinitions(text, CATEGORIES_PATH)
         val categories = definitions.map { definition ->
             val exams = definition.examsFile?.let { examsFile ->
                 val examsPath = "files/${definition.folderName}/$examsFile"
@@ -35,55 +39,52 @@ object TestCategories {
             )
         }
 
-        require(categories.isNotEmpty()) { "El archivo files/categories.json no contiene categorias." }
+        require(categories.isNotEmpty()) { "El archivo $CATEGORIES_PATH no contiene categorias." }
         val duplicatedIds = categories.groupBy { it.id }.filterValues { it.size > 1 }.keys
         require(duplicatedIds.isEmpty()) {
-            "Hay ids de categorias duplicados en files/categories.json: ${duplicatedIds.joinToString()}."
+            "Hay ids de categorias duplicados en $CATEGORIES_PATH: ${duplicatedIds.joinToString()}."
         }
         return categories
     }
 
-    private fun parseCategoryDefinitions(text: String, path: String): List<CategoryDefinition> {
-        return parseObjects(text).mapIndexed { index, fields ->
-            fun required(name: String): String = required(fields, name, "La categoria ${index + 1}", path)
-            fun optional(name: String): String? = fields[name]?.trim()?.takeIf { it.isNotEmpty() }
-
-            val examsFile = optional("examenes")
-            val questionsFile = optional("preguntas")
-            val answersFile = optional("respuestas")
+    internal fun parseCategoryDefinitions(text: String, path: String): List<CategoryDefinition> {
+        return decode<List<CategoryJson>>(text, path).mapIndexed { index, raw ->
+            val item = "La categoria ${index + 1}"
+            val examsFile = raw.examenes.optional()
+            val questionsFile = raw.preguntas.optional()
+            val answersFile = raw.respuestas.optional()
 
             if (examsFile != null) {
                 require(questionsFile == null && answersFile == null) {
-                    "La categoria ${index + 1} de $path no puede mezclar 'examenes' con 'preguntas' o 'respuestas'."
+                    "$item de $path no puede mezclar 'examenes' con 'preguntas' o 'respuestas'."
                 }
             } else {
                 require(questionsFile != null && answersFile != null) {
-                    "La categoria ${index + 1} de $path debe indicar 'examenes' o la pareja 'preguntas' y 'respuestas'."
+                    "$item de $path debe indicar 'examenes' o la pareja 'preguntas' y 'respuestas'."
                 }
             }
 
             CategoryDefinition(
-                id = required("id"),
-                displayName = required("nombre"),
-                folderName = required("carpeta"),
+                id = raw.id.required("id", item, path),
+                displayName = raw.nombre.required("nombre", item, path),
+                folderName = raw.carpeta.required("carpeta", item, path),
                 questionsFile = questionsFile,
                 answersFile = answersFile,
                 examsFile = examsFile,
-                progressVersion = optional("versionProgreso").orEmpty()
+                progressVersion = raw.versionProgreso.optional().orEmpty()
             )
         }
     }
 
-    private fun parseExams(text: String, path: String): List<TestExam> {
-        val exams = parseObjects(text).mapIndexed { index, fields ->
-            fun required(name: String): String = required(fields, name, "El examen ${index + 1}", path)
-
+    internal fun parseExams(text: String, path: String): List<TestExam> {
+        val exams = decode<List<ExamJson>>(text, path).mapIndexed { index, raw ->
+            val item = "El examen ${index + 1}"
             TestExam(
-                id = required("id"),
-                displayName = required("nombre"),
-                folderName = required("carpeta"),
-                questionsFile = required("preguntas"),
-                answersFile = required("respuestas")
+                id = raw.id.required("id", item, path),
+                displayName = raw.nombre.required("nombre", item, path),
+                folderName = raw.carpeta.required("carpeta", item, path),
+                questionsFile = raw.preguntas.required("preguntas", item, path),
+                answersFile = raw.respuestas.required("respuestas", item, path)
             )
         }
 
@@ -95,41 +96,47 @@ object TestCategories {
         return exams
     }
 
-    private fun parseObjects(text: String): List<Map<String, String>> {
-        val objectRegex = Regex("\\{([^{}]*)\\}", RegexOption.DOT_MATCHES_ALL)
-        val fieldRegex = Regex("\"([^\"]+)\"\\s*:\\s*\"((?:\\\\.|[^\"])*)\"")
+    // Estricto a propósito: un campo mal escrito ("preguntass") o un valor que no sea texto
+    // debe dar error al cargar, no ignorarse sin avisar.
+    private val json = Json { ignoreUnknownKeys = false }
 
-        return objectRegex.findAll(text).map { match ->
-            fieldRegex.findAll(match.groupValues[1]).associate {
-                it.groupValues[1] to unescapeJsonString(it.groupValues[2])
-            }
-        }.toList()
+    private inline fun <reified T> decode(text: String, path: String): T = try {
+        json.decodeFromString<T>(text)
+    } catch (e: SerializationException) {
+        throw IllegalArgumentException("El archivo $path no tiene un formato valido: ${e.message}", e)
     }
 
-    private fun required(
-        fields: Map<String, String>,
-        name: String,
-        itemDescription: String,
-        path: String
-    ): String {
-        val value = fields[name]?.trim().orEmpty()
-        require(value.isNotEmpty()) {
-            "$itemDescription de $path no tiene el campo '$name'."
-        }
+    private fun String?.optional(): String? = this?.trim()?.takeIf { it.isNotEmpty() }
+
+    private fun String?.required(name: String, item: String, path: String): String {
+        val value = optional()
+        require(value != null) { "$item de $path no tiene el campo '$name'." }
         return value
     }
 
-    private fun unescapeJsonString(value: String): String {
-        return value
-            .replace("\\\"", "\"")
-            .replace("\\\\", "\\")
-            .replace("\\/", "/")
-            .replace("\\n", "\n")
-            .replace("\\r", "\r")
-            .replace("\\t", "\t")
-    }
+    // Reflejan los ficheros tal cual, con sus nombres en español. Todo es opcional aquí
+    // para poder dar un mensaje propio cuando falta un campo.
+    @Serializable
+    private data class CategoryJson(
+        val id: String? = null,
+        val nombre: String? = null,
+        val carpeta: String? = null,
+        val preguntas: String? = null,
+        val respuestas: String? = null,
+        val examenes: String? = null,
+        val versionProgreso: String? = null
+    )
 
-    private data class CategoryDefinition(
+    @Serializable
+    private data class ExamJson(
+        val id: String? = null,
+        val nombre: String? = null,
+        val carpeta: String? = null,
+        val preguntas: String? = null,
+        val respuestas: String? = null
+    )
+
+    internal data class CategoryDefinition(
         val id: String,
         val displayName: String,
         val folderName: String,
