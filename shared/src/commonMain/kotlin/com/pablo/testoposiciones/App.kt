@@ -11,8 +11,6 @@ import androidx.compose.foundation.layout.safeContent
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.lightColorScheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -25,6 +23,7 @@ import com.pablo.testoposiciones.logic.Screen
 import com.pablo.testoposiciones.logic.TestViewModel
 import com.pablo.testoposiciones.model.TipoTest
 import com.pablo.testoposiciones.platform.ProgressStorage
+import com.pablo.testoposiciones.ui.AppTheme
 import com.pablo.testoposiciones.ui.QuestionScreen
 import com.pablo.testoposiciones.ui.ResultsScreen
 import com.pablo.testoposiciones.ui.ReviewScreen
@@ -35,11 +34,10 @@ fun App() {
     val systemDarkTheme = isSystemInDarkTheme()
     var savedDarkTheme by remember { mutableStateOf(ProgressStorage.readDarkTheme()) }
     val darkTheme = savedDarkTheme ?: systemDarkTheme
-    val colorScheme = if (darkTheme) darkColorScheme() else lightColorScheme()
 
     ApplySystemBarTheme(darkTheme)
 
-    MaterialTheme(colorScheme = colorScheme) {
+    AppTheme(darkTheme) {
         val vm: TestViewModel = viewModel { TestViewModel() }
         val screen = vm.screen
         var showExitTestDialog by remember { mutableStateOf(false) }

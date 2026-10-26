@@ -10,6 +10,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.unit.dp
@@ -51,6 +52,7 @@ internal fun QuestionIllustration(path: String?) {
                     modifier = Modifier
                         .widthIn(max = 680.dp)
                         .width((bitmap.width / 2f).dp)
+                        .clip(MaterialTheme.shapes.small)
                         .background(Color.White)
                         .clickable(onClickLabel = "Ampliar ilustración") { expanded = true }
                 )

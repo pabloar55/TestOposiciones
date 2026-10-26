@@ -1,46 +1,68 @@
 package com.pablo.testoposiciones.ui
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Card
-import androidx.compose.material3.FilterChip
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
+import androidx.compose.material3.ListItem
+import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.pablo.testoposiciones.model.CategoryProgress
 import com.pablo.testoposiciones.model.TestCategory
 import com.pablo.testoposiciones.model.TipoTest
-import com.pablo.testoposiciones.ui.icons.arrow_forward
+import com.pablo.testoposiciones.ui.icons.check
 import com.pablo.testoposiciones.ui.icons.dark_mode
+import com.pablo.testoposiciones.ui.icons.expand_more
+import com.pablo.testoposiciones.ui.icons.format_list_numbered
 import com.pablo.testoposiciones.ui.icons.light_mode
+import com.pablo.testoposiciones.ui.icons.more_vert
+import com.pablo.testoposiciones.ui.icons.replay
+import com.pablo.testoposiciones.ui.icons.shuffle
+import com.pablo.testoposiciones.ui.icons.view_agenda
+import kotlinx.coroutines.launch
 
 @Composable
 fun WelcomeScreen(
@@ -57,104 +79,67 @@ fun WelcomeScreen(
     onStartTest: (TipoTest, TestCategory) -> Unit
 ) {
     var showResetDialog by remember { mutableStateOf(false) }
+    var showCategorySheet by remember { mutableStateOf(false) }
     val canStart = selectedCategory != null && !categoriesLoading && loadError == null
+    // Mientras se calcula el progreso de otra categoría no se muestra el de la anterior.
+    val progress = categoryProgress?.takeIf { it.categoryId == selectedCategory?.id }
 
-    BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
-        val useTwoPaneLayout = maxWidth >= 720.dp
-
+    Box(modifier = Modifier.fillMaxSize()) {
         Column(
             modifier = Modifier
                 .align(Alignment.TopCenter)
-                .widthIn(max = 1040.dp)
+                .widthIn(max = 720.dp)
                 .fillMaxWidth()
                 .verticalScroll(rememberScrollState())
-                .padding(horizontal = 24.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+                .padding(start = 20.dp, end = 8.dp, bottom = 24.dp)
         ) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.End
-            ) {
-                IconButton(onClick = onToggleTheme) {
-                    Icon(
-                        imageVector = if (darkTheme) light_mode else dark_mode,
-                        contentDescription = if (darkTheme) "Cambiar a tema claro" else "Cambiar a tema oscuro",
-                        tint = MaterialTheme.colorScheme.onSurface
-                    )
-                }
-            }
-
-            Text(
-                text = "Test Oposiciones",
-                style = MaterialTheme.typography.headlineMedium,
-                fontWeight = FontWeight.Bold,
-                textAlign = TextAlign.Center,
-                color = MaterialTheme.colorScheme.onSurface,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(bottom = 8.dp)
-            )
-            Text(
-                text = "Elige una categoría y el modo de test",
-                style = MaterialTheme.typography.bodyLarge,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                textAlign = TextAlign.Center,
-                modifier = Modifier.fillMaxWidth()
+            Header(
+                darkTheme = darkTheme,
+                onToggleTheme = onToggleTheme,
+                canReset = canStart,
+                onResetProgress = { showResetDialog = true }
             )
 
-            Spacer(Modifier.height(32.dp))
+            Column(Modifier.padding(end = 12.dp)) {
+                Spacer(Modifier.height(8.dp))
+                when {
+                    categoriesLoading -> Box(
+                        modifier = Modifier.fillMaxWidth().height(160.dp),
+                        contentAlignment = Alignment.Center
+                    ) { CircularProgressIndicator() }
 
-            if (useTwoPaneLayout) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(32.dp),
-                    verticalAlignment = Alignment.Top
-                ) {
-                    CategoryPanel(
-                        categories = categories,
-                        categoriesLoading = categoriesLoading,
-                        loadError = loadError,
-                        selectedCategory = selectedCategory,
-                        canStart = canStart,
-                        onRetryLoad = onRetryLoad,
-                        onCategorySelected = onCategorySelected,
-                        onResetProgress = { showResetDialog = true },
-                        modifier = Modifier.weight(1f)
-                    )
-                    ModePanel(
-                        selectedCategory = selectedCategory,
-                        canStart = canStart,
-                        progress = categoryProgress,
-                        onStartTest = onStartTest,
-                        modifier = Modifier.weight(1f)
+                    loadError != null -> LoadErrorCard(loadError, onRetryLoad)
+
+                    selectedCategory != null -> CategoryCard(
+                        category = selectedCategory,
+                        progress = progress,
+                        onClick = { showCategorySheet = true }
                     )
                 }
-            } else {
-                Column(
-                    modifier = Modifier
-                        .align(Alignment.CenterHorizontally)
-                        .widthIn(max = 680.dp)
-                        .fillMaxWidth(),
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-                    CategoryPanel(
-                        categories = categories,
-                        categoriesLoading = categoriesLoading,
-                        loadError = loadError,
-                        selectedCategory = selectedCategory,
-                        canStart = canStart,
-                        onRetryLoad = onRetryLoad,
-                        onCategorySelected = onCategorySelected,
-                        onResetProgress = { showResetDialog = true }
-                    )
-                    ModePanel(
-                        selectedCategory = selectedCategory,
-                        canStart = canStart,
-                        progress = categoryProgress,
-                        onStartTest = onStartTest
-                    )
-                }
+
+                Spacer(Modifier.height(28.dp))
+                Text(
+                    text = "Elige cómo practicar",
+                    style = MaterialTheme.typography.titleMedium,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    modifier = Modifier.padding(bottom = 12.dp)
+                )
+                ModeGrid(
+                    selectedCategory = selectedCategory,
+                    canStart = canStart,
+                    progress = progress,
+                    onStartTest = onStartTest
+                )
             }
+        }
+
+        if (showCategorySheet) {
+            CategorySheet(
+                categories = categories,
+                selectedCategory = selectedCategory,
+                onSelected = onCategorySelected,
+                onDismiss = { showCategorySheet = false }
+            )
         }
 
         if (showResetDialog && selectedCategory != null) {
@@ -189,191 +174,318 @@ fun WelcomeScreen(
 }
 
 @Composable
-private fun CategoryPanel(
-    categories: List<TestCategory>,
-    categoriesLoading: Boolean,
-    loadError: String?,
-    selectedCategory: TestCategory?,
-    canStart: Boolean,
-    onRetryLoad: () -> Unit,
-    onCategorySelected: (TestCategory) -> Unit,
-    onResetProgress: () -> Unit,
-    modifier: Modifier = Modifier
+private fun Header(
+    darkTheme: Boolean,
+    onToggleTheme: () -> Unit,
+    canReset: Boolean,
+    onResetProgress: () -> Unit
 ) {
-    Column(
-        modifier = modifier,
-        horizontalAlignment = Alignment.CenterHorizontally
+    var menuOpen by remember { mutableStateOf(false) }
+    Row(
+        modifier = Modifier.fillMaxWidth().height(64.dp),
+        verticalAlignment = Alignment.CenterVertically
     ) {
-        when {
-            categoriesLoading -> CircularProgressIndicator(modifier = Modifier.padding(bottom = 24.dp))
-            loadError != null -> {
-                Text(
-                    text = loadError,
-                    color = MaterialTheme.colorScheme.error,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.padding(bottom = 12.dp)
-                )
-                OutlinedButton(
-                    onClick = onRetryLoad,
-                    modifier = Modifier.padding(bottom = 24.dp)
-                ) {
-                    Text("Reintentar carga")
-                }
-            }
-            else -> CategorySelector(
-                categories = categories,
-                selectedCategory = selectedCategory,
-                onSelected = onCategorySelected
+        Text(
+            text = "Test Oposiciones",
+            style = MaterialTheme.typography.titleLarge,
+            fontWeight = FontWeight.Bold,
+            color = MaterialTheme.colorScheme.onSurface,
+            modifier = Modifier.weight(1f)
+        )
+        IconButton(onClick = onToggleTheme) {
+            Icon(
+                imageVector = if (darkTheme) light_mode else dark_mode,
+                contentDescription = if (darkTheme) "Cambiar a tema claro" else "Cambiar a tema oscuro",
+                tint = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
-
-        if (canStart && selectedCategory != null) {
-            TextButton(
-                onClick = onResetProgress,
-                modifier = Modifier.padding(bottom = 16.dp)
-            ) {
-                Text("Reiniciar progreso de ${selectedCategory.displayName}")
+        Box {
+            IconButton(onClick = { menuOpen = true }) {
+                Icon(
+                    imageVector = more_vert,
+                    contentDescription = "Más opciones",
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+            DropdownMenu(expanded = menuOpen, onDismissRequest = { menuOpen = false }) {
+                DropdownMenuItem(
+                    text = { Text("Reiniciar progreso") },
+                    enabled = canReset,
+                    onClick = {
+                        menuOpen = false
+                        onResetProgress()
+                    }
+                )
             }
         }
     }
 }
 
 @Composable
-private fun ModePanel(
+private fun CategoryCard(
+    category: TestCategory,
+    progress: CategoryProgress?,
+    onClick: () -> Unit
+) {
+    Surface(
+        onClick = onClick,
+        color = MaterialTheme.colorScheme.primaryContainer,
+        contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
+        shape = MaterialTheme.shapes.large,
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Column(Modifier.padding(20.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = "Categoría",
+                    style = MaterialTheme.typography.labelLarge,
+                    modifier = Modifier.weight(1f).alpha(0.8f)
+                )
+                Text("Cambiar", style = MaterialTheme.typography.labelLarge)
+                Icon(expand_more, contentDescription = null, modifier = Modifier.size(20.dp))
+            }
+            Spacer(Modifier.height(4.dp))
+            Text(
+                text = category.displayName,
+                style = MaterialTheme.typography.headlineMedium
+            )
+            Spacer(Modifier.height(12.dp))
+            val facts = buildList {
+                if (progress == null) {
+                    add("Cargando…")
+                } else {
+                    add("${progress.totalQuestions} preguntas")
+                    if (category.exams.size > 1) add("${category.exams.size} exámenes")
+                    when (progress.failedCount) {
+                        0 -> Unit
+                        1 -> add("1 fallada")
+                        else -> add("${progress.failedCount} falladas")
+                    }
+                }
+            }
+            Text(
+                text = facts.joinToString("  ·  "),
+                style = MaterialTheme.typography.bodyMedium.merge(TabularNumbers),
+                modifier = Modifier.alpha(0.85f)
+            )
+        }
+    }
+}
+
+@Composable
+private fun LoadErrorCard(message: String, onRetry: () -> Unit) {
+    Surface(
+        color = MaterialTheme.colorScheme.errorContainer,
+        contentColor = MaterialTheme.colorScheme.onErrorContainer,
+        shape = MaterialTheme.shapes.large,
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Column(Modifier.padding(20.dp)) {
+            Text("No se han podido cargar las categorías", style = MaterialTheme.typography.titleMedium)
+            Spacer(Modifier.height(4.dp))
+            Text(message, style = MaterialTheme.typography.bodySmall)
+            Spacer(Modifier.height(12.dp))
+            Button(onClick = onRetry) { Text("Reintentar") }
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun CategorySheet(
+    categories: List<TestCategory>,
+    selectedCategory: TestCategory?,
+    onSelected: (TestCategory) -> Unit,
+    onDismiss: () -> Unit
+) {
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val scope = rememberCoroutineScope()
+    ModalBottomSheet(onDismissRequest = onDismiss, sheetState = sheetState) {
+        Text(
+            text = "Elige categoría",
+            style = MaterialTheme.typography.titleLarge,
+            modifier = Modifier.padding(start = 24.dp, end = 24.dp, bottom = 8.dp)
+        )
+        Column(Modifier.verticalScroll(rememberScrollState()).padding(bottom = 16.dp)) {
+            categories.forEach { category ->
+                val selected = category.id == selectedCategory?.id
+                ListItem(
+                    headlineContent = { Text(category.displayName) },
+                    supportingContent = if (category.exams.size > 1) {
+                        { Text("${category.exams.size} exámenes") }
+                    } else {
+                        null
+                    },
+                    trailingContent = if (selected) {
+                        { Icon(check, contentDescription = null, tint = MaterialTheme.colorScheme.primary) }
+                    } else {
+                        null
+                    },
+                    colors = ListItemDefaults.colors(
+                        containerColor = if (selected) {
+                            MaterialTheme.colorScheme.secondaryContainer
+                        } else {
+                            Color.Transparent
+                        }
+                    ),
+                    modifier = Modifier
+                        .padding(horizontal = 12.dp)
+                        .clip(MaterialTheme.shapes.medium)
+                        .clickable(role = Role.RadioButton) {
+                            onSelected(category)
+                            scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss() }
+                        }
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun ModeGrid(
     selectedCategory: TestCategory?,
     canStart: Boolean,
     progress: CategoryProgress?,
-    onStartTest: (TipoTest, TestCategory) -> Unit,
-    modifier: Modifier = Modifier
+    onStartTest: (TipoTest, TestCategory) -> Unit
 ) {
     val failedCount = progress?.failedCount ?: 0
-
-    Column(modifier = modifier.fillMaxWidth()) {
-        ModeButton(
-            title = "Test aleatorio",
-            description = "Hasta 30 preguntas escogidas al azar. Muestra feedback inmediato.",
-            status = progress?.let { "De entre ${it.totalQuestions} preguntas" },
-            enabled = canStart,
-            onClick = { selectedCategory?.let { onStartTest(TipoTest.ALEATORIO_30, it) } }
-        )
-
-        Spacer(Modifier.height(16.dp))
-
-        ModeButton(
-            title = "Bloques de hasta 30",
-            description = "Preguntas consecutivas. Reanuda desde el último bloque completado.",
-            status = progress?.let {
-                if (it.blocksStartIndex == 0) "${it.totalBlocks} bloques · empiezas por el primero"
-                else "Vas por el bloque ${it.currentBlock} de ${it.totalBlocks}"
-            },
-            progress = progress?.takeIf { it.blocksStartIndex > 0 }
-                ?.let { it.blocksStartIndex.toFloat() / it.totalQuestions },
-            enabled = canStart,
-            onClick = { selectedCategory?.let { onStartTest(TipoTest.BLOQUES_30, it) } }
-        )
-
-        Spacer(Modifier.height(16.dp))
-
-        ModeButton(
-            title = "Preguntas seguidas",
-            description = "Todas las preguntas en orden. Reanuda desde donde lo dejaste.",
-            status = progress?.let {
-                if (it.sequentialStartIndex == 0) "${it.totalQuestions} preguntas · empiezas por la primera"
-                else "Vas por la pregunta ${it.sequentialStartIndex + 1} de ${it.totalQuestions}"
-            },
-            progress = progress?.takeIf { it.sequentialStartIndex > 0 }
-                ?.let { it.sequentialStartIndex.toFloat() / it.totalQuestions },
-            enabled = canStart,
-            onClick = { selectedCategory?.let { onStartTest(TipoTest.SECUENCIAL, it) } }
-        )
-
-        Spacer(Modifier.height(16.dp))
-
-        ModeButton(
-            title = if (failedCount > 0) "Repasar falladas ($failedCount)" else "Repasar falladas",
-            description = if (failedCount > 0) {
-                "Las preguntas que has fallado en esta categoría. Al acertarlas salen de la lista."
-            } else {
-                "Aún no tienes preguntas falladas en esta categoría."
-            },
-            enabled = canStart && failedCount > 0,
-            onClick = { selectedCategory?.let { onStartTest(TipoTest.FALLADAS, it) } }
-        )
+    fun start(tipo: TipoTest) {
+        selectedCategory?.let { onStartTest(tipo, it) }
     }
-}
 
-@OptIn(ExperimentalLayoutApi::class)
-@Composable
-private fun CategorySelector(
-    categories: List<TestCategory>,
-    selectedCategory: TestCategory?,
-    onSelected: (TestCategory) -> Unit
-) {
-    FlowRow(
-        modifier = Modifier.fillMaxWidth().padding(bottom = 24.dp),
-        horizontalArrangement = Arrangement.Center,
-        verticalArrangement = Arrangement.spacedBy(8.dp)
-    ) {
-        categories.forEach { category ->
-            FilterChip(
-                selected = category.id == selectedCategory?.id,
-                onClick = { onSelected(category) },
-                label = { Text(text = category.displayName) },
-                modifier = Modifier.padding(horizontal = 4.dp)
+    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        Row(
+            modifier = Modifier.fillMaxWidth().height(IntrinsicSize.Min),
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            ModeTile(
+                icon = shuffle,
+                title = "Aleatorio",
+                description = "30 preguntas al azar, corregidas al momento.",
+                status = progress?.let { "De entre ${it.totalQuestions}" },
+                enabled = canStart,
+                onClick = { start(TipoTest.ALEATORIO_30) },
+                modifier = Modifier.weight(1f)
+            )
+            ModeTile(
+                icon = view_agenda,
+                title = "Bloques de 30",
+                description = "En orden y de 30 en 30. Corriges al terminar.",
+                status = progress?.let {
+                    if (it.blocksStartIndex == 0) "${it.totalBlocks} bloques"
+                    else "Bloque ${it.currentBlock} de ${it.totalBlocks}"
+                },
+                progress = progress?.takeIf { it.blocksStartIndex > 0 }
+                    ?.let { it.blocksStartIndex.toFloat() / it.totalQuestions },
+                enabled = canStart,
+                onClick = { start(TipoTest.BLOQUES_30) },
+                modifier = Modifier.weight(1f)
+            )
+        }
+        Row(
+            modifier = Modifier.fillMaxWidth().height(IntrinsicSize.Min),
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            ModeTile(
+                icon = format_list_numbered,
+                title = "Seguidas",
+                description = "Todo el temario en orden. Retomas donde lo dejaste.",
+                status = progress?.let {
+                    if (it.sequentialStartIndex == 0) "${it.totalQuestions} preguntas"
+                    else "Vas por la ${it.sequentialStartIndex + 1} de ${it.totalQuestions}"
+                },
+                progress = progress?.takeIf { it.sequentialStartIndex > 0 }
+                    ?.let { it.sequentialStartIndex.toFloat() / it.totalQuestions },
+                enabled = canStart,
+                onClick = { start(TipoTest.SECUENCIAL) },
+                modifier = Modifier.weight(1f)
+            )
+            ModeTile(
+                icon = replay,
+                title = "Falladas",
+                description = "Salen de la lista en cuanto las aciertas.",
+                status = progress?.let {
+                    if (failedCount > 0) "$failedCount por repasar" else "Ninguna por ahora"
+                },
+                highlighted = failedCount > 0,
+                enabled = canStart && failedCount > 0,
+                onClick = { start(TipoTest.FALLADAS) },
+                modifier = Modifier.weight(1f)
             )
         }
     }
 }
 
 @Composable
-private fun ModeButton(
+private fun ModeTile(
+    icon: ImageVector,
     title: String,
     description: String,
+    status: String?,
     enabled: Boolean,
-    status: String? = null,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
     progress: Float? = null,
-    onClick: () -> Unit
+    highlighted: Boolean = false
 ) {
-    Card(
+    val colors = MaterialTheme.colorScheme
+    // Falladas pendientes se marcan en ámbar: es lo que más conviene repasar.
+    val container = if (highlighted) colors.tertiaryContainer else colors.surfaceContainerLow
+    val content = if (highlighted) colors.onTertiaryContainer else colors.onSurface
+    val iconContainer = if (highlighted) colors.tertiary else colors.secondaryContainer
+    val iconTint = if (highlighted) colors.onTertiary else colors.onSecondaryContainer
+    val accent = if (highlighted) colors.onTertiaryContainer else colors.primary
+
+    Surface(
         onClick = onClick,
         enabled = enabled,
-        modifier = Modifier.fillMaxWidth()
+        color = container,
+        contentColor = content,
+        shape = MaterialTheme.shapes.medium,
+        modifier = modifier.fillMaxHeight()
     ) {
-        Row(
-            modifier = Modifier.padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(16.dp)
+        Column(
+            modifier = Modifier
+                .fillMaxHeight()
+                .padding(16.dp)
+                .alpha(if (enabled) 1f else 0.5f)
         ) {
-            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                Text(text = title, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
-                Text(
-                    text = description,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                if (status != null) {
-                    Spacer(Modifier.height(6.dp))
-                    Text(
-                        text = status,
-                        style = MaterialTheme.typography.labelMedium,
-                        fontWeight = FontWeight.SemiBold,
-                        color = MaterialTheme.colorScheme.primary
-                    )
-                }
-                if (progress != null) {
-                    Spacer(Modifier.height(6.dp))
-                    LinearProgressIndicator(
-                        progress = { progress },
-                        modifier = Modifier.fillMaxWidth(),
-                        drawStopIndicator = {}
-                    )
-                }
+            Box(
+                modifier = Modifier
+                    .size(40.dp)
+                    .background(iconContainer, MaterialTheme.shapes.small),
+                contentAlignment = Alignment.Center
+            ) {
+                Icon(icon, contentDescription = null, tint = iconTint, modifier = Modifier.size(22.dp))
             }
-            Icon(
-                imageVector = arrow_forward,
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.primary
+            Spacer(Modifier.height(14.dp))
+            Text(text = title, style = MaterialTheme.typography.titleMedium)
+            Spacer(Modifier.height(2.dp))
+            Text(
+                text = description,
+                style = MaterialTheme.typography.bodySmall,
+                color = if (highlighted) content else colors.onSurfaceVariant
             )
+            // Empuja el estado abajo para que las dos fichas de cada fila queden alineadas.
+            Spacer(Modifier.height(12.dp))
+            Spacer(Modifier.weight(1f))
+            if (status != null) {
+                Text(
+                    text = status,
+                    style = MaterialTheme.typography.labelMedium.merge(TabularNumbers),
+                    fontWeight = FontWeight.Bold,
+                    color = accent
+                )
+            }
+            if (progress != null) {
+                Spacer(Modifier.height(8.dp))
+                LinearProgressIndicator(
+                    progress = { progress },
+                    modifier = Modifier.fillMaxWidth(),
+                    trackColor = colors.surfaceContainerHighest,
+                    drawStopIndicator = {}
+                )
+            }
         }
     }
 }
